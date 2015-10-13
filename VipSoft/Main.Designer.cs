@@ -3,7 +3,7 @@
     partial class Main
     {
         /// <summary>
-        /// Required designer variable.
+        /// Required designer variable.aa
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
