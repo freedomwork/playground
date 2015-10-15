@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace VipSoft
 {
-    public partial class Main : Form
+    public partial class Main : BaseForm
     {
         public Main()
         {

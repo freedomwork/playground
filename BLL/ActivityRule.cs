@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data;
 using System.Collections.Generic;
 using Maticsoft.Common;
 using VipSoft.Model;
@@ -72,29 +73,6 @@ namespace VipSoft.BLL
 			return dal.GetModel(ID);
 		}
 
-		/// <summary>
-		/// 得到一个对象实体，从缓存中
-		/// </summary>
-		public VipSoft.Model.ActivityRule GetModelByCache(int ID)
-		{
-			
-			string CacheKey = "ActivityRuleModel-" + ID;
-			object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
-			if (objModel == null)
-			{
-				try
-				{
-					objModel = dal.GetModel(ID);
-					if (objModel != null)
-					{
-						int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");
-						Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
-					}
-				}
-				catch{}
-			}
-			return (VipSoft.Model.ActivityRule)objModel;
-		}
 
 		/// <summary>
 		/// 获得数据列表

@@ -50,30 +50,6 @@ namespace VipSoft.BLL
 		}
 
 		/// <summary>
-		/// 得到一个对象实体，从缓存中
-		/// </summary>
-		public VipSoft.Model.MoneyRule GetModelByCache()
-		{
-			//该表无主键信息，请自定义主键/条件字段
-			string CacheKey = "MoneyRuleModel-" ;
-			object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
-			if (objModel == null)
-			{
-				try
-				{
-					objModel = dal.GetModel();
-					if (objModel != null)
-					{
-						int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");
-						Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
-					}
-				}
-				catch{}
-			}
-			return (VipSoft.Model.MoneyRule)objModel;
-		}
-
-		/// <summary>
 		/// 获得数据列表
 		/// </summary>
 		public DataSet GetList(string strWhere)

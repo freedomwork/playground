@@ -72,29 +72,14 @@ namespace VipSoft.BLL
 			return dal.GetModel(ID);
 		}
 
-		/// <summary>
-		/// 得到一个对象实体，从缓存中
-		/// </summary>
-		public VipSoft.Model.Master GetModelByCache(int ID)
-		{
-			
-			string CacheKey = "MasterModel-" + ID;
-			object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
-			if (objModel == null)
-			{
-				try
-				{
-					objModel = dal.GetModel(ID);
-					if (objModel != null)
-					{
-						int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");
-						Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
-					}
-				}
-				catch{}
-			}
-			return (VipSoft.Model.Master)objModel;
-		}
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public VipSoft.Model.Master GetModel(string Account)
+        {
+
+            return dal.GetModel(Account);
+        }
 
 		/// <summary>
 		/// 获得数据列表

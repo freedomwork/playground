@@ -73,30 +73,6 @@ namespace VipSoft.BLL
 		}
 
 		/// <summary>
-		/// 得到一个对象实体，从缓存中
-		/// </summary>
-		public VipSoft.Model.CardLevel GetModelByCache(int ID)
-		{
-			
-			string CacheKey = "CardLevelModel-" + ID;
-			object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
-			if (objModel == null)
-			{
-				try
-				{
-					objModel = dal.GetModel(ID);
-					if (objModel != null)
-					{
-						int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");
-						Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
-					}
-				}
-				catch{}
-			}
-			return (VipSoft.Model.CardLevel)objModel;
-		}
-
-		/// <summary>
 		/// 获得数据列表
 		/// </summary>
 		public DataSet GetList(string strWhere)

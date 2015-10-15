@@ -60,9 +60,72 @@ namespace VipSoft.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ico_link {
+            get {
+                object obj = ResourceManager.GetObject("ico_link", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap MainFromBG {
+            get {
+                object obj = ResourceManager.GetObject("MainFromBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ToolStrip_BG {
+            get {
+                object obj = ResourceManager.GetObject("ToolStrip_BG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap 专家 {
+            get {
+                object obj = ResourceManager.GetObject("专家", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap 中性游乐场top {
+            get {
+                object obj = ResourceManager.GetObject("中性游乐场top", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap 会员刷卡 {
+            get {
+                object obj = ResourceManager.GetObject("会员刷卡", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap 会员消费快速消费 {
+            get {
+                object obj = ResourceManager.GetObject("会员消费快速消费", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap 会员消费普通消费 {
+            get {
+                object obj = ResourceManager.GetObject("会员消费普通消费", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap 登录界面3 {
             get {
                 object obj = ResourceManager.GetObject("登录界面3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap 系统导航 {
+            get {
+                object obj = ResourceManager.GetObject("系统导航", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

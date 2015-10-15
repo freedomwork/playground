@@ -47,6 +47,9 @@
     <Compile Include="Common\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PanelButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,8 +64,14 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\PanelButton.resx">
+      <DependentUpon>PanelButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,9 +98,44 @@
       <Project>{9D734669-6BFD-4CD0-B527-ED622CDB608D}</Project>
       <Name>AlSkin</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\登录界面3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainFormBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\系统导航.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\专家.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\中性游乐场top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\会员刷卡.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\会员消费副本.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\会员消费副本2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStrip_BG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_link.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
