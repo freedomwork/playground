@@ -63,6 +63,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Member\MemRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\MemRegister.Designer.cs">
+      <DependentUpon>MemRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\PanelButton.resx">
       <DependentUpon>PanelButton.cs</DependentUpon>
@@ -72,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\MemRegister.resx">
+      <DependentUpon>MemRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,6 +145,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ico_link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_增加会员.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_会员列表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_储值卡充值.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_产品数据导入.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_产品列表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_增加会员1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_普通消费.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

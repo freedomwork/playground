@@ -37,16 +37,32 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.alpanel21 = new AlSkin.AlControl.Alpanel2();
-            this.label_Title = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.myTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelButton_Member_DataInput = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Member_Recharge = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Member_List = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Member_Add = new Vipsoft.Controls.PanelButton();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelButton_stockAdd = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Goods_DataInput = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Goods_List = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Goods_Add = new Vipsoft.Controls.PanelButton();
+            this.label_Title = new System.Windows.Forms.Label();
+            this.Button_GoodsManage = new AlSkin.AlControl.AlButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.alpanel21.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.myTabControl.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,12 +99,13 @@
             this.Button_MemberManage.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(131)))), ((int)(((byte)(204)))));
             this.Button_MemberManage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Button_MemberManage.ForeColor = System.Drawing.Color.White;
-            this.Button_MemberManage.Location = new System.Drawing.Point(36, 133);
+            this.Button_MemberManage.Location = new System.Drawing.Point(36, 137);
             this.Button_MemberManage.Name = "Button_MemberManage";
             this.Button_MemberManage.Size = new System.Drawing.Size(150, 30);
             this.Button_MemberManage.TabIndex = 17;
             this.Button_MemberManage.Text = "会 员 管 理";
             this.Button_MemberManage.UseVisualStyleBackColor = true;
+            this.Button_MemberManage.Click += new System.EventHandler(this.Button_MemberManage_Click);
             // 
             // toolStrip1
             // 
@@ -137,12 +154,198 @@
             // 
             // alpanel21
             // 
-            this.alpanel21.Controls.Add(this.tabControl1);
+            this.alpanel21.Controls.Add(this.myTabControl);
             this.alpanel21.Controls.Add(this.label_Title);
             this.alpanel21.Location = new System.Drawing.Point(205, 137);
             this.alpanel21.Name = "alpanel21";
             this.alpanel21.Size = new System.Drawing.Size(830, 481);
             this.alpanel21.TabIndex = 19;
+            // 
+            // myTabControl
+            // 
+            this.myTabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.myTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.myTabControl.Controls.Add(this.tabPage1);
+            this.myTabControl.Controls.Add(this.tabPage2);
+            this.myTabControl.Controls.Add(this.tabPage3);
+            this.myTabControl.ItemSize = new System.Drawing.Size(0, 20);
+            this.myTabControl.Location = new System.Drawing.Point(-22, 26);
+            this.myTabControl.Multiline = true;
+            this.myTabControl.Name = "myTabControl";
+            this.myTabControl.SelectedIndex = 0;
+            this.myTabControl.Size = new System.Drawing.Size(853, 458);
+            this.myTabControl.TabIndex = 45;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(24, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(825, 450);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "会员刷卡";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.tableLayoutPanel1);
+            this.tabPage2.Location = new System.Drawing.Point(24, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(825, 450);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "会员管理";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.panelButton_Member_DataInput, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelButton_Member_Recharge, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelButton_Member_List, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelButton_Member_Add, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(120, 50);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(503, 207);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panelButton_Member_DataInput
+            // 
+            this.panelButton_Member_DataInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_Member_DataInput.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Member_DataInput.Info = "将外部会员资料批量导入到系统中";
+            this.panelButton_Member_DataInput.InfoImg = global::VipSoft.Properties.Resources.ico_数据导入;
+            this.panelButton_Member_DataInput.Location = new System.Drawing.Point(255, 83);
+            this.panelButton_Member_DataInput.Name = "panelButton_Member_DataInput";
+            this.panelButton_Member_DataInput.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Member_DataInput.TabIndex = 3;
+            this.panelButton_Member_DataInput.Title = "会员资料导入";
+            this.panelButton_Member_DataInput.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
+            // panelButton_Member_Recharge
+            // 
+            this.panelButton_Member_Recharge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_Member_Recharge.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Member_Recharge.Info = "针对储值卡进行充值操作";
+            this.panelButton_Member_Recharge.InfoImg = global::VipSoft.Properties.Resources.ico_储值卡充值;
+            this.panelButton_Member_Recharge.Location = new System.Drawing.Point(3, 83);
+            this.panelButton_Member_Recharge.Name = "panelButton_Member_Recharge";
+            this.panelButton_Member_Recharge.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Member_Recharge.TabIndex = 2;
+            this.panelButton_Member_Recharge.Title = "会员充值";
+            this.panelButton_Member_Recharge.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
+            // panelButton_Member_List
+            // 
+            this.panelButton_Member_List.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Member_List.Info = "全部会员资料,对会员进行综合管理";
+            this.panelButton_Member_List.InfoImg = global::VipSoft.Properties.Resources.ico_会员列表;
+            this.panelButton_Member_List.Location = new System.Drawing.Point(254, 3);
+            this.panelButton_Member_List.Name = "panelButton_Member_List";
+            this.panelButton_Member_List.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Member_List.TabIndex = 1;
+            this.panelButton_Member_List.Title = "会员列表";
+            this.panelButton_Member_List.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
+            // panelButton_Member_Add
+            // 
+            this.panelButton_Member_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_Member_Add.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Member_Add.Info = "会员资料录入";
+            this.panelButton_Member_Add.InfoImg = global::VipSoft.Properties.Resources.ico_增加会员;
+            this.panelButton_Member_Add.Location = new System.Drawing.Point(3, 3);
+            this.panelButton_Member_Add.Name = "panelButton_Member_Add";
+            this.panelButton_Member_Add.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Member_Add.TabIndex = 0;
+            this.panelButton_Member_Add.Title = "会员注册";
+            this.panelButton_Member_Add.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.tableLayoutPanel2);
+            this.tabPage3.Location = new System.Drawing.Point(24, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(825, 450);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "新增产品";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.panelButton_stockAdd, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.panelButton_Goods_DataInput, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.panelButton_Goods_List, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panelButton_Goods_Add, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(118, 73);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(503, 207);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // panelButton_stockAdd
+            // 
+            this.panelButton_stockAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_stockAdd.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_stockAdd.Info = "设置采购进货商品";
+            this.panelButton_stockAdd.InfoImg = global::VipSoft.Properties.Resources.ico_普通消费;
+            this.panelButton_stockAdd.Location = new System.Drawing.Point(255, 83);
+            this.panelButton_stockAdd.Name = "panelButton_stockAdd";
+            this.panelButton_stockAdd.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_stockAdd.TabIndex = 3;
+            this.panelButton_stockAdd.Title = "产品采购进货";
+            this.panelButton_stockAdd.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
+            // panelButton_Goods_DataInput
+            // 
+            this.panelButton_Goods_DataInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_Goods_DataInput.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Goods_DataInput.Info = "将外部产品资料批量导入到系统中";
+            this.panelButton_Goods_DataInput.InfoImg = global::VipSoft.Properties.Resources.ico_数据导入;
+            this.panelButton_Goods_DataInput.Location = new System.Drawing.Point(3, 83);
+            this.panelButton_Goods_DataInput.Name = "panelButton_Goods_DataInput";
+            this.panelButton_Goods_DataInput.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Goods_DataInput.TabIndex = 2;
+            this.panelButton_Goods_DataInput.Title = "产品数据导入";
+            this.panelButton_Goods_DataInput.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
+            // panelButton_Goods_List
+            // 
+            this.panelButton_Goods_List.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Goods_List.Info = "全部产品资料,对产品进行综合管理";
+            this.panelButton_Goods_List.InfoImg = global::VipSoft.Properties.Resources.ico_会员列表;
+            this.panelButton_Goods_List.Location = new System.Drawing.Point(254, 3);
+            this.panelButton_Goods_List.Name = "panelButton_Goods_List";
+            this.panelButton_Goods_List.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Goods_List.TabIndex = 1;
+            this.panelButton_Goods_List.Title = "产品列表";
+            this.panelButton_Goods_List.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
+            // panelButton_Goods_Add
+            // 
+            this.panelButton_Goods_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_Goods_Add.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Goods_Add.Info = "将产品资料录入到软件中";
+            this.panelButton_Goods_Add.InfoImg = global::VipSoft.Properties.Resources.ico_增加会员;
+            this.panelButton_Goods_Add.Location = new System.Drawing.Point(3, 3);
+            this.panelButton_Goods_Add.Name = "panelButton_Goods_Add";
+            this.panelButton_Goods_Add.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Goods_Add.TabIndex = 0;
+            this.panelButton_Goods_Add.Title = "新增产品";
+            this.panelButton_Goods_Add.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
             // 
             // label_Title
             // 
@@ -155,41 +358,19 @@
             this.label_Title.TabIndex = 44;
             this.label_Title.Text = "会员刷卡";
             // 
-            // tabControl1
+            // Button_GoodsManage
             // 
-            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.ItemSize = new System.Drawing.Size(0, 20);
-            this.tabControl1.Location = new System.Drawing.Point(-24, 26);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(853, 458);
-            this.tabControl1.TabIndex = 45;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(24, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(825, 450);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(40, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(156, 92);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Button_GoodsManage.BackColor = System.Drawing.Color.Transparent;
+            this.Button_GoodsManage.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(131)))), ((int)(((byte)(204)))));
+            this.Button_GoodsManage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Button_GoodsManage.ForeColor = System.Drawing.Color.White;
+            this.Button_GoodsManage.Location = new System.Drawing.Point(36, 183);
+            this.Button_GoodsManage.Name = "Button_GoodsManage";
+            this.Button_GoodsManage.Size = new System.Drawing.Size(150, 30);
+            this.Button_GoodsManage.TabIndex = 20;
+            this.Button_GoodsManage.Text = "商 品 管 理";
+            this.Button_GoodsManage.UseVisualStyleBackColor = true;
+            this.Button_GoodsManage.Click += new System.EventHandler(this.Button_GoodsManage_Click);
             // 
             // Main
             // 
@@ -199,6 +380,7 @@
             this.BacklightImg = global::VipSoft.Properties.Resources.MainFromBG;
             this.BacklightLTRB = new System.Drawing.Rectangle(20, 94, 20, 40);
             this.ClientSize = new System.Drawing.Size(1060, 650);
+            this.Controls.Add(this.Button_GoodsManage);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.Button_MemberManage);
             this.Controls.Add(this.pictureBox2);
@@ -213,6 +395,7 @@
             this.Controls.SetChildIndex(this.pictureBox2, 0);
             this.Controls.SetChildIndex(this.Button_MemberManage, 0);
             this.Controls.SetChildIndex(this.toolStrip1, 0);
+            this.Controls.SetChildIndex(this.Button_GoodsManage, 0);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -220,7 +403,11 @@
             this.toolStrip1.PerformLayout();
             this.alpanel21.ResumeLayout(false);
             this.alpanel21.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.myTabControl.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,8 +425,20 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private AlSkin.AlControl.Alpanel2 alpanel21;
         private System.Windows.Forms.Label label_Title;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl myTabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Vipsoft.Controls.PanelButton panelButton_Member_DataInput;
+        private Vipsoft.Controls.PanelButton panelButton_Member_Recharge;
+        private Vipsoft.Controls.PanelButton panelButton_Member_List;
+        private Vipsoft.Controls.PanelButton panelButton_Member_Add;
+        private AlSkin.AlControl.AlButton Button_GoodsManage;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private Vipsoft.Controls.PanelButton panelButton_stockAdd;
+        private Vipsoft.Controls.PanelButton panelButton_Goods_DataInput;
+        private Vipsoft.Controls.PanelButton panelButton_Goods_List;
+        private Vipsoft.Controls.PanelButton panelButton_Goods_Add;
     }
 }

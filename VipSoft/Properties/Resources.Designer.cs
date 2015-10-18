@@ -67,6 +67,55 @@ namespace VipSoft.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ico_产品列表 {
+            get {
+                object obj = ResourceManager.GetObject("ico_产品列表", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_会员列表 {
+            get {
+                object obj = ResourceManager.GetObject("ico_会员列表", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_储值卡充值 {
+            get {
+                object obj = ResourceManager.GetObject("ico_储值卡充值", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_增加会员 {
+            get {
+                object obj = ResourceManager.GetObject("ico_增加会员", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_增加会员1 {
+            get {
+                object obj = ResourceManager.GetObject("ico_增加会员1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_数据导入 {
+            get {
+                object obj = ResourceManager.GetObject("ico_数据导入", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_普通消费 {
+            get {
+                object obj = ResourceManager.GetObject("ico_普通消费", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap MainFromBG {
             get {
                 object obj = ResourceManager.GetObject("MainFromBG", resourceCulture);
