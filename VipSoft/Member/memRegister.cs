@@ -8,11 +8,16 @@ using System.Windows.Forms;
 
 namespace VipSoft.Member
 {
-    public partial class memRegister : Form
+    public partial class memRegister : BaseForm
     {
         public memRegister()
         {
             InitializeComponent();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
