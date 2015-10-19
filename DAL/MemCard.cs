@@ -46,9 +46,9 @@ namespace VipSoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into MemCard(");
-			strSql.Append("CardID,CardMianID,Name,Sex,Password,Mobile,Photo,LevelID,IsPast,PastTime,Point,State,IsPointAuto,Money,TotalMoney,ShopID,ShopName,LastTime,Email,PayMoney,Remark,CardTypeID)");
+			strSql.Append("CardID,CardMianID,Name,Sex,Password,Mobile,Photo,LevelID,IsPast,PastTime,Point,State,IsPointAuto,Money,TotalMoney,ShopID,ShopName,LastTime,Email,PayMoney,Remark,CardTypeID,CreateTime)");
 			strSql.Append(" values (");
-			strSql.Append("@CardID,@CardMianID,@Name,@Sex,@Password,@Mobile,@Photo,@LevelID,@IsPast,@PastTime,@Point,@State,@IsPointAuto,@Money,@TotalMoney,@ShopID,@ShopName,@LastTime,@Email,@PayMoney,@Remark,@CardTypeID)");
+			strSql.Append("@CardID,@CardMianID,@Name,@Sex,@Password,@Mobile,@Photo,@LevelID,@IsPast,@PastTime,@Point,@State,@IsPointAuto,@Money,@TotalMoney,@ShopID,@ShopName,@LastTime,@Email,@PayMoney,@Remark,@CardTypeID,@CreateTime)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@CardID", SqlDbType.VarChar,50),
@@ -72,7 +72,9 @@ namespace VipSoft.DAL
 					new SqlParameter("@Email", SqlDbType.VarChar,50),
 					new SqlParameter("@PayMoney", SqlDbType.Money,8),
 					new SqlParameter("@Remark", SqlDbType.VarChar,1000),
-					new SqlParameter("@CardTypeID", SqlDbType.Int,4)};
+					new SqlParameter("@CardTypeID", SqlDbType.Int,4),
+                    new SqlParameter("@CreateTime",SqlDbType.DateTime)
+                                        };
 			parameters[0].Value = model.CardID;
 			parameters[1].Value = model.CardMianID;
 			parameters[2].Value = model.Name;
@@ -95,6 +97,7 @@ namespace VipSoft.DAL
 			parameters[19].Value = model.PayMoney;
 			parameters[20].Value = model.Remark;
 			parameters[21].Value = model.CardTypeID;
+            parameters[22].Value = model.CreateTime;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -134,7 +137,8 @@ namespace VipSoft.DAL
 			strSql.Append("Email=@Email,");
 			strSql.Append("PayMoney=@PayMoney,");
 			strSql.Append("Remark=@Remark,");
-			strSql.Append("CardTypeID=@CardTypeID");
+			strSql.Append("CardTypeID=@CardTypeID,");
+            strSql.Append("CreateTime=@CreateTime");
 			strSql.Append(" where ID=@ID");
 			SqlParameter[] parameters = {
 					new SqlParameter("@CardID", SqlDbType.VarChar,50),
@@ -159,6 +163,7 @@ namespace VipSoft.DAL
 					new SqlParameter("@PayMoney", SqlDbType.Money,8),
 					new SqlParameter("@Remark", SqlDbType.VarChar,1000),
 					new SqlParameter("@CardTypeID", SqlDbType.Int,4),
+                    new SqlParameter("@CreateTime",SqlDbType.DateTime),
 					new SqlParameter("@ID", SqlDbType.Int,4)};
 			parameters[0].Value = model.CardID;
 			parameters[1].Value = model.CardMianID;
@@ -182,7 +187,8 @@ namespace VipSoft.DAL
 			parameters[19].Value = model.PayMoney;
 			parameters[20].Value = model.Remark;
 			parameters[21].Value = model.CardTypeID;
-			parameters[22].Value = model.ID;
+            parameters[22].Value = model.CreateTime;
+			parameters[23].Value = model.ID;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -246,7 +252,7 @@ namespace VipSoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 ID,CardID,CardMianID,Name,Sex,Password,Mobile,Photo,LevelID,IsPast,PastTime,Point,State,IsPointAuto,Money,TotalMoney,ShopID,ShopName,LastTime,Email,PayMoney,Remark,CardTypeID from MemCard ");
+			strSql.Append("select  top 1 ID,CardID,CardMianID,Name,Sex,Password,Mobile,Photo,LevelID,IsPast,PastTime,Point,State,IsPointAuto,Money,TotalMoney,ShopID,ShopName,LastTime,Email,PayMoney,Remark,CardTypeID,CreateTime from MemCard ");
 			strSql.Append(" where ID=@ID");
 			SqlParameter[] parameters = {
 					new SqlParameter("@ID", SqlDbType.Int,4)
@@ -380,6 +386,10 @@ namespace VipSoft.DAL
 				{
 					model.CardTypeID=int.Parse(row["CardTypeID"].ToString());
 				}
+                if (row["CreateTime"]!=null&&row["CreateTime"].ToString()!="")
+                {
+                    model.CreateTime = DateTime.Parse(row["CreateTime"].ToString());
+                }
 			}
 			return model;
 		}
@@ -390,7 +400,7 @@ namespace VipSoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select ID,CardID,CardMianID,Name,Sex,Password,Mobile,Photo,LevelID,IsPast,PastTime,Point,State,IsPointAuto,Money,TotalMoney,ShopID,ShopName,LastTime,Email,PayMoney,Remark,CardTypeID ");
+			strSql.Append("select ID,CardID,CardMianID,Name,Sex,Password,Mobile,Photo,LevelID,IsPast,PastTime,Point,State,IsPointAuto,Money,TotalMoney,ShopID,ShopName,LastTime,Email,PayMoney,Remark,CardTypeID,CreateTime ");
 			strSql.Append(" FROM MemCard ");
 			if(strWhere.Trim()!="")
 			{
@@ -410,7 +420,7 @@ namespace VipSoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" ID,CardID,CardMianID,Name,Sex,Password,Mobile,Photo,LevelID,IsPast,PastTime,Point,State,IsPointAuto,Money,TotalMoney,ShopID,ShopName,LastTime,Email,PayMoney,Remark,CardTypeID ");
+			strSql.Append(" ID,CardID,CardMianID,Name,Sex,Password,Mobile,Photo,LevelID,IsPast,PastTime,Point,State,IsPointAuto,Money,TotalMoney,ShopID,ShopName,LastTime,Email,PayMoney,Remark,CardTypeID,CreateTime");
 			strSql.Append(" FROM MemCard ");
 			if(strWhere.Trim()!="")
 			{
