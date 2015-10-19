@@ -123,6 +123,13 @@ namespace VipSoft.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap nophoto {
+            get {
+                object obj = ResourceManager.GetObject("nophoto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Page_First {
             get {
                 object obj = ResourceManager.GetObject("Page_First", resourceCulture);
