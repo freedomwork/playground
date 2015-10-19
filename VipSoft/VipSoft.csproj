@@ -47,14 +47,38 @@
     <Compile Include="Common\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MemberPhoto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MemberPhoto.designer.cs">
+      <DependentUpon>MemberPhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Pager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Pager.designer.cs">
+      <DependentUpon>Pager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PanelButton.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsList.Designer.cs">
+      <DependentUpon>GoodsList.cs</DependentUpon>
     </Compile>
     <Compile Include="Goods\GoodsPutIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Goods\GoodsPutIn.Designer.cs">
       <DependentUpon>GoodsPutIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\SetClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goods\SetClass.Designer.cs">
+      <DependentUpon>SetClass.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -76,11 +100,23 @@
       <DependentUpon>memRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\MemberPhoto.resx">
+      <DependentUpon>MemberPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Pager.resx">
+      <DependentUpon>Pager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\PanelButton.resx">
       <DependentUpon>PanelButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Goods\GoodsList.resx">
+      <DependentUpon>GoodsList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Goods\GoodsPutIn.resx">
       <DependentUpon>GoodsPutIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goods\SetClass.resx">
+      <DependentUpon>SetClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -176,6 +212,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ico_普通消费.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\退出.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新增.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\修改.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\批量数据导入.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStrip_BG1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PagerFirstItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PagerFirstItem.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PagerLastItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PagerLastItem.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PagerNextItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PagerNextItem.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PagerPrevItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PagerPrevItem.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nophoto.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
