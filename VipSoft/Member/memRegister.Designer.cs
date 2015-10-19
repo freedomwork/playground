@@ -71,10 +71,11 @@
             this.myTabControl1 = new YiJiaSoft.Controls.MyTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.memberPhoto1 = new VipSoft.Controls.MemberPhoto();
             this.groupBox1.SuspendLayout();
             this.myTabControl1.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +83,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.memberPhoto1);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.richTextBox1);
             this.groupBox1.Controls.Add(this.label17);
@@ -149,7 +151,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(388, 33);
+            this.label17.Location = new System.Drawing.Point(395, 33);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(53, 12);
             this.label17.TabIndex = 37;
@@ -158,7 +160,7 @@
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(457, 28);
+            this.comboBox4.Location = new System.Drawing.Point(462, 28);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(113, 20);
             this.comboBox4.TabIndex = 36;
@@ -488,15 +490,6 @@
             this.tabPage2.Text = "计次卡信息";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(276, 572);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "保存(F5)";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // tabPage3
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
@@ -505,6 +498,15 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "到期提醒";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(276, 572);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "保存(F5)";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -524,6 +526,18 @@
             this.checkBox3.TabIndex = 20;
             this.checkBox3.Text = "保存后继续添加";
             this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // memberPhoto1
+            // 
+            this.memberPhoto1.BackColor = System.Drawing.Color.Transparent;
+            this.memberPhoto1.Location = new System.Drawing.Point(457, 88);
+            this.memberPhoto1.Margin = new System.Windows.Forms.Padding(0);
+            this.memberPhoto1.Name = "memberPhoto1";
+            this.memberPhoto1.PhotoHeight = 150;
+            this.memberPhoto1.PhotoPath = "";
+            this.memberPhoto1.PhotoWidth = 150;
+            this.memberPhoto1.Size = new System.Drawing.Size(152, 153);
+            this.memberPhoto1.TabIndex = 40;
             // 
             // memRegister
             // 
@@ -599,5 +613,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox checkBox3;
+        private Controls.MemberPhoto memberPhoto1;
     }
 }
