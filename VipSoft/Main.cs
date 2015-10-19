@@ -39,5 +39,10 @@ namespace VipSoft
                     break;
             }
         }
+
+        private void alButton_Shortcut_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
