@@ -40,7 +40,22 @@ namespace VipSoft
 
         private void alButton_Shortcut_Click(object sender, EventArgs e)
         {
-
+            AlSkin.AlControl.AlButton btn = (AlSkin.AlControl.AlButton)sender;
+            switch (btn.Name)
+            {
+                case "alButton_Shortcut_SetClass":
+                    SetClass setClass = new SetClass();
+                    setClass.ShowDialog();
+                    break;
+                case "alButton_Shortcut_GoodsReport":
+                    break;
+                case "alButton_cancle":
+                    break;
+                case "alButton_CaiSearch":
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
