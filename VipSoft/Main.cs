@@ -32,8 +32,6 @@ namespace VipSoft
             switch (senderName)
             {
                 case "panelButton_Member_Add":
-                    MemRegister reg = new MemRegister();
-                    reg.ShowDialog();
                     break;
                 default:
                     break;

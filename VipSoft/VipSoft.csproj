@@ -50,6 +50,12 @@
     <Compile Include="Controls\PanelButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Goods\GoodsPutIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsPutIn.Designer.cs">
+      <DependentUpon>GoodsPutIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\PanelButton.resx">
       <DependentUpon>PanelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goods\GoodsPutIn.resx">
+      <DependentUpon>GoodsPutIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
