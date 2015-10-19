@@ -123,9 +123,72 @@ namespace VipSoft.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Page_First {
+            get {
+                object obj = ResourceManager.GetObject("Page_First", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Page_FirstBlack {
+            get {
+                object obj = ResourceManager.GetObject("Page_FirstBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Page_Last {
+            get {
+                object obj = ResourceManager.GetObject("Page_Last", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Page_LastBlack {
+            get {
+                object obj = ResourceManager.GetObject("Page_LastBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Page_Next {
+            get {
+                object obj = ResourceManager.GetObject("Page_Next", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Page_NextBlack {
+            get {
+                object obj = ResourceManager.GetObject("Page_NextBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Page_Prev {
+            get {
+                object obj = ResourceManager.GetObject("Page_Prev", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Page_PrevBlack {
+            get {
+                object obj = ResourceManager.GetObject("Page_PrevBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ToolStrip_BG {
             get {
                 object obj = ResourceManager.GetObject("ToolStrip_BG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ToolStrip_BG1 {
+            get {
+                object obj = ResourceManager.GetObject("ToolStrip_BG1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -165,6 +228,34 @@ namespace VipSoft.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap 修改 {
+            get {
+                object obj = ResourceManager.GetObject("修改", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap 删除 {
+            get {
+                object obj = ResourceManager.GetObject("删除", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap 批量数据导入 {
+            get {
+                object obj = ResourceManager.GetObject("批量数据导入", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap 新增 {
+            get {
+                object obj = ResourceManager.GetObject("新增", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap 登录界面3 {
             get {
                 object obj = ResourceManager.GetObject("登录界面3", resourceCulture);
@@ -175,6 +266,13 @@ namespace VipSoft.Properties {
         internal static System.Drawing.Bitmap 系统导航 {
             get {
                 object obj = ResourceManager.GetObject("系统导航", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap 退出 {
+            get {
+                object obj = ResourceManager.GetObject("退出", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
