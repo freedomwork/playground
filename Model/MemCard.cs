@@ -33,6 +33,7 @@ namespace VipSoft.Model
 		private decimal? _paymoney;
 		private string _remark;
 		private int? _cardtypeid;
+        private DateTime? _createtime;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -217,6 +218,14 @@ namespace VipSoft.Model
 			set{ _cardtypeid=value;}
 			get{return _cardtypeid;}
 		}
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime? CreateTime
+        {
+            get { return _createtime; }
+            set { _createtime = value; }
+        }
 		#endregion Model
 
 	}
