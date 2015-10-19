@@ -69,6 +69,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Member\memRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\memRegister.Designer.cs">
+      <DependentUpon>memRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\PanelButton.resx">
       <DependentUpon>PanelButton.cs</DependentUpon>
