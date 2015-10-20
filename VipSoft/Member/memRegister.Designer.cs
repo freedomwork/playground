@@ -29,35 +29,36 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.memberPhoto1 = new VipSoft.Controls.MemberPhoto();
             this.label18 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Remark = new System.Windows.Forms.RichTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.CardTypeID = new System.Windows.Forms.ComboBox();
+            this.IsPointAuto = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.Point = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.Money = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.createtime = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PayMoney = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.State = new System.Windows.Forms.ComboBox();
+            this.Name = new System.Windows.Forms.TextBox();
+            this.PastTime = new System.Windows.Forms.DateTimePicker();
+            this.IsPast = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.LevelID = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Password2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Mobile = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -67,15 +68,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Sex = new System.Windows.Forms.ComboBox();
             this.myTabControl1 = new YiJiaSoft.Controls.MyTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.memberPhoto1 = new VipSoft.Controls.MemberPhoto();
+            this.alButton1 = new AlSkin.AlControl.AlButton();
+            this.alButton2 = new AlSkin.AlControl.AlButton();
             this.groupBox1.SuspendLayout();
             this.myTabControl1.SuspendLayout();
             this.SuspendLayout();
@@ -85,34 +85,34 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.memberPhoto1);
             this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.Remark);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.CardTypeID);
+            this.groupBox1.Controls.Add(this.IsPointAuto);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.Point);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.Money);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.createtime);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.Email);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.PayMoney);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.State);
+            this.groupBox1.Controls.Add(this.Name);
+            this.groupBox1.Controls.Add(this.PastTime);
+            this.groupBox1.Controls.Add(this.IsPast);
             this.groupBox1.Controls.Add(this.linkLabel1);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.LevelID);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.Password2);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.Password);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.Mobile);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -122,14 +122,26 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.Sex);
             this.groupBox1.Location = new System.Drawing.Point(13, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(686, 393);
+            this.groupBox1.Size = new System.Drawing.Size(631, 393);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "会员注册";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // memberPhoto1
+            // 
+            this.memberPhoto1.BackColor = System.Drawing.Color.Transparent;
+            this.memberPhoto1.Location = new System.Drawing.Point(457, 88);
+            this.memberPhoto1.Margin = new System.Windows.Forms.Padding(0);
+            this.memberPhoto1.Name = "memberPhoto1";
+            this.memberPhoto1.PhotoHeight = 150;
+            this.memberPhoto1.PhotoPath = "";
+            this.memberPhoto1.PhotoWidth = 150;
+            this.memberPhoto1.Size = new System.Drawing.Size(152, 153);
+            this.memberPhoto1.TabIndex = 40;
             // 
             // label18
             // 
@@ -140,13 +152,13 @@
             this.label18.TabIndex = 39;
             this.label18.Text = "备注：";
             // 
-            // richTextBox1
+            // Remark
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(81, 337);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(573, 45);
-            this.richTextBox1.TabIndex = 38;
-            this.richTextBox1.Text = "";
+            this.Remark.Location = new System.Drawing.Point(81, 337);
+            this.Remark.Name = "Remark";
+            this.Remark.Size = new System.Drawing.Size(540, 45);
+            this.Remark.TabIndex = 38;
+            this.Remark.Text = "";
             // 
             // label17
             // 
@@ -157,23 +169,23 @@
             this.label17.TabIndex = 37;
             this.label17.Text = "卡类型：";
             // 
-            // comboBox4
+            // CardTypeID
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(462, 28);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(113, 20);
-            this.comboBox4.TabIndex = 36;
+            this.CardTypeID.FormattingEnabled = true;
+            this.CardTypeID.Location = new System.Drawing.Point(462, 28);
+            this.CardTypeID.Name = "CardTypeID";
+            this.CardTypeID.Size = new System.Drawing.Size(113, 20);
+            this.CardTypeID.TabIndex = 36;
             // 
-            // checkBox2
+            // IsPointAuto
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(414, 302);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(120, 16);
-            this.checkBox2.TabIndex = 35;
-            this.checkBox2.Text = "积分自动转换等级";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.IsPointAuto.AutoSize = true;
+            this.IsPointAuto.Location = new System.Drawing.Point(414, 302);
+            this.IsPointAuto.Name = "IsPointAuto";
+            this.IsPointAuto.Size = new System.Drawing.Size(120, 16);
+            this.IsPointAuto.TabIndex = 35;
+            this.IsPointAuto.Text = "积分自动转换等级";
+            this.IsPointAuto.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
@@ -184,12 +196,12 @@
             this.label16.TabIndex = 34;
             this.label16.Text = "积分数量：";
             // 
-            // textBox8
+            // Point
             // 
-            this.textBox8.Location = new System.Drawing.Point(291, 300);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(113, 21);
-            this.textBox8.TabIndex = 33;
+            this.Point.Location = new System.Drawing.Point(291, 300);
+            this.Point.Name = "Point";
+            this.Point.Size = new System.Drawing.Size(113, 21);
+            this.Point.TabIndex = 33;
             // 
             // label15
             // 
@@ -200,27 +212,27 @@
             this.label15.TabIndex = 32;
             this.label15.Text = "卡片余额：";
             // 
-            // textBox7
+            // Money
             // 
-            this.textBox7.Location = new System.Drawing.Point(81, 300);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(113, 21);
-            this.textBox7.TabIndex = 31;
+            this.Money.Location = new System.Drawing.Point(81, 300);
+            this.Money.Name = "Money";
+            this.Money.Size = new System.Drawing.Size(113, 21);
+            this.Money.TabIndex = 31;
             // 
             // groupBox2
             // 
             this.groupBox2.Location = new System.Drawing.Point(14, 289);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(656, 1);
+            this.groupBox2.Size = new System.Drawing.Size(600, 1);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             // 
-            // dateTimePicker2
+            // createtime
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(81, 258);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(113, 21);
-            this.dateTimePicker2.TabIndex = 29;
+            this.createtime.Location = new System.Drawing.Point(81, 258);
+            this.createtime.Name = "createtime";
+            this.createtime.Size = new System.Drawing.Size(113, 21);
+            this.createtime.TabIndex = 29;
             // 
             // label14
             // 
@@ -231,12 +243,12 @@
             this.label14.TabIndex = 28;
             this.label14.Text = "开卡时间：";
             // 
-            // textBox6
+            // Email
             // 
-            this.textBox6.Location = new System.Drawing.Point(291, 258);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(113, 21);
-            this.textBox6.TabIndex = 27;
+            this.Email.Location = new System.Drawing.Point(291, 258);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(113, 21);
+            this.Email.TabIndex = 27;
             // 
             // label13
             // 
@@ -256,12 +268,12 @@
             this.label12.TabIndex = 25;
             this.label12.Text = "卡片付费：";
             // 
-            // textBox1
+            // PayMoney
             // 
-            this.textBox1.Location = new System.Drawing.Point(291, 224);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(113, 21);
-            this.textBox1.TabIndex = 24;
+            this.PayMoney.Location = new System.Drawing.Point(291, 224);
+            this.PayMoney.Name = "PayMoney";
+            this.PayMoney.Size = new System.Drawing.Size(113, 21);
+            this.PayMoney.TabIndex = 24;
             // 
             // label11
             // 
@@ -272,37 +284,37 @@
             this.label11.TabIndex = 23;
             this.label11.Text = "卡片状态：";
             // 
-            // comboBox3
+            // State
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(81, 224);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(113, 20);
-            this.comboBox3.TabIndex = 22;
+            this.State.FormattingEnabled = true;
+            this.State.Location = new System.Drawing.Point(81, 224);
+            this.State.Name = "State";
+            this.State.Size = new System.Drawing.Size(113, 20);
+            this.State.TabIndex = 22;
             // 
-            // textBox5
+            // Name
             // 
-            this.textBox5.Location = new System.Drawing.Point(81, 93);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(113, 21);
-            this.textBox5.TabIndex = 21;
+            this.Name.Location = new System.Drawing.Point(81, 93);
+            this.Name.Name = "Name";
+            this.Name.Size = new System.Drawing.Size(113, 21);
+            this.Name.TabIndex = 21;
             // 
-            // dateTimePicker1
+            // PastTime
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(291, 191);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(113, 21);
-            this.dateTimePicker1.TabIndex = 20;
+            this.PastTime.Location = new System.Drawing.Point(291, 191);
+            this.PastTime.Name = "PastTime";
+            this.PastTime.Size = new System.Drawing.Size(113, 21);
+            this.PastTime.TabIndex = 20;
             // 
-            // checkBox1
+            // IsPast
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(14, 196);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(246, 16);
-            this.checkBox1.TabIndex = 19;
-            this.checkBox1.Text = "设置卡片过期时间,(到期则此卡自动失效)";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.IsPast.AutoSize = true;
+            this.IsPast.Location = new System.Drawing.Point(14, 196);
+            this.IsPast.Name = "IsPast";
+            this.IsPast.Size = new System.Drawing.Size(246, 16);
+            this.IsPast.TabIndex = 19;
+            this.IsPast.Text = "设置卡片过期时间,(到期则此卡自动失效)";
+            this.IsPast.UseVisualStyleBackColor = true;
             // 
             // linkLabel1
             // 
@@ -314,13 +326,13 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "设置";
             // 
-            // comboBox2
+            // LevelID
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(291, 160);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(113, 20);
-            this.comboBox2.TabIndex = 17;
+            this.LevelID.FormattingEnabled = true;
+            this.LevelID.Location = new System.Drawing.Point(291, 160);
+            this.LevelID.Name = "LevelID";
+            this.LevelID.Size = new System.Drawing.Size(113, 20);
+            this.LevelID.TabIndex = 17;
             // 
             // label10
             // 
@@ -331,12 +343,12 @@
             this.label10.TabIndex = 16;
             this.label10.Text = "会员等级：";
             // 
-            // textBox4
+            // Password2
             // 
-            this.textBox4.Location = new System.Drawing.Point(291, 126);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(113, 21);
-            this.textBox4.TabIndex = 15;
+            this.Password2.Location = new System.Drawing.Point(291, 126);
+            this.Password2.Name = "Password2";
+            this.Password2.Size = new System.Drawing.Size(113, 21);
+            this.Password2.TabIndex = 15;
             // 
             // label9
             // 
@@ -347,12 +359,12 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "确认密码：";
             // 
-            // textBox3
+            // Password
             // 
-            this.textBox3.Location = new System.Drawing.Point(81, 126);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(113, 21);
-            this.textBox3.TabIndex = 13;
+            this.Password.Location = new System.Drawing.Point(81, 126);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(113, 21);
+            this.Password.TabIndex = 13;
             // 
             // label8
             // 
@@ -363,12 +375,12 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "卡片密码：";
             // 
-            // textBox2
+            // Mobile
             // 
-            this.textBox2.Location = new System.Drawing.Point(291, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(113, 21);
-            this.textBox2.TabIndex = 11;
+            this.Mobile.Location = new System.Drawing.Point(291, 93);
+            this.Mobile.Name = "Mobile";
+            this.Mobile.Size = new System.Drawing.Size(113, 21);
+            this.Mobile.TabIndex = 11;
             // 
             // label7
             // 
@@ -448,13 +460,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "会员性别：";
             // 
-            // comboBox1
+            // Sex
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(81, 160);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(113, 20);
-            this.comboBox1.TabIndex = 0;
+            this.Sex.FormattingEnabled = true;
+            this.Sex.Location = new System.Drawing.Point(81, 160);
+            this.Sex.Name = "Sex";
+            this.Sex.Size = new System.Drawing.Size(113, 20);
+            this.Sex.TabIndex = 0;
             // 
             // myTabControl1
             // 
@@ -467,7 +479,7 @@
             this.myTabControl1.Padding = new System.Drawing.Point(9, 0);
             this.myTabControl1.PageBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(185)))));
             this.myTabControl1.SelectedIndex = 0;
-            this.myTabControl1.Size = new System.Drawing.Size(686, 100);
+            this.myTabControl1.Size = new System.Drawing.Size(632, 100);
             this.myTabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -475,7 +487,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(678, 72);
+            this.tabPage1.Size = new System.Drawing.Size(624, 72);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "会员扩展属性(选填)";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -499,24 +511,6 @@
             this.tabPage3.Text = "到期提醒";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(276, 572);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "保存(F5)";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(375, 572);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "关闭(Esc)";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
@@ -527,35 +521,41 @@
             this.checkBox3.Text = "保存后继续添加";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
-            // memberPhoto1
+            // alButton1
             // 
-            this.memberPhoto1.BackColor = System.Drawing.Color.Transparent;
-            this.memberPhoto1.Location = new System.Drawing.Point(457, 88);
-            this.memberPhoto1.Margin = new System.Windows.Forms.Padding(0);
-            this.memberPhoto1.Name = "memberPhoto1";
-            this.memberPhoto1.PhotoHeight = 150;
-            this.memberPhoto1.PhotoPath = "";
-            this.memberPhoto1.PhotoWidth = 150;
-            this.memberPhoto1.Size = new System.Drawing.Size(152, 153);
-            this.memberPhoto1.TabIndex = 40;
+            this.alButton1.Location = new System.Drawing.Point(241, 568);
+            this.alButton1.Name = "alButton1";
+            this.alButton1.Size = new System.Drawing.Size(75, 23);
+            this.alButton1.TabIndex = 41;
+            this.alButton1.Text = "保存(F5)";
+            this.alButton1.UseVisualStyleBackColor = true;
+            // 
+            // alButton2
+            // 
+            this.alButton2.Location = new System.Drawing.Point(355, 568);
+            this.alButton2.Name = "alButton2";
+            this.alButton2.Size = new System.Drawing.Size(75, 23);
+            this.alButton2.TabIndex = 42;
+            this.alButton2.Text = "关闭(Esc)";
+            this.alButton2.UseVisualStyleBackColor = true;
             // 
             // memRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 607);
+            this.ClientSize = new System.Drawing.Size(656, 607);
+            this.Controls.Add(this.alButton2);
+            this.Controls.Add(this.alButton1);
             this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.myTabControl1);
             this.Name = "memRegister";
             this.Text = "会员注册";
             this.Controls.SetChildIndex(this.myTabControl1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.checkBox3, 0);
+            this.Controls.SetChildIndex(this.alButton1, 0);
+            this.Controls.SetChildIndex(this.alButton2, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.myTabControl1.ResumeLayout(false);
@@ -568,51 +568,51 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Sex;
         private System.Windows.Forms.TextBox cardmianid;
         private System.Windows.Forms.TextBox cardid;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Mobile;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Password2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox LevelID;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox Name;
+        private System.Windows.Forms.DateTimePicker PastTime;
+        private System.Windows.Forms.CheckBox IsPast;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox State;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox PayMoney;
+        private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker createtime;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox Money;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox Point;
+        private System.Windows.Forms.CheckBox IsPointAuto;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox CardTypeID;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox Remark;
         private YiJiaSoft.Controls.MyTabControl myTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox checkBox3;
         private Controls.MemberPhoto memberPhoto1;
+        private AlSkin.AlControl.AlButton alButton1;
+        private AlSkin.AlControl.AlButton alButton2;
     }
 }
