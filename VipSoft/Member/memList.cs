@@ -29,5 +29,15 @@ namespace VipSoft.Member
         {
 
         }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
