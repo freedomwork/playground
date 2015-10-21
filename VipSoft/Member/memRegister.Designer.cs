@@ -550,7 +550,6 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.myTabControl1);
-            this.Name = "memRegister";
             this.Text = "会员注册";
             this.Controls.SetChildIndex(this.myTabControl1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
