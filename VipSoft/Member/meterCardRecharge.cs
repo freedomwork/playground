@@ -8,14 +8,19 @@ using System.Windows.Forms;
 
 namespace VipSoft.Member
 {
-    public partial class prepaidCardRecharge : BaseForm
+    public partial class meterCardRecharge : BaseForm
     {
-        public prepaidCardRecharge()
+        public meterCardRecharge()
         {
             InitializeComponent();
         }
 
-        private void prepaidCardRecharge_Load(object sender, EventArgs e)
+        private void meterCardRecharge_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }
