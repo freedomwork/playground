@@ -497,7 +497,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(678, 72);
+            this.tabPage2.Size = new System.Drawing.Size(624, 72);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "计次卡信息";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -506,7 +506,7 @@
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(678, 72);
+            this.tabPage3.Size = new System.Drawing.Size(624, 72);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "到期提醒";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -529,6 +529,7 @@
             this.alButton1.TabIndex = 41;
             this.alButton1.Text = "保存(F5)";
             this.alButton1.UseVisualStyleBackColor = true;
+            this.alButton1.Click += new System.EventHandler(this.alButton1_Click);
             // 
             // alButton2
             // 
@@ -549,6 +550,7 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.myTabControl1);
+            this.Name = "memRegister";
             this.Text = "会员注册";
             this.Controls.SetChildIndex(this.myTabControl1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
