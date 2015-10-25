@@ -18,6 +18,25 @@ namespace VipSoft.Model
 		private DateTime? _createdatetime;
 		private int? _shopid;
 		private string _shopname;
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="master"></param>
+        /// <param name="area"></param>
+        /// <param name="detail"></param>
+        /// <param name="createdatetime"></param>
+        /// <param name="shopid"></param>
+        /// <param name="shopname"></param>
+        public SysLog(VipSoft.Model.Master master,string area,string detail,DateTime createdatetime)
+        {
+            _masteraccount = master.Account;
+            _mastername = master.Name;
+            _area = area;
+            _detail = detail;
+            _createdatetime = createdatetime;
+            _shopid = master.ShopID;
+            _shopname = master.ShopName;
+        }
 		/// <summary>
 		/// 
 		/// </summary>
