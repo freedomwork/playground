@@ -181,7 +181,7 @@
             this.myTabControl.Controls.Add(this.tabPage2);
             this.myTabControl.Controls.Add(this.tabPage3);
             this.myTabControl.ItemSize = new System.Drawing.Size(0, 20);
-            this.myTabControl.Location = new System.Drawing.Point(-22, 26);
+            this.myTabControl.Location = new System.Drawing.Point(-23, 26);
             this.myTabControl.Multiline = true;
             this.myTabControl.Name = "myTabControl";
             this.myTabControl.SelectedIndex = 0;
@@ -274,6 +274,7 @@
             this.panelButton_Member_DataInput.Size = new System.Drawing.Size(245, 60);
             this.panelButton_Member_DataInput.TabIndex = 3;
             this.panelButton_Member_DataInput.Title = "会员资料录入";
+            this.panelButton_Member_DataInput.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
             // 
             // panelButton_Member_Recharge
             // 
@@ -286,6 +287,7 @@
             this.panelButton_Member_Recharge.Size = new System.Drawing.Size(245, 60);
             this.panelButton_Member_Recharge.TabIndex = 2;
             this.panelButton_Member_Recharge.Title = "会员充值";
+            this.panelButton_Member_Recharge.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
             // 
             // panelButton_Member_List
             // 
@@ -297,6 +299,7 @@
             this.panelButton_Member_List.Size = new System.Drawing.Size(245, 60);
             this.panelButton_Member_List.TabIndex = 1;
             this.panelButton_Member_List.Title = "会员列表";
+            this.panelButton_Member_List.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
             // 
             // panelButton_Member_Add
             // 
@@ -309,6 +312,7 @@
             this.panelButton_Member_Add.Size = new System.Drawing.Size(245, 60);
             this.panelButton_Member_Add.TabIndex = 0;
             this.panelButton_Member_Add.Title = "添加会员";
+            this.panelButton_Member_Add.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
             // 
             // tabPage3
             // 

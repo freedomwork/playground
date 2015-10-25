@@ -31,7 +31,14 @@ namespace VipSoft
         {
             switch (senderName)
             {
+                    //会员登记
                 case "panelButton_Member_Add":
+                    break;
+                case "panelButton_Member_List":
+                    break;
+                case "panelButton_Member_Recharge":
+                    break;
+                case "panelButton_Member_DataInput":
                     break;
                 case "panelButton_Goods_Add":
                     GoodsPutIn goodsPutIn = new GoodsPutIn();
