@@ -62,6 +62,12 @@
     <Compile Include="Controls\PanelButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Goods\Dictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goods\Dictionary.designer.cs">
+      <DependentUpon>Dictionary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Goods\GoodsList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <EmbeddedResource Include="Controls\PanelButton.resx">
       <DependentUpon>PanelButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Goods\Dictionary.resx">
+      <DependentUpon>Dictionary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Goods\GoodsList.resx">
       <DependentUpon>GoodsList.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +164,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
+      <Name>Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Controls\Controls.csproj">
       <Project>{74778122-08A8-48F0-BCAA-79B81F7CC117}</Project>
