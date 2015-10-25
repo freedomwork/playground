@@ -31,6 +31,16 @@ namespace VipSoft.BLL
 			return dal.Exists(ID);
 		}
 
+        /// <summary>
+        /// 检测该分类下是否存在商品
+        /// </summary>
+        public bool ExistGoods(int ID)
+        {
+            if (dal.Exist(ID))
+                return true;
+            return false;
+        }
+
 		/// <summary>
 		/// 增加一条数据
 		/// </summary>
