@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new YiJiaSoft.Controls.MyGroupBox();
             this.rdoPoint = new System.Windows.Forms.RadioButton();
             this.rdoIsPoint = new System.Windows.Forms.RadioButton();
@@ -66,6 +67,11 @@
             this.checkBox_save = new System.Windows.Forms.CheckBox();
             this.button2 = new AlSkin.AlControl.AlButton();
             this.button_Save = new AlSkin.AlControl.AlButton();
+            this.toolTip_Number = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip_Point = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip_Percent = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip_IsPoint = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip_GoodsType = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage_customField.SuspendLayout();
@@ -134,6 +140,7 @@
             this.rdoIsPoint.TabStop = true;
             this.rdoIsPoint.Text = "按会员等级积分";
             this.rdoIsPoint.UseVisualStyleBackColor = true;
+            this.rdoIsPoint.CheckedChanged += new System.EventHandler(this.rdoIsPoint_CheckedChanged);
             // 
             // myMoneyTextBox1
             // 
@@ -163,6 +170,7 @@
             this.linkLabel_GoodsUnitSet.TabIndex = 7;
             this.linkLabel_GoodsUnitSet.TabStop = true;
             this.linkLabel_GoodsUnitSet.Text = "设置";
+            this.linkLabel_GoodsUnitSet.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_GoodsUnitSet_LinkClicked);
             // 
             // textBox_NameCode
             // 
@@ -220,6 +228,7 @@
             this.linkLabel_Percent.TabIndex = 14;
             this.linkLabel_Percent.TabStop = true;
             this.linkLabel_Percent.Text = "帮助";
+            this.linkLabel_Percent.Click += new System.EventHandler(this.linkLabel_Help_Click);
             // 
             // linkLabel_GoodsType
             // 
@@ -230,6 +239,7 @@
             this.linkLabel_GoodsType.TabIndex = 18;
             this.linkLabel_GoodsType.TabStop = true;
             this.linkLabel_GoodsType.Text = "帮助";
+            this.linkLabel_GoodsType.Click += new System.EventHandler(this.linkLabel_Help_Click);
             // 
             // checkBox_AutoCode
             // 
@@ -240,6 +250,7 @@
             this.checkBox_AutoCode.TabIndex = 1;
             this.checkBox_AutoCode.Text = "系统自动创建编号";
             this.checkBox_AutoCode.UseVisualStyleBackColor = true;
+            this.checkBox_AutoCode.CheckedChanged += new System.EventHandler(this.checkBox_AutoCode_CheckedChanged);
             // 
             // comboBox_Unit
             // 
@@ -259,6 +270,7 @@
             this.linkLabel_Point.TabIndex = 11;
             this.linkLabel_Point.TabStop = true;
             this.linkLabel_Point.Text = "帮助";
+            this.linkLabel_Point.Click += new System.EventHandler(this.linkLabel_Help_Click);
             // 
             // linkLabel_Number
             // 
@@ -270,6 +282,7 @@
             this.linkLabel_Number.TabStop = true;
             this.linkLabel_Number.Tag = "";
             this.linkLabel_Number.Text = "帮助";
+            this.linkLabel_Number.Click += new System.EventHandler(this.linkLabel_Help_Click);
             // 
             // checkBox_GoodsType
             // 
@@ -280,6 +293,7 @@
             this.checkBox_GoodsType.TabIndex = 17;
             this.checkBox_GoodsType.Text = "此产品为服务类产品";
             this.checkBox_GoodsType.UseVisualStyleBackColor = true;
+            this.checkBox_GoodsType.CheckedChanged += new System.EventHandler(this.checkBox_GoodsType_CheckedChanged);
             // 
             // linkLabel_Class
             // 
@@ -290,6 +304,7 @@
             this.linkLabel_Class.TabIndex = 5;
             this.linkLabel_Class.TabStop = true;
             this.linkLabel_Class.Text = "分类管理";
+            this.linkLabel_Class.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Class_LinkClicked);
             // 
             // comboBox_Class
             // 
@@ -379,6 +394,7 @@
             this.textBox_GoodsName.Name = "textBox_GoodsName";
             this.textBox_GoodsName.Size = new System.Drawing.Size(200, 21);
             this.textBox_GoodsName.TabIndex = 2;
+            this.textBox_GoodsName.TextChanged += new System.EventHandler(this.textBox_GoodsName_TextChanged);
             // 
             // label2
             // 
@@ -469,6 +485,47 @@
             this.button_Save.TabIndex = 24;
             this.button_Save.Text = "保存(F5)";
             this.button_Save.UseVisualStyleBackColor = false;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
+            // toolTip_Number
+            // 
+            this.toolTip_Number.AutoPopDelay = 20000;
+            this.toolTip_Number.InitialDelay = 500;
+            this.toolTip_Number.ReshowDelay = 100;
+            this.toolTip_Number.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip_Number.ToolTipTitle = "帮助提示";
+            // 
+            // toolTip_Point
+            // 
+            this.toolTip_Point.AutoPopDelay = 20000;
+            this.toolTip_Point.InitialDelay = 500;
+            this.toolTip_Point.ReshowDelay = 100;
+            this.toolTip_Point.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip_Point.ToolTipTitle = "帮助提示";
+            // 
+            // toolTip_Percent
+            // 
+            this.toolTip_Percent.AutoPopDelay = 20000;
+            this.toolTip_Percent.InitialDelay = 500;
+            this.toolTip_Percent.ReshowDelay = 100;
+            this.toolTip_Percent.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip_Percent.ToolTipTitle = "帮助提示";
+            // 
+            // toolTip_IsPoint
+            // 
+            this.toolTip_IsPoint.AutoPopDelay = 20000;
+            this.toolTip_IsPoint.InitialDelay = 500;
+            this.toolTip_IsPoint.ReshowDelay = 100;
+            this.toolTip_IsPoint.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip_IsPoint.ToolTipTitle = "帮助提示";
+            // 
+            // toolTip_GoodsType
+            // 
+            this.toolTip_GoodsType.AutoPopDelay = 20000;
+            this.toolTip_GoodsType.InitialDelay = 500;
+            this.toolTip_GoodsType.ReshowDelay = 100;
+            this.toolTip_GoodsType.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip_GoodsType.ToolTipTitle = "帮助提示";
             // 
             // GoodsPutIn
             // 
@@ -487,6 +544,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "新增商品";
+            this.Load += new System.EventHandler(this.GoodsPutIn_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.tabControl1, 0);
             this.Controls.SetChildIndex(this.button_Save, 0);
@@ -541,5 +599,10 @@
         private System.Windows.Forms.CheckBox checkBox_save;
         private AlSkin.AlControl.AlButton button2;
         private AlSkin.AlControl.AlButton button_Save;
+        private System.Windows.Forms.ToolTip toolTip_Number;
+        private System.Windows.Forms.ToolTip toolTip_Point;
+        private System.Windows.Forms.ToolTip toolTip_Percent;
+        private System.Windows.Forms.ToolTip toolTip_IsPoint;
+        private System.Windows.Forms.ToolTip toolTip_GoodsType;
     }
 }
