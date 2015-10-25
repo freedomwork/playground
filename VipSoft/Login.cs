@@ -38,6 +38,8 @@ namespace VipSoft
                 return;
             }
 
+            PublicState.Master = modelMaster;
+
             this.Hide();
             Main mainForm = new Main();
             mainForm.ShowDialog();
