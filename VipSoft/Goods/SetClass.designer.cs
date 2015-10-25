@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox2 = new YiJiaSoft.Controls.MyGroupBox();
             this.treeView_Class = new System.Windows.Forms.TreeView();
             this.groupBox_manage = new YiJiaSoft.Controls.MyGroupBox();
+            this.label_ParentID = new System.Windows.Forms.Label();
+            this.label_ID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_ClassName = new System.Windows.Forms.TextBox();
@@ -39,8 +42,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button_Close = new AlSkin.AlControl.AlButton();
             this.button_Add = new AlSkin.AlControl.AlButton();
+            this.contextMenuStrip_Right = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem_Edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_Delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_Add = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             this.groupBox_manage.SuspendLayout();
+            this.contextMenuStrip_Right.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -63,11 +71,14 @@
             this.treeView_Class.Name = "treeView_Class";
             this.treeView_Class.Size = new System.Drawing.Size(194, 222);
             this.treeView_Class.TabIndex = 0;
+            this.treeView_Class.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_Class_NodeMouseClick);
             // 
             // groupBox_manage
             // 
             this.groupBox_manage.BackColor = System.Drawing.Color.Transparent;
             this.groupBox_manage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(185)))));
+            this.groupBox_manage.Controls.Add(this.label_ParentID);
+            this.groupBox_manage.Controls.Add(this.label_ID);
             this.groupBox_manage.Controls.Add(this.label4);
             this.groupBox_manage.Controls.Add(this.label3);
             this.groupBox_manage.Controls.Add(this.textBox_ClassName);
@@ -82,6 +93,26 @@
             this.groupBox_manage.TabIndex = 10;
             this.groupBox_manage.TabStop = false;
             this.groupBox_manage.Text = "新增/修改分类";
+            // 
+            // label_ParentID
+            // 
+            this.label_ParentID.AutoSize = true;
+            this.label_ParentID.Location = new System.Drawing.Point(84, 135);
+            this.label_ParentID.Name = "label_ParentID";
+            this.label_ParentID.Size = new System.Drawing.Size(89, 12);
+            this.label_ParentID.TabIndex = 10;
+            this.label_ParentID.Text = "label_ParentID";
+            this.label_ParentID.Visible = false;
+            // 
+            // label_ID
+            // 
+            this.label_ID.AutoSize = true;
+            this.label_ID.Location = new System.Drawing.Point(28, 135);
+            this.label_ID.Name = "label_ID";
+            this.label_ID.Size = new System.Drawing.Size(53, 12);
+            this.label_ID.TabIndex = 9;
+            this.label_ID.Text = "label_ID";
+            this.label_ID.Visible = false;
             // 
             // label4
             // 
@@ -148,6 +179,7 @@
             this.button_Close.TabIndex = 5;
             this.button_Close.Text = "关闭(Esc)";
             this.button_Close.UseVisualStyleBackColor = false;
+            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
             // 
             // button_Add
             // 
@@ -159,6 +191,38 @@
             this.button_Add.TabIndex = 4;
             this.button_Add.Text = "增加分类";
             this.button_Add.UseVisualStyleBackColor = false;
+            this.button_Add.Click += new System.EventHandler(this.button_Add_Click);
+            // 
+            // contextMenuStrip_Right
+            // 
+            this.contextMenuStrip_Right.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.contextMenuStrip_Right.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_Edit,
+            this.toolStripMenuItem_Delete,
+            this.toolStripMenuItem_Add});
+            this.contextMenuStrip_Right.Name = "contextMenuStrip_Right";
+            this.contextMenuStrip_Right.Size = new System.Drawing.Size(147, 70);
+            // 
+            // toolStripMenuItem_Edit
+            // 
+            this.toolStripMenuItem_Edit.Name = "toolStripMenuItem_Edit";
+            this.toolStripMenuItem_Edit.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem_Edit.Text = "修改此分类";
+            this.toolStripMenuItem_Edit.Click += new System.EventHandler(this.toolStripMenuItem_Item_Click);
+            // 
+            // toolStripMenuItem_Delete
+            // 
+            this.toolStripMenuItem_Delete.Name = "toolStripMenuItem_Delete";
+            this.toolStripMenuItem_Delete.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem_Delete.Text = "删除此分类";
+            this.toolStripMenuItem_Delete.Click += new System.EventHandler(this.toolStripMenuItem_Item_Click);
+            // 
+            // toolStripMenuItem_Add
+            // 
+            this.toolStripMenuItem_Add.Name = "toolStripMenuItem_Add";
+            this.toolStripMenuItem_Add.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem_Add.Text = "增加下级分类";
+            this.toolStripMenuItem_Add.Click += new System.EventHandler(this.toolStripMenuItem_Item_Click);
             // 
             // SetClass
             // 
@@ -174,11 +238,13 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "产品分类设置";
+            this.Load += new System.EventHandler(this.SetClass_Load);
             this.Controls.SetChildIndex(this.groupBox_manage, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.groupBox2.ResumeLayout(false);
             this.groupBox_manage.ResumeLayout(false);
             this.groupBox_manage.PerformLayout();
+            this.contextMenuStrip_Right.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -196,5 +262,11 @@
         private System.Windows.Forms.Label label1;
         private AlSkin.AlControl.AlButton button_Close;
         private AlSkin.AlControl.AlButton button_Add;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_Right;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Edit;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Delete;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Add;
+        private System.Windows.Forms.Label label_ParentID;
+        private System.Windows.Forms.Label label_ID;
     }
 }
