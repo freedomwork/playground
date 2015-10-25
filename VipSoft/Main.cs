@@ -33,6 +33,16 @@ namespace VipSoft
             {
                 case "panelButton_Member_Add":
                     break;
+                case "panelButton_Goods_Add":
+                    GoodsPutIn goodsPutIn = new GoodsPutIn();
+                    goodsPutIn.ShowDialog();
+                    break;
+                case "panelButton_Goods_List":
+                    break;
+                case "panelButton_Goods_DataInput":
+                    break;
+                case "panelButton_stockAdd":
+                    break;
                 default:
                     break;
             }

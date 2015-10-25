@@ -181,7 +181,7 @@
             this.myTabControl.Controls.Add(this.tabPage2);
             this.myTabControl.Controls.Add(this.tabPage3);
             this.myTabControl.ItemSize = new System.Drawing.Size(0, 20);
-            this.myTabControl.Location = new System.Drawing.Point(-23, 26);
+            this.myTabControl.Location = new System.Drawing.Point(-22, 26);
             this.myTabControl.Multiline = true;
             this.myTabControl.Name = "myTabControl";
             this.myTabControl.SelectedIndex = 0;
