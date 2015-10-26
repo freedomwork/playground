@@ -83,6 +83,18 @@
     <Compile Include="Goods\SetClass.cs">
       <SubType>Form</SubType>
     </Compile>
+	<Compile Include="Member\memList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+	<Compile Include="Member\memRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+	<Compile Include="Member\meterCardRecharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+	<Compile Include="Member\prepaidCardRecharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Goods\SetClass.Designer.cs">
       <DependentUpon>SetClass.cs</DependentUpon>
     </Compile>
