@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(memList));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.alButton2 = new AlSkin.AlControl.AlButton();
             this.alButton1 = new AlSkin.AlControl.AlButton();
@@ -53,6 +52,7 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.myTabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -66,7 +66,7 @@
             this.groupBox1.Controls.Add(this.alButton1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 73);
+            this.groupBox1.Location = new System.Drawing.Point(12, 80);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(880, 59);
             this.groupBox1.TabIndex = 4;
@@ -112,7 +112,7 @@
             this.myTabControl1.Controls.Add(this.tabPage1);
             this.myTabControl1.Controls.Add(this.tabPage2);
             this.myTabControl1.ItemSize = new System.Drawing.Size(0, 20);
-            this.myTabControl1.Location = new System.Drawing.Point(12, 138);
+            this.myTabControl1.Location = new System.Drawing.Point(12, 145);
             this.myTabControl1.Name = "myTabControl1";
             this.myTabControl1.Padding = new System.Drawing.Point(9, 0);
             this.myTabControl1.PageBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(185)))));
@@ -154,7 +154,7 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(199, 138);
+            this.dataGridView1.Location = new System.Drawing.Point(199, 156);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(693, 347);
@@ -226,9 +226,10 @@
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton1.Image = global::VipSoft.Properties.Resources.新增;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(37, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(64, 22);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
@@ -240,10 +241,11 @@
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Image = global::VipSoft.Properties.Resources.修改;
+            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(37, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(64, 22);
             this.toolStripButton2.Text = "toolStripButton2";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -254,17 +256,31 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.BackgroundImage = global::VipSoft.Properties.Resources.ToolStrip_BG;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(33, 16);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripSeparator1,
             this.toolStripButton2,
-            this.toolStripSeparator2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStripSeparator2,
+            this.toolStripButton3});
+            this.toolStrip1.Location = new System.Drawing.Point(16, 39);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(904, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(876, 32);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = global::VipSoft.Properties.Resources.删除;
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(64, 22);
+            this.toolStripButton3.Text = "toolStripButton3";
             // 
             // memList
             // 
@@ -291,7 +307,6 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -321,6 +336,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
 
     }
 }
