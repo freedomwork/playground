@@ -553,10 +553,12 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.myTabControl1);
+            //this.Name = "memRegister";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "会员注册";
+            this.Load += new System.EventHandler(this.memRegister_Load);
             this.Controls.SetChildIndex(this.myTabControl1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.checkBox3, 0);
