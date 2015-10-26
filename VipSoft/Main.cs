@@ -45,14 +45,20 @@ namespace VipSoft
                     pRecharge.ShowDialog();
                     break;
                 case "panelButton_Member_DataInput":
+                    DataInput dmInput = new DataInput();
+                    dmInput.ShowDialog();
                     break;
                 case "panelButton_Goods_Add":
                     GoodsPutIn goodsPutIn = new GoodsPutIn();
                     goodsPutIn.ShowDialog();
                     break;
                 case "panelButton_Goods_List":
+                    GoodsList gList = new GoodsList();
+                    gList.ShowDialog();
                     break;
                 case "panelButton_Goods_DataInput":
+                    DataInput dgInput = new DataInput();
+                    dgInput.ShowDialog();
                     break;
                 case "panelButton_stockAdd":
                     break;
@@ -71,10 +77,14 @@ namespace VipSoft
                     setClass.ShowDialog();
                     break;
                 case "alButton_Shortcut_GoodsReport":
+                    GoodsList gList = new GoodsList();
+                    gList.ShowDialog();
                     break;
                 case "alButton_cancle":
                     break;
                 case "alButton_CaiSearch":
+                    ReportStock rStock = new ReportStock();
+                    rStock.ShowDialog();
                     break;
                 default:
                     break;

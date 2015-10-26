@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GoodsList));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_Add = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_Edit = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_Delete = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_DataInput = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_Close = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new YiJiaSoft.Controls.MyGroupBox();
             this.alButton_excle = new AlSkin.AlControl.AlButton();
             this.button_Select = new AlSkin.AlControl.AlButton();
@@ -70,7 +71,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.query_Name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button_Reset = new AlSkin.AlControl.AlButton();
             this.button_Query = new AlSkin.AlControl.AlButton();
             this.dataGridView_List = new System.Windows.Forms.DataGridView();
             this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -88,6 +88,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lbl_TotalNum = new System.Windows.Forms.Label();
             this.lbl_znum = new System.Windows.Forms.Label();
+            this.contextMenuStrip_CellRight = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ToolStripMenuItem_Edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -95,6 +98,7 @@
             this.tabPage_Select.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).BeginInit();
             this.alpanel1.SuspendLayout();
+            this.contextMenuStrip_CellRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -103,90 +107,95 @@
             this.toolStrip1.BackgroundImage = global::VipSoft.Properties.Resources.ToolStrip_BG;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.toolStripButton_Add,
             this.toolStripSeparator1,
-            this.toolStripButton2,
+            this.toolStripButton_Edit,
             this.toolStripSeparator2,
-            this.toolStripButton3,
+            this.toolStripButton_Delete,
             this.toolStripSeparator3,
-            this.toolStripButton4,
+            this.toolStripButton_DataInput,
             this.toolStripSeparator4,
-            this.toolStripButton5});
+            this.toolStripButton_Close});
             this.toolStrip1.Location = new System.Drawing.Point(9, 42);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(864, 32);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // toolStripButton_Add
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::VipSoft.Properties.Resources.新增;
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(64, 29);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton_Add.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_Add.Image = global::VipSoft.Properties.Resources.新增;
+            this.toolStripButton_Add.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Add.Name = "toolStripButton_Add";
+            this.toolStripButton_Add.Size = new System.Drawing.Size(64, 29);
+            this.toolStripButton_Add.Text = "toolStripButton1";
+            this.toolStripButton_Add.Click += new System.EventHandler(this.toolStripButton_Item_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
             // 
-            // toolStripButton2
+            // toolStripButton_Edit
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::VipSoft.Properties.Resources.修改;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(64, 29);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton_Edit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_Edit.Image = global::VipSoft.Properties.Resources.修改;
+            this.toolStripButton_Edit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_Edit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Edit.Name = "toolStripButton_Edit";
+            this.toolStripButton_Edit.Size = new System.Drawing.Size(64, 29);
+            this.toolStripButton_Edit.Text = "toolStripButton2";
+            this.toolStripButton_Edit.Click += new System.EventHandler(this.toolStripButton_Item_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
             // 
-            // toolStripButton3
+            // toolStripButton_Delete
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::VipSoft.Properties.Resources.删除;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(64, 29);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton_Delete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_Delete.Image = global::VipSoft.Properties.Resources.删除;
+            this.toolStripButton_Delete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Delete.Name = "toolStripButton_Delete";
+            this.toolStripButton_Delete.Size = new System.Drawing.Size(64, 29);
+            this.toolStripButton_Delete.Text = "toolStripButton3";
+            this.toolStripButton_Delete.Click += new System.EventHandler(this.toolStripButton_Item_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 32);
             // 
-            // toolStripButton4
+            // toolStripButton_DataInput
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::VipSoft.Properties.Resources.批量数据导入;
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(104, 29);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton_DataInput.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_DataInput.Image = global::VipSoft.Properties.Resources.批量数据导入;
+            this.toolStripButton_DataInput.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_DataInput.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_DataInput.Name = "toolStripButton_DataInput";
+            this.toolStripButton_DataInput.Size = new System.Drawing.Size(104, 29);
+            this.toolStripButton_DataInput.Text = "toolStripButton4";
+            this.toolStripButton_DataInput.Click += new System.EventHandler(this.toolStripButton_Item_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 32);
             // 
-            // toolStripButton5
+            // toolStripButton_Close
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = global::VipSoft.Properties.Resources.退出;
-            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(64, 29);
-            this.toolStripButton5.Text = "toolStripButton5";
+            this.toolStripButton_Close.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_Close.Image = global::VipSoft.Properties.Resources.退出;
+            this.toolStripButton_Close.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_Close.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Close.Name = "toolStripButton_Close";
+            this.toolStripButton_Close.Size = new System.Drawing.Size(64, 29);
+            this.toolStripButton_Close.Text = "toolStripButton5";
+            this.toolStripButton_Close.Click += new System.EventHandler(this.toolStripButton_Item_Click);
             // 
             // groupBox1
             // 
@@ -226,6 +235,7 @@
             this.button_Select.Text = " 查询";
             this.button_Select.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_Select.UseVisualStyleBackColor = false;
+            this.button_Select.Click += new System.EventHandler(this.button_Select_Click);
             // 
             // textBox_Key
             // 
@@ -279,6 +289,7 @@
             this.treeView_Class.Name = "treeView_Class";
             this.treeView_Class.Size = new System.Drawing.Size(152, 389);
             this.treeView_Class.TabIndex = 0;
+            this.treeView_Class.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_Class_AfterSelect);
             // 
             // tabPage_Select
             // 
@@ -305,7 +316,6 @@
             this.tabPage_Select.Controls.Add(this.label4);
             this.tabPage_Select.Controls.Add(this.query_Name);
             this.tabPage_Select.Controls.Add(this.label2);
-            this.tabPage_Select.Controls.Add(this.button_Reset);
             this.tabPage_Select.Controls.Add(this.button_Query);
             this.tabPage_Select.Location = new System.Drawing.Point(4, 24);
             this.tabPage_Select.Name = "tabPage_Select";
@@ -524,17 +534,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "产品名称：";
             // 
-            // button_Reset
-            // 
-            this.button_Reset.BackColor = System.Drawing.Color.Transparent;
-            this.button_Reset.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_Reset.Location = new System.Drawing.Point(81, 367);
-            this.button_Reset.Name = "button_Reset";
-            this.button_Reset.Size = new System.Drawing.Size(50, 23);
-            this.button_Reset.TabIndex = 13;
-            this.button_Reset.Text = "重置";
-            this.button_Reset.UseVisualStyleBackColor = false;
-            // 
             // button_Query
             // 
             this.button_Query.BackColor = System.Drawing.Color.Transparent;
@@ -545,6 +544,7 @@
             this.button_Query.TabIndex = 12;
             this.button_Query.Text = "搜索";
             this.button_Query.UseVisualStyleBackColor = false;
+            this.button_Query.Click += new System.EventHandler(this.button_Query_Click);
             // 
             // dataGridView_List
             // 
@@ -571,6 +571,9 @@
             this.dataGridView_List.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_List.Size = new System.Drawing.Size(698, 400);
             this.dataGridView_List.TabIndex = 29;
+            this.dataGridView_List.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_List_CellDoubleClick);
+            this.dataGridView_List.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_List_CellEnter);
+            this.dataGridView_List.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_List_CellMouseClick);
             // 
             // check
             // 
@@ -613,6 +616,7 @@
             this.pager1.RecordCount = 0;
             this.pager1.Size = new System.Drawing.Size(859, 30);
             this.pager1.TabIndex = 30;
+            this.pager1.EventPaging += new Vipsoft.Controls.EventPagingHandler(this.pager1_EventPaging);
             // 
             // alpanel1
             // 
@@ -723,6 +727,29 @@
             this.lbl_znum.TabIndex = 0;
             this.lbl_znum.Text = "库存数量：";
             // 
+            // contextMenuStrip_CellRight
+            // 
+            this.contextMenuStrip_CellRight.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Edit,
+            this.toolStripMenuItem_Delete});
+            this.contextMenuStrip_CellRight.Name = "contextMenuStrip_Header";
+            this.contextMenuStrip_CellRight.ShowImageMargin = false;
+            this.contextMenuStrip_CellRight.Size = new System.Drawing.Size(124, 48);
+            // 
+            // ToolStripMenuItem_Edit
+            // 
+            this.ToolStripMenuItem_Edit.Name = "ToolStripMenuItem_Edit";
+            this.ToolStripMenuItem_Edit.Size = new System.Drawing.Size(127, 22);
+            this.ToolStripMenuItem_Edit.Text = "修改产品信息";
+            this.ToolStripMenuItem_Edit.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem_Delete
+            // 
+            this.toolStripMenuItem_Delete.Name = "toolStripMenuItem_Delete";
+            this.toolStripMenuItem_Delete.Size = new System.Drawing.Size(127, 22);
+            this.toolStripMenuItem_Delete.Text = "删除此产品";
+            this.toolStripMenuItem_Delete.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
             // GoodsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -740,6 +767,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "产品列表";
+            this.Load += new System.EventHandler(this.GoodsList_Load);
             this.Controls.SetChildIndex(this.alpanel1, 0);
             this.Controls.SetChildIndex(this.toolStrip1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
@@ -757,6 +785,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).EndInit();
             this.alpanel1.ResumeLayout(false);
             this.alpanel1.PerformLayout();
+            this.contextMenuStrip_CellRight.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -764,15 +793,15 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Add;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Edit;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Delete;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStripButton_DataInput;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Close;
         private YiJiaSoft.Controls.MyGroupBox groupBox1;
         private AlSkin.AlControl.AlButton alButton_excle;
         private AlSkin.AlControl.AlButton button_Select;
@@ -804,7 +833,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox query_Name;
         private System.Windows.Forms.Label label2;
-        private AlSkin.AlControl.AlButton button_Reset;
         private AlSkin.AlControl.AlButton button_Query;
         private System.Windows.Forms.DataGridView dataGridView_List;
         private System.Windows.Forms.DataGridViewCheckBoxColumn check;
@@ -822,6 +850,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lbl_TotalNum;
         private System.Windows.Forms.Label lbl_znum;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_CellRight;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Edit;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Delete;
 
     }
 }

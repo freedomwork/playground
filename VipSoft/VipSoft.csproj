@@ -80,6 +80,12 @@
     <Compile Include="Goods\GoodsPutIn.Designer.cs">
       <DependentUpon>GoodsPutIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Goods\ReportStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goods\ReportStock.designer.cs">
+      <DependentUpon>ReportStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Goods\SetClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     <Compile Include="Member\prepaidCardRecharge.Designer.cs">
       <DependentUpon>prepaidCardRecharge.cs</DependentUpon>
     </Compile>
+    <Compile Include="Other\DataInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\DataInput.Designer.cs">
+      <DependentUpon>DataInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\MemberPhoto.resx">
       <DependentUpon>MemberPhoto.cs</DependentUpon>
@@ -141,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Goods\GoodsPutIn.resx">
       <DependentUpon>GoodsPutIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goods\ReportStock.resx">
+      <DependentUpon>ReportStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Goods\SetClass.resx">
       <DependentUpon>SetClass.cs</DependentUpon>
@@ -162,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\DataInput.resx">
+      <DependentUpon>DataInput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

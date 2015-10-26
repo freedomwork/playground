@@ -29,23 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.alButton2 = new AlSkin.AlControl.AlButton();
-            this.alButton1 = new AlSkin.AlControl.AlButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.alButton_excle = new AlSkin.AlControl.AlButton();
+            this.button_Select = new AlSkin.AlControl.AlButton();
+            this.textBox_Key = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.myTabControl1 = new YiJiaSoft.Controls.MyTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pager1 = new Vipsoft.Controls.Pager();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -53,71 +43,85 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.dataGridView_List = new System.Windows.Forms.DataGridView();
+            this.CheckBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CardID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CardmianID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alpanel21 = new AlSkin.AlControl.Alpanel2();
             this.groupBox1.SuspendLayout();
             this.myTabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.alButton2);
-            this.groupBox1.Controls.Add(this.alButton1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.alButton_excle);
+            this.groupBox1.Controls.Add(this.button_Select);
+            this.groupBox1.Controls.Add(this.textBox_Key);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 80);
+            this.groupBox1.Location = new System.Drawing.Point(12, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(880, 59);
+            this.groupBox1.Size = new System.Drawing.Size(861, 59);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "会员查询";
             // 
-            // alButton2
+            // alButton_excle
             // 
-            this.alButton2.Location = new System.Drawing.Point(397, 24);
-            this.alButton2.Name = "alButton2";
-            this.alButton2.Size = new System.Drawing.Size(75, 23);
-            this.alButton2.TabIndex = 2;
-            this.alButton2.Text = "导出Excel";
-            this.alButton2.UseVisualStyleBackColor = true;
+            this.alButton_excle.Location = new System.Drawing.Point(405, 18);
+            this.alButton_excle.Name = "alButton_excle";
+            this.alButton_excle.Size = new System.Drawing.Size(104, 30);
+            this.alButton_excle.TabIndex = 6;
+            this.alButton_excle.Text = "会员导出Excel";
+            this.alButton_excle.UseVisualStyleBackColor = true;
             // 
-            // alButton1
+            // button_Select
             // 
-            this.alButton1.Location = new System.Drawing.Point(301, 24);
-            this.alButton1.Name = "alButton1";
-            this.alButton1.Size = new System.Drawing.Size(75, 23);
-            this.alButton1.TabIndex = 1;
-            this.alButton1.Text = "查询";
-            this.alButton1.UseVisualStyleBackColor = true;
+            this.button_Select.BackColor = System.Drawing.Color.Transparent;
+            this.button_Select.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button_Select.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Select.Location = new System.Drawing.Point(302, 16);
+            this.button_Select.Name = "button_Select";
+            this.button_Select.Size = new System.Drawing.Size(80, 35);
+            this.button_Select.TabIndex = 5;
+            this.button_Select.Text = " 查询";
+            this.button_Select.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_Select.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // textBox_Key
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 21);
-            this.textBox1.TabIndex = 0;
+            this.textBox_Key.Font = new System.Drawing.Font("宋体", 18F);
+            this.textBox_Key.Location = new System.Drawing.Point(109, 16);
+            this.textBox_Key.Name = "textBox_Key";
+            this.textBox_Key.Size = new System.Drawing.Size(187, 35);
+            this.textBox_Key.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 29);
+            this.label1.Location = new System.Drawing.Point(8, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "会员/手机(F2)：";
+            this.label1.Size = new System.Drawing.Size(107, 12);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "会员卡号/手机号：";
             // 
             // myTabControl1
             // 
             this.myTabControl1.Controls.Add(this.tabPage1);
             this.myTabControl1.Controls.Add(this.tabPage2);
             this.myTabControl1.ItemSize = new System.Drawing.Size(0, 20);
-            this.myTabControl1.Location = new System.Drawing.Point(12, 145);
+            this.myTabControl1.Location = new System.Drawing.Point(12, 130);
             this.myTabControl1.Name = "myTabControl1";
             this.myTabControl1.Padding = new System.Drawing.Point(9, 0);
             this.myTabControl1.PageBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(185)))));
             this.myTabControl1.SelectedIndex = 0;
-            this.myTabControl1.Size = new System.Drawing.Size(181, 369);
+            this.myTabControl1.Size = new System.Drawing.Size(169, 426);
             this.myTabControl1.TabIndex = 5;
             // 
             // tabPage1
@@ -125,7 +129,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(173, 341);
+            this.tabPage1.Size = new System.Drawing.Size(161, 398);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "按分类查看";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -135,90 +139,23 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(173, 341);
+            this.tabPage2.Size = new System.Drawing.Size(161, 398);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "高级查询";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.check,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(199, 156);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(693, 347);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // check
-            // 
-            this.check.HeaderText = "";
-            this.check.Name = "check";
-            this.check.Width = 20;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "自动编号";
-            this.Column1.Name = "Column1";
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "会员编号";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "卡面号";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "会员姓名";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "手机号码";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "邮件";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "性别";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "当前等级";
-            this.Column8.Name = "Column8";
             // 
             // pager1
             // 
             this.pager1.BackColor = System.Drawing.Color.Transparent;
             this.pager1.BackGroundImage = null;
             this.pager1.CurrentPage = 0;
-            this.pager1.Location = new System.Drawing.Point(12, 509);
+            this.pager1.Location = new System.Drawing.Point(12, 564);
             this.pager1.Name = "pager1";
             this.pager1.PageCount = 0;
             this.pager1.PagerWidth = 500;
             this.pager1.PageSize = 10;
             this.pager1.RecordCount = 0;
-            this.pager1.Size = new System.Drawing.Size(880, 30);
+            this.pager1.Size = new System.Drawing.Size(861, 30);
             this.pager1.TabIndex = 7;
             this.pager1.Load += new System.EventHandler(this.pager1_Load);
             // 
@@ -266,9 +203,9 @@
             this.toolStripButton2,
             this.toolStripSeparator2,
             this.toolStripButton3});
-            this.toolStrip1.Location = new System.Drawing.Point(16, 39);
+            this.toolStrip1.Location = new System.Drawing.Point(11, 38);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(876, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(862, 32);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -282,33 +219,120 @@
             this.toolStripButton3.Size = new System.Drawing.Size(64, 29);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
+            // dataGridView_List
+            // 
+            this.dataGridView_List.AllowUserToAddRows = false;
+            this.dataGridView_List.AllowUserToDeleteRows = false;
+            this.dataGridView_List.AllowUserToResizeRows = false;
+            this.dataGridView_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_List.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_List.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_List.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CheckBox,
+            this.ID,
+            this.CardID,
+            this.CardmianID,
+            this.MemName,
+            this.Mobile,
+            this.Email});
+            this.dataGridView_List.Location = new System.Drawing.Point(183, 132);
+            this.dataGridView_List.MultiSelect = false;
+            this.dataGridView_List.Name = "dataGridView_List";
+            this.dataGridView_List.RowHeadersVisible = false;
+            this.dataGridView_List.RowHeadersWidth = 20;
+            this.dataGridView_List.RowTemplate.Height = 23;
+            this.dataGridView_List.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_List.Size = new System.Drawing.Size(690, 402);
+            this.dataGridView_List.TabIndex = 23;
+            // 
+            // CheckBox
+            // 
+            this.CheckBox.HeaderText = "";
+            this.CheckBox.Name = "CheckBox";
+            this.CheckBox.Width = 20;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "编号";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // CardID
+            // 
+            this.CardID.DataPropertyName = "CardID";
+            this.CardID.HeaderText = "会员卡号";
+            this.CardID.Name = "CardID";
+            this.CardID.ReadOnly = true;
+            // 
+            // CardmianID
+            // 
+            this.CardmianID.DataPropertyName = "CardmianID";
+            this.CardmianID.HeaderText = "卡面号";
+            this.CardmianID.Name = "CardmianID";
+            this.CardmianID.ReadOnly = true;
+            // 
+            // MemName
+            // 
+            this.MemName.DataPropertyName = "Name";
+            this.MemName.HeaderText = "会员姓名";
+            this.MemName.Name = "MemName";
+            this.MemName.ReadOnly = true;
+            // 
+            // Mobile
+            // 
+            this.Mobile.DataPropertyName = "Mobile";
+            this.Mobile.HeaderText = "手机号码";
+            this.Mobile.Name = "Mobile";
+            this.Mobile.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "邮件";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // alpanel21
+            // 
+            this.alpanel21.Location = new System.Drawing.Point(180, 538);
+            this.alpanel21.Name = "alpanel21";
+            this.alpanel21.Size = new System.Drawing.Size(695, 100);
+            this.alpanel21.TabIndex = 24;
+            // 
             // memList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 551);
+            this.ClientSize = new System.Drawing.Size(882, 600);
+            this.Controls.Add(this.dataGridView_List);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pager1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.myTabControl1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.alpanel21);
             this.Name = "memList";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "会员列表";
             this.Load += new System.EventHandler(this.memList_Load);
+            this.Controls.SetChildIndex(this.alpanel21, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.myTabControl1, 0);
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.pager1, 0);
             this.Controls.SetChildIndex(this.toolStrip1, 0);
+            this.Controls.SetChildIndex(this.dataGridView_List, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.myTabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,23 +340,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private AlSkin.AlControl.AlButton alButton2;
-        private AlSkin.AlControl.AlButton alButton1;
         private YiJiaSoft.Controls.MyTabControl myTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn check;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private Vipsoft.Controls.Pager pager1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -340,6 +350,19 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.DataGridView dataGridView_List;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn CheckBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CardID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CardmianID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private AlSkin.AlControl.Alpanel2 alpanel21;
+        private AlSkin.AlControl.AlButton alButton_excle;
+        private AlSkin.AlControl.AlButton button_Select;
+        private System.Windows.Forms.TextBox textBox_Key;
+        private System.Windows.Forms.Label label1;
 
     }
 }

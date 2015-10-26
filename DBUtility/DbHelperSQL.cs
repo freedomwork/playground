@@ -902,6 +902,78 @@ namespace Maticsoft.DBUtility
         }
         #endregion
 
+
+        #region 存储过程分页
+        /// <summary>
+        /// 分页取得相关信息
+        /// </summary>
+        /// <param name="TableName"></param>
+        /// <param name="column"></param>
+        /// <param name="condition"></param>
+        /// <param name="IndexColumn"></param>
+        /// <param name="IsAsc"></param>
+        /// <param name="PageSize"></param>
+        /// <param name="Page"></param>
+        /// <param name="RecordCount"></param>
+        /// <returns></returns>
+        public static DataSet GetTable(string TableName, string[] column, string[] condition, string IndexColumn, bool IsAsc, int PageSize, int Page, int RecordCount)
+        {
+            #region 构造SqlParameter
+            string tempsql = "";
+            string tempsql2 = "";
+
+            for (int i = 0; i < column.Length; i++)
+            {
+                tempsql += column[i];
+                if (i < column.Length - 1) tempsql += ",";
+            }
+
+            if (condition != null && condition.Length > 0)
+            {
+                for (int i = 0; i < condition.Length; i++)
+                {
+                    if (condition[i] == "")
+                        continue;
+                    tempsql2 += condition[i];
+                    if (i < condition.Length - 1) tempsql2 += " and ";
+                }
+            }
+
+            SqlParameter[] paras = { 
+                                    new SqlParameter("@tblName",SqlDbType.VarChar,255),
+                                    new SqlParameter("@strGetFields",SqlDbType.VarChar,255),
+                                    new SqlParameter("@fldName",SqlDbType.VarChar,255),
+                                    new SqlParameter("@PageSize",SqlDbType.Int,4),
+                                    new SqlParameter("@PageIndex",SqlDbType.Int,4),
+                                    new SqlParameter("@doCount",SqlDbType.Int,4),
+                                    new SqlParameter("@OrderType",SqlDbType.Int,4),
+                                    new SqlParameter("@strWhere",SqlDbType.VarChar,255)
+                                   };
+            paras[0].Value = TableName;
+            paras[1].Value = tempsql;
+            paras[2].Value = IndexColumn;
+            paras[3].Value = PageSize;
+            paras[4].Value = Page;
+            paras[5].Value = RecordCount;
+            paras[6].Value = IsAsc ? 0 : 1;
+            paras[7].Value = tempsql2;
+            #endregion
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlDataAdapter sqlDA = new SqlDataAdapter();
+                DataSet ds = new DataSet();
+                sqlDA.SelectCommand = BuildQueryCommand(connection, "CP_Page", paras);
+                sqlDA.Fill(ds);
+                connection.Close();
+                sqlDA.Dispose();
+
+                return ds;
+            }
+        }
+
+        #endregion
     }
 
 }

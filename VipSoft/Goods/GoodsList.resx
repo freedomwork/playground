@@ -132,12 +132,24 @@
   <metadata name="GName.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="check.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="GoodsCode.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="GName.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="alpanel1.BackImg" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABcAAAB9CAYAAABJRficAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+QAA
-        CvkBtGHeGQAAA2FJREFUaEPtkN1OU1EQhfer4Cv5YD6BF3pPYlAQBVEkaPAXKIXy2yrYWhDiVdvTOeeM
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+AAA
+        CvgBZiY8/QAAA2FJREFUaEPtkN1OU1EQhfer4Cv5YD6BF3pPYlAQBVEkaPAXKIXy2yrYWhDiVdvTOeeM
         a/bP6T51SEykd3uSL2tmzezV5pj2dSnc71yXjzs33Oxccw/9bx32qLuee18+ljzJNe1f5YOzXyU7Cq8O
         7Gpa41rzJ+8l15xcFnxyVfDpVQktoaEXf6LBO70Md372vbyLfck1x5dFDniao7+80qP5054lN4f9ggAf
         /pxC8VrigVblleqd9ZBrDno57fdyhvJ+r4AWXsULGpBdfCf93+98Hpnmj5z2ujk3wV63gBZQzD/Ek9nt
@@ -154,4 +166,7 @@
         /s7rRsLnXX/nNS/hc+Cu/73kzUm4cA88AT/B/5S8lxzksfkDXTGja5voeM0AAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="contextMenuStrip_CellRight.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>250, 21</value>
+  </metadata>
 </root>

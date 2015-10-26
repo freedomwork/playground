@@ -12,6 +12,7 @@ namespace VipSoft
 {
     public partial class GoodsPutIn : BaseForm
     {
+        public event GoodsListRefreshHandler GoodsListRefresh;
         /// <summary>
         /// 编辑会员时记录会员自动编号
         /// </summary>
@@ -87,7 +88,27 @@ namespace VipSoft
         /// </summary>
         private void BindGoodsData()
         {
+            VipSoft.Model.Goods model = new VipSoft.BLL.Goods().GetModel(CurrentGoodsID);
+            if (model==null)
+            {
+                return;
+            }
 
+            this.Text = "修改产品信息";
+            this.checkBox_save.Visible = false;
+            this.checkBox_AutoCode.Visible = false;
+            this.textBox_GoodsCode.Enabled = false;
+            this.textBox_Number.Enabled = false;
+            textBox_GoodsCode.Text = model.GoodsCode;
+            textBox_GoodsName.Text = model.Name;
+            textBox_NameCode.Text = model.NameCode;
+            comboBox_Class.SelectedValue = model.ClassID;
+            comboBox_Unit.Text = model.Unit;
+            textBox_Number.Text = model.Number.ToString();
+            textBox_Point.Text = model.Point.ToString();
+            textBox_Price.Text = ((decimal)model.Price).ToString("￥0.00");
+            myMoneyTextBox1.Text = ((decimal)model.BuyPrice).ToString("￥0.00");
+            textBox_MinPercent.Text = model.MinPercent.ToString();
         }
 
         /// <summary>
@@ -263,6 +284,9 @@ namespace VipSoft
                         DateTime.Now));
                     // 提示
                     MessageBox.Show("产品添加成功。");
+                    // 刷新
+                    if (GoodsListRefresh != null)
+                        GoodsListRefresh();
                 }
                 else
                 {
@@ -280,6 +304,9 @@ namespace VipSoft
                     log.Add(new VipSoft.Model.SysLog(PublicState.Master, "产品信息修改", "修改产品信息（编号：" + this.textBox_GoodsCode.Text + " 名称：" + this.textBox_GoodsName.Text + "）", DateTime.Now));
                     // 提示
                     MessageBox.Show("产品信息修改成功。");
+                    // 刷新
+                    if (GoodsListRefresh != null)
+                        GoodsListRefresh();
                 }
                 else
                 {
@@ -329,6 +356,11 @@ namespace VipSoft
             }
             else
                 this.textBox_Point.ReadOnly = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
