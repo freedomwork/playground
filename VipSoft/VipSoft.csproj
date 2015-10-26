@@ -83,16 +83,25 @@
     <Compile Include="Goods\SetClass.cs">
       <SubType>Form</SubType>
     </Compile>
-	<Compile Include="Member\memList.cs">
+    <Compile Include="Member\memList.cs">
       <SubType>Form</SubType>
     </Compile>
-	<Compile Include="Member\memRegister.cs">
+    <Compile Include="Member\memList.Designer.cs">
+      <DependentUpon>memList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\memRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-	<Compile Include="Member\meterCardRecharge.cs">
+    <Compile Include="Member\memRegister.Designer.cs">
+      <DependentUpon>memRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\meterCardRecharge.cs">
       <SubType>Form</SubType>
     </Compile>
-	<Compile Include="Member\prepaidCardRecharge.cs">
+    <Compile Include="Member\meterCardRecharge.Designer.cs">
+      <DependentUpon>meterCardRecharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\prepaidCardRecharge.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Goods\SetClass.Designer.cs">
@@ -110,6 +119,9 @@
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\prepaidCardRecharge.Designer.cs">
+      <DependentUpon>prepaidCardRecharge.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\MemberPhoto.resx">
@@ -133,16 +145,16 @@
     <EmbeddedResource Include="Goods\SetClass.resx">
       <DependentUpon>SetClass.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="Member\memList.resx">
+    <EmbeddedResource Include="Member\memList.resx">
       <DependentUpon>memList.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="Member\memRegister.resx">
+    <EmbeddedResource Include="Member\memRegister.resx">
       <DependentUpon>memRegister.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="Member\meterCardRecharge.resx">
+    <EmbeddedResource Include="Member\meterCardRecharge.resx">
       <DependentUpon>meterCardRecharge.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="Member\prepaidCardRecharge.resx">
+    <EmbeddedResource Include="Member\prepaidCardRecharge.resx">
       <DependentUpon>prepaidCardRecharge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">

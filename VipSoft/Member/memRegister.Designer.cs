@@ -1,4 +1,4 @@
-﻿namespace VipSoft.Member
+﻿namespace VipSoft
 {
     partial class memRegister
     {
@@ -514,31 +514,34 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.BackColor = System.Drawing.Color.Transparent;
             this.checkBox3.Location = new System.Drawing.Point(18, 572);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(108, 16);
             this.checkBox3.TabIndex = 20;
             this.checkBox3.Text = "保存后继续添加";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.UseVisualStyleBackColor = false;
             // 
             // alButton1
             // 
+            this.alButton1.BackColor = System.Drawing.Color.Transparent;
             this.alButton1.Location = new System.Drawing.Point(241, 568);
             this.alButton1.Name = "alButton1";
             this.alButton1.Size = new System.Drawing.Size(75, 23);
             this.alButton1.TabIndex = 41;
             this.alButton1.Text = "保存(F5)";
-            this.alButton1.UseVisualStyleBackColor = true;
+            this.alButton1.UseVisualStyleBackColor = false;
             this.alButton1.Click += new System.EventHandler(this.alButton1_Click);
             // 
             // alButton2
             // 
+            this.alButton2.BackColor = System.Drawing.Color.Transparent;
             this.alButton2.Location = new System.Drawing.Point(355, 568);
             this.alButton2.Name = "alButton2";
             this.alButton2.Size = new System.Drawing.Size(75, 23);
             this.alButton2.TabIndex = 42;
             this.alButton2.Text = "关闭(Esc)";
-            this.alButton2.UseVisualStyleBackColor = true;
+            this.alButton2.UseVisualStyleBackColor = false;
             // 
             // memRegister
             // 
@@ -550,6 +553,9 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.myTabControl1);
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "会员注册";
             this.Controls.SetChildIndex(this.myTabControl1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);

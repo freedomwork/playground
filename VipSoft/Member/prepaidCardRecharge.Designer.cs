@@ -1,4 +1,4 @@
-﻿namespace VipSoft.Member
+﻿namespace VipSoft
 {
     partial class prepaidCardRecharge
     {
@@ -392,6 +392,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "prepaidCardRecharge";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "储值卡充值";
             this.Load += new System.EventHandler(this.prepaidCardRecharge_Load);
             this.Controls.SetChildIndex(this.label1, 0);

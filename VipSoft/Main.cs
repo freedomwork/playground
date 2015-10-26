@@ -33,10 +33,16 @@ namespace VipSoft
             {
                     //会员登记
                 case "panelButton_Member_Add":
+                    memRegister mRegister = new memRegister();
+                    mRegister.ShowDialog();
                     break;
                 case "panelButton_Member_List":
+                    memList mList = new memList();
+                    mList.ShowDialog();
                     break;
                 case "panelButton_Member_Recharge":
+                    prepaidCardRecharge pRecharge = new prepaidCardRecharge();
+                    pRecharge.ShowDialog();
                     break;
                 case "panelButton_Member_DataInput":
                     break;

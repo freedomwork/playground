@@ -1,4 +1,4 @@
-﻿namespace VipSoft.Member
+﻿namespace VipSoft
 {
     partial class meterCardRecharge
     {
