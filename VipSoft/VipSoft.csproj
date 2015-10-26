@@ -121,6 +121,18 @@
     <EmbeddedResource Include="Goods\SetClass.resx">
       <DependentUpon>SetClass.cs</DependentUpon>
     </EmbeddedResource>
+	<EmbeddedResource Include="Member\memList.resx">
+      <DependentUpon>memList.cs</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Include="Member\memRegister.resx">
+      <DependentUpon>memRegister.cs</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Include="Member\meterCardRecharge.resx">
+      <DependentUpon>meterCardRecharge.cs</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Include="Member\prepaidCardRecharge.resx">
+      <DependentUpon>prepaidCardRecharge.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
