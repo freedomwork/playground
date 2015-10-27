@@ -37,12 +37,12 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pager1 = new Vipsoft.Controls.Pager();
-            this.toolStripButton_Add = new System.Windows.Forms.ToolStripButton();
+            this.AddBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton_Edit = new System.Windows.Forms.ToolStripButton();
+            this.UpdBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton_Delete = new System.Windows.Forms.ToolStripButton();
+            this.DelBtn = new System.Windows.Forms.ToolStripButton();
             this.alpanel21 = new AlSkin.AlControl.Alpanel2();
             this.dataGridView_List = new System.Windows.Forms.DataGridView();
             this.CheckBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -159,32 +159,32 @@
             this.pager1.TabIndex = 7;
             this.pager1.EventPaging += new Vipsoft.Controls.EventPagingHandler(this.pager1_EventPaging);
             // 
-            // toolStripButton_Add
+            // AddBtn
             // 
-            this.toolStripButton_Add.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton_Add.Image = global::VipSoft.Properties.Resources.新增;
-            this.toolStripButton_Add.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_Add.Name = "toolStripButton_Add";
-            this.toolStripButton_Add.Size = new System.Drawing.Size(64, 29);
-            this.toolStripButton_Add.Text = "toolStripButton1";
-            this.toolStripButton_Add.Click += new System.EventHandler(this.toolStripButton_Item_Click);
+            this.AddBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AddBtn.Image = global::VipSoft.Properties.Resources.新增;
+            this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(64, 29);
+            this.AddBtn.Text = "toolStripButton1";
+            this.AddBtn.Click += new System.EventHandler(this.menu_click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
             // 
-            // toolStripButton_Edit
+            // UpdBtn
             // 
-            this.toolStripButton_Edit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton_Edit.Image = global::VipSoft.Properties.Resources.修改;
-            this.toolStripButton_Edit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton_Edit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_Edit.Name = "toolStripButton_Edit";
-            this.toolStripButton_Edit.Size = new System.Drawing.Size(64, 29);
-            this.toolStripButton_Edit.Text = "toolStripButton2";
-            this.toolStripButton_Edit.Click += new System.EventHandler(this.toolStripButton_Item_Click);
+            this.UpdBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.UpdBtn.Image = global::VipSoft.Properties.Resources.修改;
+            this.UpdBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.UpdBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UpdBtn.Name = "UpdBtn";
+            this.UpdBtn.Size = new System.Drawing.Size(64, 29);
+            this.UpdBtn.Text = "toolStripButton2";
+            this.UpdBtn.Click += new System.EventHandler(this.menu_click);
             // 
             // toolStripSeparator2
             // 
@@ -198,27 +198,27 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(33, 16);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton_Add,
+            this.AddBtn,
             this.toolStripSeparator1,
-            this.toolStripButton_Edit,
+            this.UpdBtn,
             this.toolStripSeparator2,
-            this.toolStripButton_Delete});
+            this.DelBtn});
             this.toolStrip1.Location = new System.Drawing.Point(11, 38);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(862, 32);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton_Delete
+            // DelBtn
             // 
-            this.toolStripButton_Delete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton_Delete.Image = global::VipSoft.Properties.Resources.删除;
-            this.toolStripButton_Delete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_Delete.Name = "toolStripButton_Delete";
-            this.toolStripButton_Delete.Size = new System.Drawing.Size(64, 29);
-            this.toolStripButton_Delete.Text = "toolStripButton3";
-            this.toolStripButton_Delete.Click += new System.EventHandler(this.toolStripButton_Item_Click);
+            this.DelBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.DelBtn.Image = global::VipSoft.Properties.Resources.删除;
+            this.DelBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.DelBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DelBtn.Name = "DelBtn";
+            this.DelBtn.Size = new System.Drawing.Size(64, 29);
+            this.DelBtn.Text = "toolStripButton3";
+            this.DelBtn.Click += new System.EventHandler(this.menu_click);
             // 
             // alpanel21
             // 
@@ -232,9 +232,9 @@
             this.dataGridView_List.AllowUserToAddRows = false;
             this.dataGridView_List.AllowUserToDeleteRows = false;
             this.dataGridView_List.AllowUserToResizeRows = false;
-            this.dataGridView_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_List.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_List.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -345,12 +345,12 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private Vipsoft.Controls.Pager pager1;
-        private System.Windows.Forms.ToolStripButton toolStripButton_Add;
+        private System.Windows.Forms.ToolStripButton AddBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton_Edit;
+        private System.Windows.Forms.ToolStripButton UpdBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton_Delete;
+        private System.Windows.Forms.ToolStripButton DelBtn;
         private AlSkin.AlControl.Alpanel2 alpanel21;
         private AlSkin.AlControl.AlButton alButton_excle;
         private AlSkin.AlControl.AlButton button_Select;
