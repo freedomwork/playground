@@ -37,12 +37,13 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pager1 = new Vipsoft.Controls.Pager();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_Add = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_Edit = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_Delete = new System.Windows.Forms.ToolStripButton();
+            this.alpanel21 = new AlSkin.AlControl.Alpanel2();
             this.dataGridView_List = new System.Windows.Forms.DataGridView();
             this.CheckBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +52,6 @@
             this.MemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alpanel21 = new AlSkin.AlControl.Alpanel2();
             this.groupBox1.SuspendLayout();
             this.myTabControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -157,34 +157,34 @@
             this.pager1.RecordCount = 0;
             this.pager1.Size = new System.Drawing.Size(861, 30);
             this.pager1.TabIndex = 7;
-            this.pager1.Load += new System.EventHandler(this.pager1_Load);
+            this.pager1.EventPaging += new Vipsoft.Controls.EventPagingHandler(this.pager1_EventPaging);
             // 
-            // toolStripButton1
+            // toolStripButton_Add
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::VipSoft.Properties.Resources.新增;
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(64, 29);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            this.toolStripButton_Add.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_Add.Image = global::VipSoft.Properties.Resources.新增;
+            this.toolStripButton_Add.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Add.Name = "toolStripButton_Add";
+            this.toolStripButton_Add.Size = new System.Drawing.Size(64, 29);
+            this.toolStripButton_Add.Text = "toolStripButton1";
+            this.toolStripButton_Add.Click += new System.EventHandler(this.toolStripButton_Item_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
             // 
-            // toolStripButton2
+            // toolStripButton_Edit
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::VipSoft.Properties.Resources.修改;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(64, 29);
-            this.toolStripButton2.Text = "toolStripButton2";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.toolStripButton_Edit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_Edit.Image = global::VipSoft.Properties.Resources.修改;
+            this.toolStripButton_Edit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_Edit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Edit.Name = "toolStripButton_Edit";
+            this.toolStripButton_Edit.Size = new System.Drawing.Size(64, 29);
+            this.toolStripButton_Edit.Text = "toolStripButton2";
+            this.toolStripButton_Edit.Click += new System.EventHandler(this.toolStripButton_Item_Click);
             // 
             // toolStripSeparator2
             // 
@@ -198,37 +198,43 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(33, 16);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.toolStripButton_Add,
             this.toolStripSeparator1,
-            this.toolStripButton2,
+            this.toolStripButton_Edit,
             this.toolStripSeparator2,
-            this.toolStripButton3});
+            this.toolStripButton_Delete});
             this.toolStrip1.Location = new System.Drawing.Point(11, 38);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(862, 32);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
-            // toolStripButton3
+            // toolStripButton_Delete
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::VipSoft.Properties.Resources.删除;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(64, 29);
-            this.toolStripButton3.Text = "toolStripButton3";
-            this.toolStripButton3.Click += new System.EventHandler(this.delete_Click);
+            this.toolStripButton_Delete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_Delete.Image = global::VipSoft.Properties.Resources.删除;
+            this.toolStripButton_Delete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Delete.Name = "toolStripButton_Delete";
+            this.toolStripButton_Delete.Size = new System.Drawing.Size(64, 29);
+            this.toolStripButton_Delete.Text = "toolStripButton3";
+            this.toolStripButton_Delete.Click += new System.EventHandler(this.toolStripButton_Item_Click);
+            // 
+            // alpanel21
+            // 
+            this.alpanel21.Location = new System.Drawing.Point(180, 538);
+            this.alpanel21.Name = "alpanel21";
+            this.alpanel21.Size = new System.Drawing.Size(695, 100);
+            this.alpanel21.TabIndex = 24;
             // 
             // dataGridView_List
             // 
             this.dataGridView_List.AllowUserToAddRows = false;
             this.dataGridView_List.AllowUserToDeleteRows = false;
             this.dataGridView_List.AllowUserToResizeRows = false;
-            this.dataGridView_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_List.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_List.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -240,16 +246,15 @@
             this.MemName,
             this.Mobile,
             this.Email});
-            this.dataGridView_List.Location = new System.Drawing.Point(183, 136);
+            this.dataGridView_List.Location = new System.Drawing.Point(182, 136);
             this.dataGridView_List.MultiSelect = false;
             this.dataGridView_List.Name = "dataGridView_List";
             this.dataGridView_List.RowHeadersVisible = false;
             this.dataGridView_List.RowHeadersWidth = 20;
             this.dataGridView_List.RowTemplate.Height = 23;
             this.dataGridView_List.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_List.Size = new System.Drawing.Size(690, 398);
-            this.dataGridView_List.TabIndex = 23;
-            this.dataGridView_List.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_List_CellContentClick);
+            this.dataGridView_List.Size = new System.Drawing.Size(690, 402);
+            this.dataGridView_List.TabIndex = 25;
             // 
             // CheckBox
             // 
@@ -300,13 +305,6 @@
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
             // 
-            // alpanel21
-            // 
-            this.alpanel21.Location = new System.Drawing.Point(180, 538);
-            this.alpanel21.Name = "alpanel21";
-            this.alpanel21.Size = new System.Drawing.Size(695, 100);
-            this.alpanel21.TabIndex = 24;
-            // 
             // memList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -347,12 +345,17 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private Vipsoft.Controls.Pager pager1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Add;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Edit;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Delete;
+        private AlSkin.AlControl.Alpanel2 alpanel21;
+        private AlSkin.AlControl.AlButton alButton_excle;
+        private AlSkin.AlControl.AlButton button_Select;
+        private System.Windows.Forms.TextBox textBox_Key;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView_List;
         private System.Windows.Forms.DataGridViewCheckBoxColumn CheckBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
@@ -361,11 +364,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private AlSkin.AlControl.Alpanel2 alpanel21;
-        private AlSkin.AlControl.AlButton alButton_excle;
-        private AlSkin.AlControl.AlButton button_Select;
-        private System.Windows.Forms.TextBox textBox_Key;
-        private System.Windows.Forms.Label label1;
 
     }
 }

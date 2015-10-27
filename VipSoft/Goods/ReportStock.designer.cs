@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportStock));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnExit = new AlSkin.AlControl.AlButton();
             this.btnPrint = new AlSkin.AlControl.AlButton();
             this.lblEndTime = new System.Windows.Forms.DateTimePicker();
@@ -151,6 +151,7 @@
             this.btnExit.Text = "退出(Esc)";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnPrint
             // 
@@ -183,6 +184,7 @@
             this.btnCondition.TabIndex = 75;
             this.btnCondition.Text = "查询";
             this.btnCondition.UseVisualStyleBackColor = false;
+            this.btnCondition.Click += new System.EventHandler(this.btnCondition_Click);
             // 
             // txtContent
             // 
@@ -314,24 +316,24 @@
             // 
             // Number
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle21;
             this.Number.HeaderText = "当前库存";
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
             // 
             // Column2
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle22;
             this.Column2.HeaderText = "库存总值";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column1
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle23;
             this.Column1.HeaderText = "销售总数";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -350,9 +352,9 @@
             // 
             // Point
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.Point.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle24.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.Point.DefaultCellStyle = dataGridViewCellStyle24;
             this.Point.HeaderText = "所得积分";
             this.Point.Name = "Point";
             this.Point.ReadOnly = true;
@@ -360,10 +362,10 @@
             // 
             // ReferencePrice
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "￥0.00";
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.ReferencePrice.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle25.Format = "￥0.00";
+            dataGridViewCellStyle25.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.ReferencePrice.DefaultCellStyle = dataGridViewCellStyle25;
             this.ReferencePrice.HeaderText = "参考进价";
             this.ReferencePrice.Name = "ReferencePrice";
             this.ReferencePrice.ReadOnly = true;
@@ -577,9 +579,9 @@
             // 
             // goods_number
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.goods_number.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle26.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.goods_number.DefaultCellStyle = dataGridViewCellStyle26;
             this.goods_number.HeaderText = "库存数量";
             this.goods_number.Name = "goods_number";
             this.goods_number.ReadOnly = true;
@@ -587,9 +589,9 @@
             // 
             // stock_Number
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.stock_Number.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle27.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.stock_Number.DefaultCellStyle = dataGridViewCellStyle27;
             this.stock_Number.HeaderText = "进货数量";
             this.stock_Number.Name = "stock_Number";
             this.stock_Number.ReadOnly = true;
@@ -597,9 +599,9 @@
             // 
             // Stock_Price
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.Stock_Price.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle28.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.Stock_Price.DefaultCellStyle = dataGridViewCellStyle28;
             this.Stock_Price.HeaderText = "进货金额";
             this.Stock_Price.Name = "Stock_Price";
             this.Stock_Price.ReadOnly = true;
@@ -607,9 +609,9 @@
             // 
             // stockBlack_number
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.stockBlack_number.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle29.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.stockBlack_number.DefaultCellStyle = dataGridViewCellStyle29;
             this.stockBlack_number.HeaderText = "退货数量";
             this.stockBlack_number.Name = "stockBlack_number";
             this.stockBlack_number.ReadOnly = true;
@@ -617,9 +619,9 @@
             // 
             // stockBlackprice
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.stockBlackprice.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle30.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.stockBlackprice.DefaultCellStyle = dataGridViewCellStyle30;
             this.stockBlackprice.HeaderText = "退货金额";
             this.stockBlackprice.Name = "stockBlackprice";
             this.stockBlackprice.ReadOnly = true;
@@ -627,9 +629,9 @@
             // 
             // countNumber
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.countNumber.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle31.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.countNumber.DefaultCellStyle = dataGridViewCellStyle31;
             this.countNumber.HeaderText = "合计数量";
             this.countNumber.Name = "countNumber";
             this.countNumber.ReadOnly = true;
@@ -637,9 +639,9 @@
             // 
             // countPrice
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.countPrice.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle32.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.countPrice.DefaultCellStyle = dataGridViewCellStyle32;
             this.countPrice.HeaderText = "合计金额";
             this.countPrice.Name = "countPrice";
             this.countPrice.ReadOnly = true;
@@ -647,9 +649,9 @@
             // 
             // SellLog_number
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.SellLog_number.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle33.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.SellLog_number.DefaultCellStyle = dataGridViewCellStyle33;
             this.SellLog_number.HeaderText = "销售数量";
             this.SellLog_number.Name = "SellLog_number";
             this.SellLog_number.ReadOnly = true;
@@ -657,9 +659,9 @@
             // 
             // SellLog_Price
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.SellLog_Price.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle34.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.SellLog_Price.DefaultCellStyle = dataGridViewCellStyle34;
             this.SellLog_Price.HeaderText = "销售金额";
             this.SellLog_Price.Name = "SellLog_Price";
             this.SellLog_Price.ReadOnly = true;
@@ -667,9 +669,9 @@
             // 
             // SellLogBaclk_number
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.SellLogBaclk_number.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle35.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.SellLogBaclk_number.DefaultCellStyle = dataGridViewCellStyle35;
             this.SellLogBaclk_number.HeaderText = "退货数量";
             this.SellLogBaclk_number.Name = "SellLogBaclk_number";
             this.SellLogBaclk_number.ReadOnly = true;
@@ -677,9 +679,9 @@
             // 
             // SellLogBlack_Price
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle16.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.SellLogBlack_Price.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle36.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.SellLogBlack_Price.DefaultCellStyle = dataGridViewCellStyle36;
             this.SellLogBlack_Price.HeaderText = "退货金额";
             this.SellLogBlack_Price.Name = "SellLogBlack_Price";
             this.SellLogBlack_Price.ReadOnly = true;
@@ -687,9 +689,9 @@
             // 
             // countSellLogNumbers
             // 
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle17.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.countSellLogNumbers.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle37.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.countSellLogNumbers.DefaultCellStyle = dataGridViewCellStyle37;
             this.countSellLogNumbers.HeaderText = "合计数量";
             this.countSellLogNumbers.Name = "countSellLogNumbers";
             this.countSellLogNumbers.ReadOnly = true;
@@ -697,9 +699,9 @@
             // 
             // countSellLogPrice
             // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle18.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.countSellLogPrice.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle38.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.countSellLogPrice.DefaultCellStyle = dataGridViewCellStyle38;
             this.countSellLogPrice.HeaderText = "合计金额";
             this.countSellLogPrice.Name = "countSellLogPrice";
             this.countSellLogPrice.ReadOnly = true;
@@ -894,9 +896,9 @@
             // 
             // Column8
             // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle19.Format = "￥0.00";
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle39.Format = "￥0.00";
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle39;
             this.Column8.HeaderText = "进价单价";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
@@ -909,9 +911,9 @@
             // 
             // Column10
             // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle20.Format = "￥0.00";
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle40.Format = "￥0.00";
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle40;
             this.Column10.HeaderText = "总金额";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
