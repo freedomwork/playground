@@ -208,6 +208,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(862, 32);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // toolStripButton3
             // 
@@ -218,15 +219,16 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(64, 29);
             this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.delete_Click);
             // 
             // dataGridView_List
             // 
             this.dataGridView_List.AllowUserToAddRows = false;
             this.dataGridView_List.AllowUserToDeleteRows = false;
             this.dataGridView_List.AllowUserToResizeRows = false;
-            this.dataGridView_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_List.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_List.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -238,15 +240,16 @@
             this.MemName,
             this.Mobile,
             this.Email});
-            this.dataGridView_List.Location = new System.Drawing.Point(183, 132);
+            this.dataGridView_List.Location = new System.Drawing.Point(183, 136);
             this.dataGridView_List.MultiSelect = false;
             this.dataGridView_List.Name = "dataGridView_List";
             this.dataGridView_List.RowHeadersVisible = false;
             this.dataGridView_List.RowHeadersWidth = 20;
             this.dataGridView_List.RowTemplate.Height = 23;
             this.dataGridView_List.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_List.Size = new System.Drawing.Size(690, 402);
+            this.dataGridView_List.Size = new System.Drawing.Size(690, 398);
             this.dataGridView_List.TabIndex = 23;
+            this.dataGridView_List.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_List_CellContentClick);
             // 
             // CheckBox
             // 
