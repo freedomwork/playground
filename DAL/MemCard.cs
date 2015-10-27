@@ -504,7 +504,19 @@ namespace VipSoft.DAL
 
 		#endregion  BasicMethod
 		#region  ExtensionMethod
-
+        /// <summary>
+        /// 分页获取数据列表
+        /// </summary>
+        public DataSet GetList(int PageSize, int PageIndex, string[] strWhere, out int resCount)
+        {
+            string tableName = "MemCard";
+            string[] columns = { "ID, CardID, CardMianID, name" };
+            string[] condition = strWhere;
+            int recordCount = 1;
+            DataSet ds = DbHelperSQL.GetTable(tableName, columns, condition, "ID", false, PageSize, PageIndex, recordCount);
+            resCount = int.Parse(ds.Tables[1].Rows[0][0].ToString());
+            return ds;
+        }
 		#endregion  ExtensionMethod
 	}
 }
