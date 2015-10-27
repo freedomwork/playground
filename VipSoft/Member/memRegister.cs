@@ -48,6 +48,20 @@ namespace VipSoft
             //...
 
             mBll.Add(mCard);
+            MessageBox.Show("会员新增成功。");
+       
+            if (this.continue_add.Checked)
+            {
+                this.cardid.Text = "";
+                this.cardmianid.Text = "";
+                this.CardTypeID.Text = "";
+                this.Name.Text = "";
+                //...
+            }
+            else
+            {
+                this.Close();
+            }
 
         }
 

@@ -73,7 +73,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.continue_add = new System.Windows.Forms.CheckBox();
             this.alButton1 = new AlSkin.AlControl.AlButton();
             this.alButton2 = new AlSkin.AlControl.AlButton();
             this.groupBox1.SuspendLayout();
@@ -511,16 +511,16 @@
             this.tabPage3.Text = "到期提醒";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // continue_add
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox3.Location = new System.Drawing.Point(18, 572);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(108, 16);
-            this.checkBox3.TabIndex = 20;
-            this.checkBox3.Text = "保存后继续添加";
-            this.checkBox3.UseVisualStyleBackColor = false;
+            this.continue_add.AutoSize = true;
+            this.continue_add.BackColor = System.Drawing.Color.Transparent;
+            this.continue_add.Location = new System.Drawing.Point(18, 572);
+            this.continue_add.Name = "continue_add";
+            this.continue_add.Size = new System.Drawing.Size(108, 16);
+            this.continue_add.TabIndex = 20;
+            this.continue_add.Text = "保存后继续添加";
+            this.continue_add.UseVisualStyleBackColor = false;
             // 
             // alButton1
             // 
@@ -550,7 +550,7 @@
             this.ClientSize = new System.Drawing.Size(656, 607);
             this.Controls.Add(this.alButton2);
             this.Controls.Add(this.alButton1);
-            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.continue_add);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.myTabControl1);
             //this.Name = "memRegister";
@@ -561,7 +561,7 @@
             this.Load += new System.EventHandler(this.memRegister_Load);
             this.Controls.SetChildIndex(this.myTabControl1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.checkBox3, 0);
+            this.Controls.SetChildIndex(this.continue_add, 0);
             this.Controls.SetChildIndex(this.alButton1, 0);
             this.Controls.SetChildIndex(this.alButton2, 0);
             this.groupBox1.ResumeLayout(false);
@@ -618,7 +618,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox continue_add;
         private Controls.MemberPhoto memberPhoto1;
         private AlSkin.AlControl.AlButton alButton1;
         private AlSkin.AlControl.AlButton alButton2;
