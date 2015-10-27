@@ -30,7 +30,7 @@ namespace VipSoft
             mCard.Name = this.Name.Text.Trim();
             mCard.CardID = this.cardid.Text.Trim();
             mCard.CardMianID = this.cardmianid.Text.Trim();
-            mCard.CardTypeID = Int32.Parse(this.CardTypeID.Text.Trim());
+            mCard.CardTypeID = this.CardTypeID.SelectedIndex;
             mCard.CreateTime = DateTime.Parse(this.createtime.Text.Trim());
             mCard.Email = this.Email.Text.Trim();
            // mCard.IsPast = Convert.ToBoolean(Int32.Parse(this.IsPast.Text.Trim()));
@@ -68,7 +68,13 @@ namespace VipSoft
             this.Sex.ValueMember = "value";
             this.Sex.SelectedIndex = 0;
 
-
+            //加载卡片类型
+            this.CardTypeID.Items.Add(new System.Collections.DictionaryEntry("计次卡", 1));
+            this.CardTypeID.Items.Add(new System.Collections.DictionaryEntry("计时卡", 2));
+            this.CardTypeID.Items.Add(new System.Collections.DictionaryEntry("月卡", 3));
+            this.CardTypeID.DisplayMember = "key";
+            this.CardTypeID.ValueMember = "value";
+            this.CardTypeID.SelectedIndex = 0;
         }
     }
 }
