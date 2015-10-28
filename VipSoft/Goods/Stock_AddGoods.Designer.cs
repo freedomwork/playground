@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.myGroupBox1 = new YiJiaSoft.Controls.MyGroupBox();
             this.btnSelectIn = new AlSkin.AlControl.AlButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -121,6 +121,7 @@
             this.btnSelectIn.TabIndex = 11;
             this.btnSelectIn.Text = "加入所选产品";
             this.btnSelectIn.UseVisualStyleBackColor = false;
+            this.btnSelectIn.Click += new System.EventHandler(this.btnSelectIn_Click);
             // 
             // label1
             // 
@@ -233,6 +234,7 @@
             this.dgvGoodsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGoodsList.Size = new System.Drawing.Size(492, 348);
             this.dgvGoodsList.TabIndex = 7;
+            this.dgvGoodsList.DoubleClick += new System.EventHandler(this.dgvGoodsList_DoubleClick);
             // 
             // Column9
             // 
@@ -261,8 +263,8 @@
             // 
             // ReferencePrice
             // 
-            dataGridViewCellStyle1.Format = "￥0.00";
-            this.ReferencePrice.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle12.Format = "￥0.00";
+            this.ReferencePrice.DefaultCellStyle = dataGridViewCellStyle12;
             this.ReferencePrice.HeaderText = "参考进价";
             this.ReferencePrice.Name = "ReferencePrice";
             this.ReferencePrice.ReadOnly = true;
@@ -312,6 +314,7 @@
             this.dgvGoods.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGoods.Size = new System.Drawing.Size(345, 341);
             this.dgvGoods.TabIndex = 9;
+            this.dgvGoods.DoubleClick += new System.EventHandler(this.dgvGoods_DoubleClick);
             // 
             // Column10
             // 
@@ -340,9 +343,9 @@
             // 
             // dataGridViewTextBoxColumn5
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "￥0.00";
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.Format = "￥0.00";
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewTextBoxColumn5.HeaderText = "参考进价";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
@@ -362,6 +365,7 @@
             this.treeView_Class.Name = "treeView_Class";
             this.treeView_Class.Size = new System.Drawing.Size(144, 341);
             this.treeView_Class.TabIndex = 8;
+            this.treeView_Class.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_Class_AfterSelect);
             // 
             // tabPage6
             // 
@@ -400,6 +404,7 @@
             this.dgvEarlyTimeList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEarlyTimeList.Size = new System.Drawing.Size(492, 348);
             this.dgvEarlyTimeList.TabIndex = 0;
+            this.dgvEarlyTimeList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEarlyTimeList_CellClick);
             // 
             // Column16
             // 
@@ -429,9 +434,9 @@
             // 
             // Column4
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "￥0.00";
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "￥0.00";
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle11;
             this.Column4.HeaderText = "单价";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -519,8 +524,8 @@
             // 
             // Column11
             // 
-            dataGridViewCellStyle4.Format = "￥0.00";
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Format = "￥0.00";
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column11.HeaderText = "进价";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
@@ -535,8 +540,8 @@
             // 
             // Column13
             // 
-            dataGridViewCellStyle5.Format = "￥0.00";
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Format = "￥0.00";
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle15;
             this.Column13.HeaderText = "总金额";
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
@@ -551,6 +556,7 @@
             this.btnExit.TabIndex = 24;
             this.btnExit.Text = "退出(Esc)";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnOK
             // 
@@ -562,6 +568,7 @@
             this.btnOK.TabIndex = 23;
             this.btnOK.Text = "确定(F5)";
             this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnDelete
             // 
@@ -573,6 +580,7 @@
             this.btnDelete.TabIndex = 22;
             this.btnDelete.Text = "删除(Del)";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnModify
             // 
@@ -584,6 +592,7 @@
             this.btnModify.TabIndex = 21;
             this.btnModify.Text = "修改(F2)";
             this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // Stock_AddGoods
             // 
@@ -604,6 +613,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "采购进货";
+            this.Load += new System.EventHandler(this.Stock_AddGoods_Load);
             this.Controls.SetChildIndex(this.myGroupBox1, 0);
             this.Controls.SetChildIndex(this.tabControl1, 0);
             this.Controls.SetChildIndex(this.myGroupBox2, 0);

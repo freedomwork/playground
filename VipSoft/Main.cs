@@ -61,6 +61,9 @@ namespace VipSoft
                     dgInput.ShowDialog();
                     break;
                 case "panelButton_stockAdd":
+                    Stock_AddGoods stock_AddGoods = new Stock_AddGoods();
+                    stock_AddGoods.orderType = "采购进货";
+                    stock_AddGoods.ShowDialog();
                     break;
                 default:
                     break;
@@ -81,6 +84,9 @@ namespace VipSoft
                     gList.ShowDialog();
                     break;
                 case "alButton_cancle":
+                    Stock_AddGoods cancel = new Stock_AddGoods();
+                    cancel.orderType = "采购退货";
+                    cancel.ShowDialog();
                     break;
                 case "alButton_CaiSearch":
                     ReportStock rStock = new ReportStock();

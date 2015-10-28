@@ -2,7 +2,9 @@
 using System.Data;
 using System.Text;
 using System.Data.SqlClient;
-using Maticsoft.DBUtility;//Please add references
+using Maticsoft.DBUtility;
+using System.Collections;
+using System.Collections.Generic;//Please add references
 namespace VipSoft.DAL
 {
 	/// <summary>
@@ -89,6 +91,42 @@ namespace VipSoft.DAL
 				return Convert.ToInt32(obj);
 			}
 		}
+
+        public bool Add(List<VipSoft.Model.OrderGoods> list)
+        {
+            List<string> arrList = new List<string>();
+
+            DateTime time = DateTime.Now;
+            string sql = "";          //增加订单
+            string update_sql = "";  // 改变库存
+
+
+            foreach (VipSoft.Model.OrderGoods dr in list)
+            {
+
+                if (dr.type == 0) //采购进货
+                {
+                    sql = "insert into OrderGoods(GoodsID,GoodsCode,GoodsName,Type,GoodsUnit,Price,[Number],TotalMoney,MasterID,MasterName,CreateTime,ShopID,ShopName) "
+
+                + "values('" + dr.GoodsID + "','" + dr.GoodsCode + "','" + dr.GoodsName + "','" + dr.type + "','" + dr.GoodsUnit + "','" + dr.Price + "','" + dr.Number + "','" + dr.TotalMoney + "','" + dr.MasterID + "','" + dr.MasterName + "','" + time + "'," + dr.ShopID + ",'" + dr.ShopName + "')";      //增加订单        
+
+                    update_sql = " update Goods set [Number]=[Number]+" + dr.Number + " where ID=" + dr.GoodsID + "";
+                }
+                else       //采购退货
+                {
+                    sql = "insert into OrderGoods(GoodsID,GoodsCode,GoodsName,Type,GoodsUnit,Price,[Number],TotalMoney,MasterID,MasterName,CreateTime,ShopID,ShopName) "
+
+                + "values('" + dr.GoodsID + "','" + dr.GoodsCode + "','" + dr.GoodsName + "','" + dr.type + "','" + dr.GoodsUnit + "','" + dr.Price + "','-" + dr.Number + "','-" + dr.TotalMoney + "','" + dr.MasterID + "','" + dr.MasterName + "','" + time + "'," + dr.ShopID + ",'" + dr.ShopName + "')";      //增加订单            
+
+                    update_sql = " update Goods set [Number]=[Number]-" + dr.Number + " where ID=" + dr.GoodsID + "";
+                }
+
+                arrList.Add(sql);
+                arrList.Add(update_sql);
+            }
+
+            return DbHelperSQL.ExecuteSqlTran(arrList)>0;
+        }
 		/// <summary>
 		/// 更新一条数据
 		/// </summary>

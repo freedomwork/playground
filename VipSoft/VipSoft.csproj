@@ -95,6 +95,12 @@
     <Compile Include="Goods\Stock_AddGoods.Designer.cs">
       <DependentUpon>Stock_AddGoods.cs</DependentUpon>
     </Compile>
+    <Compile Include="Goods\Stock_Detial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goods\Stock_Detial.Designer.cs">
+      <DependentUpon>Stock_Detial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Member\memList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Goods\Stock_AddGoods.resx">
       <DependentUpon>Stock_AddGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goods\Stock_Detial.resx">
+      <DependentUpon>Stock_Detial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Member\memList.resx">
       <DependentUpon>memList.cs</DependentUpon>
