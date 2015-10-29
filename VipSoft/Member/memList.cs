@@ -8,6 +8,13 @@ using System.Windows.Forms;
 
 namespace VipSoft
 {
+
+    //声明一个委托
+    public delegate void memListRefreshHandler();
+
+
+
+
     public partial class memList : BaseForm
     {
 
@@ -15,6 +22,8 @@ namespace VipSoft
         int currentPage = 0;
         int resCount = 0;
         int pageCount = 0;
+        DataTable listClass;
+
 
         string[] condition;
 
@@ -27,6 +36,14 @@ namespace VipSoft
         {
             BindList();
         }
+
+
+        private void BindTree()
+        {
+
+        }
+
+
 
         private void BindList()
         {
@@ -95,6 +112,22 @@ namespace VipSoft
             BindList();
         }
 
+        private void updMem()
+        {
+            //选择的条数不是1条时返回
+            if (this.dataGridView_List.SelectedRows.Count != 1)
+                return;
+            memRegister memReg = new memRegister();
+            memReg.memListRefresh += new memListRefreshHandler(BindList);
+
+            //得到所选记录的主键
+            int memId = int.Parse(this.dataGridView_List.SelectedRows[0].Cells["ID"].Value.ToString());
+            memReg.memId = memId;
+            memReg.StartPosition = FormStartPosition.CenterParent;
+            memReg.ShowDialog(this);
+
+        }
+
 
         private void menu_click(object sender, EventArgs e)
         {
@@ -107,6 +140,10 @@ namespace VipSoft
                 case "DelBtn":
                     delMem();
                     break;
+
+                case "UpdBtn":
+                    updMem();
+                    break;
             }
         }
 
@@ -115,6 +152,16 @@ namespace VipSoft
             currentPage = e.PageIndex;
             BindList();
             this.dataGridView_List.Focus();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView_List_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

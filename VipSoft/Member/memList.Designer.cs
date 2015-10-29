@@ -133,6 +133,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "按分类查看";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // tabPage2
             // 
@@ -255,6 +256,7 @@
             this.dataGridView_List.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_List.Size = new System.Drawing.Size(690, 402);
             this.dataGridView_List.TabIndex = 25;
+            this.dataGridView_List.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_List_CellContentClick);
             // 
             // CheckBox
             // 

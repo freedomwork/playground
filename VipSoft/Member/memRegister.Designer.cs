@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.id = new System.Windows.Forms.Label();
             this.memberPhoto1 = new VipSoft.Controls.MemberPhoto();
             this.label18 = new System.Windows.Forms.Label();
             this.Remark = new System.Windows.Forms.RichTextBox();
@@ -83,6 +84,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.id);
             this.groupBox1.Controls.Add(this.memberPhoto1);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.Remark);
@@ -129,7 +131,18 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "会员注册";
+            this.groupBox1.UseCompatibleTextRendering = true;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // id
+            // 
+            this.id.AutoSize = true;
+            this.id.Location = new System.Drawing.Point(528, 61);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(17, 12);
+            this.id.TabIndex = 41;
+            this.id.Text = "ID";
+            this.id.Visible = false;
             // 
             // memberPhoto1
             // 
@@ -542,6 +555,7 @@
             this.alButton2.TabIndex = 42;
             this.alButton2.Text = "关闭(Esc)";
             this.alButton2.UseVisualStyleBackColor = false;
+            this.alButton2.Click += new System.EventHandler(this.alButton2_Click);
             // 
             // memRegister
             // 
@@ -622,5 +636,6 @@
         private Controls.MemberPhoto memberPhoto1;
         private AlSkin.AlControl.AlButton alButton1;
         private AlSkin.AlControl.AlButton alButton2;
+        private System.Windows.Forms.Label id;
     }
 }

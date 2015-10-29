@@ -10,6 +10,10 @@ namespace VipSoft
 {
     public partial class memRegister : BaseForm
     {
+        public event memListRefreshHandler memListRefresh;
+
+        public int memId = 0;
+
         public memRegister()
         {
             InitializeComponent();
@@ -47,19 +51,29 @@ namespace VipSoft
             mCard.State = this.State.SelectedIndex;
             //...
 
-            mBll.Add(mCard);
-            MessageBox.Show("会员新增成功。");
-       
-            if (this.continue_add.Checked)
+            if (this.memId == 0)
             {
-                this.cardid.Text = "";
-                this.cardmianid.Text = "";
-                this.CardTypeID.Text = "";
-                this.Name.Text = "";
-                //...
+                mBll.Add(mCard);
+                MessageBox.Show("会员新增成功。");
+
+                if (this.continue_add.Checked)
+                {
+                    this.cardid.Text = "";
+                    this.cardmianid.Text = "";
+                    this.CardTypeID.Text = "";
+                    this.Name.Text = "";
+                    //...
+                }
+                else
+                {
+                    this.Close();
+                }
             }
             else
             {
+                mCard.ID = memId;
+                mBll.Update(mCard);
+                MessageBox.Show("会员修改成功。");
                 this.Close();
             }
 
@@ -67,7 +81,42 @@ namespace VipSoft
 
         private void memRegister_Load(object sender, EventArgs e)
         {
+            loadDicData();
+            if (this.memId != null)
+            {
+                VipSoft.BLL.MemCard mCard = new VipSoft.BLL.MemCard();
+                VipSoft.Model.MemCard memModel = mCard.GetModel(memId);
 
+                if (memModel != null)
+                {
+                    this.continue_add.Visible = false;
+                    this.cardid.Text = memModel.CardID;
+                    this.cardmianid.Text = memModel.CardMianID;
+                    this.CardTypeID.SelectedIndex = int.Parse(memModel.CardTypeID.ToString());
+                    this.Name.Text = memModel.Name;
+                    this.LevelID.Text = memModel.LevelID.ToString();
+                    this.id.Text = memModel.ID.ToString();
+                    this.Sex.SelectedIndex = int.Parse(memModel.Sex.ToString());
+                    this.State.SelectedIndex = int.Parse(memModel.State.ToString());
+                    //this.IsPast.Text = memModel.IsPast.ToString();
+                    //this.IsPointAuto.Text = memModel.IsPointAuto.ToString();
+                    this.Email.Text = memModel.Email;
+                    this.createtime.Text = memModel.CreateTime.ToString();
+                    this.Mobile.Text = memModel.Mobile;
+                    this.Money.Text = memModel.Money.ToString();
+                    this.PayMoney.Text = memModel.PayMoney.ToString();
+                    this.Remark.Text = memModel.Remark.ToString();
+                    this.Point.Text = memModel.Point.ToString();
+                }
+              
+            }
+
+        }
+
+
+        //加载页面的字典项
+        private void loadDicData()
+        {
             //加载卡片状态
             this.State.Items.Add(new System.Collections.DictionaryEntry("正常", 0));
             this.State.Items.Add(new System.Collections.DictionaryEntry("锁定", 1));
@@ -89,6 +138,12 @@ namespace VipSoft
             this.CardTypeID.DisplayMember = "key";
             this.CardTypeID.ValueMember = "value";
             this.CardTypeID.SelectedIndex = 0;
+
+        }
+
+        private void alButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
