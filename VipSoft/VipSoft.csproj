@@ -47,6 +47,9 @@
     <Compile Include="Common\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\BaseFormNoSkin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Controls\MemberPhoto.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -61,6 +64,24 @@
     </Compile>
     <Compile Include="Controls\PanelButton.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchMember.designer.cs">
+      <DependentUpon>SearchMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gift\GiftHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gift\GiftHistory.Designer.cs">
+      <DependentUpon>GiftHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gift\GiftList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gift\GiftList.Designer.cs">
+      <DependentUpon>GiftList.cs</DependentUpon>
     </Compile>
     <Compile Include="Goods\Dictionary.cs">
       <SubType>Form</SubType>
@@ -141,6 +162,18 @@
     <Compile Include="Member\prepaidCardRecharge.Designer.cs">
       <DependentUpon>prepaidCardRecharge.cs</DependentUpon>
     </Compile>
+    <Compile Include="Member\SearchMem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\SearchMem.designer.cs">
+      <DependentUpon>SearchMem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\SetLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\SetLevel.Designer.cs">
+      <DependentUpon>SetLevel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Other\DataInput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +181,9 @@
       <DependentUpon>DataInput.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Common\BaseFormNoSkin.resx">
+      <DependentUpon>BaseFormNoSkin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\MemberPhoto.resx">
       <DependentUpon>MemberPhoto.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +192,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\PanelButton.resx">
       <DependentUpon>PanelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SearchMember.resx">
+      <DependentUpon>SearchMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gift\GiftHistory.resx">
+      <DependentUpon>GiftHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gift\GiftList.resx">
+      <DependentUpon>GiftList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Goods\Dictionary.resx">
       <DependentUpon>Dictionary.cs</DependentUpon>
@@ -195,6 +240,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\SearchMem.resx">
+      <DependentUpon>SearchMem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\SetLevel.resx">
+      <DependentUpon>SetLevel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Other\DataInput.resx">
       <DependentUpon>DataInput.cs</DependentUpon>
@@ -336,6 +387,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nophoto.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_兑换历史记录.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_积分兑换.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_礼品设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\query.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

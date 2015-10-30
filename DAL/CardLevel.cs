@@ -38,6 +38,20 @@ namespace VipSoft.DAL
 			return DbHelperSQL.Exists(strSql.ToString(),parameters);
 		}
 
+        /// <summary>
+        /// 是否存在该记录
+        /// </summary>
+        public bool Exists(string name)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select count(1) from CardLevel");
+            strSql.Append(" where LevelName=@LevelName ");
+            SqlParameter[] parameters = {
+					new SqlParameter("@LevelName", SqlDbType.VarChar,50)};
+            parameters[0].Value = name;
+
+            return DbHelperSQL.Exists(strSql.ToString(), parameters);
+        }
 
 		/// <summary>
 		/// 增加一条数据
@@ -46,7 +60,7 @@ namespace VipSoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into CardLevel(");
-			strSql.Append("LevelName,NeedPoint,Point,Percent,ShopID,ShopName)");
+			strSql.Append("LevelName,NeedPoint,Point,[Percent],ShopID,ShopName)");
 			strSql.Append(" values (");
 			strSql.Append("@LevelName,@NeedPoint,@Point,@Percent,@ShopID,@ShopName)");
 			strSql.Append(";select @@IDENTITY");
@@ -84,7 +98,7 @@ namespace VipSoft.DAL
 			strSql.Append("LevelName=@LevelName,");
 			strSql.Append("NeedPoint=@NeedPoint,");
 			strSql.Append("Point=@Point,");
-			strSql.Append("Percent=@Percent,");
+			strSql.Append("[Percent]=@Percent,");
 			strSql.Append("ShopID=@ShopID,");
 			strSql.Append("ShopName=@ShopName");
 			strSql.Append(" where ID=@ID");
@@ -232,7 +246,7 @@ namespace VipSoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select ID,LevelName,NeedPoint,Point,Percent,ShopID,ShopName ");
+			strSql.Append("select ID,LevelName,NeedPoint,Point,[Percent],ShopID,ShopName ");
 			strSql.Append(" FROM CardLevel ");
 			if(strWhere.Trim()!="")
 			{
@@ -240,6 +254,18 @@ namespace VipSoft.DAL
 			}
 			return DbHelperSQL.Query(strSql.ToString());
 		}
+
+        public DataTable GetListC(int ID)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select * from Memcard");
+            strSql.Append(" where LevelID=@ID ");
+            SqlParameter[] parameters = {
+					new SqlParameter("@ID", SqlDbType.Int,4)};
+            parameters[0].Value = ID;
+
+            return DbHelperSQL.Query(strSql.ToString(), parameters).Tables[0];
+        }
 
 		/// <summary>
 		/// 获得前几行数据

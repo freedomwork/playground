@@ -271,6 +271,32 @@ namespace VipSoft.DAL
 			}
 		}
 
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public VipSoft.Model.MemCard GetModel(string CardID)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select  top 1 ID,CardID,CardMianID,Name,Sex,Password,Mobile,Photo,LevelID,IsPast,PastTime,Point,State,IsPointAuto,Money,TotalMoney,ShopID,ShopName,LastTime,Email,PayMoney,Remark,CardTypeID,CreateTime from MemCard ");
+            strSql.Append(" where CardID=@CardID or CardMianID=@CardMianID or Mobile=@CardID");
+            SqlParameter[] parameters = {
+					new SqlParameter("@CardID", SqlDbType.VarChar,50)
+			};
+            parameters[0].Value = CardID;
+
+            VipSoft.Model.MemCard model = new VipSoft.Model.MemCard();
+            DataSet ds = DbHelperSQL.Query(strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return DataRowToModel(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
 
 		/// <summary>
 		/// 得到一个对象实体
@@ -516,6 +542,21 @@ namespace VipSoft.DAL
             DataSet ds = DbHelperSQL.GetTable(tableName, columns, condition, "ID", false, PageSize, PageIndex, recordCount);
             resCount = int.Parse(ds.Tables[1].Rows[0][0].ToString());
             return ds;
+        }
+
+        /// <summary>
+        /// 按某字段排序显示前几条数据
+        /// </summary>
+        /// <returns></returns>
+        public DataSet GetList(int number, string sort, bool isAsc, string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select top " + number + " ID,CardID,[Name],LevelID,Point,[Money],TotalMoney from MemCard where CardID <> '0'");
+            if (strWhere.Trim() != "")
+                strSql.Append(" and " + strWhere + " ");
+            strSql.Append("order by " + sort + (isAsc ? "" : " desc "));
+
+            return DbHelperSQL.Query(strSql.ToString());
         }
 		#endregion  ExtensionMethod
 	}

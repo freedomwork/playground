@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.myTabControl1 = new YiJiaSoft.Controls.MyTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.treeView_Class = new System.Windows.Forms.TreeView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pager1 = new Vipsoft.Controls.Pager();
             this.AddBtn = new System.Windows.Forms.ToolStripButton();
@@ -54,6 +55,7 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.myTabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).BeginInit();
             this.SuspendLayout();
@@ -126,6 +128,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.treeView_Class);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -133,7 +136,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "按分类查看";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // treeView_Class
+            // 
+            this.treeView_Class.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.treeView_Class.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treeView_Class.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView_Class.Location = new System.Drawing.Point(3, 3);
+            this.treeView_Class.Name = "treeView_Class";
+            this.treeView_Class.Size = new System.Drawing.Size(155, 392);
+            this.treeView_Class.TabIndex = 1;
+            this.treeView_Class.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_Class_AfterSelect);
             // 
             // tabPage2
             // 
@@ -233,9 +246,9 @@
             this.dataGridView_List.AllowUserToAddRows = false;
             this.dataGridView_List.AllowUserToDeleteRows = false;
             this.dataGridView_List.AllowUserToResizeRows = false;
-            this.dataGridView_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_List.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_List.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -256,7 +269,6 @@
             this.dataGridView_List.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_List.Size = new System.Drawing.Size(690, 402);
             this.dataGridView_List.TabIndex = 25;
-            this.dataGridView_List.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_List_CellContentClick);
             // 
             // CheckBox
             // 
@@ -333,6 +345,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.myTabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).EndInit();
@@ -366,6 +379,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.TreeView treeView_Class;
 
     }
 }

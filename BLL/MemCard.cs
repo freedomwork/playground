@@ -72,6 +72,15 @@ namespace VipSoft.BLL
 			return dal.GetModel(ID);
 		}
 
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public VipSoft.Model.MemCard GetModel(string CardID)
+        {
+
+            return dal.GetModel(CardID);
+        }
+
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
@@ -154,6 +163,14 @@ namespace VipSoft.BLL
         public DataSet GetList(int PageSize, int PageIndex, out int resCount, params string[] strWhere)
         {
             return dal.GetList(PageSize, PageIndex, strWhere, out resCount);
+        }
+
+        /// <summary>
+        /// 按某字段排序得到前几条数据
+        /// </summary>
+        public DataSet GetList(int number, string sort, bool isAsc, string strWhere)
+        {
+            return dal.GetList(number, sort, isAsc, strWhere);
         }
         #endregion  ExtensionMethod
 	}

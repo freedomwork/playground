@@ -59,8 +59,14 @@
             this.panelButton_Goods_DataInput = new Vipsoft.Controls.PanelButton();
             this.panelButton_Goods_List = new Vipsoft.Controls.PanelButton();
             this.panelButton_Goods_Add = new Vipsoft.Controls.PanelButton();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelButton_Gift_His = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Gift_Setup = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Gift_Exchang = new Vipsoft.Controls.PanelButton();
             this.label_Title = new System.Windows.Forms.Label();
             this.Button_GoodsManage = new AlSkin.AlControl.AlButton();
+            this.Button_PointExchage = new AlSkin.AlControl.AlButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -73,6 +79,8 @@
             this.tabPage3.SuspendLayout();
             this.myGroupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -180,6 +188,7 @@
             this.myTabControl.Controls.Add(this.tabPage1);
             this.myTabControl.Controls.Add(this.tabPage2);
             this.myTabControl.Controls.Add(this.tabPage3);
+            this.myTabControl.Controls.Add(this.tabPage4);
             this.myTabControl.ItemSize = new System.Drawing.Size(0, 20);
             this.myTabControl.Location = new System.Drawing.Point(-23, 26);
             this.myTabControl.Multiline = true;
@@ -456,6 +465,68 @@
             this.panelButton_Goods_Add.Title = "新增产品";
             this.panelButton_Goods_Add.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.tableLayoutPanel3);
+            this.tabPage4.Location = new System.Drawing.Point(24, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(825, 450);
+            this.tabPage4.TabIndex = 4;
+            this.tabPage4.Text = "礼品";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.panelButton_Gift_His, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.panelButton_Gift_Setup, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panelButton_Gift_Exchang, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(118, 73);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(503, 207);
+            this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // panelButton_Gift_His
+            // 
+            this.panelButton_Gift_His.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_Gift_His.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Gift_His.Info = "显示会员的礼品兑换记录";
+            this.panelButton_Gift_His.InfoImg = global::VipSoft.Properties.Resources.ico_兑换历史记录;
+            this.panelButton_Gift_His.Location = new System.Drawing.Point(3, 83);
+            this.panelButton_Gift_His.Name = "panelButton_Gift_His";
+            this.panelButton_Gift_His.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Gift_His.TabIndex = 2;
+            this.panelButton_Gift_His.Title = "兑换历史记录";
+            // 
+            // panelButton_Gift_Setup
+            // 
+            this.panelButton_Gift_Setup.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Gift_Setup.Info = "用于兑换的小礼品列表";
+            this.panelButton_Gift_Setup.InfoImg = global::VipSoft.Properties.Resources.ico_礼品设置;
+            this.panelButton_Gift_Setup.Location = new System.Drawing.Point(254, 3);
+            this.panelButton_Gift_Setup.Name = "panelButton_Gift_Setup";
+            this.panelButton_Gift_Setup.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Gift_Setup.TabIndex = 1;
+            this.panelButton_Gift_Setup.Title = "礼品设置";
+            // 
+            // panelButton_Gift_Exchang
+            // 
+            this.panelButton_Gift_Exchang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_Gift_Exchang.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Gift_Exchang.Info = "用积分兑换各种小礼品";
+            this.panelButton_Gift_Exchang.InfoImg = global::VipSoft.Properties.Resources.ico_积分兑换;
+            this.panelButton_Gift_Exchang.Location = new System.Drawing.Point(3, 3);
+            this.panelButton_Gift_Exchang.Name = "panelButton_Gift_Exchang";
+            this.panelButton_Gift_Exchang.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Gift_Exchang.TabIndex = 0;
+            this.panelButton_Gift_Exchang.Title = "积分兑换";
+            // 
             // label_Title
             // 
             this.label_Title.AutoSize = true;
@@ -481,6 +552,20 @@
             this.Button_GoodsManage.UseVisualStyleBackColor = true;
             this.Button_GoodsManage.Click += new System.EventHandler(this.Button_GoodsManage_Click);
             // 
+            // Button_PointExchage
+            // 
+            this.Button_PointExchage.BackColor = System.Drawing.Color.Transparent;
+            this.Button_PointExchage.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(131)))), ((int)(((byte)(204)))));
+            this.Button_PointExchage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Button_PointExchage.ForeColor = System.Drawing.Color.White;
+            this.Button_PointExchage.Location = new System.Drawing.Point(36, 228);
+            this.Button_PointExchage.Name = "Button_PointExchage";
+            this.Button_PointExchage.Size = new System.Drawing.Size(150, 30);
+            this.Button_PointExchage.TabIndex = 21;
+            this.Button_PointExchage.Text = "积 分 兑 换";
+            this.Button_PointExchage.UseVisualStyleBackColor = true;
+            this.Button_PointExchage.Click += new System.EventHandler(this.Button_PointExchage_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -489,6 +574,7 @@
             this.BacklightImg = global::VipSoft.Properties.Resources.MainFromBG;
             this.BacklightLTRB = new System.Drawing.Rectangle(20, 94, 20, 40);
             this.ClientSize = new System.Drawing.Size(1060, 650);
+            this.Controls.Add(this.Button_PointExchage);
             this.Controls.Add(this.Button_GoodsManage);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.Button_MemberManage);
@@ -505,6 +591,7 @@
             this.Controls.SetChildIndex(this.Button_MemberManage, 0);
             this.Controls.SetChildIndex(this.toolStrip1, 0);
             this.Controls.SetChildIndex(this.Button_GoodsManage, 0);
+            this.Controls.SetChildIndex(this.Button_PointExchage, 0);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -519,6 +606,8 @@
             this.tabPage3.ResumeLayout(false);
             this.myGroupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,5 +648,11 @@
         private AlSkin.AlControl.AlButton alButton_cancle;
         private AlSkin.AlControl.AlButton alButton_Shortcut_GoodsReport;
         private AlSkin.AlControl.AlButton alButton_Shortcut_SetClass;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private Vipsoft.Controls.PanelButton panelButton_Gift_His;
+        private Vipsoft.Controls.PanelButton panelButton_Gift_Setup;
+        private Vipsoft.Controls.PanelButton panelButton_Gift_Exchang;
+        private AlSkin.AlControl.AlButton Button_PointExchage;
     }
 }

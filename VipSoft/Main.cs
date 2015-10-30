@@ -27,6 +27,12 @@ namespace VipSoft
             this.myTabControl.SelectedIndex = 2;
         }
 
+        private void Button_PointExchage_Click(object sender, EventArgs e)
+        {
+            this.label_Title.Text = "积分兑换";
+            this.myTabControl.SelectedIndex = 3;
+        }
+
         private void panelButton_Item_Click(string senderName)
         {
             switch (senderName)
@@ -65,6 +71,12 @@ namespace VipSoft
                     stock_AddGoods.orderType = "采购进货";
                     stock_AddGoods.ShowDialog();
                     break;
+                case "panelButton_Gift_Exchang":
+                    break;
+                case "panelButton_Gift_Setup":
+                    break;
+                case "panelButton_Gift_His":
+                    break;
                 default:
                     break;
             }
@@ -91,6 +103,12 @@ namespace VipSoft
                 case "alButton_CaiSearch":
                     ReportStock rStock = new ReportStock();
                     rStock.ShowDialog();
+                    break;
+                case "alButton_Shortcut_SetLevel":
+                    SetLevel setLevel = new SetLevel();
+                    setLevel.ShowDialog();
+                    break;
+                case "alButton_Shortcut_SetCardType":
                     break;
                 default:
                     break;

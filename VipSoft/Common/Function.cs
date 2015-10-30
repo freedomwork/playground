@@ -18,6 +18,34 @@ namespace VipSoft
             Application.Run(new Login());
         }
 
+        #region 会员等级相关方法
+        /// <summary>
+        /// 将等级编号转换为名称
+        /// </summary>
+        public static string LevelIDToName(int levelID)
+        {
+            List<VipSoft.Model.CardLevel> listLevel = new VipSoft.BLL.CardLevel().GetModelList("");
+            foreach (VipSoft.Model.CardLevel level in listLevel)
+            {
+                if (level.ID == levelID)
+                    return level.LevelName;
+            }
+            return "";
+        }
+        #endregion
+
+        /// <summary>
+        /// 设置窗口的初始位置
+        /// </summary>
+        public static void SetStartPosition(Form currentForm)
+        {
+            Form owner = currentForm.Owner;
+            if (owner == null || owner.Name != "Main")
+                return;
+            // 窗体居中显示
+            currentForm.SetBounds((Screen.GetBounds(currentForm).Width / 2) - (currentForm.Width / 2),
+                (Screen.GetBounds(currentForm).Height / 2) - (currentForm.Height / 2), currentForm.Width, currentForm.Height, BoundsSpecified.Location);
+        }
 
         /// <summary>
         /// 绑定产品分类到下拉菜单

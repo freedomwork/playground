@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using VipSoft.Common;
 
 namespace VipSoft
 {
@@ -24,9 +25,20 @@ namespace VipSoft
 
         }
 
+        /// <summary>
+        /// 加载卡片等级
+        /// </summary>
+        private void LoadCardLevel()
+        {
+            VipSoft.BLL.CardLevel level = new VipSoft.BLL.CardLevel();
+            DataSet ds = level.GetAllList();
+            this.LevelID.DataSource = ds.Tables[0];
+            this.LevelID.DisplayMember = "LevelName";
+            this.LevelID.ValueMember = "ID";
+        }
+
         private void alButton1_Click(object sender, EventArgs e)
         {
-
             VipSoft.BLL.MemCard mBll = new BLL.MemCard();
 
             //新建会员卡实体对象，保存界面录入的值
@@ -37,18 +49,18 @@ namespace VipSoft
             mCard.CardTypeID = this.CardTypeID.SelectedIndex;
             mCard.CreateTime = DateTime.Parse(this.createtime.Text.Trim());
             mCard.Email = this.Email.Text.Trim();
-           // mCard.IsPast = Convert.ToBoolean(Int32.Parse(this.IsPast.Text.Trim()));
-           // mCard.IsPointAuto = Convert.ToBoolean(Int32.Parse(this.IsPointAuto.Text.Trim()));
+            mCard.IsPast = this.IsPast.Checked ;
+            mCard.IsPointAuto = this.IsPointAuto.Checked ;
             mCard.PastTime = DateTime.Parse(this.PastTime.Text.Trim());
             mCard.Sex = this.Sex.SelectedIndex;
             mCard.Mobile = this.Mobile.Text.Trim();
-            mCard.LevelID = Int32.Parse(this.LevelID.Text.Trim());
+            mCard.LevelID = int.Parse(this.LevelID.SelectedValue.ToString());
             mCard.Money = Decimal.Parse(this.Money.Text.Trim());
             mCard.Password = this.Password.Text.Trim();
             mCard.PayMoney = Decimal.Parse(this.PayMoney.Text.Trim());
             mCard.Point = Int32.Parse(this.Point.Text.Trim());
             mCard.Remark = this.Remark.Text.Trim();
-            mCard.State = this.State.SelectedIndex;
+            mCard.State = int.Parse(((System.Collections.DictionaryEntry)State.SelectedItem).Value.ToString());
             //...
 
             if (this.memId == 0)
@@ -81,8 +93,9 @@ namespace VipSoft
 
         private void memRegister_Load(object sender, EventArgs e)
         {
+            LoadCardLevel();
             loadDicData();
-            if (this.memId != null)
+            if (memId != 0)
             {
                 VipSoft.BLL.MemCard mCard = new VipSoft.BLL.MemCard();
                 VipSoft.Model.MemCard memModel = mCard.GetModel(memId);
@@ -144,6 +157,20 @@ namespace VipSoft
         private void alButton2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SetLevel sl = new SetLevel();
+            sl.StartPosition = FormStartPosition.CenterParent;
+            sl.LevelFormClosed += new LevelFormClosedHandler(sl_LevelFormClosed);
+            sl.ShowDialog();
+        }
+
+        // 卡片等级窗体关闭时，需要重新加载注册窗体的卡片级别下拉菜单
+        void sl_LevelFormClosed(string s)
+        {
+            LoadCardLevel();
         }
     }
 }

@@ -184,6 +184,7 @@
             // 
             // CardTypeID
             // 
+            this.CardTypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CardTypeID.FormattingEnabled = true;
             this.CardTypeID.Location = new System.Drawing.Point(462, 28);
             this.CardTypeID.Name = "CardTypeID";
@@ -299,6 +300,7 @@
             // 
             // State
             // 
+            this.State.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.State.FormattingEnabled = true;
             this.State.Location = new System.Drawing.Point(81, 224);
             this.State.Name = "State";
@@ -338,9 +340,11 @@
             this.linkLabel1.TabIndex = 18;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "设置";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // LevelID
             // 
+            this.LevelID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LevelID.FormattingEnabled = true;
             this.LevelID.Location = new System.Drawing.Point(291, 160);
             this.LevelID.Name = "LevelID";
@@ -475,6 +479,7 @@
             // 
             // Sex
             // 
+            this.Sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Sex.FormattingEnabled = true;
             this.Sex.Location = new System.Drawing.Point(81, 160);
             this.Sex.Name = "Sex";
@@ -567,7 +572,6 @@
             this.Controls.Add(this.continue_add);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.myTabControl1);
-            //this.Name = "memRegister";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

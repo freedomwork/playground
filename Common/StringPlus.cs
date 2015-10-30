@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Maticsoft.Common
 {
@@ -319,6 +320,23 @@ namespace Maticsoft.Common
             }
             return " ";
 
+        }
+        #endregion
+
+        #region 判断是否为合法的手机号码
+        /// <summary>
+        /// 判断是否为合法的手机号码
+        /// </summary>
+        public static bool IsRightfulMobile(string mobiles)
+        {
+            string[] mos = mobiles.Split(",".ToCharArray());
+            string pattern = @"^1[3|4|5|8]\d{9}$";
+            foreach (string mo in mos)
+            {
+                if (!Regex.IsMatch(mo, pattern))
+                    return false;
+            }
+            return true;
         }
         #endregion
     }

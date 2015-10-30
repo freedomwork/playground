@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using VipSoft.Common;
 
 namespace VipSoft
 {
@@ -22,10 +23,12 @@ namespace VipSoft
         int currentPage = 0;
         int resCount = 0;
         int pageCount = 0;
-        DataTable listClass;
 
+        // 卡片等级
+        DataSet listLevel;
 
-        string[] condition;
+        // 查询条件
+        string condition = "CardID <> '0'";
 
         public memList()
         {
@@ -34,16 +37,44 @@ namespace VipSoft
 
         private void memList_Load(object sender, EventArgs e)
         {
+            BindTree();
             BindList();
         }
 
-
+        /// <summary>
+        /// 绑定树形菜单
+        /// </summary>
         private void BindTree()
         {
+            VipSoft.BLL.CardLevel level = new VipSoft.BLL.CardLevel();
+            listLevel = level.GetList("");
+            TreeNode rootNode = new TreeNode("所有会员");
+            rootNode.Name = "all_Level";
+            foreach (DataRow dr in listLevel.Tables[0].Rows)
+            {
+                TreeNode node = new TreeNode(dr["LevelName"].ToString());
+                node.Name = "level_" + dr["ID"].ToString();
+                rootNode.Nodes.Add(node);
+            }
+            this.treeView_Class.Nodes.Add(rootNode);
+            TreeNode rootNode_State = new TreeNode("所有会员");
+            rootNode_State.Name = "all_state";
 
+            TreeNode node1 = new TreeNode("正常");
+            node1.Name = "state_" + ((int)CardState.Normal);
+            rootNode_State.Nodes.Add(node1);
+
+            TreeNode node2 = new TreeNode("锁定");
+            node2.Name = "state_" + ((int)CardState.Locked);
+            rootNode_State.Nodes.Add(node2);
+
+            TreeNode node3 = new TreeNode("挂失");
+            node3.Name = "state_" + ((int)CardState.Lossed);
+            rootNode_State.Nodes.Add(node3);
+
+            this.treeView_Class.Nodes.Add(rootNode_State);
+            this.treeView_Class.ExpandAll();
         }
-
-
 
         private void BindList()
         {
@@ -154,14 +185,23 @@ namespace VipSoft
             this.dataGridView_List.Focus();
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void treeView_Class_AfterSelect(object sender, TreeViewEventArgs e)
         {
-
-        }
-
-        private void dataGridView_List_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            condition = "CardID <> '0'";
+            string name = e.Node.Name;
+            if (name.IndexOf("level_") != -1)
+            {
+                string level = name.Substring(6, name.Length - 6);
+                condition += " and LevelID=" + level;
+            }
+            else if (name.IndexOf("state_") != -1)
+            {
+                string state = name.Substring(6, name.Length - 6);
+                condition += " and State=" + state;
+            }
+            currentPage = 0;
+            resCount = 0;
+            BindList();
         }
     }
 }

@@ -88,6 +88,13 @@ namespace VipSoft.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ico_兑换历史记录 {
+            get {
+                object obj = ResourceManager.GetObject("ico_兑换历史记录", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ico_增加会员 {
             get {
                 object obj = ResourceManager.GetObject("ico_增加会员", resourceCulture);
@@ -112,6 +119,20 @@ namespace VipSoft.Properties {
         internal static System.Drawing.Bitmap ico_普通消费 {
             get {
                 object obj = ResourceManager.GetObject("ico_普通消费", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_礼品设置 {
+            get {
+                object obj = ResourceManager.GetObject("ico_礼品设置", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_积分兑换 {
+            get {
+                object obj = ResourceManager.GetObject("ico_积分兑换", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -182,6 +203,13 @@ namespace VipSoft.Properties {
         internal static System.Drawing.Bitmap Page_PrevBlack {
             get {
                 object obj = ResourceManager.GetObject("Page_PrevBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap query {
+            get {
+                object obj = ResourceManager.GetObject("query", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -31,6 +31,14 @@ namespace VipSoft.BLL
 			return dal.Exists(ID);
 		}
 
+        /// <summary>
+        /// 是否存在该等级名称
+        /// </summary>
+        public bool Exists(string name)
+        {
+            return dal.Exists(name);
+        }
+
 		/// <summary>
 		/// 增加一条数据
 		/// </summary>
@@ -79,6 +87,11 @@ namespace VipSoft.BLL
 		{
 			return dal.GetList(strWhere);
 		}
+
+        public DataTable GetListC(int ID)
+        {
+            return dal.GetListC(ID);
+        }
 		/// <summary>
 		/// 获得前几行数据
 		/// </summary>
