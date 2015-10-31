@@ -61,6 +61,8 @@ namespace VipSoft
             mCard.Point = Int32.Parse(this.Point.Text.Trim());
             mCard.Remark = this.Remark.Text.Trim();
             mCard.State = int.Parse(((System.Collections.DictionaryEntry)State.SelectedItem).Value.ToString());
+            mCard.ShopID = PublicState.Master.ShopID;
+            mCard.ShopName = PublicState.Master.ShopName;
             //...
 
             if (this.memId == 0)

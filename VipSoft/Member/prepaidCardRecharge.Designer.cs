@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.alButton1 = new AlSkin.AlControl.AlButton();
+            this.search_box = new System.Windows.Forms.TextBox();
+            this.search = new AlSkin.AlControl.AlButton();
             this.myTabControl1 = new YiJiaSoft.Controls.MyTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.alButton3 = new AlSkin.AlControl.AlButton();
-            this.alButton2 = new AlSkin.AlControl.AlButton();
+            this.total = new System.Windows.Forms.Label();
+            this.close = new AlSkin.AlControl.AlButton();
+            this.recharge = new AlSkin.AlControl.AlButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.giftAmount = new System.Windows.Forms.TextBox();
+            this.rechargeAmount = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -47,6 +48,15 @@
             this.label10 = new System.Windows.Forms.Label();
             this.memberPhoto1 = new VipSoft.Controls.MemberPhoto();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.id = new System.Windows.Forms.Label();
+            this.mobile = new System.Windows.Forms.Label();
+            this.pasttime = new System.Windows.Forms.Label();
+            this.totalMoney = new System.Windows.Forms.Label();
+            this.point = new System.Windows.Forms.Label();
+            this.money = new System.Windows.Forms.Label();
+            this.levelid = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
+            this.cardid = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -79,21 +89,22 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "卡号/手机(F2):";
             // 
-            // textBox1
+            // search_box
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 5;
+            this.search_box.Location = new System.Drawing.Point(116, 53);
+            this.search_box.Name = "search_box";
+            this.search_box.Size = new System.Drawing.Size(100, 21);
+            this.search_box.TabIndex = 5;
             // 
-            // alButton1
+            // search
             // 
-            this.alButton1.Location = new System.Drawing.Point(222, 52);
-            this.alButton1.Name = "alButton1";
-            this.alButton1.Size = new System.Drawing.Size(75, 23);
-            this.alButton1.TabIndex = 6;
-            this.alButton1.Text = "查询";
-            this.alButton1.UseVisualStyleBackColor = true;
+            this.search.Location = new System.Drawing.Point(222, 52);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(75, 23);
+            this.search.TabIndex = 6;
+            this.search.Text = "查询";
+            this.search.UseVisualStyleBackColor = true;
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // myTabControl1
             // 
@@ -123,11 +134,12 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.alButton3);
-            this.groupBox2.Controls.Add(this.alButton2);
+            this.groupBox2.Controls.Add(this.total);
+            this.groupBox2.Controls.Add(this.close);
+            this.groupBox2.Controls.Add(this.recharge);
             this.groupBox2.Controls.Add(this.richTextBox1);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.giftAmount);
+            this.groupBox2.Controls.Add(this.rechargeAmount);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
@@ -141,23 +153,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "储值卡充值";
             // 
-            // alButton3
+            // total
             // 
-            this.alButton3.Location = new System.Drawing.Point(266, 210);
-            this.alButton3.Name = "alButton3";
-            this.alButton3.Size = new System.Drawing.Size(75, 23);
-            this.alButton3.TabIndex = 10;
-            this.alButton3.Text = "关闭(Esc)";
-            this.alButton3.UseVisualStyleBackColor = true;
+            this.total.AutoSize = true;
+            this.total.Location = new System.Drawing.Point(81, 112);
+            this.total.Name = "total";
+            this.total.Size = new System.Drawing.Size(0, 12);
+            this.total.TabIndex = 11;
             // 
-            // alButton2
+            // close
             // 
-            this.alButton2.Location = new System.Drawing.Point(159, 210);
-            this.alButton2.Name = "alButton2";
-            this.alButton2.Size = new System.Drawing.Size(75, 23);
-            this.alButton2.TabIndex = 9;
-            this.alButton2.Text = "马上充值";
-            this.alButton2.UseVisualStyleBackColor = true;
+            this.close.Location = new System.Drawing.Point(266, 210);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(75, 23);
+            this.close.TabIndex = 10;
+            this.close.Text = "关闭(Esc)";
+            this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
+            // recharge
+            // 
+            this.recharge.Location = new System.Drawing.Point(159, 210);
+            this.recharge.Name = "recharge";
+            this.recharge.Size = new System.Drawing.Size(75, 23);
+            this.recharge.TabIndex = 9;
+            this.recharge.Text = "马上充值";
+            this.recharge.UseVisualStyleBackColor = true;
+            this.recharge.Click += new System.EventHandler(this.recharge_Click);
             // 
             // richTextBox1
             // 
@@ -167,19 +189,23 @@
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
             // 
-            // textBox3
+            // giftAmount
             // 
-            this.textBox3.Location = new System.Drawing.Point(82, 82);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(95, 21);
-            this.textBox3.TabIndex = 7;
+            this.giftAmount.Location = new System.Drawing.Point(82, 82);
+            this.giftAmount.Name = "giftAmount";
+            this.giftAmount.Size = new System.Drawing.Size(95, 21);
+            this.giftAmount.TabIndex = 7;
+            this.giftAmount.Text = "0.00";
+            this.giftAmount.Leave += new System.EventHandler(this.calculateAmount);
             // 
-            // textBox2
+            // rechargeAmount
             // 
-            this.textBox2.Location = new System.Drawing.Point(82, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(95, 21);
-            this.textBox2.TabIndex = 6;
+            this.rechargeAmount.Location = new System.Drawing.Point(82, 53);
+            this.rechargeAmount.Name = "rechargeAmount";
+            this.rechargeAmount.Size = new System.Drawing.Size(95, 21);
+            this.rechargeAmount.TabIndex = 6;
+            this.rechargeAmount.Text = "0.00";
+            this.rechargeAmount.Leave += new System.EventHandler(this.calculateAmount);
             // 
             // comboBox1
             // 
@@ -248,6 +274,15 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.id);
+            this.groupBox1.Controls.Add(this.mobile);
+            this.groupBox1.Controls.Add(this.pasttime);
+            this.groupBox1.Controls.Add(this.totalMoney);
+            this.groupBox1.Controls.Add(this.point);
+            this.groupBox1.Controls.Add(this.money);
+            this.groupBox1.Controls.Add(this.levelid);
+            this.groupBox1.Controls.Add(this.name);
+            this.groupBox1.Controls.Add(this.cardid);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -262,6 +297,81 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "会员基本信息";
+            // 
+            // id
+            // 
+            this.id.AutoSize = true;
+            this.id.Location = new System.Drawing.Point(80, 137);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(0, 12);
+            this.id.TabIndex = 16;
+            this.id.Visible = false;
+            // 
+            // mobile
+            // 
+            this.mobile.AutoSize = true;
+            this.mobile.Location = new System.Drawing.Point(239, 57);
+            this.mobile.Name = "mobile";
+            this.mobile.Size = new System.Drawing.Size(0, 12);
+            this.mobile.TabIndex = 15;
+            // 
+            // pasttime
+            // 
+            this.pasttime.AutoSize = true;
+            this.pasttime.Location = new System.Drawing.Point(239, 114);
+            this.pasttime.Name = "pasttime";
+            this.pasttime.Size = new System.Drawing.Size(11, 12);
+            this.pasttime.TabIndex = 14;
+            this.pasttime.Text = "";
+            // 
+            // totalMoney
+            // 
+            this.totalMoney.AutoSize = true;
+            this.totalMoney.Location = new System.Drawing.Point(79, 114);
+            this.totalMoney.Name = "totalMoney";
+            this.totalMoney.Size = new System.Drawing.Size(11, 12);
+            this.totalMoney.TabIndex = 13;
+            this.totalMoney.Text = "";
+            // 
+            // point
+            // 
+            this.point.AutoSize = true;
+            this.point.Location = new System.Drawing.Point(239, 86);
+            this.point.Name = "point";
+            this.point.Size = new System.Drawing.Size(0, 12);
+            this.point.TabIndex = 12;
+            // 
+            // money
+            // 
+            this.money.AutoSize = true;
+            this.money.Location = new System.Drawing.Point(79, 86);
+            this.money.Name = "money";
+            this.money.Size = new System.Drawing.Size(0, 12);
+            this.money.TabIndex = 11;
+            // 
+            // levelid
+            // 
+            this.levelid.AutoSize = true;
+            this.levelid.Location = new System.Drawing.Point(79, 57);
+            this.levelid.Name = "levelid";
+            this.levelid.Size = new System.Drawing.Size(0, 12);
+            this.levelid.TabIndex = 10;
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(239, 28);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(0, 12);
+            this.name.TabIndex = 9;
+            // 
+            // cardid
+            // 
+            this.cardid.AutoSize = true;
+            this.cardid.Location = new System.Drawing.Point(80, 28);
+            this.cardid.Name = "cardid";
+            this.cardid.Size = new System.Drawing.Size(0, 12);
+            this.cardid.TabIndex = 8;
             // 
             // label9
             // 
@@ -306,7 +416,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 12);
             this.label5.TabIndex = 3;
-            this.label5.Text = "会员生日:";
+            this.label5.Text = "手机号码:";
             // 
             // label4
             // 
@@ -388,8 +498,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 565);
             this.Controls.Add(this.myTabControl1);
-            this.Controls.Add(this.alButton1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.search);
+            this.Controls.Add(this.search_box);
             this.Controls.Add(this.label1);
             this.Name = "prepaidCardRecharge";
             this.ShowIcon = false;
@@ -398,8 +508,8 @@
             this.Text = "储值卡充值";
             this.Load += new System.EventHandler(this.prepaidCardRecharge_Load);
             this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.alButton1, 0);
+            this.Controls.SetChildIndex(this.search_box, 0);
+            this.Controls.SetChildIndex(this.search, 0);
             this.Controls.SetChildIndex(this.myTabControl1, 0);
             this.myTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -417,8 +527,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private AlSkin.AlControl.AlButton alButton1;
+        private System.Windows.Forms.TextBox search_box;
+        private AlSkin.AlControl.AlButton search;
         private YiJiaSoft.Controls.MyTabControl myTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -433,11 +543,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private AlSkin.AlControl.AlButton alButton3;
-        private AlSkin.AlControl.AlButton alButton2;
+        private AlSkin.AlControl.AlButton close;
+        private AlSkin.AlControl.AlButton recharge;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox giftAmount;
+        private System.Windows.Forms.TextBox rechargeAmount;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -449,5 +559,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label cardid;
+        private System.Windows.Forms.Label mobile;
+        private System.Windows.Forms.Label pasttime;
+        private System.Windows.Forms.Label totalMoney;
+        private System.Windows.Forms.Label point;
+        private System.Windows.Forms.Label money;
+        private System.Windows.Forms.Label levelid;
+        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Label total;
+        private System.Windows.Forms.Label id;
     }
 }
