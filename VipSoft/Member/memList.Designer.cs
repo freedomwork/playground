@@ -60,7 +60,6 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.DelBtn = new System.Windows.Forms.ToolStripButton();
-            this.alpanel21 = new AlSkin.AlControl.Alpanel2();
             this.pager1 = new Vipsoft.Controls.Pager();
             this.dataGridView_List = new System.Windows.Forms.DataGridView();
             this.CheckBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -82,7 +81,6 @@
             this.tabPage1.SuspendLayout();
             this.sign_money.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.alpanel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).BeginInit();
             this.SuspendLayout();
             // 
@@ -423,19 +421,12 @@
             this.DelBtn.Text = "toolStripButton3";
             this.DelBtn.Click += new System.EventHandler(this.menu_click);
             // 
-            // alpanel21
-            // 
-            this.alpanel21.Controls.Add(this.pager1);
-            this.alpanel21.Location = new System.Drawing.Point(180, 539);
-            this.alpanel21.Name = "alpanel21";
-            this.alpanel21.Size = new System.Drawing.Size(695, 99);
-            this.alpanel21.TabIndex = 24;
-            // 
             // pager1
             // 
+            this.pager1.BackColor = System.Drawing.Color.Transparent;
             this.pager1.BackGroundImage = null;
             this.pager1.CurrentPage = 0;
-            this.pager1.Location = new System.Drawing.Point(0, 26);
+            this.pager1.Location = new System.Drawing.Point(175, 558);
             this.pager1.Name = "pager1";
             this.pager1.PageCount = 0;
             this.pager1.PagerWidth = 500;
@@ -573,22 +564,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 600);
+            this.Controls.Add(this.pager1);
             this.Controls.Add(this.dataGridView_List);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.myTabControl1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.alpanel21);
             this.Name = "memList";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "会员列表";
             this.Load += new System.EventHandler(this.memList_Load);
-            this.Controls.SetChildIndex(this.alpanel21, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.myTabControl1, 0);
             this.Controls.SetChildIndex(this.toolStrip1, 0);
             this.Controls.SetChildIndex(this.dataGridView_List, 0);
+            this.Controls.SetChildIndex(this.pager1, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.myTabControl1.ResumeLayout(false);
@@ -597,7 +588,6 @@
             this.sign_money.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.alpanel21.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).EndInit();
             this.ResumeLayout(false);
 
@@ -615,7 +605,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton DelBtn;
-        private AlSkin.AlControl.Alpanel2 alpanel21;
         private AlSkin.AlControl.AlButton alButton_excle;
         private AlSkin.AlControl.AlButton button_Select;
         private System.Windows.Forms.TextBox search_box;
