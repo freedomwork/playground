@@ -536,7 +536,7 @@ namespace VipSoft.DAL
         public DataSet GetList(int PageSize, int PageIndex, string[] strWhere, out int resCount)
         {
             string tableName = "MemCard";
-            string[] columns = { "ID, CardID, CardMianID, name" };
+            string[] columns = { "ID, CardID, CardMianID, name, Sex,LevelID, Point, Money, TotalMoney, State, Email, Mobile" };
             string[] condition = strWhere;
             int recordCount = 1;
             DataSet ds = DbHelperSQL.GetTable(tableName, columns, condition, "ID", false, PageSize, PageIndex, recordCount);
