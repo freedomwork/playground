@@ -262,7 +262,7 @@ namespace VipSoft
                 }
             }
 
-            if (cond_money.Text != "" && sign_money.Text != "")
+            if (cond_money.Text != "" && tab.Text != "")
             {
                 if (!Maticsoft.Common.FormValidate.IsNumber(cond_money.Text))
                 {
@@ -273,7 +273,7 @@ namespace VipSoft
                 else
                 {
                     if (sb.ToString() != "") sb.Append(" and ");
-                    sb.Append(" money" + sign_money.Text + int.Parse(cond_money.Text));
+                    sb.Append(" money" + tab.Text + int.Parse(cond_money.Text));
                 }
             }
 
@@ -304,7 +304,7 @@ namespace VipSoft
             this.cond_level.SelectedIndex = -1;
             this.cond_name.Text = "";
             this.cond_money.Text = "";
-            this.sign_money.Text = "";
+            this.tab.Text = "";
             this.cond_point.Text = "";
             this.sign_point.Text = "";
             this.cond_totalMoney.Text = "";
