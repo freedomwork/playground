@@ -37,6 +37,8 @@ namespace VipSoft
 
         private void memList_Load(object sender, EventArgs e)
         {
+
+            loadDic();
             BindTree();
             BindList();
         }
@@ -90,6 +92,16 @@ namespace VipSoft
             BindPage();
         }
 
+        private void loadDic()
+        {
+            //this.cond_state.Items.Add(new System.Collections.DictionaryEntry("", -1));
+            this.cond_state.Items.Add(new System.Collections.DictionaryEntry("正常", 0));
+            this.cond_state.Items.Add(new System.Collections.DictionaryEntry("锁定", 1));
+            this.cond_state.Items.Add(new System.Collections.DictionaryEntry("挂失", 2));
+            this.cond_state.DisplayMember = "key";
+            this.cond_state.ValueMember = "value";
+            //this.cond_state.SelectedIndex = -1;
+        }
         /// <summary>
         /// 绑定分页
         /// </summary>
@@ -203,5 +215,109 @@ namespace VipSoft
             resCount = 0;
             BindList();
         }
+
+        private void button_Select_Click(object sender, EventArgs e) {
+
+            if (!string.IsNullOrEmpty(this.search_box.Text.Trim()))
+            {
+                condition += " and Mobile = '" + this.search_box.Text.Trim() + "' or cardid like '%" + this.search_box.Text.Trim() + "%' ";
+            }
+            else
+            {
+                condition = "CardID <> '0'";
+            }
+            currentPage = 0;
+            resCount = 0;
+            BindList();
+        }
+
+        private void gsearch_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            if (cond_name.Text.Trim() != "")
+                sb.Append("[Name] like '%" + cond_name.Text.Trim() + "%'");
+            if (cond_level.SelectedIndex >= 0)
+            {
+                if (sb.ToString() != "") sb.Append(" and ");
+                sb.Append(" levelid ='" + cond_level.SelectedIndex + "' ");
+            }
+            if (cond_state.SelectedIndex >=0)
+            {
+                    if (sb.ToString() != "") sb.Append(" and ");
+                    sb.Append(" state ="  + cond_state.SelectedIndex);
+            }
+
+            if (cond_point.Text != "" && sign_point.Text != "")
+            {
+                if (!Maticsoft.Common.FormValidate.IsNumber(cond_point.Text))
+                {
+                    MessageBox.Show("按会员积分查询，请在文本框中输入表示积分的整数。");
+                    this.cond_point.Focus();
+                    this.cond_point.SelectAll();
+                }
+                else
+                {
+                    if (sb.ToString() != "") sb.Append(" and ");
+                    sb.Append(" point" + sign_point.Text + int.Parse(cond_point.Text));
+                }
+            }
+
+            if (cond_money.Text != "" && sign_money.Text != "")
+            {
+                if (!Maticsoft.Common.FormValidate.IsNumber(cond_money.Text))
+                {
+                    MessageBox.Show("按会员余额查询，请在文本框中输入表示余额的整数。");
+                    this.cond_money.Focus();
+                    this.cond_money.SelectAll();
+                }
+                else
+                {
+                    if (sb.ToString() != "") sb.Append(" and ");
+                    sb.Append(" money" + sign_money.Text + int.Parse(cond_money.Text));
+                }
+            }
+
+            if (cond_totalMoney.Text != "" && sign_totalMoney.Text != "")
+            {
+                if (!Maticsoft.Common.FormValidate.IsNumber(cond_totalMoney.Text))
+                {
+                    MessageBox.Show("按会员余额查询，请在文本框中输入表示余额的整数。");
+                    this.cond_totalMoney.Focus();
+                    this.cond_totalMoney.SelectAll();
+                }
+                else
+                {
+                    if (sb.ToString() != "") sb.Append(" and ");
+                    sb.Append(" money" + sign_totalMoney.Text + int.Parse(cond_totalMoney.Text));
+                }
+            }
+
+            condition = sb.ToString();
+            currentPage = 0;
+            resCount = 0;
+            BindList();
+        }
+
+        private void gresret_Click(object sender, EventArgs e)
+        {
+            this.cond_state.SelectedIndex = -1;
+            this.cond_level.SelectedIndex = -1;
+            this.cond_name.Text = "";
+            this.cond_money.Text = "";
+            this.sign_money.Text = "";
+            this.cond_point.Text = "";
+            this.sign_point.Text = "";
+            this.cond_totalMoney.Text = "";
+            this.sign_totalMoney.Text = "";
+        }
+
+        private void dataGridView_List_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+
+        
     }
 }

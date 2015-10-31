@@ -138,8 +138,9 @@ namespace VipSoft
             this.State.ValueMember = "value";
             this.State.SelectedIndex = 0;
 
-            this.Sex.Items.Add(new System.Collections.DictionaryEntry("男", 0));
-            this.Sex.Items.Add(new System.Collections.DictionaryEntry("女", 1));
+            this.Sex.Items.Add(new System.Collections.DictionaryEntry("未知", 0));
+            this.Sex.Items.Add(new System.Collections.DictionaryEntry("男", 1));
+            this.Sex.Items.Add(new System.Collections.DictionaryEntry("女", 2));
             this.Sex.DisplayMember = "key";
             this.Sex.ValueMember = "value";
             this.Sex.SelectedIndex = 0;
