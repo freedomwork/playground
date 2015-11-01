@@ -34,7 +34,11 @@
             this.Column_Point = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.searchMember1 = new VipSoft.Controls.SearchMember();
+            this.label_Result = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView_List
@@ -50,7 +54,7 @@
             this.Column_Point,
             this.Column_Num,
             this.Column_Time});
-            this.dataGridView_List.Location = new System.Drawing.Point(16, 94);
+            this.dataGridView_List.Location = new System.Drawing.Point(16, 102);
             this.dataGridView_List.Name = "dataGridView_List";
             this.dataGridView_List.ReadOnly = true;
             this.dataGridView_List.RowHeadersWidth = 20;
@@ -91,11 +95,44 @@
             this.Column_Time.ReadOnly = true;
             this.Column_Time.Width = 120;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.searchMember1);
+            this.groupBox1.Location = new System.Drawing.Point(16, 41);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(593, 55);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "按会员查看";
+            // 
+            // searchMember1
+            // 
+            this.searchMember1.CardID = "";
+            this.searchMember1.IsSmallControl = false;
+            this.searchMember1.Location = new System.Drawing.Point(15, 13);
+            this.searchMember1.Name = "searchMember1";
+            this.searchMember1.Size = new System.Drawing.Size(320, 35);
+            this.searchMember1.TabIndex = 0;
+            this.searchMember1.EventMemberSelected += new VipSoft.Controls.EventMemberSelectedHandler(this.searchMember1_EventMemberSelected);
+            // 
+            // label_Result
+            // 
+            this.label_Result.AutoSize = true;
+            this.label_Result.BackColor = System.Drawing.Color.White;
+            this.label_Result.Location = new System.Drawing.Point(61, 162);
+            this.label_Result.Name = "label_Result";
+            this.label_Result.Size = new System.Drawing.Size(77, 12);
+            this.label_Result.TabIndex = 8;
+            this.label_Result.Text = "label_Result";
+            // 
             // GiftHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 458);
+            this.Controls.Add(this.label_Result);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView_List);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -104,9 +141,14 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "积分兑换历史记录";
+            this.Load += new System.EventHandler(this.GiftHistory_Load);
             this.Controls.SetChildIndex(this.dataGridView_List, 0);
+            this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.label_Result, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -118,5 +160,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Point;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Num;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Time;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private Controls.SearchMember searchMember1;
+        private System.Windows.Forms.Label label_Result;
     }
 }

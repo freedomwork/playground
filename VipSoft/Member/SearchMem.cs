@@ -78,7 +78,7 @@ namespace VipSoft
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 this.dataGridView_List.Rows.Add(dr["ID"].ToString(),dr["CardID"].ToString(),dr["Name"].ToString(),
-                    decimal.Parse(dr["TotalMoney"].ToString()).ToString("￥0.00"),
+                    decimal.Parse(dr["TotalMoney"].ToString() == "" ? "0" : dr["TotalMoney"].ToString()).ToString("￥0.00"),
                     Function.LevelIDToName(int.Parse(dr["LevelID"].ToString())));
             }
         }

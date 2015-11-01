@@ -72,10 +72,16 @@ namespace VipSoft
                     stock_AddGoods.ShowDialog();
                     break;
                 case "panelButton_Gift_Exchang":
+                    Exchang exchange = new Exchang();
+                    exchange.ShowDialog();
                     break;
                 case "panelButton_Gift_Setup":
+                    GiftList giftList = new GiftList();
+                    giftList.ShowDialog();
                     break;
                 case "panelButton_Gift_His":
+                    GiftHistory giftHis = new GiftHistory();
+                    giftHis.ShowDialog();
                     break;
                 default:
                     break;
@@ -109,6 +115,20 @@ namespace VipSoft
                     setLevel.ShowDialog();
                     break;
                 case "alButton_Shortcut_SetCardType":
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void toolStripButton_Item_Click(object sender, EventArgs e)
+        {
+            ToolStripButton item = (ToolStripButton)sender;
+            switch (item.Name)
+            {
+                case "toolStripButton_SwipingCard":
+                    this.label_Title.Text = "会员刷卡";
+                    this.myTabControl.SelectedIndex = 0;
                     break;
                 default:
                     break;

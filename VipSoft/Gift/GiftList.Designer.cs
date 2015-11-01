@@ -28,16 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.myTabControl1 = new YiJiaSoft.Controls.MyTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView_List = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_photo = new System.Windows.Forms.Label();
@@ -55,11 +49,24 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.contextMenuStrip_Right = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ToolStripMenuItem_Add = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiftCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Point = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExchangNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Photo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.myTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip_Right.SuspendLayout();
             this.SuspendLayout();
             // 
             // myTabControl1
@@ -94,13 +101,13 @@
             this.dataGridView_List.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_List.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
+            this.ID,
+            this.GiftCode,
+            this.Name,
+            this.Point,
+            this.ExchangNum,
+            this.Number,
+            this.Photo});
             this.dataGridView_List.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_List.Location = new System.Drawing.Point(3, 3);
             this.dataGridView_List.MultiSelect = false;
@@ -112,61 +119,7 @@
             this.dataGridView_List.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_List.Size = new System.Drawing.Size(433, 302);
             this.dataGridView_List.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "ID";
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "GiftCode";
-            this.Column2.HeaderText = "礼品编号";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "GiftName";
-            this.Column3.HeaderText = "礼品名称";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 120;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Point";
-            this.Column4.HeaderText = "积分";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 60;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "ExchangNum";
-            this.Column5.HeaderText = "已兑换";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 80;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Number";
-            this.Column6.HeaderText = "剩余量";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 80;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "Photo";
-            this.Column7.HeaderText = "图片";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Visible = false;
+            this.dataGridView_List.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_List_CellMouseClick);
             // 
             // tabPage2
             // 
@@ -220,6 +173,7 @@
             this.alButton1.TabIndex = 8;
             this.alButton1.Text = "选择图片";
             this.alButton1.UseVisualStyleBackColor = true;
+            this.alButton1.Click += new System.EventHandler(this.alButton1_Click);
             // 
             // label_GiftID
             // 
@@ -239,6 +193,7 @@
             this.Button_Close.TabIndex = 7;
             this.Button_Close.Text = "关闭(Esc)";
             this.Button_Close.UseVisualStyleBackColor = false;
+            this.Button_Close.Click += new System.EventHandler(this.Button_Close_Click);
             // 
             // Button_Add
             // 
@@ -249,6 +204,7 @@
             this.Button_Add.TabIndex = 6;
             this.Button_Add.Text = "保存信息";
             this.Button_Add.UseVisualStyleBackColor = false;
+            this.Button_Add.Click += new System.EventHandler(this.Button_Add_Click);
             // 
             // TextBox_Number
             // 
@@ -332,6 +288,97 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "礼品编号：";
             // 
+            // contextMenuStrip_Right
+            // 
+            this.contextMenuStrip_Right.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Add,
+            this.ToolStripMenuItem_Edit,
+            this.ToolStripMenuItem_Delete});
+            this.contextMenuStrip_Right.Name = "contextMenuStrip_Right";
+            this.contextMenuStrip_Right.Size = new System.Drawing.Size(161, 92);
+            // 
+            // ToolStripMenuItem_Add
+            // 
+            this.ToolStripMenuItem_Add.Name = "ToolStripMenuItem_Add";
+            this.ToolStripMenuItem_Add.Size = new System.Drawing.Size(160, 22);
+            this.ToolStripMenuItem_Add.Text = "新增礼品";
+            this.ToolStripMenuItem_Add.Click += new System.EventHandler(this.ToolStripMenuItem_Right_Click);
+            // 
+            // ToolStripMenuItem_Edit
+            // 
+            this.ToolStripMenuItem_Edit.Name = "ToolStripMenuItem_Edit";
+            this.ToolStripMenuItem_Edit.Size = new System.Drawing.Size(160, 22);
+            this.ToolStripMenuItem_Edit.Text = "修改此礼品信息";
+            this.ToolStripMenuItem_Edit.Click += new System.EventHandler(this.ToolStripMenuItem_Right_Click);
+            // 
+            // ToolStripMenuItem_Delete
+            // 
+            this.ToolStripMenuItem_Delete.Name = "ToolStripMenuItem_Delete";
+            this.ToolStripMenuItem_Delete.Size = new System.Drawing.Size(160, 22);
+            this.ToolStripMenuItem_Delete.Text = "删除此礼品";
+            this.ToolStripMenuItem_Delete.Click += new System.EventHandler(this.ToolStripMenuItem_Right_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "jpg图片|*.jpg|gif动画|*.gif";
+            this.openFileDialog1.Title = "选择礼品图片";
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // GiftCode
+            // 
+            this.GiftCode.DataPropertyName = "GiftCode";
+            this.GiftCode.HeaderText = "礼品编号";
+            this.GiftCode.Name = "GiftCode";
+            this.GiftCode.ReadOnly = true;
+            // 
+            // Name
+            // 
+            this.Name.DataPropertyName = "Name";
+            this.Name.HeaderText = "礼品名称";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            this.Name.Width = 120;
+            // 
+            // Point
+            // 
+            this.Point.DataPropertyName = "Point";
+            this.Point.HeaderText = "积分";
+            this.Point.Name = "Point";
+            this.Point.ReadOnly = true;
+            this.Point.Width = 60;
+            // 
+            // ExchangNum
+            // 
+            this.ExchangNum.DataPropertyName = "ExchangNum";
+            this.ExchangNum.HeaderText = "已兑换";
+            this.ExchangNum.Name = "ExchangNum";
+            this.ExchangNum.ReadOnly = true;
+            this.ExchangNum.Width = 80;
+            // 
+            // Number
+            // 
+            this.Number.DataPropertyName = "Number";
+            this.Number.HeaderText = "剩余量";
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            this.Number.Width = 80;
+            // 
+            // Photo
+            // 
+            this.Photo.DataPropertyName = "Photo";
+            this.Photo.HeaderText = "图片";
+            this.Photo.Name = "Photo";
+            this.Photo.ReadOnly = true;
+            this.Photo.Visible = false;
+            // 
             // GiftList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -340,11 +387,12 @@
             this.Controls.Add(this.myTabControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "GiftList";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "礼品设置";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GiftList_FormClosing);
+            this.Load += new System.EventHandler(this.GiftList_Load);
             this.Controls.SetChildIndex(this.myTabControl1, 0);
             this.myTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -352,6 +400,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip_Right.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -361,13 +410,6 @@
         private YiJiaSoft.Controls.MyTabControl myTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView_List;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label_photo;
@@ -385,5 +427,17 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_Right;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Add;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Edit;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Delete;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiftCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Point;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExchangNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Photo;
     }
 }

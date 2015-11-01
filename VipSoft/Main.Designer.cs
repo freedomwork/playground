@@ -33,7 +33,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Button_MemberManage = new AlSkin.AlControl.AlButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_SwipingCard = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.alpanel21 = new AlSkin.AlControl.Alpanel2();
@@ -131,24 +131,25 @@
             this.toolStrip1.BackgroundImage = global::VipSoft.Properties.Resources.ToolStrip_BG;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.toolStripButton_SwipingCard,
             this.toolStripButton2,
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(204, 99);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(308, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(339, 32);
             this.toolStrip1.TabIndex = 18;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // toolStripButton_SwipingCard
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::VipSoft.Properties.Resources.会员刷卡;
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(84, 29);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton_SwipingCard.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_SwipingCard.Image = global::VipSoft.Properties.Resources.会员刷卡;
+            this.toolStripButton_SwipingCard.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_SwipingCard.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_SwipingCard.Name = "toolStripButton_SwipingCard";
+            this.toolStripButton_SwipingCard.Size = new System.Drawing.Size(84, 29);
+            this.toolStripButton_SwipingCard.Text = "toolStripButton1";
+            this.toolStripButton_SwipingCard.Click += new System.EventHandler(this.toolStripButton_Item_Click);
             // 
             // toolStripButton2
             // 
@@ -503,6 +504,7 @@
             this.panelButton_Gift_His.Size = new System.Drawing.Size(245, 60);
             this.panelButton_Gift_His.TabIndex = 2;
             this.panelButton_Gift_His.Title = "兑换历史记录";
+            this.panelButton_Gift_His.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
             // 
             // panelButton_Gift_Setup
             // 
@@ -514,6 +516,7 @@
             this.panelButton_Gift_Setup.Size = new System.Drawing.Size(245, 60);
             this.panelButton_Gift_Setup.TabIndex = 1;
             this.panelButton_Gift_Setup.Title = "礼品设置";
+            this.panelButton_Gift_Setup.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
             // 
             // panelButton_Gift_Exchang
             // 
@@ -526,6 +529,7 @@
             this.panelButton_Gift_Exchang.Size = new System.Drawing.Size(245, 60);
             this.panelButton_Gift_Exchang.TabIndex = 0;
             this.panelButton_Gift_Exchang.Title = "积分兑换";
+            this.panelButton_Gift_Exchang.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
             // 
             // label_Title
             // 
@@ -620,7 +624,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private AlSkin.AlControl.AlButton Button_MemberManage;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton_SwipingCard;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private AlSkin.AlControl.Alpanel2 alpanel21;

@@ -32,6 +32,59 @@ namespace VipSoft
             }
             return "";
         }
+
+                /// <summary>
+        /// 更新用户等级
+        /// </summary>
+        /// <param name="type">1：购物增加积分  2：兑换减少积分</param>
+        public static void UpdateMemberLevel(int type, Model.MemCard memInfo)
+        {
+            Model.CardLevel newLevel = null;
+            List<Model.CardLevel> listLevel = new BLL.CardLevel().GetModelList("");
+            if (memInfo.IsPointAuto)
+            {
+
+                //如果没有勾选“积分自动换算等级”则跳过
+                int point = 0;
+                foreach (Model.CardLevel lev in listLevel)
+                {
+                    if (memInfo.Point < lev.NeedPoint)//500--1000-2000-3000
+                    {
+                        if (point == 0)
+                        {
+                            newLevel = lev;
+                            point = (int)lev.NeedPoint;
+                        }
+                        else if (point > lev.NeedPoint)
+                        {
+                            newLevel = lev;
+                            point = (int)lev.NeedPoint;
+                        }
+                    }
+                    else if (memInfo.Point > lev.NeedPoint)   //如果积分比最高等级的积分还高,就默认是最高等级
+                    {
+                        newLevel = lev;
+                    }
+                }
+                if (newLevel != null && newLevel.ID != memInfo.LevelID)
+                {
+                    // 比较新的等级和当前等级（当等级降低的情况，需要做出判断）
+                    Model.CardLevel curLevel = null;
+                    foreach (Model.CardLevel lev in listLevel)
+                    {
+                        if (lev.ID == memInfo.LevelID)
+                        {
+                            curLevel = lev;
+                            break;
+                        }
+                    }
+                    // 如果级别被降低，而全局设置了不允许降低等级，则返回
+                    if (curLevel != null && newLevel.NeedPoint < curLevel.NeedPoint)
+                        return;
+                    new BLL.MemCard().UpdateLevel((int)memInfo.ID, (int)newLevel.ID);
+                }
+            }
+        }
         #endregion
 
         /// <summary>

@@ -14,5 +14,10 @@ namespace VipSoft
         {
             InitializeComponent();
         }
+
+        private void linkLabel_OpenExcel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

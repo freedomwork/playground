@@ -191,6 +191,7 @@
             this.linkLabel_OpenExcel.TabIndex = 22;
             this.linkLabel_OpenExcel.TabStop = true;
             this.linkLabel_OpenExcel.Text = "这里";
+            this.linkLabel_OpenExcel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_OpenExcel_LinkClicked);
             // 
             // DataInput
             // 
