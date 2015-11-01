@@ -201,6 +201,15 @@ namespace VipSoft.DAL
 			}
 		}
 
+        /// <summary>
+        /// 修改会员等级
+        /// </summary>
+        public void UpdateLevel(int ID, int levelID)
+        {
+            string sql = "update MemCard set LevelID=" + levelID + " where ID=" + ID;
+            DbHelperSQL.ExecuteSql(sql);
+        }
+
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
