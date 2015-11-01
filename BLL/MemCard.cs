@@ -47,6 +47,14 @@ namespace VipSoft.BLL
 			return dal.Update(model);
 		}
 
+        /// <summary>
+        /// 更新会员等级
+        /// </summary>
+        public void UpdateLevel(int ID, int levelID)
+        {
+            dal.UpdateLevel(ID, levelID);
+        }
+
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
