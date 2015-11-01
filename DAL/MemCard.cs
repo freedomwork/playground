@@ -435,6 +435,18 @@ namespace VipSoft.DAL
 			return DbHelperSQL.Query(strSql.ToString());
 		}
 
+        public DataSet GetExportList(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select CardID,CardMianID,Name,Mobile,email,Sex,LevelID,Point,Money,TotalMoney,state ");
+            strSql.Append(" FROM MemCard ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            return DbHelperSQL.Query(strSql.ToString());
+        }
+
 		/// <summary>
 		/// 获得前几行数据
 		/// </summary>
