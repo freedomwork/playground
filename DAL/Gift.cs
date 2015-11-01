@@ -38,6 +38,21 @@ namespace VipSoft.DAL
 			return DbHelperSQL.Exists(strSql.ToString(),parameters);
 		}
 
+        /// <summary>
+        /// 是否存在该记录
+        /// </summary>
+        public bool Exists(string GiftCode)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select count(1) from Gift");
+            strSql.Append(" where GiftCode=@GiftCode");
+            SqlParameter[] parameters = {
+					new SqlParameter("@GiftCode", SqlDbType.VarChar,50)
+			};
+            parameters[0].Value = GiftCode;
+
+            return DbHelperSQL.Exists(strSql.ToString(), parameters);
+        }
 
 		/// <summary>
 		/// 增加一条数据
