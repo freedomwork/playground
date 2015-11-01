@@ -39,6 +39,14 @@ namespace VipSoft.BLL
 			return dal.Add(model);
 		}
 
+        /// <summary>
+        /// 增加一条数据
+        /// </summary>
+        public bool Add(List<VipSoft.Model.ExchangeLog> exchangList)
+        {
+            return dal.Add(exchangList);
+        }
+
 		/// <summary>
 		/// 更新一条数据
 		/// </summary>
@@ -86,6 +94,15 @@ namespace VipSoft.BLL
 		{
 			return dal.GetList(Top,strWhere,filedOrder);
 		}
+
+        /// <summary>
+        /// 获得报表统计所需数据
+        /// </summary>
+        public DataSet GetReportList(string condition)
+        {
+            return dal.GetReportList(condition);
+        }
+
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
