@@ -15,6 +15,7 @@ namespace VipSoft
         public prepaidCardRecharge()
         {
             InitializeComponent();
+            this.dataGridView1.AutoGenerateColumns = false;
         }
 
         private void prepaidCardRecharge_Load(object sender, EventArgs e)
@@ -33,7 +34,7 @@ namespace VipSoft
                 return;
             }
 
-            conditionStr += " cardid like '%"+search_box.Text+"%' or mobile like '%"+search_box.Text+"%'";
+            conditionStr += " cardid ='"+search_box.Text+"' or mobile ='"+search_box.Text+"' ";
 
             VipSoft.BLL.MemCard memCard = new BLL.MemCard();
             DataSet ds = memCard.GetList(conditionStr);
@@ -42,16 +43,29 @@ namespace VipSoft
             {
 
                 DataRow dr = dt.Rows[0];
-                this.cardid.Text = dr["cardid"].ToString();
+                this.v_cardid.Text = dr["cardid"].ToString();
                 this.name.Text = dr["name"].ToString();
-                this.money.Text = dr["money"].ToString();
+                this.v_money.Text = dr["money"].ToString();
                 this.totalMoney.Text = dr["totalMoney"].ToString();
                 this.point.Text = dr["point"].ToString();
                 this.mobile.Text = dr["mobile"].ToString();
                 this.pasttime.Text = dr["pasttime"].ToString().Substring(0, 10);
                 this.levelid.Text = dr["levelid"].ToString();
                 this.id.Text = dr["id"].ToString();
-                
+
+            }
+            else
+            {
+
+                this.v_cardid.Text = "";
+                this.name.Text = "";
+                this.v_money.Text ="";
+                this.totalMoney.Text = "";
+                this.point.Text = "";
+                this.mobile.Text = "";
+                this.pasttime.Text ="";
+                this.levelid.Text = "";
+                this.id.Text = "";
             }
 
             //SearchMem searchDlg = new SearchMem();
@@ -70,7 +84,7 @@ namespace VipSoft
 
         private void recharge_Click(object sender, EventArgs e)
         {
-            if (this.cardid.Text == null || this.cardid.Text == "")
+            if (this.v_cardid.Text == null || this.v_cardid.Text == "")
             {
                 MessageBox.Show("请先选择需要充值的会员!");
                 this.search_box.Focus();
@@ -139,6 +153,10 @@ namespace VipSoft
 
             }
         }
+
+
+
+
 
 
 

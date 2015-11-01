@@ -53,10 +53,10 @@
             this.pasttime = new System.Windows.Forms.Label();
             this.totalMoney = new System.Windows.Forms.Label();
             this.point = new System.Windows.Forms.Label();
-            this.money = new System.Windows.Forms.Label();
+            this.v_money = new System.Windows.Forms.Label();
             this.levelid = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
-            this.cardid = new System.Windows.Forms.Label();
+            this.v_cardid = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,10 +67,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cardid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.money = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.givemoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mastername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.myTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -280,10 +280,10 @@
             this.groupBox1.Controls.Add(this.pasttime);
             this.groupBox1.Controls.Add(this.totalMoney);
             this.groupBox1.Controls.Add(this.point);
-            this.groupBox1.Controls.Add(this.money);
+            this.groupBox1.Controls.Add(this.v_money);
             this.groupBox1.Controls.Add(this.levelid);
             this.groupBox1.Controls.Add(this.name);
-            this.groupBox1.Controls.Add(this.cardid);
+            this.groupBox1.Controls.Add(this.v_cardid);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -342,13 +342,13 @@
             this.point.Size = new System.Drawing.Size(0, 12);
             this.point.TabIndex = 12;
             // 
-            // money
+            // v_money
             // 
-            this.money.AutoSize = true;
-            this.money.Location = new System.Drawing.Point(79, 86);
-            this.money.Name = "money";
-            this.money.Size = new System.Drawing.Size(0, 12);
-            this.money.TabIndex = 11;
+            this.v_money.AutoSize = true;
+            this.v_money.Location = new System.Drawing.Point(79, 86);
+            this.v_money.Name = "v_money";
+            this.v_money.Size = new System.Drawing.Size(0, 12);
+            this.v_money.TabIndex = 11;
             // 
             // levelid
             // 
@@ -366,13 +366,13 @@
             this.name.Size = new System.Drawing.Size(0, 12);
             this.name.TabIndex = 9;
             // 
-            // cardid
+            // v_cardid
             // 
-            this.cardid.AutoSize = true;
-            this.cardid.Location = new System.Drawing.Point(80, 28);
-            this.cardid.Name = "cardid";
-            this.cardid.Size = new System.Drawing.Size(0, 12);
-            this.cardid.TabIndex = 8;
+            this.v_cardid.AutoSize = true;
+            this.v_cardid.Location = new System.Drawing.Point(80, 28);
+            this.v_cardid.Name = "v_cardid";
+            this.v_cardid.Size = new System.Drawing.Size(0, 12);
+            this.v_cardid.TabIndex = 8;
             // 
             // label9
             // 
@@ -462,36 +462,36 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.cardid,
+            this.money,
+            this.givemoney,
+            this.mastername});
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 6);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(502, 433);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Column1
+            // cardid
             // 
-            this.Column1.HeaderText = "充值金额";
-            this.Column1.Name = "Column1";
+            this.cardid.HeaderText = "会员卡号";
+            this.cardid.Name = "cardid";
             // 
-            // Column2
+            // money
             // 
-            this.Column2.HeaderText = "赠送金额";
-            this.Column2.Name = "Column2";
+            this.money.HeaderText = "充值金额";
+            this.money.Name = "money";
             // 
-            // Column3
+            // givemoney
             // 
-            this.Column3.HeaderText = "操作员";
-            this.Column3.Name = "Column3";
+            this.givemoney.HeaderText = "赠送金额";
+            this.givemoney.Name = "givemoney";
             // 
-            // Column4
+            // mastername
             // 
-            this.Column4.HeaderText = "充值时间";
-            this.Column4.Name = "Column4";
+            this.mastername.HeaderText = "操作员";
+            this.mastername.Name = "mastername";
             // 
             // prepaidCardRecharge
             // 
@@ -556,19 +556,19 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.Label cardid;
+        private System.Windows.Forms.Label v_cardid;
         private System.Windows.Forms.Label mobile;
         private System.Windows.Forms.Label pasttime;
         private System.Windows.Forms.Label totalMoney;
         private System.Windows.Forms.Label point;
-        private System.Windows.Forms.Label money;
+        private System.Windows.Forms.Label v_money;
         private System.Windows.Forms.Label levelid;
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label total;
         private System.Windows.Forms.Label id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cardid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn money;
+        private System.Windows.Forms.DataGridViewTextBoxColumn givemoney;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mastername;
     }
 }

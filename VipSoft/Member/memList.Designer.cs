@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.alButton_excle = new AlSkin.AlControl.AlButton();
+            this.exportExcel = new AlSkin.AlControl.AlButton();
             this.button_Select = new AlSkin.AlControl.AlButton();
             this.search_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -87,7 +87,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.alButton_excle);
+            this.groupBox1.Controls.Add(this.exportExcel);
             this.groupBox1.Controls.Add(this.button_Select);
             this.groupBox1.Controls.Add(this.search_box);
             this.groupBox1.Controls.Add(this.label1);
@@ -98,14 +98,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "会员查询";
             // 
-            // alButton_excle
+            // exportExcel
             // 
-            this.alButton_excle.Location = new System.Drawing.Point(405, 18);
-            this.alButton_excle.Name = "alButton_excle";
-            this.alButton_excle.Size = new System.Drawing.Size(104, 30);
-            this.alButton_excle.TabIndex = 6;
-            this.alButton_excle.Text = "会员导出Excel";
-            this.alButton_excle.UseVisualStyleBackColor = true;
+            this.exportExcel.Location = new System.Drawing.Point(405, 18);
+            this.exportExcel.Name = "exportExcel";
+            this.exportExcel.Size = new System.Drawing.Size(104, 30);
+            this.exportExcel.TabIndex = 6;
+            this.exportExcel.Text = "会员导出Excel";
+            this.exportExcel.UseVisualStyleBackColor = true;
+            this.exportExcel.Click += new System.EventHandler(this.exportExcel_Click);
             // 
             // button_Select
             // 
@@ -605,7 +606,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton DelBtn;
-        private AlSkin.AlControl.AlButton alButton_excle;
+        private AlSkin.AlControl.AlButton exportExcel;
         private AlSkin.AlControl.AlButton button_Select;
         private System.Windows.Forms.TextBox search_box;
         private System.Windows.Forms.Label label1;

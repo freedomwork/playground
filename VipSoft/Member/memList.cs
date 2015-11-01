@@ -33,6 +33,7 @@ namespace VipSoft
         public memList()
         {
             InitializeComponent();
+            this.dataGridView_List.AutoGenerateColumns = false;
         }
 
         private void memList_Load(object sender, EventArgs e)
@@ -315,6 +316,15 @@ namespace VipSoft
         {
 
         }
+
+        private void exportExcel_Click(object sender, EventArgs e)
+        {
+            String[] title = new String[] { "会员卡号", "卡面号", "会员姓名" ,"手机号码","邮件","性别" };
+            int[] width = new int[] { 20, 20, 20 };
+            Maticsoft.Common.NPOI2.ExcalHelper eHelper = new Maticsoft.Common.NPOI2.ExcalHelper("会员导出",title, width, 0);
+
+        }
+
 
 
 
