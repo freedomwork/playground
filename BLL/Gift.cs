@@ -30,6 +30,13 @@ namespace VipSoft.BLL
 		{
 			return dal.Exists(ID);
 		}
+        /// <summary>
+        /// 是否存在该记录
+        /// </summary>
+        public bool Exists(string giftCode)
+        {
+            return dal.Exists(giftCode);
+        }
 
 		/// <summary>
 		/// 增加一条数据
