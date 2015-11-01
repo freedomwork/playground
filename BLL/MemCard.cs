@@ -88,6 +88,12 @@ namespace VipSoft.BLL
 		{
 			return dal.GetList(strWhere);
 		}
+
+        public DataSet GetExportList(string strWhere)
+        {
+            return dal.GetExportList(strWhere);
+        }
+
 		/// <summary>
 		/// 获得前几行数据
 		/// </summary>
