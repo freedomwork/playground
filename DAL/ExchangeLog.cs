@@ -2,7 +2,8 @@
 using System.Data;
 using System.Text;
 using System.Data.SqlClient;
-using Maticsoft.DBUtility;//Please add references
+using Maticsoft.DBUtility;
+using System.Collections.Generic;//Please add references
 namespace VipSoft.DAL
 {
 	/// <summary>
@@ -86,6 +87,70 @@ namespace VipSoft.DAL
 				return Convert.ToInt32(obj);
 			}
 		}
+
+        /// <summary>
+        /// 增加一条数据
+        /// </summary>
+        public bool Add(List<Model.ExchangeLog> exchangList)
+        {
+            int totalPoint = 0;
+            List<string> arr = new List<string>();
+            foreach (Model.ExchangeLog model in exchangList)
+            {
+                totalPoint += (int)model.Point;
+                StringBuilder strSql = new StringBuilder();
+                strSql.Append("insert into ExchangeLog(");
+                strSql.Append("MemID,CardID,Name,GiftID,GiftCode,GiftName,[Number],Point,MasterID,MasterName,CreateTime,ShopID,ShopName)");
+                strSql.Append(" values (");
+                strSql.Append("@MemID,@CardID,@Name,@GiftID,@GiftCode,@GiftName,@Number,@Point,@MasterID,@MasterName,@CreateTime,@ShopID,@ShopName)");
+                SqlParameter[] parameters = {
+					new SqlParameter("@MemID", SqlDbType.Int,4),
+					new SqlParameter("@CardID", SqlDbType.VarChar,50),
+					new SqlParameter("@Name", SqlDbType.VarChar,20),
+					new SqlParameter("@GiftID", SqlDbType.Int,4),
+					new SqlParameter("@GiftCode", SqlDbType.VarChar,50),
+					new SqlParameter("@GiftName", SqlDbType.VarChar,20),
+					new SqlParameter("@Number", SqlDbType.Int,4),
+					new SqlParameter("@Point", SqlDbType.Int,4),
+					new SqlParameter("@MasterID", SqlDbType.Int,4),
+					new SqlParameter("@MasterName", SqlDbType.VarChar,20),
+                    new SqlParameter("@CreateTime",SqlDbType.DateTime),
+                    new SqlParameter("@ShopID",SqlDbType.Int,4),
+                    new SqlParameter("@ShopName",SqlDbType.VarChar,50)
+                                            };
+                parameters[0].Value = model.MemID;
+                parameters[1].Value = model.CardID;
+                parameters[2].Value = model.Name;
+                parameters[3].Value = model.GiftID;
+                parameters[4].Value = model.GiftCode;
+                parameters[5].Value = model.GiftName;
+                parameters[6].Value = model.Number;
+                parameters[7].Value = model.Point;
+                parameters[8].Value = model.MasterID;
+                parameters[9].Value = model.MasterName;
+                parameters[10].Value = DateTime.Now;
+                parameters[11].Value = model.ShopID;
+                parameters[12].Value = model.ShopName;
+
+                DbHelperSQL.GetSingle(strSql.ToString(), parameters);
+
+                // 修改相关数量
+                string sqlGift = string.Format("update Gift set [Number]=[Number]-{0},ExchangeNumber=ExchangeNumber+{0} where ID={1}", model.Number, model.GiftID);
+                arr.Add(sqlGift);
+
+                //// 积分变动日志
+                //string sqlPoint = string.Format("insert into PointLog(CardID,MemName,Point,Type,Info,CreateTime,MasterID,MasterName,ShopID,ShopName) values('{0}','{1}',{2},{3},'{4}','{5}','{6}','{7}',{8},'{9}')",
+                //    model.CardID, model.Name, model.Point * -1, (int)VipSoft.Common.PointLogType.ExchangPoint, "礼品兑换，礼品：" + model.GiftName + "，数量：" + model.Number, DateTime.Now, model.MasterID, model.MasterName,model.ShopID,model.ShopName);
+                //arr.Add(sqlPoint);
+            }
+
+            string sql1 = "update MemCard set [Point]=[Point]-{0} where ID={1}";
+            sql1 = string.Format(sql1, totalPoint, exchangList[0].MemID);
+
+            arr.Add(sql1);
+
+            return DbHelperSQL.ExecuteSqlTran(arr)>0;
+        }
 		/// <summary>
 		/// 更新一条数据
 		/// </summary>
@@ -315,6 +380,20 @@ namespace VipSoft.DAL
 			strSql.Append(" order by " + filedOrder);
 			return DbHelperSQL.Query(strSql.ToString());
 		}
+
+        /// <summary>
+        /// 取得统计数据
+        /// </summary>
+        public DataSet GetReportList(string condition)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("SELECT ExchangeLog.MemID,ExchangeLog.CreateTime,ExchangeLog.CardID,ExchangeLog.Name,ExchangeLog.GiftID,ExchangeLog.GiftCode,ExchangeLog.GiftName,ExchangeLog.[Number],ExchangeLog.Point,ExchangeLog.MasterID,ExchangeLog.MasterName,MemCard.CardmianID,MemCard.ID,MemCard.Mobile");
+            sb.Append(" FROM ExchangeLog INNER JOIN MemCard on ExchangeLog.MemID=MemCard.ID");
+            if (condition != "")
+                sb.Append(" where " + condition);
+            sb.Append(" Order By ExchangeLog.ID desc");
+            return DbHelperSQL.Query(sb.ToString());
+        }
 
 		/// <summary>
 		/// 获取记录总数
