@@ -71,7 +71,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alMenuStrip1 = new AlSkin.AlControl.AlMenuStrip();
             this.myTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -494,14 +493,6 @@
             this.Column4.HeaderText = "充值时间";
             this.Column4.Name = "Column4";
             // 
-            // alMenuStrip1
-            // 
-            this.alMenuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.alMenuStrip1.Name = "alMenuStrip1";
-            this.alMenuStrip1.Size = new System.Drawing.Size(547, 24);
-            this.alMenuStrip1.TabIndex = 8;
-            this.alMenuStrip1.Text = "alMenuStrip1";
-            // 
             // prepaidCardRecharge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -511,15 +502,12 @@
             this.Controls.Add(this.search);
             this.Controls.Add(this.search_box);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.alMenuStrip1);
-            this.MainMenuStrip = this.alMenuStrip1;
             this.Name = "prepaidCardRecharge";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "储值卡充值";
             this.Load += new System.EventHandler(this.prepaidCardRecharge_Load);
-            this.Controls.SetChildIndex(this.alMenuStrip1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.search_box, 0);
             this.Controls.SetChildIndex(this.search, 0);
@@ -582,6 +570,5 @@
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label total;
         private System.Windows.Forms.Label id;
-        private AlSkin.AlControl.AlMenuStrip alMenuStrip1;
     }
 }
