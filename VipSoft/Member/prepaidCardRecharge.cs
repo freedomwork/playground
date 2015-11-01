@@ -10,6 +10,8 @@ namespace VipSoft
 {
     public partial class prepaidCardRecharge : BaseForm
     {
+
+
         public prepaidCardRecharge()
         {
             InitializeComponent();
@@ -17,7 +19,8 @@ namespace VipSoft
 
         private void prepaidCardRecharge_Load(object sender, EventArgs e)
         {
-            this.comboBox1.Text = "----无优惠----";
+            this.comboBox1.Text = "---无优惠---";
+           
         }
 
         public void search_Click(object sender, EventArgs e)
@@ -118,6 +121,25 @@ namespace VipSoft
         {
             this.Close();
         }
+
+        private void myTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.id.Text != "" && this.id.Text != null)
+            {
+                //假如界面的会员ID不为空，查询该会员的历史充值记录
+                String conditionStr = "memid = " + this.id.Text;
+                VipSoft.BLL.RechargeLog chargeBll = new VipSoft.BLL.RechargeLog();
+                DataSet ds = chargeBll.GetList(conditionStr);
+                this.dataGridView1.DataSource = ds.Tables[0];
+
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    dataGridView1.Rows[i].Cells[0].Value = false;
+                }
+
+            }
+        }
+
 
 
 
