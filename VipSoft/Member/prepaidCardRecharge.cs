@@ -48,7 +48,7 @@ namespace VipSoft
                 this.totalMoney.Text = dr["totalMoney"].ToString();
                 this.point.Text = dr["point"].ToString();
                 this.mobile.Text = dr["mobile"].ToString();
-                this.pasttime.Text = dr["pasttime"].ToString();
+                this.pasttime.Text = dr["pasttime"].ToString().Substring(0, 10);
                 this.levelid.Text = dr["levelid"].ToString();
                 this.id.Text = dr["id"].ToString();
                 
