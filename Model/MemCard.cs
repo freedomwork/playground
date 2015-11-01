@@ -24,8 +24,8 @@ namespace VipSoft.Model
 		private int? _point;
 		private int? _state;
 		private bool _ispointauto;
-		private decimal? _money;
-		private decimal? _totalmoney;
+		private decimal _money;
+		private decimal _totalmoney;
 		private int? _shopid;
 		private string _shopname;
 		private DateTime? _lasttime;
@@ -149,7 +149,7 @@ namespace VipSoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal? Money
+		public decimal Money
 		{
 			set{ _money=value;}
 			get{return _money;}
@@ -157,7 +157,7 @@ namespace VipSoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal? TotalMoney
+		public decimal TotalMoney
 		{
 			set{ _totalmoney=value;}
 			get{return _totalmoney;}
