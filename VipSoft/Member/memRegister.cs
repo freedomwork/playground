@@ -46,13 +46,15 @@ namespace VipSoft
             mCard.Name = this.Name.Text.Trim();
             mCard.CardID = this.cardid.Text.Trim();
             mCard.CardMianID = this.cardmianid.Text.Trim();
-            mCard.CardTypeID = int.Parse(CardTypeID.SelectedValue.ToString());
+
+
+            mCard.CardTypeID = int.Parse(((System.Collections.DictionaryEntry)CardTypeID.Items[0]).Value.ToString());
             mCard.CreateTime = DateTime.Parse(this.createtime.Text.Trim());
             mCard.Email = this.Email.Text.Trim();
             mCard.IsPast = this.IsPast.Checked ;
             mCard.IsPointAuto = this.IsPointAuto.Checked ;
             mCard.PastTime = DateTime.Parse(this.PastTime.Text.Trim());
-            mCard.Sex = int.Parse(this.Sex.SelectedValue.ToString());
+            mCard.Sex = int.Parse(((System.Collections.DictionaryEntry)Sex.Items[0]).Value.ToString());
             mCard.Mobile = this.Mobile.Text.Trim();
             mCard.LevelID = int.Parse(this.LevelID.SelectedValue.ToString());
             mCard.Money = Decimal.Parse(this.Money.Text.Trim());
@@ -60,7 +62,7 @@ namespace VipSoft
             mCard.PayMoney = Decimal.Parse(this.PayMoney.Text.Trim());
             mCard.Point = Int32.Parse(this.Point.Text.Trim());
             mCard.Remark = this.Remark.Text.Trim();
-            mCard.State = int.Parse(((System.Collections.DictionaryEntry)State.SelectedItem).Value.ToString());
+            mCard.State = int.Parse(((System.Collections.DictionaryEntry)State.Items[0]).Value.ToString());
             mCard.ShopID = PublicState.Master.ShopID;
             mCard.ShopName = PublicState.Master.ShopName;
             //...
@@ -107,14 +109,14 @@ namespace VipSoft
                     this.continue_add.Visible = false;
                     this.cardid.Text = memModel.CardID;
                     this.cardmianid.Text = memModel.CardMianID;
-                    this.CardTypeID.SelectedIndex = int.Parse(memModel.CardTypeID.ToString());
+                    this.CardTypeID.SelectedValue= int.Parse(memModel.CardTypeID.ToString());
                     this.Name.Text = memModel.Name;
                     this.LevelID.Text = memModel.LevelID.ToString();
                     this.id.Text = memModel.ID.ToString();
-                    this.Sex.SelectedIndex = int.Parse(memModel.Sex.ToString());
-                    this.State.SelectedIndex = int.Parse(memModel.State.ToString());
-                    //this.IsPast.Text = memModel.IsPast.ToString();
-                    //this.IsPointAuto.Text = memModel.IsPointAuto.ToString();
+                    this.Sex.SelectedValue = int.Parse(memModel.Sex.ToString());
+                    this.State.SelectedValue= int.Parse(memModel.State.ToString());
+                    this.IsPast.Checked = memModel.IsPast;
+                    this.IsPointAuto.Checked= memModel.IsPointAuto;
                     this.Email.Text = memModel.Email;
                     this.createtime.Text = memModel.CreateTime.ToString();
                     this.Mobile.Text = memModel.Mobile;
@@ -138,14 +140,14 @@ namespace VipSoft
             this.State.Items.Add(new System.Collections.DictionaryEntry("挂失", 2));
             this.State.DisplayMember = "key";
             this.State.ValueMember = "value";
-            this.State.SelectedValue = 0;
+            this.State.SelectedIndex = 0;
 
             this.Sex.Items.Add(new System.Collections.DictionaryEntry("未知", 0));
             this.Sex.Items.Add(new System.Collections.DictionaryEntry("男", 1));
             this.Sex.Items.Add(new System.Collections.DictionaryEntry("女", 2));
             this.Sex.DisplayMember = "key";
             this.Sex.ValueMember = "value";
-            this.Sex.SelectedValue = 0;
+            this.Sex.SelectedIndex = 0;
 
             //加载卡片类型
             this.CardTypeID.Items.Add(new System.Collections.DictionaryEntry("计次卡", 1));
@@ -153,7 +155,7 @@ namespace VipSoft
             this.CardTypeID.Items.Add(new System.Collections.DictionaryEntry("月卡", 3));
             this.CardTypeID.DisplayMember = "key";
             this.CardTypeID.ValueMember = "value";
-            this.CardTypeID.SelectedValue = 1;
+            this.CardTypeID.SelectedIndex = 0;
 
         }
 
