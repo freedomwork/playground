@@ -115,6 +115,8 @@ namespace VipSoft
                     setLevel.ShowDialog();
                     break;
                 case "alButton_Shortcut_SetCardType":
+                    memCardType cardTypeWin = new memCardType();
+                    cardTypeWin.ShowDialog();
                     break;
                 default:
                     break;
