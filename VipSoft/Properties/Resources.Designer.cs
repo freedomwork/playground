@@ -81,6 +81,13 @@ namespace VipSoft.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ico_会员退货 {
+            get {
+                object obj = ResourceManager.GetObject("ico_会员退货", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ico_储值卡充值 {
             get {
                 object obj = ResourceManager.GetObject("ico_储值卡充值", resourceCulture);
@@ -123,6 +130,20 @@ namespace VipSoft.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ico_普通消费1 {
+            get {
+                object obj = ResourceManager.GetObject("ico_普通消费1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_消费历史记录 {
+            get {
+                object obj = ResourceManager.GetObject("ico_消费历史记录", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ico_礼品设置 {
             get {
                 object obj = ResourceManager.GetObject("ico_礼品设置", resourceCulture);
@@ -133,6 +154,13 @@ namespace VipSoft.Properties {
         internal static System.Drawing.Bitmap ico_积分兑换 {
             get {
                 object obj = ResourceManager.GetObject("ico_积分兑换", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_计时消费 {
+            get {
+                object obj = ResourceManager.GetObject("ico_计时消费", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

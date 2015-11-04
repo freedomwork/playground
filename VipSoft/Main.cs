@@ -27,10 +27,16 @@ namespace VipSoft
             this.myTabControl.SelectedIndex = 2;
         }
 
+        private void Button_MemberOrder_Click(object sender, EventArgs e)
+        {
+            this.label_Title.Text = "会员消费";
+            this.myTabControl.SelectedIndex = 3;
+        }
+
         private void Button_PointExchage_Click(object sender, EventArgs e)
         {
             this.label_Title.Text = "积分兑换";
-            this.myTabControl.SelectedIndex = 3;
+            this.myTabControl.SelectedIndex = 4;
         }
 
         private void panelButton_Item_Click(string senderName)
@@ -82,6 +88,22 @@ namespace VipSoft
                 case "panelButton_Gift_His":
                     GiftHistory giftHis = new GiftHistory();
                     giftHis.ShowDialog();
+                    break;
+                case "panelButton_Order_Expense":
+                    Expense exp = new Expense();
+                    exp.ShowDialog();
+                    break;
+                case "panelButton_Order_Point":
+                    Expense_Point exp_Pointe = new Expense_Point();
+                    exp_Pointe.ShowDialog();
+                    break;
+                case "panelButton_Order_Expense_Time":
+                    break;
+                case "panelButton_Order_Cancel":
+                    break;
+                case "panelButton_Order_History":
+                    ExpHistory expHis = new ExpHistory();
+                    expHis.ShowDialog();
                     break;
                 default:
                     break;

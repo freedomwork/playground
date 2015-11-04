@@ -180,6 +180,24 @@
     <Compile Include="Member\SetLevel.Designer.cs">
       <DependentUpon>SetLevel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order\Expense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Expense.Designer.cs">
+      <DependentUpon>Expense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Expense_Point.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Expense_Point.Designer.cs">
+      <DependentUpon>Expense_Point.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\ExpHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\ExpHistory.Designer.cs">
+      <DependentUpon>ExpHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Other\DataInput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +273,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Member\SetLevel.resx">
       <DependentUpon>SetLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Expense.resx">
+      <DependentUpon>Expense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Expense_Point.resx">
+      <DependentUpon>Expense_Point.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\ExpHistory.resx">
+      <DependentUpon>ExpHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Other\DataInput.resx">
       <DependentUpon>DataInput.cs</DependentUpon>
@@ -408,6 +435,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\query.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_普通消费1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_计时消费.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_消费历史记录.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_会员退货.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
