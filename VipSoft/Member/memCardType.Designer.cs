@@ -35,10 +35,12 @@
             this.IsPointAuto = new System.Windows.Forms.CheckBox();
             this.save = new AlSkin.AlControl.AlButton();
             this.id = new System.Windows.Forms.Label();
+            this.close = new AlSkin.AlControl.AlButton();
             this.SuspendLayout();
             // 
             // cardType
             // 
+            this.cardType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cardType.FormattingEnabled = true;
             this.cardType.Location = new System.Drawing.Point(127, 61);
             this.cardType.Name = "cardType";
@@ -91,12 +93,13 @@
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(111, 209);
+            this.save.BackColor = System.Drawing.Color.Transparent;
+            this.save.Location = new System.Drawing.Point(52, 209);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(75, 27);
             this.save.TabIndex = 9;
             this.save.Text = "保存";
-            this.save.UseVisualStyleBackColor = true;
+            this.save.UseVisualStyleBackColor = false;
             this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // id
@@ -108,11 +111,23 @@
             this.id.TabIndex = 10;
             this.id.Visible = false;
             // 
+            // close
+            // 
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.Location = new System.Drawing.Point(143, 209);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(75, 27);
+            this.close.TabIndex = 11;
+            this.close.Text = "关闭";
+            this.close.UseVisualStyleBackColor = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // memCardType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(296, 285);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.id);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cardType);
@@ -120,7 +135,12 @@
             this.Controls.Add(this.IsExpenseGoods);
             this.Controls.Add(this.IsPointAuto);
             this.Controls.Add(this.save);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "memCardType";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "卡类型设置";
             this.Load += new System.EventHandler(this.memCardType_Load);
             this.Controls.SetChildIndex(this.save, 0);
@@ -130,6 +150,7 @@
             this.Controls.SetChildIndex(this.cardType, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.id, 0);
+            this.Controls.SetChildIndex(this.close, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +165,6 @@
         private System.Windows.Forms.CheckBox IsPointAuto;
         private AlSkin.AlControl.AlButton save;
         private System.Windows.Forms.Label id;
+        private AlSkin.AlControl.AlButton close;
     }
 }
