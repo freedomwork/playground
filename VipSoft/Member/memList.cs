@@ -324,11 +324,13 @@ namespace VipSoft
             String fileName = "member.xls";
             String[] title = new String[] { "会员卡号", "卡面号", "会员姓名" ,"手机号码","邮件","性别","当前等级", "当前积分", "当前余额", "累计消费", "会员卡状态" };
             int[] width = new int[] { 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20 };
-            Maticsoft.Common.NPOI2.ExcalHelper eHelper = new Maticsoft.Common.NPOI2.ExcalHelper("会员导出",title, width, 0);
 
             VipSoft.BLL.MemCard memCard = new BLL.MemCard();
             DataSet ds = memCard.GetExportList(condition);
-            eHelper.ExportExcel(ds, filePath+fileName);
+
+            VipSoft.Common.NPOI2.ExcelInfo  ei = new VipSoft.Common.NPOI2.ExcelInfo();
+            ei.filePath = filePath + fileName;
+            VipSoft.Common.NPOI2.ExcelUtils.writeExcel(ds.Tables[0], ei, title, width);
 
             SaveFileDialog SaveFile = new SaveFileDialog();
             SaveFile.FileName = fileName;
