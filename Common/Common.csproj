@@ -139,10 +139,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cache.cs" />
+    <Compile Include="DB\SqlHelper.cs" />
     <Compile Include="Enum.cs" />
     <Compile Include="FormValidate.cs" />
     <Compile Include="HttpProc.cs" />
-    <Compile Include="NPOI2\ExcelHelper.cs" />
+    <Compile Include="NPOI2\ExcelInfo.cs" />
+    <Compile Include="NPOI2\ExcelUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
