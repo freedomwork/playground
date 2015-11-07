@@ -186,6 +186,23 @@ namespace VipSoft.BLL
         {
             return dal.GetList(number, sort, isAsc, strWhere);
         }
+
+        public Boolean importMemCard(DataTable dt)
+        {
+            return dal.importMemCard(dt);
+        }
+
+
+        public DataTable getTblModel()
+        {
+            return dal.getTblModel();
+        }
+
+        public DataTable getQuery(String sqlStr)
+        {
+            return dal.getQuery(sqlStr);
+        }
+
         #endregion  ExtensionMethod
 	}
 }
