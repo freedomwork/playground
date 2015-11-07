@@ -3,6 +3,8 @@ using System.Data;
 using System.Text;
 using System.Data.SqlClient;
 using Maticsoft.DBUtility;//Please add references
+
+
 namespace VipSoft.DAL
 {
 	/// <summary>
@@ -579,6 +581,26 @@ namespace VipSoft.DAL
 
             return DbHelperSQL.Query(strSql.ToString());
         }
+
+        private String tblName = "memCard";
+
+        public Boolean importMemCard(DataTable dt)
+        {
+            Boolean importState = true;
+            importState = VipSoft.Common.DB.SqlHelper.insertTbl(dt, tblName, dt.Columns);
+            return importState;
+        }
+
+        public DataTable getTblModel()
+        {
+            return VipSoft.Common.DB.SqlHelper.getTblModel("select * from memCard where 1=2");
+        }
+
+        public DataTable getQuery(String sqlStr)
+        {
+            return VipSoft.Common.DB.SqlHelper.getTblModel(sqlStr);
+        }
+
 		#endregion  ExtensionMethod
 	}
 }
