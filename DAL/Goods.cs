@@ -254,6 +254,32 @@ namespace VipSoft.DAL
 			}
 		}
 
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public VipSoft.Model.Goods GetModel(string  GoodsCode)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select  top 1 ID,GoodsCode,Name,NameCode,Unit,Number,SaleNumber,ClassID,Price,BuyPrice,Point,MinPercent,GoodsType,PointType,CreateDateTime,ShopID,ShopName,Remark from Goods ");
+            strSql.Append(" where GoodsCode=@GoodsCode");
+            SqlParameter[] parameters = {
+					new SqlParameter("@GoodsCode", SqlDbType.VarChar,50)
+			};
+            parameters[0].Value = GoodsCode;
+
+            VipSoft.Model.Goods model = new VipSoft.Model.Goods();
+            DataSet ds = DbHelperSQL.Query(strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return DataRowToModel(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
 
 		/// <summary>
 		/// 得到一个对象实体
@@ -313,14 +339,7 @@ namespace VipSoft.DAL
 				}
 				if(row["GoodsType"]!=null && row["GoodsType"].ToString()!="")
 				{
-					if((row["GoodsType"].ToString()=="1")||(row["GoodsType"].ToString().ToLower()=="true"))
-					{
-						model.GoodsType=true;
-					}
-					else
-					{
-						model.GoodsType=false;
-					}
+                    model.GoodsType = byte.Parse(row["GoodsType"].ToString());
 				}
 				if(row["PointType"]!=null && row["PointType"].ToString()!="")
 				{

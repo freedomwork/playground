@@ -2,7 +2,8 @@
 using System.Data;
 using System.Text;
 using System.Data.SqlClient;
-using Maticsoft.DBUtility;//Please add references
+using Maticsoft.DBUtility;
+using System.Collections.Generic;//Please add references
 namespace VipSoft.DAL
 {
 	/// <summary>
@@ -94,6 +95,84 @@ namespace VipSoft.DAL
 				return Convert.ToInt32(obj);
 			}
 		}
+        /// <summary>
+        /// 散客消费
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="listOrder"></param>
+        /// <returns></returns>
+        public bool Add(VipSoft.Model.OrderLog model, List<VipSoft.Model.OrderDetail> listOrder)
+        {
+            List<string> arr = new List<string>();
+            string sq1 = "delete from OrderLog where OrderCode='" + model.OrderCode + "'";
+            string sq2 = "delete from OrderDetail where OrderCode='" + model.OrderCode + "'";
+            arr.Add(sq1);
+            arr.Add(sq2);
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("insert into OrderLog(");
+            strSql.Append("OrderCode,OrderType,MemID,CardID,MemName,TotalNumber,TotalMoney,DisCountMoney,PayInfo,Point,CreateDateTime,PayType,MasterID,MasterName,ShopID,ShopName)");
+            strSql.Append(" values (");
+            strSql.Append("@OrderCode,@OrderType,@MemID,@CardID,@MemName,@TotalNumber,@TotalMoney,@DisCountMoney,@PayInfo,@Point,@CreateDateTime,@PayType,@MasterID,@MasterName,@ShopID,@ShopName)");
+            strSql.Append(";select @@IDENTITY");
+            SqlParameter[] parameters = {
+					new SqlParameter("@OrderCode", SqlDbType.NChar,10),
+					new SqlParameter("@OrderType", SqlDbType.Int,4),
+					new SqlParameter("@MemID", SqlDbType.Int,4),
+					new SqlParameter("@CardID", SqlDbType.VarChar,50),
+					new SqlParameter("@MemName", SqlDbType.VarChar,20),
+					new SqlParameter("@TotalNumber", SqlDbType.Int,4),
+					new SqlParameter("@TotalMoney", SqlDbType.Money,8),
+					new SqlParameter("@DisCountMoney", SqlDbType.Money,8),
+					new SqlParameter("@PayInfo", SqlDbType.VarChar,50),
+					new SqlParameter("@Point", SqlDbType.Int,4),
+					new SqlParameter("@CreateDateTime", SqlDbType.DateTime),
+					new SqlParameter("@PayType", SqlDbType.Int,4),
+					new SqlParameter("@MasterID", SqlDbType.Int,4),
+					new SqlParameter("@MasterName", SqlDbType.VarChar,50),
+					new SqlParameter("@ShopID", SqlDbType.Int,4),
+					new SqlParameter("@ShopName", SqlDbType.VarChar,50)};
+            parameters[0].Value = model.OrderCode;
+            parameters[1].Value = model.OrderType;
+            parameters[2].Value = model.MemID;
+            parameters[3].Value = model.CardID;
+            parameters[4].Value = model.MemName;
+            parameters[5].Value = model.TotalNumber;
+            parameters[6].Value = model.TotalMoney;
+            parameters[7].Value = model.DisCountMoney;
+            parameters[8].Value = model.PayInfo;
+            parameters[9].Value = model.Point;
+            parameters[10].Value = model.CreateDateTime;
+            parameters[11].Value = model.PayType;
+            parameters[12].Value = model.MasterID;
+            parameters[13].Value = model.MasterName;
+            parameters[14].Value = model.ShopID;
+            parameters[15].Value = model.ShopName;
+
+            object obj = DbHelperSQL.GetSingle(strSql.ToString(), parameters);
+            if (obj == null)
+            {
+                return false;
+            }
+            else
+            {
+                // 添加订单详细，同时将产品数量减少
+                foreach (VipSoft.Model.OrderDetail detail in listOrder)
+                {
+                    string sql = "insert into OrderDetail(OrderCode,GoodsID,GoodsCode,GoodsName,Price,DiscountPrice,[Number],Percent,IsService) " +
+                        "values('{0}',{1},'{2}','{3}',{4},{5},{6},{7})";
+                    sql = string.Format(sql, detail.OrderCode, detail.GoodsID, detail.GoodsCode, detail.GoodsName, detail.Price,  detail.DiscountPrice, detail.Number,detail.Percent,detail.IsService);
+                    arr.Add(sql);
+
+                    string sqlGoods = "update Goods set [Number]=[Number]-" + detail.Number + ",SaleNumber=SaleNumber+" + detail.Number + " where ID=" + detail.GoodsID;
+                    if (detail.IsService)
+                        sqlGoods = "update Goods set SaleNumber=SaleNumber+" + detail.Number + " where ID=" + detail.GoodsID;
+                    arr.Add(sqlGoods);
+                }
+
+                return DbHelperSQL.ExecuteSqlTran(arr)>0;
+            }
+        }
 		/// <summary>
 		/// 更新一条数据
 		/// </summary>
