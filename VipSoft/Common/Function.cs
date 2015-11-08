@@ -279,4 +279,97 @@ namespace VipSoft
         }
     }
     #endregion
+
+    #region TempOrderInfo 类：保存临时订单数据的类
+    /// <summary>
+    /// 保存临时订单数据的类
+    /// </summary>
+    public class TempOrderInfo
+    {
+        private string _guid;
+        private int _number;
+        private decimal _DiscountPrice;
+        private VipSoft.Model.Goods _ginfo;
+        private int _countid;
+        private decimal _Discount;
+
+
+        public string Guid
+        {
+            set { _guid = value; }
+            get { return _guid; }
+        }
+
+        public int Number
+        {
+            set { _number = value; }
+            get { return _number; }
+        }
+
+        /// <summary>
+        /// 记次信息表ID，此字段在记次消费时有用
+        /// </summary>
+        public int CountID
+        {
+            set { _countid = value; }
+            get { return _countid; }
+        }
+
+        /// <summary>
+        /// 记录折扣
+        /// </summary>
+        public decimal Discount
+        {
+            get { return _Discount; }
+            set { _Discount = value; }
+        }
+
+        /// <summary>
+        /// 折扣后的价格
+        /// </summary>
+        public decimal DiscountPrice
+        {
+            set { _DiscountPrice = value; }
+            get { return _DiscountPrice; }
+        }
+
+        /// <summary>
+        /// 产品信息
+        /// </summary>
+        public VipSoft.Model.Goods GInfo
+        {
+            set { _ginfo = value; }
+            get { return _ginfo; }
+        }
+
+        /// <summary>
+        /// 修改挂单
+        /// </summary>
+        public TempOrderInfo(int number, decimal percent, VipSoft.Model.Goods ginfo)
+        {
+            _guid = System.Guid.NewGuid().ToString();
+            _number = number;
+            _ginfo = ginfo;
+            _Discount = percent;
+        }
+
+        public TempOrderInfo(int number, VipSoft.Model.Goods ginfo)
+        {
+            _guid = System.Guid.NewGuid().ToString();
+            _number = number;
+            _ginfo = ginfo;
+        }
+        /// <summary>
+        /// 用于记次消费
+        /// </summary>
+        public TempOrderInfo(int number, int countid, VipSoft.Model.Goods ginfo)
+        {
+            _guid = System.Guid.NewGuid().ToString();
+            _number = number;
+            _countid = countid;
+            _ginfo = ginfo;
+        }
+    }
+
+    #endregion
 }

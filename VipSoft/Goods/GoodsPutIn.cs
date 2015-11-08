@@ -264,7 +264,7 @@ namespace VipSoft
             model.BuyPrice = decimal.Parse(this.myMoneyTextBox1.Text.Replace("￥", ""));
             model.MinPercent = decimal.Parse(this.textBox_MinPercent.Text);
             model.PointType = int.Parse(this.rdoIsPoint.Checked ? "1" : "0");
-            model.GoodsType = this.checkBox_GoodsType.Checked;
+            model.GoodsType = this.checkBox_GoodsType.Checked?(byte)0:(byte)1;
             model.ShopID = PublicState.Master.ShopID;
             model.ShopName = PublicState.Master.ShopName;
             if (CurrentGoodsID == 0)

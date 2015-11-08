@@ -204,6 +204,12 @@
     <Compile Include="Order\ExpHistory.Designer.cs">
       <DependentUpon>ExpHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order\ExpResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\ExpResult.Designer.cs">
+      <DependentUpon>ExpResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="Other\DataInput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Order\ExpHistory.resx">
       <DependentUpon>ExpHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\ExpResult.resx">
+      <DependentUpon>ExpResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Other\DataInput.resx">
       <DependentUpon>DataInput.cs</DependentUpon>
