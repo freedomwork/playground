@@ -33,6 +33,34 @@ namespace VipSoft
             return "";
         }
 
+        /// <summary>
+        /// 根据等级编号得到该等级的折扣率（1表示不打折）
+        /// </summary>
+        public static decimal LevelIDToPercent(int levelID)
+        {
+            List<VipSoft.Model.CardLevel> listLevel = new VipSoft.BLL.CardLevel().GetModelList("");
+            foreach (VipSoft.Model.CardLevel level in listLevel)
+            {
+                if (level.ID == levelID)
+                    return (decimal)level.Percent;
+            }
+            return 1M;
+        }
+
+        /// <summary>
+        /// 根据等级编号得到该等级的折扣率（1表示不打折）
+        /// </summary>
+        public static int LevelIDToPoint(int levelID)
+        {
+            List<VipSoft.Model.CardLevel> listLevel = new VipSoft.BLL.CardLevel().GetModelList("");
+            foreach (VipSoft.Model.CardLevel level in listLevel)
+            {
+                if (level.ID == levelID)
+                    return (int)level.Point;
+            }
+            return 0;
+        }
+
                 /// <summary>
         /// 更新用户等级
         /// </summary>
