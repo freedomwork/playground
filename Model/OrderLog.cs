@@ -26,7 +26,7 @@ namespace VipSoft.Model
 		private int? _masterid;
 		private string _mastername;
 		private int? _shopid;
-		private int? _shopname;
+		private string _shopname;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -158,7 +158,7 @@ namespace VipSoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? ShopName
+		public string ShopName
 		{
 			set{ _shopname=value;}
 			get{return _shopname;}
