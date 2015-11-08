@@ -28,18 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox_Query = new System.Windows.Forms.GroupBox();
-            this.searchMember1 = new VipSoft.Controls.SearchMember();
-            this.linkLabel_ChangeTime = new System.Windows.Forms.LinkLabel();
-            this.label_CurrentTime = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.checkBox_NoMember = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label_MemPoint = new System.Windows.Forms.Label();
@@ -50,6 +46,11 @@
             this.label_MemName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.linkLabel_ChangeTime = new System.Windows.Forms.LinkLabel();
+            this.label_CurrentTime = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkBox_NoMember = new System.Windows.Forms.CheckBox();
+            this.searchMember1 = new VipSoft.Controls.SearchMember();
             this.groupBox5 = new YiJiaSoft.Controls.MyGroupBox();
             this.label_Tree_load = new System.Windows.Forms.Label();
             this.treeView_goods = new System.Windows.Forms.TreeView();
@@ -96,6 +97,7 @@
             this.button_Close = new AlSkin.AlControl.AlButton();
             this.button_Expense = new AlSkin.AlControl.AlButton();
             this.checkBox_Print = new System.Windows.Forms.CheckBox();
+            this.toolTip_Tree = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox_Query.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -128,54 +130,6 @@
             this.groupBox_Query.TabIndex = 4;
             this.groupBox_Query.TabStop = false;
             this.groupBox_Query.Text = "查找会员";
-            // 
-            // searchMember1
-            // 
-            this.searchMember1.CardID = "";
-            this.searchMember1.IsSmallControl = false;
-            this.searchMember1.Location = new System.Drawing.Point(3, 13);
-            this.searchMember1.Name = "searchMember1";
-            this.searchMember1.Size = new System.Drawing.Size(326, 35);
-            this.searchMember1.TabIndex = 0;
-            // 
-            // linkLabel_ChangeTime
-            // 
-            this.linkLabel_ChangeTime.AutoSize = true;
-            this.linkLabel_ChangeTime.Location = new System.Drawing.Point(700, 22);
-            this.linkLabel_ChangeTime.Name = "linkLabel_ChangeTime";
-            this.linkLabel_ChangeTime.Size = new System.Drawing.Size(53, 12);
-            this.linkLabel_ChangeTime.TabIndex = 1008;
-            this.linkLabel_ChangeTime.TabStop = true;
-            this.linkLabel_ChangeTime.Text = "历史消费";
-            // 
-            // label_CurrentTime
-            // 
-            this.label_CurrentTime.AutoSize = true;
-            this.label_CurrentTime.Location = new System.Drawing.Point(577, 22);
-            this.label_CurrentTime.Name = "label_CurrentTime";
-            this.label_CurrentTime.Size = new System.Drawing.Size(119, 12);
-            this.label_CurrentTime.TabIndex = 1007;
-            this.label_CurrentTime.Text = "2010-08-21 20:30:52";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(518, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 12);
-            this.label1.TabIndex = 1006;
-            this.label1.Text = "消费日期：";
-            // 
-            // checkBox_NoMember
-            // 
-            this.checkBox_NoMember.AutoSize = true;
-            this.checkBox_NoMember.Location = new System.Drawing.Point(335, 20);
-            this.checkBox_NoMember.Name = "checkBox_NoMember";
-            this.checkBox_NoMember.Size = new System.Drawing.Size(126, 16);
-            this.checkBox_NoMember.TabIndex = 1005;
-            this.checkBox_NoMember.TabStop = false;
-            this.checkBox_NoMember.Text = "散客消费（Enter）";
-            this.checkBox_NoMember.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -270,6 +224,55 @@
             this.label9.TabIndex = 1011;
             this.label9.Text = "账户余额：";
             // 
+            // linkLabel_ChangeTime
+            // 
+            this.linkLabel_ChangeTime.AutoSize = true;
+            this.linkLabel_ChangeTime.Location = new System.Drawing.Point(700, 22);
+            this.linkLabel_ChangeTime.Name = "linkLabel_ChangeTime";
+            this.linkLabel_ChangeTime.Size = new System.Drawing.Size(53, 12);
+            this.linkLabel_ChangeTime.TabIndex = 1008;
+            this.linkLabel_ChangeTime.TabStop = true;
+            this.linkLabel_ChangeTime.Text = "历史消费";
+            // 
+            // label_CurrentTime
+            // 
+            this.label_CurrentTime.AutoSize = true;
+            this.label_CurrentTime.Location = new System.Drawing.Point(577, 22);
+            this.label_CurrentTime.Name = "label_CurrentTime";
+            this.label_CurrentTime.Size = new System.Drawing.Size(119, 12);
+            this.label_CurrentTime.TabIndex = 1007;
+            this.label_CurrentTime.Text = "2010-08-21 20:30:52";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(518, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 12);
+            this.label1.TabIndex = 1006;
+            this.label1.Text = "消费日期：";
+            // 
+            // checkBox_NoMember
+            // 
+            this.checkBox_NoMember.AutoSize = true;
+            this.checkBox_NoMember.Location = new System.Drawing.Point(335, 20);
+            this.checkBox_NoMember.Name = "checkBox_NoMember";
+            this.checkBox_NoMember.Size = new System.Drawing.Size(126, 16);
+            this.checkBox_NoMember.TabIndex = 1005;
+            this.checkBox_NoMember.TabStop = false;
+            this.checkBox_NoMember.Text = "散客消费（Enter）";
+            this.checkBox_NoMember.UseVisualStyleBackColor = true;
+            // 
+            // searchMember1
+            // 
+            this.searchMember1.CardID = "";
+            this.searchMember1.IsSmallControl = false;
+            this.searchMember1.Location = new System.Drawing.Point(3, 13);
+            this.searchMember1.Name = "searchMember1";
+            this.searchMember1.Size = new System.Drawing.Size(326, 35);
+            this.searchMember1.TabIndex = 0;
+            this.searchMember1.EventMemberSelected += new VipSoft.Controls.EventMemberSelectedHandler(this.searchMember1_EventMemberSelected);
+            // 
             // groupBox5
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -307,6 +310,7 @@
             this.treeView_goods.Size = new System.Drawing.Size(217, 470);
             this.treeView_goods.TabIndex = 3;
             this.treeView_goods.TabStop = false;
+            this.treeView_goods.DoubleClick += new System.EventHandler(this.treeView_goods_DoubleClick);
             // 
             // textBox_GoodsCode
             // 
@@ -507,8 +511,8 @@
             // 
             // Column_Price
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column_Price.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column_Price.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column_Price.HeaderText = "单价";
             this.Column_Price.Name = "Column_Price";
             this.Column_Price.Width = 90;
@@ -523,21 +527,21 @@
             // 
             // Column_Number
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Red;
-            this.Column_Number.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Red;
+            this.Column_Number.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column_Number.HeaderText = "数量";
             this.Column_Number.Name = "Column_Number";
             this.Column_Number.Width = 90;
             // 
             // Column_Point
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column_Point.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column_Point.DefaultCellStyle = dataGridViewCellStyle15;
             this.Column_Point.HeaderText = "积分";
             this.Column_Point.Name = "Column_Point";
             this.Column_Point.ReadOnly = true;
@@ -545,8 +549,8 @@
             // 
             // Column_Total
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column_Total.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column_Total.DefaultCellStyle = dataGridViewCellStyle16;
             this.Column_Total.HeaderText = "价格";
             this.Column_Total.Name = "Column_Total";
             this.Column_Total.ReadOnly = true;
@@ -555,16 +559,16 @@
             // 
             // Column_Percent
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column_Percent.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column_Percent.DefaultCellStyle = dataGridViewCellStyle17;
             this.Column_Percent.HeaderText = "折扣";
             this.Column_Percent.Name = "Column_Percent";
             this.Column_Percent.Width = 92;
             // 
             // Column_DiscountTotal
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column_DiscountTotal.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column_DiscountTotal.DefaultCellStyle = dataGridViewCellStyle18;
             this.Column_DiscountTotal.HeaderText = "折扣价格";
             this.Column_DiscountTotal.Name = "Column_DiscountTotal";
             this.Column_DiscountTotal.ReadOnly = true;
@@ -739,6 +743,7 @@
             this.button_Close.TabIndex = 1015;
             this.button_Close.Text = "关闭(Esc)";
             this.button_Close.UseVisualStyleBackColor = false;
+            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
             // 
             // button_Expense
             // 
@@ -751,6 +756,7 @@
             this.button_Expense.TabIndex = 1014;
             this.button_Expense.Text = "马上结算(F5)";
             this.button_Expense.UseVisualStyleBackColor = false;
+            this.button_Expense.Click += new System.EventHandler(this.button_Expense_Click);
             // 
             // checkBox_Print
             // 
@@ -788,6 +794,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "普通消费";
+            this.Load += new System.EventHandler(this.Expense_Load);
             this.Controls.SetChildIndex(this.groupBox_Query, 0);
             this.Controls.SetChildIndex(this.groupBox5, 0);
             this.Controls.SetChildIndex(this.groupBox3, 0);
@@ -880,5 +887,6 @@
         private AlSkin.AlControl.AlButton button_Close;
         private AlSkin.AlControl.AlButton button_Expense;
         private System.Windows.Forms.CheckBox checkBox_Print;
+        private System.Windows.Forms.ToolTip toolTip_Tree;
     }
 }
