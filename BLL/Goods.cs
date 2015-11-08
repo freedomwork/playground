@@ -80,6 +80,15 @@ namespace VipSoft.BLL
 			return dal.GetModel(ID);
 		}
 
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public VipSoft.Model.Goods GetModel(string GoodsCode)
+        {
+
+            return dal.GetModel(GoodsCode);
+        }
+
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>

@@ -39,6 +39,14 @@ namespace VipSoft.BLL
 			return dal.Add(model);
 		}
 
+        /// <summary>
+        /// 散客消费
+        /// </summary>
+        public bool Add(VipSoft.Model.OrderLog model, List<VipSoft.Model.OrderDetail> listOrder)
+        {
+            return dal.Add(model, listOrder);
+        }
+
 		/// <summary>
 		/// 更新一条数据
 		/// </summary>
