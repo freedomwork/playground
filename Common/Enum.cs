@@ -69,4 +69,46 @@ namespace VipSoft.Common
     }
 
     #endregion
+
+    #region 会员消费订单支付类型
+    /// <summary>
+    /// 会员消费订单支付类型
+    /// </summary>
+    [Serializable]
+    public enum OrderPayType
+    {
+        /// <summary>
+        /// 卡片余额支付
+        /// </summary>
+        CardPay = 1,
+        /// <summary>
+        /// 现金支付
+        /// </summary>
+        CashPay = 2,
+        /// <summary>
+        /// 银行卡支付
+        /// </summary>
+        CreditPay = 3,
+        /// <summary>
+        /// 代金券支付
+        /// </summary>
+        VoucherPay = 4,
+        /// <summary>
+        /// 余额和现金联合支付
+        /// </summary>
+        UnionPay = 5,
+        /// <summary>
+        /// 挂账（打白条）
+        /// </summary>
+        LendMoney = 10,
+        /// <summary>
+        /// 挂单（未付款，只下订单）
+        /// </summary>
+        EmptyBills = 11,
+        /// <summary>
+        /// 记次消费
+        /// </summary>
+        CountPay = 100
+    }
+    #endregion
 }
