@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox_Query = new System.Windows.Forms.GroupBox();
-            this.searchMember1 = new VipSoft.Controls.SearchMember();
-            this.checkBox_NoMember = new System.Windows.Forms.CheckBox();
-            this.linkLabel_ChangeTime = new System.Windows.Forms.LinkLabel();
-            this.label_CurrentTime = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label_MemPoint = new System.Windows.Forms.Label();
@@ -44,6 +39,11 @@
             this.label_MemName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.checkBox_NoMember = new System.Windows.Forms.CheckBox();
+            this.linkLabel_ChangeTime = new System.Windows.Forms.LinkLabel();
+            this.label_CurrentTime = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.searchMember1 = new VipSoft.Controls.SearchMember();
             this.label4 = new System.Windows.Forms.Label();
             this.TextBox_PointPoint = new System.Windows.Forms.TextBox();
             this.TextBox_PointMoney1 = new YiJiaSoft.Controls.MyMoneyTextBox();
@@ -90,54 +90,6 @@
             this.groupBox_Query.TabIndex = 4;
             this.groupBox_Query.TabStop = false;
             this.groupBox_Query.Text = "查找会员";
-            // 
-            // searchMember1
-            // 
-            this.searchMember1.CardID = "";
-            this.searchMember1.IsSmallControl = false;
-            this.searchMember1.Location = new System.Drawing.Point(3, 13);
-            this.searchMember1.Name = "searchMember1";
-            this.searchMember1.Size = new System.Drawing.Size(326, 35);
-            this.searchMember1.TabIndex = 0;
-            // 
-            // checkBox_NoMember
-            // 
-            this.checkBox_NoMember.AutoSize = true;
-            this.checkBox_NoMember.Location = new System.Drawing.Point(335, 20);
-            this.checkBox_NoMember.Name = "checkBox_NoMember";
-            this.checkBox_NoMember.Size = new System.Drawing.Size(126, 16);
-            this.checkBox_NoMember.TabIndex = 1009;
-            this.checkBox_NoMember.TabStop = false;
-            this.checkBox_NoMember.Text = "散客消费（Enter）";
-            this.checkBox_NoMember.UseVisualStyleBackColor = true;
-            // 
-            // linkLabel_ChangeTime
-            // 
-            this.linkLabel_ChangeTime.AutoSize = true;
-            this.linkLabel_ChangeTime.Location = new System.Drawing.Point(657, 22);
-            this.linkLabel_ChangeTime.Name = "linkLabel_ChangeTime";
-            this.linkLabel_ChangeTime.Size = new System.Drawing.Size(53, 12);
-            this.linkLabel_ChangeTime.TabIndex = 1008;
-            this.linkLabel_ChangeTime.TabStop = true;
-            this.linkLabel_ChangeTime.Text = "历史消费";
-            // 
-            // label_CurrentTime
-            // 
-            this.label_CurrentTime.AutoSize = true;
-            this.label_CurrentTime.Location = new System.Drawing.Point(534, 22);
-            this.label_CurrentTime.Name = "label_CurrentTime";
-            this.label_CurrentTime.Size = new System.Drawing.Size(119, 12);
-            this.label_CurrentTime.TabIndex = 1007;
-            this.label_CurrentTime.Text = "2010-08-21 20:30:52";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(475, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 12);
-            this.label1.TabIndex = 1006;
-            this.label1.Text = "消费日期：";
             // 
             // label8
             // 
@@ -232,6 +184,57 @@
             this.label9.TabIndex = 1012;
             this.label9.Text = "账户余额：";
             // 
+            // checkBox_NoMember
+            // 
+            this.checkBox_NoMember.AutoSize = true;
+            this.checkBox_NoMember.Location = new System.Drawing.Point(335, 20);
+            this.checkBox_NoMember.Name = "checkBox_NoMember";
+            this.checkBox_NoMember.Size = new System.Drawing.Size(126, 16);
+            this.checkBox_NoMember.TabIndex = 1009;
+            this.checkBox_NoMember.TabStop = false;
+            this.checkBox_NoMember.Text = "散客消费（Enter）";
+            this.checkBox_NoMember.UseVisualStyleBackColor = true;
+            this.checkBox_NoMember.CheckedChanged += new System.EventHandler(this.checkBox_NoMember_CheckedChanged);
+            // 
+            // linkLabel_ChangeTime
+            // 
+            this.linkLabel_ChangeTime.AutoSize = true;
+            this.linkLabel_ChangeTime.Location = new System.Drawing.Point(657, 22);
+            this.linkLabel_ChangeTime.Name = "linkLabel_ChangeTime";
+            this.linkLabel_ChangeTime.Size = new System.Drawing.Size(53, 12);
+            this.linkLabel_ChangeTime.TabIndex = 1008;
+            this.linkLabel_ChangeTime.TabStop = true;
+            this.linkLabel_ChangeTime.Text = "历史消费";
+            // 
+            // label_CurrentTime
+            // 
+            this.label_CurrentTime.AutoSize = true;
+            this.label_CurrentTime.Location = new System.Drawing.Point(534, 22);
+            this.label_CurrentTime.Name = "label_CurrentTime";
+            this.label_CurrentTime.Size = new System.Drawing.Size(119, 12);
+            this.label_CurrentTime.TabIndex = 1007;
+            this.label_CurrentTime.Text = "2010-08-21 20:30:52";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(475, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 12);
+            this.label1.TabIndex = 1006;
+            this.label1.Text = "消费日期：";
+            // 
+            // searchMember1
+            // 
+            this.searchMember1.CardID = "";
+            this.searchMember1.IsSmallControl = false;
+            this.searchMember1.Location = new System.Drawing.Point(3, 13);
+            this.searchMember1.Name = "searchMember1";
+            this.searchMember1.Size = new System.Drawing.Size(326, 35);
+            this.searchMember1.TabIndex = 0;
+            this.searchMember1.ShanKeSelected += new VipSoft.Controls.ShanKeXiaoFeiHandler(this.searchMember1_ShanKeSelected);
+            this.searchMember1.EventMemberSelected += new VipSoft.Controls.EventMemberSelectedHandler(this.searchMember1_EventMemberSelected);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -257,6 +260,7 @@
             this.TextBox_PointMoney1.Name = "TextBox_PointMoney1";
             this.TextBox_PointMoney1.Size = new System.Drawing.Size(100, 21);
             this.TextBox_PointMoney1.TabIndex = 56;
+            this.TextBox_PointMoney1.TextChanged += new System.EventHandler(this.TextBox_PointMoney1_TextChanged);
             // 
             // TextBox_PointMoney2
             // 
@@ -265,6 +269,7 @@
             this.TextBox_PointMoney2.Name = "TextBox_PointMoney2";
             this.TextBox_PointMoney2.Size = new System.Drawing.Size(100, 21);
             this.TextBox_PointMoney2.TabIndex = 57;
+            this.TextBox_PointMoney2.TextChanged += new System.EventHandler(this.TextBox_PointMoney2_TextChanged);
             // 
             // label24
             // 
@@ -412,6 +417,7 @@
             this.Button_PointClose.TabIndex = 70;
             this.Button_PointClose.Text = "关闭(Esc)";
             this.Button_PointClose.UseVisualStyleBackColor = false;
+            this.Button_PointClose.Click += new System.EventHandler(this.Button_PointClose_Click);
             // 
             // Button_PointExpense
             // 
@@ -423,6 +429,7 @@
             this.Button_PointExpense.TabIndex = 69;
             this.Button_PointExpense.Text = "马上结算(F5)";
             this.Button_PointExpense.UseVisualStyleBackColor = false;
+            this.Button_PointExpense.Click += new System.EventHandler(this.Button_PointExpense_Click);
             // 
             // Expense_Point
             // 
@@ -456,6 +463,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "快速消费";
+            this.Load += new System.EventHandler(this.Expense_Point_Load);
             this.Controls.SetChildIndex(this.groupBox_Query, 0);
             this.Controls.SetChildIndex(this.label21, 0);
             this.Controls.SetChildIndex(this.label27, 0);
