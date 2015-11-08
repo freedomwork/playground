@@ -22,7 +22,7 @@ namespace VipSoft.Model
 		private decimal? _buyprice;
 		private int? _point;
 		private decimal? _minpercent;
-		private bool _goodstype;
+		private byte _goodstype;
 		private int? _pointtype;
 		private DateTime? _createdatetime;
 		private int? _shopid;
@@ -127,7 +127,7 @@ namespace VipSoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public bool GoodsType
+		public byte GoodsType
 		{
 			set{ _goodstype=value;}
 			get{return _goodstype;}
