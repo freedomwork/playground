@@ -66,7 +66,7 @@ namespace VipSoft.DAL
 					new SqlParameter("@MasterID", SqlDbType.Int,4),
 					new SqlParameter("@MasterName", SqlDbType.VarChar,50),
 					new SqlParameter("@ShopID", SqlDbType.Int,4),
-					new SqlParameter("@ShopName", SqlDbType.Int,4)};
+					new SqlParameter("@ShopName", SqlDbType.VarChar,50)};
 			parameters[0].Value = model.OrderCode;
 			parameters[1].Value = model.OrderType;
 			parameters[2].Value = model.MemID;
@@ -134,7 +134,7 @@ namespace VipSoft.DAL
 					new SqlParameter("@MasterID", SqlDbType.Int,4),
 					new SqlParameter("@MasterName", SqlDbType.VarChar,50),
 					new SqlParameter("@ShopID", SqlDbType.Int,4),
-					new SqlParameter("@ShopName", SqlDbType.Int,4),
+					new SqlParameter("@ShopName", SqlDbType.VarChar,4),
 					new SqlParameter("@ID", SqlDbType.Int,4)};
 			parameters[0].Value = model.OrderCode;
 			parameters[1].Value = model.OrderType;
@@ -310,7 +310,7 @@ namespace VipSoft.DAL
 				}
 				if(row["ShopName"]!=null && row["ShopName"].ToString()!="")
 				{
-					model.ShopName=int.Parse(row["ShopName"].ToString());
+					model.ShopName=row["ShopName"].ToString();
 				}
 			}
 			return model;
