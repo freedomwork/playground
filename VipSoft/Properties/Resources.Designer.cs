@@ -67,6 +67,13 @@ namespace VipSoft.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ico_产品分类设置 {
+            get {
+                object obj = ResourceManager.GetObject("ico_产品分类设置", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ico_产品列表 {
             get {
                 object obj = ResourceManager.GetObject("ico_产品列表", resourceCulture);
@@ -77,6 +84,13 @@ namespace VipSoft.Properties {
         internal static System.Drawing.Bitmap ico_会员列表 {
             get {
                 object obj = ResourceManager.GetObject("ico_会员列表", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_会员等级设置 {
+            get {
+                object obj = ResourceManager.GetObject("ico_会员等级设置", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -154,6 +168,27 @@ namespace VipSoft.Properties {
         internal static System.Drawing.Bitmap ico_积分兑换 {
             get {
                 object obj = ResourceManager.GetObject("ico_积分兑换", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_系统全局设置 {
+            get {
+                object obj = ResourceManager.GetObject("ico_系统全局设置", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_系统提醒设置 {
+            get {
+                object obj = ResourceManager.GetObject("ico_系统提醒设置", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_自定义属性设置 {
+            get {
+                object obj = ResourceManager.GetObject("ico_自定义属性设置", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

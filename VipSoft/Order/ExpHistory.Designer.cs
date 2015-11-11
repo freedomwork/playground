@@ -46,10 +46,8 @@
             this.Column_Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_List_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_Point = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_State = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_OrderType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_CreateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView_DetailList = new System.Windows.Forms.DataGridView();
             this.Column_GoodsCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,21 +56,21 @@
             this.Column_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_DiscountPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnExport = new AlSkin.AlControl.AlButton();
+            this.btnClose = new AlSkin.AlControl.AlButton();
+            this.btnQuery = new AlSkin.AlControl.AlButton();
+            this.textBox_Remark = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.alButton1 = new AlSkin.AlControl.AlButton();
-            this.alButton2 = new AlSkin.AlControl.AlButton();
-            this.alButton3 = new AlSkin.AlControl.AlButton();
+            this.comboBox_PayType = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox_OrderType = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker_End = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker_Start = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_CardID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OrderList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -109,10 +107,8 @@
             this.Column_Discount,
             this.Column_List_Number,
             this.Column_Point,
-            this.Column_State,
             this.Column_OrderType,
-            this.Column_CreateTime,
-            this.Column2});
+            this.Column_CreateTime});
             this.dataGridView_OrderList.Location = new System.Drawing.Point(4, 21);
             this.dataGridView_OrderList.MultiSelect = false;
             this.dataGridView_OrderList.Name = "dataGridView_OrderList";
@@ -120,8 +116,9 @@
             this.dataGridView_OrderList.RowHeadersWidth = 20;
             this.dataGridView_OrderList.RowTemplate.Height = 23;
             this.dataGridView_OrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_OrderList.Size = new System.Drawing.Size(844, 252);
+            this.dataGridView_OrderList.Size = new System.Drawing.Size(844, 251);
             this.dataGridView_OrderList.TabIndex = 8;
+            this.dataGridView_OrderList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_OrderList_CellDoubleClick);
             // 
             // Column_ID
             // 
@@ -194,13 +191,6 @@
             this.Column_Point.ReadOnly = true;
             this.Column_Point.Width = 60;
             // 
-            // Column_State
-            // 
-            this.Column_State.HeaderText = "状态";
-            this.Column_State.Name = "Column_State";
-            this.Column_State.ReadOnly = true;
-            this.Column_State.Width = 60;
-            // 
             // Column_OrderType
             // 
             this.Column_OrderType.HeaderText = "类型";
@@ -214,12 +204,6 @@
             this.Column_CreateTime.Name = "Column_CreateTime";
             this.Column_CreateTime.ReadOnly = true;
             this.Column_CreateTime.Width = 130;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "备注";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -307,20 +291,20 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.alButton3);
-            this.groupBox3.Controls.Add(this.alButton2);
-            this.groupBox3.Controls.Add(this.alButton1);
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.btnExport);
+            this.groupBox3.Controls.Add(this.btnClose);
+            this.groupBox3.Controls.Add(this.btnQuery);
+            this.groupBox3.Controls.Add(this.textBox_Remark);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.comboBox2);
+            this.groupBox3.Controls.Add(this.comboBox_PayType);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.comboBox_OrderType);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.dateTimePicker2);
+            this.groupBox3.Controls.Add(this.dateTimePicker_End);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.dateTimePicker_Start);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.textBox_CardID);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(16, 37);
             this.groupBox3.Name = "groupBox3";
@@ -328,89 +312,41 @@
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             // 
-            // label1
+            // btnExport
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "会员卡号：";
+            this.btnExport.Location = new System.Drawing.Point(771, 15);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 23);
+            this.btnExport.TabIndex = 14;
+            this.btnExport.Text = "导出";
+            this.btnExport.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // btnClose
             // 
-            this.textBox1.Location = new System.Drawing.Point(86, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 21);
-            this.textBox1.TabIndex = 1;
+            this.btnClose.Location = new System.Drawing.Point(692, 15);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.Text = "退出";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // label2
+            // btnQuery
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(252, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "消费日期：";
+            this.btnQuery.Location = new System.Drawing.Point(613, 15);
+            this.btnQuery.Name = "btnQuery";
+            this.btnQuery.Size = new System.Drawing.Size(75, 23);
+            this.btnQuery.TabIndex = 12;
+            this.btnQuery.Text = "查询";
+            this.btnQuery.UseVisualStyleBackColor = true;
+            this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
             // 
-            // dateTimePicker1
+            // textBox_Remark
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(323, 14);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(123, 21);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(452, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "至：";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(476, 14);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(123, 21);
-            this.dateTimePicker2.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 12);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "消费类型：";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(86, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 20);
-            this.comboBox1.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(252, 47);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 12);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "支付方式：";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(323, 44);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(150, 20);
-            this.comboBox2.TabIndex = 9;
+            this.textBox_Remark.Location = new System.Drawing.Point(526, 44);
+            this.textBox_Remark.Name = "textBox_Remark";
+            this.textBox_Remark.Size = new System.Drawing.Size(105, 21);
+            this.textBox_Remark.TabIndex = 11;
             // 
             // label6
             // 
@@ -421,39 +357,91 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "备注：";
             // 
-            // textBox2
+            // comboBox_PayType
             // 
-            this.textBox2.Location = new System.Drawing.Point(526, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(105, 21);
-            this.textBox2.TabIndex = 11;
+            this.comboBox_PayType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_PayType.FormattingEnabled = true;
+            this.comboBox_PayType.Location = new System.Drawing.Point(323, 44);
+            this.comboBox_PayType.Name = "comboBox_PayType";
+            this.comboBox_PayType.Size = new System.Drawing.Size(150, 20);
+            this.comboBox_PayType.TabIndex = 9;
             // 
-            // alButton1
+            // label5
             // 
-            this.alButton1.Location = new System.Drawing.Point(613, 15);
-            this.alButton1.Name = "alButton1";
-            this.alButton1.Size = new System.Drawing.Size(75, 23);
-            this.alButton1.TabIndex = 12;
-            this.alButton1.Text = "查询";
-            this.alButton1.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(252, 47);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 12);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "支付方式：";
             // 
-            // alButton2
+            // comboBox_OrderType
             // 
-            this.alButton2.Location = new System.Drawing.Point(692, 15);
-            this.alButton2.Name = "alButton2";
-            this.alButton2.Size = new System.Drawing.Size(75, 23);
-            this.alButton2.TabIndex = 13;
-            this.alButton2.Text = "退出";
-            this.alButton2.UseVisualStyleBackColor = true;
+            this.comboBox_OrderType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_OrderType.FormattingEnabled = true;
+            this.comboBox_OrderType.Location = new System.Drawing.Point(86, 44);
+            this.comboBox_OrderType.Name = "comboBox_OrderType";
+            this.comboBox_OrderType.Size = new System.Drawing.Size(150, 20);
+            this.comboBox_OrderType.TabIndex = 7;
             // 
-            // alButton3
+            // label4
             // 
-            this.alButton3.Location = new System.Drawing.Point(771, 15);
-            this.alButton3.Name = "alButton3";
-            this.alButton3.Size = new System.Drawing.Size(75, 23);
-            this.alButton3.TabIndex = 14;
-            this.alButton3.Text = "导出";
-            this.alButton3.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 44);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 12);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "消费类型：";
+            // 
+            // dateTimePicker_End
+            // 
+            this.dateTimePicker_End.Location = new System.Drawing.Point(476, 14);
+            this.dateTimePicker_End.Name = "dateTimePicker_End";
+            this.dateTimePicker_End.ShowCheckBox = true;
+            this.dateTimePicker_End.Size = new System.Drawing.Size(123, 21);
+            this.dateTimePicker_End.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(452, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "至：";
+            // 
+            // dateTimePicker_Start
+            // 
+            this.dateTimePicker_Start.Location = new System.Drawing.Point(323, 14);
+            this.dateTimePicker_Start.Name = "dateTimePicker_Start";
+            this.dateTimePicker_Start.ShowCheckBox = true;
+            this.dateTimePicker_Start.Size = new System.Drawing.Size(123, 21);
+            this.dateTimePicker_Start.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(252, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "消费日期：";
+            // 
+            // textBox_CardID
+            // 
+            this.textBox_CardID.Location = new System.Drawing.Point(86, 14);
+            this.textBox_CardID.Name = "textBox_CardID";
+            this.textBox_CardID.Size = new System.Drawing.Size(150, 21);
+            this.textBox_CardID.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "会员卡号：";
             // 
             // ExpHistory
             // 
@@ -470,6 +458,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "消费记录";
+            this.Load += new System.EventHandler(this.ExpHistory_Load);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.groupBox3, 0);
@@ -487,6 +476,29 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView_OrderList;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dataGridView_DetailList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_GoodsCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_GoodsName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_DiscountPrice;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private AlSkin.AlControl.AlButton btnExport;
+        private AlSkin.AlControl.AlButton btnClose;
+        private AlSkin.AlControl.AlButton btnQuery;
+        private System.Windows.Forms.TextBox textBox_Remark;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox_PayType;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox_OrderType;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_End;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_Start;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox_CardID;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_OrderCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_CardID;
@@ -496,32 +508,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Discount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_List_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Point;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_State;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_OrderType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_CreateTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView_DetailList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_GoodsCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_GoodsName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_DiscountPrice;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private AlSkin.AlControl.AlButton alButton3;
-        private AlSkin.AlControl.AlButton alButton2;
-        private AlSkin.AlControl.AlButton alButton1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
     }
 }
