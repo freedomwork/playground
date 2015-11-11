@@ -39,6 +39,18 @@ namespace VipSoft
             this.myTabControl.SelectedIndex = 4;
         }
 
+        private void Button_Report_Click(object sender, EventArgs e)
+        {
+            this.label_Title.Text = "统计报表";
+            this.myTabControl.SelectedIndex = 5;
+        }
+
+        private void Button_Setup_Click(object sender, EventArgs e)
+        {
+            this.label_Title.Text = "系统设置";
+            this.myTabControl.SelectedIndex = 6;
+        }
+
         private void panelButton_Item_Click(string senderName)
         {
             switch (senderName)
@@ -105,6 +117,26 @@ namespace VipSoft
                     ExpHistory expHis = new ExpHistory();
                     expHis.ShowDialog();
                     break;
+                case "panelButton_Setup_Level":
+                    SetLevel setLevel = new SetLevel();
+                    setLevel.ShowDialog();
+                    break;
+                case "panelButton_Setup_GoodsClass":
+                    SetClass setClass = new SetClass();
+                    setClass.ShowDialog();
+                    break;
+                case "panelButton_Setup_Custom":
+                    break;
+                case "panelButton_Setup_Remind":
+                    break;
+                case "panelButton_Setup_Master":
+                    break;
+                case "panelButton_Step_Shop":
+                    Shop shop = new Shop();
+                    shop.ShowDialog();
+                    break;
+                case "panelButton_SystemSet":
+                    break;
                 default:
                     break;
             }
@@ -158,5 +190,6 @@ namespace VipSoft
                     break;
             }
         }
+
     }
 }
