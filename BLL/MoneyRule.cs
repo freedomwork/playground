@@ -125,7 +125,10 @@ namespace VipSoft.BLL
 
 		#endregion  BasicMethod
 		#region  ExtensionMethod
-
+        public DataSet GetList(int PageSize, int PageIndex, out int resCount, params string[] strWhere)
+        {
+            return dal.GetList(PageSize, PageIndex, strWhere, out resCount);
+        }
 		#endregion  ExtensionMethod
 	}
 }
