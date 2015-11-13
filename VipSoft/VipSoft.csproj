@@ -217,6 +217,24 @@
       <DependentUpon>DataInput.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\PointChangeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\PointChangeReport.Designer.cs">
+      <DependentUpon>PointChangeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PointExchangeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\PointExchangeReport.Designer.cs">
+      <DependentUpon>PointExchangeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\RechargeMoneyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\RechargeMoneyReport.Designer.cs">
+      <DependentUpon>RechargeMoneyReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="SystemSet\Shop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +338,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\PointChangeReport.resx">
+      <DependentUpon>PointChangeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PointExchangeReport.resx">
+      <DependentUpon>PointExchangeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RechargeMoneyReport.resx">
+      <DependentUpon>RechargeMoneyReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SystemSet\Shop.resx">
       <DependentUpon>Shop.cs</DependentUpon>
     </EmbeddedResource>
@@ -475,9 +502,7 @@
   <ItemGroup>
     <None Include="Resources\ico_会员退货.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Report\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\ico_会员等级设置.png" />
   </ItemGroup>
@@ -492,6 +517,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ico_系统全局设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_消费数据统计.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_积分兑换统计.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_充值_充次统计.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_优惠活动设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_消费历史记录1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_综合统计.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

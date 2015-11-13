@@ -81,6 +81,13 @@ namespace VipSoft.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ico_优惠活动设置 {
+            get {
+                object obj = ResourceManager.GetObject("ico_优惠活动设置", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ico_会员列表 {
             get {
                 object obj = ResourceManager.GetObject("ico_会员列表", resourceCulture);
@@ -105,6 +112,13 @@ namespace VipSoft.Properties {
         internal static System.Drawing.Bitmap ico_储值卡充值 {
             get {
                 object obj = ResourceManager.GetObject("ico_储值卡充值", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_充值_充次统计 {
+            get {
+                object obj = ResourceManager.GetObject("ico_充值_充次统计", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -158,6 +172,20 @@ namespace VipSoft.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ico_消费历史记录1 {
+            get {
+                object obj = ResourceManager.GetObject("ico_消费历史记录1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_消费数据统计 {
+            get {
+                object obj = ResourceManager.GetObject("ico_消费数据统计", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ico_礼品设置 {
             get {
                 object obj = ResourceManager.GetObject("ico_礼品设置", resourceCulture);
@@ -172,6 +200,13 @@ namespace VipSoft.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ico_积分兑换统计 {
+            get {
+                object obj = ResourceManager.GetObject("ico_积分兑换统计", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ico_系统全局设置 {
             get {
                 object obj = ResourceManager.GetObject("ico_系统全局设置", resourceCulture);
@@ -182,6 +217,13 @@ namespace VipSoft.Properties {
         internal static System.Drawing.Bitmap ico_系统提醒设置 {
             get {
                 object obj = ResourceManager.GetObject("ico_系统提醒设置", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_综合统计 {
+            get {
+                object obj = ResourceManager.GetObject("ico_综合统计", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
