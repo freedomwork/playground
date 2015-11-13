@@ -137,6 +137,24 @@ namespace VipSoft
                     break;
                 case "panelButton_SystemSet":
                     break;
+                case "panelButton_Export_Order":
+                    break;
+                case "panelButton_Export_Gift":
+                    PointExchangeReport pointExchangeReport = new PointExchangeReport();
+                    pointExchangeReport.ShowDialog();
+                    break;
+                case "panelButton_Export_Cai":
+                    break;
+                case "panelButton_Export_Recharge":
+                    RechargeMoneyReport rechrgeMoneyReport = new RechargeMoneyReport();
+                    rechrgeMoneyReport.ShowDialog();
+                    break;
+                case "panelButton_Export_PointChange":
+                    PointChangeReport pointChangeReport = new PointChangeReport();
+                    pointChangeReport.ShowDialog();
+                    break;
+                case "panelButton_Export_Total":
+                    break;
                 default:
                     break;
             }

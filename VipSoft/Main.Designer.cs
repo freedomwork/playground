@@ -72,6 +72,13 @@
             this.panelButton_Gift_Setup = new Vipsoft.Controls.PanelButton();
             this.panelButton_Gift_Exchang = new Vipsoft.Controls.PanelButton();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelButton_Export_PointChange = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Export_Total = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Export_Recharge = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Export_Cai = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Export_Gift = new Vipsoft.Controls.PanelButton();
+            this.panelButton_Export_Order = new Vipsoft.Controls.PanelButton();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panelButton_SystemSet = new Vipsoft.Controls.PanelButton();
@@ -103,6 +110,8 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
@@ -218,7 +227,7 @@
             this.myTabControl.Controls.Add(this.tabPage7);
             this.myTabControl.Controls.Add(this.tabPage6);
             this.myTabControl.ItemSize = new System.Drawing.Size(0, 20);
-            this.myTabControl.Location = new System.Drawing.Point(-22, 26);
+            this.myTabControl.Location = new System.Drawing.Point(-23, 26);
             this.myTabControl.Multiline = true;
             this.myTabControl.Name = "myTabControl";
             this.myTabControl.SelectedIndex = 0;
@@ -653,12 +662,111 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.tableLayoutPanel6);
             this.tabPage7.Location = new System.Drawing.Point(24, 4);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Size = new System.Drawing.Size(825, 450);
             this.tabPage7.TabIndex = 7;
             this.tabPage7.Text = "统计报表";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.panelButton_Export_PointChange, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.panelButton_Export_Total, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.panelButton_Export_Recharge, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.panelButton_Export_Cai, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.panelButton_Export_Gift, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.panelButton_Export_Order, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(117, 73);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 4;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(503, 312);
+            this.tableLayoutPanel6.TabIndex = 4;
+            // 
+            // panelButton_Export_PointChange
+            // 
+            this.panelButton_Export_PointChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_Export_PointChange.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Export_PointChange.Info = "会员积分的增加及减少记录统计";
+            this.panelButton_Export_PointChange.InfoImg = global::VipSoft.Properties.Resources.ico_消费历史记录;
+            this.panelButton_Export_PointChange.Location = new System.Drawing.Point(3, 163);
+            this.panelButton_Export_PointChange.Name = "panelButton_Export_PointChange";
+            this.panelButton_Export_PointChange.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Export_PointChange.TabIndex = 5;
+            this.panelButton_Export_PointChange.Title = "积分变动统计";
+            this.panelButton_Export_PointChange.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
+            // panelButton_Export_Total
+            // 
+            this.panelButton_Export_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_Export_Total.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Export_Total.Info = "针对整个系统的全局数据统计";
+            this.panelButton_Export_Total.InfoImg = global::VipSoft.Properties.Resources.ico_综合统计;
+            this.panelButton_Export_Total.Location = new System.Drawing.Point(255, 163);
+            this.panelButton_Export_Total.Name = "panelButton_Export_Total";
+            this.panelButton_Export_Total.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Export_Total.TabIndex = 4;
+            this.panelButton_Export_Total.Title = "综合统计";
+            this.panelButton_Export_Total.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
+            // panelButton_Export_Recharge
+            // 
+            this.panelButton_Export_Recharge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_Export_Recharge.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Export_Recharge.Info = "储值卡充值、计次卡充次数据统计";
+            this.panelButton_Export_Recharge.InfoImg = global::VipSoft.Properties.Resources.ico_充值_充次统计;
+            this.panelButton_Export_Recharge.Location = new System.Drawing.Point(255, 83);
+            this.panelButton_Export_Recharge.Name = "panelButton_Export_Recharge";
+            this.panelButton_Export_Recharge.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Export_Recharge.TabIndex = 3;
+            this.panelButton_Export_Recharge.Title = "充值/充次统计";
+            this.panelButton_Export_Recharge.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
+            // panelButton_Export_Cai
+            // 
+            this.panelButton_Export_Cai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_Export_Cai.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Export_Cai.Info = "针对采购查询数据统计";
+            this.panelButton_Export_Cai.InfoImg = global::VipSoft.Properties.Resources.ico_优惠活动设置;
+            this.panelButton_Export_Cai.Location = new System.Drawing.Point(3, 83);
+            this.panelButton_Export_Cai.Name = "panelButton_Export_Cai";
+            this.panelButton_Export_Cai.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Export_Cai.TabIndex = 2;
+            this.panelButton_Export_Cai.Title = "采购数据统计";
+            this.panelButton_Export_Cai.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
+            // panelButton_Export_Gift
+            // 
+            this.panelButton_Export_Gift.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Export_Gift.Info = "针对礼品兑换记录进行综合统计";
+            this.panelButton_Export_Gift.InfoImg = global::VipSoft.Properties.Resources.ico_积分兑换统计;
+            this.panelButton_Export_Gift.Location = new System.Drawing.Point(254, 3);
+            this.panelButton_Export_Gift.Name = "panelButton_Export_Gift";
+            this.panelButton_Export_Gift.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Export_Gift.TabIndex = 1;
+            this.panelButton_Export_Gift.Title = "礼品兑换统计";
+            this.panelButton_Export_Gift.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
+            // panelButton_Export_Order
+            // 
+            this.panelButton_Export_Order.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_Export_Order.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_Export_Order.Info = "针对各种消费模式进行综合统计";
+            this.panelButton_Export_Order.InfoImg = global::VipSoft.Properties.Resources.ico_消费数据统计;
+            this.panelButton_Export_Order.Location = new System.Drawing.Point(3, 3);
+            this.panelButton_Export_Order.Name = "panelButton_Export_Order";
+            this.panelButton_Export_Order.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_Export_Order.TabIndex = 0;
+            this.panelButton_Export_Order.Title = "消费数据统计";
+            this.panelButton_Export_Order.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
             // 
             // tabPage6
             // 
@@ -914,6 +1022,8 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -982,5 +1092,12 @@
         private Vipsoft.Controls.PanelButton panelButton_Setup_Custom;
         private Vipsoft.Controls.PanelButton panelButton_Setup_GoodsClass;
         private Vipsoft.Controls.PanelButton panelButton_Setup_Level;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private Vipsoft.Controls.PanelButton panelButton_Export_PointChange;
+        private Vipsoft.Controls.PanelButton panelButton_Export_Total;
+        private Vipsoft.Controls.PanelButton panelButton_Export_Recharge;
+        private Vipsoft.Controls.PanelButton panelButton_Export_Cai;
+        private Vipsoft.Controls.PanelButton panelButton_Export_Gift;
+        private Vipsoft.Controls.PanelButton panelButton_Export_Order;
     }
 }
