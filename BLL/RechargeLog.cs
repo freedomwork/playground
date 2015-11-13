@@ -79,6 +79,15 @@ namespace VipSoft.BLL
 		{
 			return dal.GetList(strWhere);
 		}
+        /// <summary>
+        /// 获取数据列表
+        /// </summary>
+        /// <param name="strWhere"></param>
+        /// <returns></returns>
+        public DataSet GetReportList(string strWhere)
+        {
+            return dal.GetReportList(strWhere);
+        }
 		/// <summary>
 		/// 获得前几行数据
 		/// </summary>
