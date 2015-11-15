@@ -49,6 +49,10 @@ namespace VipSoft.BLL
 			return dal.GetModel();
 		}
 
+        public VipSoft.Model.MoneyRule GetModel(int ID)
+        {
+            return dal.GetModel(ID);
+        }
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
