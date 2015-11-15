@@ -29,14 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oneHourMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.secondHourMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thirdHourMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thanTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pager1 = new Vipsoft.Controls.Pager();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.delBtn = new AlSkin.AlControl.AlButton();
             this.resetBtn = new AlSkin.AlControl.AlButton();
             this.saveBtn = new AlSkin.AlControl.AlButton();
             this.f_thantime = new System.Windows.Forms.TextBox();
@@ -49,6 +44,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.f_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oneHourMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.secondHourMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thirdHourMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thanTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +60,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.checkbox,
             this.id,
             this.name,
             this.oneHourMoney,
@@ -70,44 +73,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(521, 235);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "序号";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            this.id.Width = 50;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "收费规则名称";
-            this.name.Name = "name";
-            // 
-            // oneHourMoney
-            // 
-            this.oneHourMoney.DataPropertyName = "oneHourMoney";
-            this.oneHourMoney.HeaderText = "一个小时收费";
-            this.oneHourMoney.Name = "oneHourMoney";
-            // 
-            // secondHourMoney
-            // 
-            this.secondHourMoney.DataPropertyName = "secondHourMoney";
-            this.secondHourMoney.HeaderText = "二个小时收费";
-            this.secondHourMoney.Name = "secondHourMoney";
-            // 
-            // thirdHourMoney
-            // 
-            this.thirdHourMoney.DataPropertyName = "thirdHourMoney";
-            this.thirdHourMoney.HeaderText = "三个小时收费";
-            this.thirdHourMoney.Name = "thirdHourMoney";
-            // 
-            // thanTime
-            // 
-            this.thanTime.DataPropertyName = "thanTime";
-            this.thanTime.HeaderText = "展期";
-            this.thanTime.Name = "thanTime";
             // 
             // pager1
             // 
@@ -126,6 +91,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.delBtn);
             this.groupBox1.Controls.Add(this.resetBtn);
             this.groupBox1.Controls.Add(this.saveBtn);
             this.groupBox1.Controls.Add(this.f_thantime);
@@ -143,13 +109,22 @@
             this.groupBox1.Size = new System.Drawing.Size(211, 244);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // delBtn
+            // 
+            this.delBtn.Location = new System.Drawing.Point(146, 202);
+            this.delBtn.Name = "delBtn";
+            this.delBtn.Size = new System.Drawing.Size(51, 23);
+            this.delBtn.TabIndex = 20;
+            this.delBtn.Text = "删除";
+            this.delBtn.UseVisualStyleBackColor = true;
+            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
             // 
             // resetBtn
             // 
-            this.resetBtn.Location = new System.Drawing.Point(112, 202);
+            this.resetBtn.Location = new System.Drawing.Point(81, 202);
             this.resetBtn.Name = "resetBtn";
-            this.resetBtn.Size = new System.Drawing.Size(75, 23);
+            this.resetBtn.Size = new System.Drawing.Size(50, 23);
             this.resetBtn.TabIndex = 19;
             this.resetBtn.Text = "重置";
             this.resetBtn.UseVisualStyleBackColor = true;
@@ -159,7 +134,7 @@
             // 
             this.saveBtn.Location = new System.Drawing.Point(16, 202);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(75, 23);
+            this.saveBtn.Size = new System.Drawing.Size(51, 23);
             this.saveBtn.TabIndex = 10;
             this.saveBtn.Text = "保存";
             this.saveBtn.UseVisualStyleBackColor = true;
@@ -245,6 +220,51 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "收费规则名称:";
             // 
+            // checkbox
+            // 
+            this.checkbox.HeaderText = " ";
+            this.checkbox.Name = "checkbox";
+            this.checkbox.Visible = false;
+            this.checkbox.Width = 20;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "序号";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            this.id.Width = 50;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "收费规则名称";
+            this.name.Name = "name";
+            // 
+            // oneHourMoney
+            // 
+            this.oneHourMoney.DataPropertyName = "oneHourMoney";
+            this.oneHourMoney.HeaderText = "一个小时收费";
+            this.oneHourMoney.Name = "oneHourMoney";
+            // 
+            // secondHourMoney
+            // 
+            this.secondHourMoney.DataPropertyName = "secondHourMoney";
+            this.secondHourMoney.HeaderText = "二个小时收费";
+            this.secondHourMoney.Name = "secondHourMoney";
+            // 
+            // thirdHourMoney
+            // 
+            this.thirdHourMoney.DataPropertyName = "thirdHourMoney";
+            this.thirdHourMoney.HeaderText = "三个小时收费";
+            this.thirdHourMoney.Name = "thirdHourMoney";
+            // 
+            // thanTime
+            // 
+            this.thanTime.DataPropertyName = "thanTime";
+            this.thanTime.HeaderText = "展期";
+            this.thanTime.Name = "thanTime";
+            // 
             // MoneyRuleList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -284,6 +304,8 @@
         private System.Windows.Forms.Label label1;
         private AlSkin.AlControl.AlButton resetBtn;
         private AlSkin.AlControl.AlButton saveBtn;
+        private AlSkin.AlControl.AlButton delBtn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn checkbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn oneHourMoney;

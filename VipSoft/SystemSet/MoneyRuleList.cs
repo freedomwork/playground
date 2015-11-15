@@ -110,9 +110,27 @@ namespace VipSoft.SystemSet
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
 
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+            if (this.currentId > 0)
+            {
+                VipSoft.BLL.MoneyRule mrBll = new BLL.MoneyRule();
+                bool flag = mrBll.Delete(this.currentId);
+                if (flag)
+                {
+                    MessageBox.Show("删除记录成功!");
+                    BindList();
+                }
+                else
+                {
+                    MessageBox.Show("删除记录失败!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("请选择一条记录!");
+            }
         }
     }
 }
