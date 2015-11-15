@@ -23,22 +23,20 @@ namespace VipSoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into MoneyRule(");
-			strSql.Append("ID,Name,OneHour,SecondHour,ThirdHour,ThanTime)");
+			strSql.Append("Name,OneHourMoney,SecondHourMoney,ThirdHourMoney,ThanTime)");
 			strSql.Append(" values (");
-			strSql.Append("@ID,@Name,@OneHour,@SecondHour,@ThirdHour,@ThanTime)");
+			strSql.Append("@Name,@OneHourMoney,@SecondHourMoney,@ThirdHourMoney,@ThanTime)");
 			SqlParameter[] parameters = {
-					new SqlParameter("@ID", SqlDbType.Int,4),
 					new SqlParameter("@Name", SqlDbType.VarChar,50),
-					new SqlParameter("@OneHour", SqlDbType.Money,8),
-					new SqlParameter("@SecondHour", SqlDbType.Money,8),
-					new SqlParameter("@ThirdHour", SqlDbType.Money,8),
+					new SqlParameter("@OneHourMoney", SqlDbType.Money,8),
+					new SqlParameter("@SecondHourMoney", SqlDbType.Money,8),
+					new SqlParameter("@ThirdHourMoney", SqlDbType.Money,8),
 					new SqlParameter("@ThanTime", SqlDbType.Int,4)};
-			parameters[0].Value = model.ID;
-			parameters[1].Value = model.Name;
-			parameters[2].Value = model.OneHour;
-			parameters[3].Value = model.SecondHour;
-			parameters[4].Value = model.ThirdHour;
-			parameters[5].Value = model.ThanTime;
+			parameters[0].Value = model.Name;
+			parameters[1].Value = model.OneHourMoney;
+			parameters[2].Value = model.SecondHourMoney;
+			parameters[3].Value = model.ThirdHourMoney;
+			parameters[4].Value = model.ThanTime;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -57,26 +55,25 @@ namespace VipSoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("update MoneyRule set ");
-			strSql.Append("ID=@ID,");
 			strSql.Append("Name=@Name,");
-			strSql.Append("OneHour=@OneHour,");
-			strSql.Append("SecondHour=@SecondHour,");
-			strSql.Append("ThirdHour=@ThirdHour,");
+			strSql.Append("OneHourMoney=@OneHourMoney,");
+			strSql.Append("SecondHourMoney=@SecondHourMoney,");
+			strSql.Append("ThirdHourMoney=@ThirdHourMoney,");
 			strSql.Append("ThanTime=@ThanTime");
-			strSql.Append(" where ");
+			strSql.Append(" where ID=@ID");
 			SqlParameter[] parameters = {
-					new SqlParameter("@ID", SqlDbType.Int,4),
 					new SqlParameter("@Name", SqlDbType.VarChar,50),
-					new SqlParameter("@OneHour", SqlDbType.Money,8),
-					new SqlParameter("@SecondHour", SqlDbType.Money,8),
-					new SqlParameter("@ThirdHour", SqlDbType.Money,8),
-					new SqlParameter("@ThanTime", SqlDbType.Int,4)};
-			parameters[0].Value = model.ID;
-			parameters[1].Value = model.Name;
-			parameters[2].Value = model.OneHour;
-			parameters[3].Value = model.SecondHour;
-			parameters[4].Value = model.ThirdHour;
-			parameters[5].Value = model.ThanTime;
+					new SqlParameter("@OneHourMoney", SqlDbType.Money,8),
+					new SqlParameter("@SecondHourMoney", SqlDbType.Money,8),
+					new SqlParameter("@ThirdHourMoney", SqlDbType.Money,8),
+					new SqlParameter("@ThanTime", SqlDbType.Int,4),
+                     new SqlParameter("@ID", SqlDbType.Int,4)};
+			parameters[5].Value = model.ID;
+			parameters[0].Value = model.Name;
+			parameters[1].Value = model.OneHourMoney;
+			parameters[2].Value = model.SecondHourMoney;
+			parameters[3].Value = model.ThirdHourMoney;
+			parameters[4].Value = model.ThanTime;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -120,7 +117,7 @@ namespace VipSoft.DAL
 		{
 			//该表无主键信息，请自定义主键/条件字段
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 ID,Name,OneHour,SecondHour,ThirdHour,ThanTime from MoneyRule ");
+			strSql.Append("select  top 1 ID,Name,OneHourMoney,SecondHourMoney,ThirdHourMoney,ThanTime from MoneyRule ");
 			strSql.Append(" where ");
 			SqlParameter[] parameters = {
 			};
@@ -136,6 +133,30 @@ namespace VipSoft.DAL
 				return null;
 			}
 		}
+
+        public VipSoft.Model.MoneyRule GetModel(int ID)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select  top 1 ID,Name,OneHourMoney, SecondHourMoney, ThirdHourMoney, ThanTime from MoneyRule ");
+            strSql.Append(" where ID=@ID");
+            SqlParameter[] parameters = {
+					new SqlParameter("@ID", SqlDbType.Int,4)
+			};
+            parameters[0].Value = ID;
+
+            VipSoft.Model.MoneyRule model = new VipSoft.Model.MoneyRule();
+            DataSet ds = DbHelperSQL.Query(strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return DataRowToModel(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
 
 
 		/// <summary>
@@ -154,17 +175,17 @@ namespace VipSoft.DAL
 				{
 					model.Name=row["Name"].ToString();
 				}
-				if(row["OneHour"]!=null && row["OneHour"].ToString()!="")
+				if(row["OneHourMoney"]!=null && row["OneHourMoney"].ToString()!="")
 				{
-					model.OneHour=decimal.Parse(row["OneHour"].ToString());
+					model.OneHourMoney=decimal.Parse(row["OneHourMoney"].ToString());
 				}
-				if(row["SecondHour"]!=null && row["SecondHour"].ToString()!="")
+				if(row["SecondHourMoney"]!=null && row["SecondHourMoney"].ToString()!="")
 				{
-					model.SecondHour=decimal.Parse(row["SecondHour"].ToString());
+					model.SecondHourMoney=decimal.Parse(row["SecondHourMoney"].ToString());
 				}
-				if(row["ThirdHour"]!=null && row["ThirdHour"].ToString()!="")
+				if(row["ThirdHourMoney"]!=null && row["ThirdHourMoney"].ToString()!="")
 				{
-					model.ThirdHour=decimal.Parse(row["ThirdHour"].ToString());
+					model.ThirdHourMoney=decimal.Parse(row["ThirdHourMoney"].ToString());
 				}
 				if(row["ThanTime"]!=null && row["ThanTime"].ToString()!="")
 				{
@@ -180,7 +201,7 @@ namespace VipSoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select ID,Name,OneHour,SecondHour,ThirdHour,ThanTime ");
+			strSql.Append("select ID,Name,OneHourMoney,SecondHourMoney,ThirdHourMoney,ThanTime ");
 			strSql.Append(" FROM MoneyRule ");
 			if(strWhere.Trim()!="")
 			{
@@ -200,7 +221,7 @@ namespace VipSoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" ID,Name,OneHour,SecondHour,ThirdHour,ThanTime ");
+			strSql.Append(" ID,Name,OneHourMoney,SecondHourMoney,ThirdHourMoney,ThanTime ");
 			strSql.Append(" FROM MoneyRule ");
 			if(strWhere.Trim()!="")
 			{
