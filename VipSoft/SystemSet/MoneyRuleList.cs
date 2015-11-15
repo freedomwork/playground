@@ -28,6 +28,7 @@ namespace VipSoft.SystemSet
 
         private void MoneyRuleList_Load(object sender, EventArgs e)
         {
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             BindList();
         }
 
@@ -60,21 +61,58 @@ namespace VipSoft.SystemSet
 
             MoneyRule mrModel = new MoneyRule();
             mrModel.Name = this.f_name.Text.ToString();
-            mrModel.OneHour = decimal.Parse(this.f_1hour.Text);
-            mrModel.SecondHour = decimal.Parse(this.f_2hour.Text);
-            mrModel.ThirdHour = decimal.Parse(this.f_3hour.Text);
+            mrModel.OneHourMoney = decimal.Parse(this.f_1hour.Text);
+            mrModel.SecondHourMoney = decimal.Parse(this.f_2hour.Text);
+            mrModel.ThirdHourMoney = decimal.Parse(this.f_3hour.Text);
             mrModel.ThanTime = int.Parse(this.f_thantime.Text);
 
             if (this.currentId == 0)
             {
                 mrBll.Add(mrModel);
                 MessageBox.Show("新增消费规则成功!");
+                BindList();
             }
             else
             {
+                mrModel.ID = this.currentId;
                 mrBll.Update(mrModel);
                 MessageBox.Show("修改消费规则成功!");
+                BindList();
             }
+        }
+
+ 
+        private void resetBtn_Click(object sender, EventArgs e)
+        {
+            this.currentId = 0;
+            this.f_thantime.Text = null;
+            this.f_name.Text = null;
+            this.f_1hour.Text = null;
+            this.f_2hour.Text = null;
+            this.f_3hour.Text = null;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            String id = this.dataGridView1.Rows[this.dataGridView1.CurrentRow.Index].Cells["id"].Value.ToString();
+            if (id != null && id != "")
+            {
+                int cid = int.Parse(id);
+                VipSoft.BLL.MoneyRule mrBll = new BLL.MoneyRule();
+                MoneyRule mrModel = mrBll.GetModel(cid);
+                this.f_2hour.Text = mrModel.SecondHourMoney.ToString();
+                this.f_1hour.Text = mrModel.OneHourMoney.ToString();
+                this.f_3hour.Text = mrModel.ThirdHourMoney.ToString();
+                this.f_name.Text = mrModel.Name.ToString();
+                this.f_thantime.Text = mrModel.ThanTime.ToString();
+                this.currentId = cid;
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
