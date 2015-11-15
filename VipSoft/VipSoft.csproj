@@ -235,6 +235,12 @@
     <Compile Include="Report\RechargeMoneyReport.Designer.cs">
       <DependentUpon>RechargeMoneyReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="SystemSet\MoneyRuleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSet\MoneyRuleList.designer.cs">
+      <DependentUpon>MoneyRuleList.cs</DependentUpon>
+    </Compile>
     <Compile Include="SystemSet\Shop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\RechargeMoneyReport.resx">
       <DependentUpon>RechargeMoneyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\MoneyRuleList.resx">
+      <DependentUpon>MoneyRuleList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SystemSet\Shop.resx">
       <DependentUpon>Shop.cs</DependentUpon>
