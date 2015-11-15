@@ -278,6 +278,28 @@ namespace VipSoft.DAL
 			return DbHelperSQL.Query(strSql.ToString());
 		}
 
+        public bool Delete(int ID)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("delete from MoneyRule ");
+            strSql.Append(" where ID=@ID");
+            SqlParameter[] parameters = {
+					new SqlParameter("@ID", SqlDbType.Int,4)
+			};
+            parameters[0].Value = ID;
+
+            int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 		/*
 		/// <summary>
 		/// 分页获取数据列表
