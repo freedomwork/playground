@@ -12,9 +12,9 @@ namespace VipSoft.Model
 		#region Model
 		private int? _id;
 		private string _name;
-		private decimal? _onehour;
-		private decimal? _secondhour;
-		private decimal? _thirdhour;
+		private decimal? _onehourmoney;
+		private decimal? _secondhourmoney;
+		private decimal? _thirdhourmoney;
 		private int? _thantime;
 		/// <summary>
 		/// 
@@ -35,26 +35,26 @@ namespace VipSoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal? OneHour
+		public decimal? OneHourMoney
 		{
-			set{ _onehour=value;}
-			get{return _onehour;}
+			set{ _onehourmoney=value;}
+			get{return _onehourmoney;}
 		}
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal? SecondHour
+		public decimal? SecondHourMoney
 		{
-			set{ _secondhour=value;}
-			get{return _secondhour;}
+			set{ _secondhourmoney=value;}
+			get{return _secondhourmoney;}
 		}
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal? ThirdHour
+		public decimal? ThirdHourMoney
 		{
-			set{ _thirdhour=value;}
-			get{return _thirdhour;}
+			set{ _thirdhourmoney=value;}
+			get{return _thirdhourmoney;}
 		}
 		/// <summary>
 		/// 
