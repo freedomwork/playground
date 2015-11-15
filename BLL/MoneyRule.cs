@@ -40,6 +40,11 @@ namespace VipSoft.BLL
 			return dal.Delete();
 		}
 
+        public bool Delete(int ID)
+        {
+
+            return dal.Delete(ID);
+        }
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
