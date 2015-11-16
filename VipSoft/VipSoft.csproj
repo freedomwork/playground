@@ -235,11 +235,23 @@
     <Compile Include="Report\RechargeMoneyReport.Designer.cs">
       <DependentUpon>RechargeMoneyReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="SystemSet\Master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSet\Master.Designer.cs">
+      <DependentUpon>Master.cs</DependentUpon>
+    </Compile>
     <Compile Include="SystemSet\MoneyRuleList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SystemSet\MoneyRuleList.designer.cs">
       <DependentUpon>MoneyRuleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\SearchShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSet\SearchShop.Designer.cs">
+      <DependentUpon>SearchShop.cs</DependentUpon>
     </Compile>
     <Compile Include="SystemSet\Shop.cs">
       <SubType>Form</SubType>
@@ -353,8 +365,14 @@
     <EmbeddedResource Include="Report\RechargeMoneyReport.resx">
       <DependentUpon>RechargeMoneyReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\Master.resx">
+      <DependentUpon>Master.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SystemSet\MoneyRuleList.resx">
       <DependentUpon>MoneyRuleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\SearchShop.resx">
+      <DependentUpon>SearchShop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SystemSet\Shop.resx">
       <DependentUpon>Shop.cs</DependentUpon>
@@ -511,7 +529,6 @@
   <ItemGroup>
     <None Include="Resources\ico_会员退货.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\ico_会员等级设置.png" />
   </ItemGroup>

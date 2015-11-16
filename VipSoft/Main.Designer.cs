@@ -216,9 +216,9 @@
             // myTabControl
             // 
             this.myTabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.myTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.myTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.myTabControl.Controls.Add(this.tabPage1);
             this.myTabControl.Controls.Add(this.tabPage2);
             this.myTabControl.Controls.Add(this.tabPage3);
@@ -994,6 +994,7 @@
             this.ShowTitle = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.Controls.SetChildIndex(this.alpanel21, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.pictureBox2, 0);

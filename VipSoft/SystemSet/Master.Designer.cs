@@ -43,24 +43,24 @@
             this.pager1 = new Vipsoft.Controls.Pager();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.alButton2 = new AlSkin.AlControl.AlButton();
+            this.alButton1 = new AlSkin.AlControl.AlButton();
+            this.f_issuper = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.f_shopname = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.f_shopid = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.f_telphone = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.f_sex = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.f_password = new System.Windows.Forms.TextBox();
+            this.f_name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.alButton1 = new AlSkin.AlControl.AlButton();
-            this.alButton2 = new AlSkin.AlControl.AlButton();
+            this.f_account = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -200,28 +200,83 @@
             // 
             this.groupBox1.Controls.Add(this.alButton2);
             this.groupBox1.Controls.Add(this.alButton1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.f_issuper);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.f_shopname);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.f_shopid);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.f_telphone);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.f_sex);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.f_password);
+            this.groupBox1.Controls.Add(this.f_name);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.f_account);
             this.groupBox1.Location = new System.Drawing.Point(3, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(417, 309);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "管理员设置";
+            // 
+            // alButton2
+            // 
+            this.alButton2.Location = new System.Drawing.Point(104, 276);
+            this.alButton2.Name = "alButton2";
+            this.alButton2.Size = new System.Drawing.Size(61, 23);
+            this.alButton2.TabIndex = 17;
+            this.alButton2.Text = "重置";
+            this.alButton2.UseVisualStyleBackColor = true;
+            // 
+            // alButton1
+            // 
+            this.alButton1.Location = new System.Drawing.Point(18, 276);
+            this.alButton1.Name = "alButton1";
+            this.alButton1.Size = new System.Drawing.Size(61, 23);
+            this.alButton1.TabIndex = 16;
+            this.alButton1.Text = "保存";
+            this.alButton1.UseVisualStyleBackColor = true;
+            this.alButton1.Click += new System.EventHandler(this.alButton1_Click);
+            // 
+            // f_issuper
+            // 
+            this.f_issuper.FormattingEnabled = true;
+            this.f_issuper.Location = new System.Drawing.Point(67, 230);
+            this.f_issuper.Name = "f_issuper";
+            this.f_issuper.Size = new System.Drawing.Size(100, 20);
+            this.f_issuper.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 185);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 12);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "店铺名称:";
+            // 
+            // f_shopname
+            // 
+            this.f_shopname.Location = new System.Drawing.Point(67, 182);
+            this.f_shopname.Name = "f_shopname";
+            this.f_shopname.ReadOnly = true;
+            this.f_shopname.Size = new System.Drawing.Size(100, 21);
+            this.f_shopname.TabIndex = 13;
+            this.f_shopname.Click += new System.EventHandler(this.f_shopname_Click);
+            this.f_shopname.TextChanged += new System.EventHandler(this.f_shopname_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 213);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 12);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "是否超级管理员:";
             // 
             // label6
             // 
@@ -232,12 +287,13 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "店铺ID:";
             // 
-            // textBox6
+            // f_shopid
             // 
-            this.textBox6.Location = new System.Drawing.Point(67, 155);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 21);
-            this.textBox6.TabIndex = 10;
+            this.f_shopid.Location = new System.Drawing.Point(67, 155);
+            this.f_shopid.Name = "f_shopid";
+            this.f_shopid.ReadOnly = true;
+            this.f_shopid.Size = new System.Drawing.Size(100, 21);
+            this.f_shopid.TabIndex = 10;
             // 
             // label5
             // 
@@ -248,12 +304,12 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "电话:";
             // 
-            // textBox5
+            // f_telphone
             // 
-            this.textBox5.Location = new System.Drawing.Point(67, 128);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 21);
-            this.textBox5.TabIndex = 8;
+            this.f_telphone.Location = new System.Drawing.Point(67, 128);
+            this.f_telphone.Name = "f_telphone";
+            this.f_telphone.Size = new System.Drawing.Size(100, 21);
+            this.f_telphone.TabIndex = 8;
             // 
             // label4
             // 
@@ -264,12 +320,12 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "性别:";
             // 
-            // textBox4
+            // f_sex
             // 
-            this.textBox4.Location = new System.Drawing.Point(66, 101);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 21);
-            this.textBox4.TabIndex = 6;
+            this.f_sex.Location = new System.Drawing.Point(66, 101);
+            this.f_sex.Name = "f_sex";
+            this.f_sex.Size = new System.Drawing.Size(100, 21);
+            this.f_sex.TabIndex = 6;
             // 
             // label3
             // 
@@ -280,19 +336,19 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "密码:";
             // 
-            // textBox3
+            // f_password
             // 
-            this.textBox3.Location = new System.Drawing.Point(66, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 21);
-            this.textBox3.TabIndex = 4;
+            this.f_password.Location = new System.Drawing.Point(66, 74);
+            this.f_password.Name = "f_password";
+            this.f_password.Size = new System.Drawing.Size(100, 21);
+            this.f_password.TabIndex = 4;
             // 
-            // textBox2
+            // f_name
             // 
-            this.textBox2.Location = new System.Drawing.Point(66, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
-            this.textBox2.TabIndex = 3;
+            this.f_name.Location = new System.Drawing.Point(66, 47);
+            this.f_name.Name = "f_name";
+            this.f_name.Size = new System.Drawing.Size(100, 21);
+            this.f_name.TabIndex = 3;
             // 
             // label2
             // 
@@ -312,63 +368,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "编号:";
             // 
-            // textBox1
+            // f_account
             // 
-            this.textBox1.Location = new System.Drawing.Point(66, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 213);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 12);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "是否超级管理员:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(67, 182);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 21);
-            this.textBox7.TabIndex = 13;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 185);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 12);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "店铺名称:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(67, 228);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 20);
-            this.comboBox1.TabIndex = 15;
-            // 
-            // alButton1
-            // 
-            this.alButton1.Location = new System.Drawing.Point(18, 277);
-            this.alButton1.Name = "alButton1";
-            this.alButton1.Size = new System.Drawing.Size(61, 23);
-            this.alButton1.TabIndex = 16;
-            this.alButton1.Text = "保存";
-            this.alButton1.UseVisualStyleBackColor = true;
-            // 
-            // alButton2
-            // 
-            this.alButton2.Location = new System.Drawing.Point(103, 276);
-            this.alButton2.Name = "alButton2";
-            this.alButton2.Size = new System.Drawing.Size(61, 23);
-            this.alButton2.TabIndex = 17;
-            this.alButton2.Text = "重置";
-            this.alButton2.UseVisualStyleBackColor = true;
+            this.f_account.Location = new System.Drawing.Point(66, 20);
+            this.f_account.Name = "f_account";
+            this.f_account.Size = new System.Drawing.Size(100, 21);
+            this.f_account.TabIndex = 0;
             // 
             // Master
             // 
@@ -408,23 +413,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn issupper;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox f_account;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox f_shopid;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox f_telphone;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox f_sex;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox f_password;
+        private System.Windows.Forms.TextBox f_name;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox f_shopname;
         private System.Windows.Forms.Label label7;
         private AlSkin.AlControl.AlButton alButton2;
         private AlSkin.AlControl.AlButton alButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox f_issuper;
 
     }
 }

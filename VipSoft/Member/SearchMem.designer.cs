@@ -67,6 +67,7 @@
             this.dataGridView_List.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_List.Size = new System.Drawing.Size(410, 300);
             this.dataGridView_List.TabIndex = 2;
+            this.dataGridView_List.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_List_CellContentClick);
             this.dataGridView_List.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_List_CellDoubleClick);
             this.dataGridView_List.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_List_KeyDown);
             // 
@@ -125,6 +126,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(420, 345);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // textBox_Key
             // 

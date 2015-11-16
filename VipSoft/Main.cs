@@ -130,6 +130,8 @@ namespace VipSoft
                 case "panelButton_Setup_Remind":
                     break;
                 case "panelButton_Setup_Master":
+                    VipSoft.SystemSet.Master master = new VipSoft.SystemSet.Master();
+                    master.ShowDialog();
                     break;
                 case "panelButton_Step_Shop":
                     Shop shop = new Shop();
@@ -207,6 +209,11 @@ namespace VipSoft
                 default:
                     break;
             }
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
 
     }
