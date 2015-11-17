@@ -148,7 +148,10 @@ namespace VipSoft.BLL
 
 		#endregion  BasicMethod
 		#region  ExtensionMethod
-
+        public DataSet GetListCollect(string sql)
+        {
+            return dal.GetListCollect(sql);
+        }
 		#endregion  ExtensionMethod
 	}
 }
