@@ -60,23 +60,19 @@ namespace VipSoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into CardLevel(");
-			strSql.Append("LevelName,NeedPoint,Point,[Percent],ShopID,ShopName)");
+			strSql.Append("LevelName,NeedPoint,Point,[Percent])");
 			strSql.Append(" values (");
-			strSql.Append("@LevelName,@NeedPoint,@Point,@Percent,@ShopID,@ShopName)");
+			strSql.Append("@LevelName,@NeedPoint,@Point,@Percent)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@LevelName", SqlDbType.VarChar,50),
 					new SqlParameter("@NeedPoint", SqlDbType.Int,4),
 					new SqlParameter("@Point", SqlDbType.Int,4),
-					new SqlParameter("@Percent", SqlDbType.Float,8),
-					new SqlParameter("@ShopID", SqlDbType.Int,4),
-					new SqlParameter("@ShopName", SqlDbType.VarChar,50)};
+					new SqlParameter("@Percent", SqlDbType.Float,8)};
 			parameters[0].Value = model.LevelName;
 			parameters[1].Value = model.NeedPoint;
 			parameters[2].Value = model.Point;
 			parameters[3].Value = model.Percent;
-			parameters[4].Value = model.ShopID;
-			parameters[5].Value = model.ShopName;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -98,25 +94,19 @@ namespace VipSoft.DAL
 			strSql.Append("LevelName=@LevelName,");
 			strSql.Append("NeedPoint=@NeedPoint,");
 			strSql.Append("Point=@Point,");
-			strSql.Append("[Percent]=@Percent,");
-			strSql.Append("ShopID=@ShopID,");
-			strSql.Append("ShopName=@ShopName");
+			strSql.Append("[Percent]=@Percent");
 			strSql.Append(" where ID=@ID");
 			SqlParameter[] parameters = {
 					new SqlParameter("@LevelName", SqlDbType.VarChar,50),
 					new SqlParameter("@NeedPoint", SqlDbType.Int,4),
 					new SqlParameter("@Point", SqlDbType.Int,4),
 					new SqlParameter("@Percent", SqlDbType.Float,8),
-					new SqlParameter("@ShopID", SqlDbType.Int,4),
-					new SqlParameter("@ShopName", SqlDbType.VarChar,50),
 					new SqlParameter("@ID", SqlDbType.Int,4)};
 			parameters[0].Value = model.LevelName;
 			parameters[1].Value = model.NeedPoint;
 			parameters[2].Value = model.Point;
 			parameters[3].Value = model.Percent;
-			parameters[4].Value = model.ShopID;
-			parameters[5].Value = model.ShopName;
-			parameters[6].Value = model.ID;
+			parameters[4].Value = model.ID;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -180,7 +170,7 @@ namespace VipSoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 ID,LevelName,NeedPoint,Point,Percent,ShopID,ShopName from CardLevel ");
+			strSql.Append("select  top 1 ID,LevelName,NeedPoint,Point,[Percent] from CardLevel ");
 			strSql.Append(" where ID=@ID");
 			SqlParameter[] parameters = {
 					new SqlParameter("@ID", SqlDbType.Int,4)
@@ -227,14 +217,6 @@ namespace VipSoft.DAL
 				if(row["Percent"]!=null && row["Percent"].ToString()!="")
 				{
 					model.Percent=decimal.Parse(row["Percent"].ToString());
-				}
-				if(row["ShopID"]!=null && row["ShopID"].ToString()!="")
-				{
-					model.ShopID=int.Parse(row["ShopID"].ToString());
-				}
-				if(row["ShopName"]!=null)
-				{
-					model.ShopName=row["ShopName"].ToString();
 				}
 			}
 			return model;
