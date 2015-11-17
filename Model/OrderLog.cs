@@ -27,6 +27,7 @@ namespace VipSoft.Model
 		private string _mastername;
 		private int? _shopid;
 		private string _shopname;
+        private string _remark;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -163,6 +164,12 @@ namespace VipSoft.Model
 			set{ _shopname=value;}
 			get{return _shopname;}
 		}
+
+        public string Remark
+        {
+            get { return _remark; }
+            set { _remark = value; }
+        }
 		#endregion Model
 
 	}
