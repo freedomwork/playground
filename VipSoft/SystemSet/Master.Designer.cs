@@ -40,27 +40,27 @@
             this.shopid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shopname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.issupper = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pager1 = new Vipsoft.Controls.Pager();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.f_issuper = new System.Windows.Forms.CheckBox();
+            this.f_sex = new System.Windows.Forms.ComboBox();
             this.alButton2 = new AlSkin.AlControl.AlButton();
             this.alButton1 = new AlSkin.AlControl.AlButton();
-            this.f_issuper = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.f_shopname = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.f_shopid = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.f_telphone = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.f_sex = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.f_password = new System.Windows.Forms.TextBox();
             this.f_name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.f_account = new System.Windows.Forms.TextBox();
+            this.delBtn = new AlSkin.AlControl.AlButton();
+            this.pager1 = new Vipsoft.Controls.Pager();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -80,8 +80,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.pager1);
+            this.tabPage1.Controls.Add(this.delBtn);
+            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 21);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -104,10 +105,10 @@
             this.shopid,
             this.shopname,
             this.issupper});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 32);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(417, 278);
+            this.dataGridView1.Size = new System.Drawing.Size(417, 251);
             this.dataGridView1.TabIndex = 0;
             // 
             // checkbox
@@ -172,19 +173,6 @@
             this.issupper.Name = "issupper";
             this.issupper.Width = 140;
             // 
-            // pager1
-            // 
-            this.pager1.BackGroundImage = null;
-            this.pager1.CurrentPage = 0;
-            this.pager1.Location = new System.Drawing.Point(24, 287);
-            this.pager1.Name = "pager1";
-            this.pager1.PageCount = 0;
-            this.pager1.PagerWidth = 500;
-            this.pager1.PageSize = 10;
-            this.pager1.RecordCount = 0;
-            this.pager1.Size = new System.Drawing.Size(390, 24);
-            this.pager1.TabIndex = 1;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox1);
@@ -198,18 +186,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.f_issuper);
+            this.groupBox1.Controls.Add(this.f_sex);
             this.groupBox1.Controls.Add(this.alButton2);
             this.groupBox1.Controls.Add(this.alButton1);
-            this.groupBox1.Controls.Add(this.f_issuper);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.f_shopname);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.f_shopid);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.f_telphone);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.f_sex);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.f_password);
             this.groupBox1.Controls.Add(this.f_name);
@@ -223,9 +210,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "管理员设置";
             // 
+            // f_issuper
+            // 
+            this.f_issuper.AutoSize = true;
+            this.f_issuper.Location = new System.Drawing.Point(8, 195);
+            this.f_issuper.Name = "f_issuper";
+            this.f_issuper.Size = new System.Drawing.Size(114, 16);
+            this.f_issuper.TabIndex = 19;
+            this.f_issuper.Text = "是否超级管理员:";
+            this.f_issuper.UseVisualStyleBackColor = true;
+            // 
+            // f_sex
+            // 
+            this.f_sex.FormattingEnabled = true;
+            this.f_sex.Location = new System.Drawing.Point(66, 101);
+            this.f_sex.Name = "f_sex";
+            this.f_sex.Size = new System.Drawing.Size(100, 20);
+            this.f_sex.TabIndex = 18;
+            // 
             // alButton2
             // 
-            this.alButton2.Location = new System.Drawing.Point(104, 276);
+            this.alButton2.Location = new System.Drawing.Point(104, 265);
             this.alButton2.Name = "alButton2";
             this.alButton2.Size = new System.Drawing.Size(61, 23);
             this.alButton2.TabIndex = 17;
@@ -234,7 +239,7 @@
             // 
             // alButton1
             // 
-            this.alButton1.Location = new System.Drawing.Point(18, 276);
+            this.alButton1.Location = new System.Drawing.Point(18, 265);
             this.alButton1.Name = "alButton1";
             this.alButton1.Size = new System.Drawing.Size(61, 23);
             this.alButton1.TabIndex = 16;
@@ -242,18 +247,10 @@
             this.alButton1.UseVisualStyleBackColor = true;
             this.alButton1.Click += new System.EventHandler(this.alButton1_Click);
             // 
-            // f_issuper
-            // 
-            this.f_issuper.FormattingEnabled = true;
-            this.f_issuper.Location = new System.Drawing.Point(67, 230);
-            this.f_issuper.Name = "f_issuper";
-            this.f_issuper.Size = new System.Drawing.Size(100, 20);
-            this.f_issuper.TabIndex = 15;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 185);
+            this.label8.Location = new System.Drawing.Point(5, 160);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 12);
             this.label8.TabIndex = 14;
@@ -261,7 +258,7 @@
             // 
             // f_shopname
             // 
-            this.f_shopname.Location = new System.Drawing.Point(67, 182);
+            this.f_shopname.Location = new System.Drawing.Point(67, 157);
             this.f_shopname.Name = "f_shopname";
             this.f_shopname.ReadOnly = true;
             this.f_shopname.Size = new System.Drawing.Size(100, 21);
@@ -269,31 +266,24 @@
             this.f_shopname.Click += new System.EventHandler(this.f_shopname_Click);
             this.f_shopname.TextChanged += new System.EventHandler(this.f_shopname_TextChanged);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 213);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 12);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "是否超级管理员:";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 158);
+            this.label6.Location = new System.Drawing.Point(8, 225);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 12);
             this.label6.TabIndex = 11;
             this.label6.Text = "店铺ID:";
+            this.label6.Visible = false;
             // 
             // f_shopid
             // 
-            this.f_shopid.Location = new System.Drawing.Point(67, 155);
+            this.f_shopid.Location = new System.Drawing.Point(67, 221);
             this.f_shopid.Name = "f_shopid";
             this.f_shopid.ReadOnly = true;
             this.f_shopid.Size = new System.Drawing.Size(100, 21);
             this.f_shopid.TabIndex = 10;
+            this.f_shopid.Visible = false;
             // 
             // label5
             // 
@@ -319,13 +309,6 @@
             this.label4.Size = new System.Drawing.Size(35, 12);
             this.label4.TabIndex = 7;
             this.label4.Text = "性别:";
-            // 
-            // f_sex
-            // 
-            this.f_sex.Location = new System.Drawing.Point(66, 101);
-            this.f_sex.Name = "f_sex";
-            this.f_sex.Size = new System.Drawing.Size(100, 21);
-            this.f_sex.TabIndex = 6;
             // 
             // label3
             // 
@@ -375,6 +358,29 @@
             this.f_account.Size = new System.Drawing.Size(100, 21);
             this.f_account.TabIndex = 0;
             // 
+            // delBtn
+            // 
+            this.delBtn.Location = new System.Drawing.Point(6, 5);
+            this.delBtn.Name = "delBtn";
+            this.delBtn.Size = new System.Drawing.Size(62, 23);
+            this.delBtn.TabIndex = 1;
+            this.delBtn.Text = "删除";
+            this.delBtn.UseVisualStyleBackColor = true;
+            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
+            // 
+            // pager1
+            // 
+            this.pager1.BackGroundImage = null;
+            this.pager1.CurrentPage = 0;
+            this.pager1.Location = new System.Drawing.Point(6, 285);
+            this.pager1.Name = "pager1";
+            this.pager1.PageCount = 0;
+            this.pager1.PagerWidth = 500;
+            this.pager1.PageSize = 10;
+            this.pager1.RecordCount = 0;
+            this.pager1.Size = new System.Drawing.Size(411, 30);
+            this.pager1.TabIndex = 2;
+            // 
             // Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -401,7 +407,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private Vipsoft.Controls.Pager pager1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn checkbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn account;
@@ -419,17 +424,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox f_telphone;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox f_sex;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox f_password;
         private System.Windows.Forms.TextBox f_name;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox f_shopname;
-        private System.Windows.Forms.Label label7;
         private AlSkin.AlControl.AlButton alButton2;
         private AlSkin.AlControl.AlButton alButton1;
-        private System.Windows.Forms.ComboBox f_issuper;
+        private System.Windows.Forms.ComboBox f_sex;
+        private System.Windows.Forms.CheckBox f_issuper;
+        private AlSkin.AlControl.AlButton delBtn;
+        private Vipsoft.Controls.Pager pager1;
 
     }
 }
