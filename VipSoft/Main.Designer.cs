@@ -41,6 +41,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.myGroupBox1 = new YiJiaSoft.Controls.MyGroupBox();
+            this.alButton_Shortcut_moneyrule = new AlSkin.AlControl.AlButton();
             this.alButton_Shortcut_SetCardType = new AlSkin.AlControl.AlButton();
             this.alButton_Shortcut_SetLevel = new AlSkin.AlControl.AlButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -216,9 +217,9 @@
             // myTabControl
             // 
             this.myTabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.myTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.myTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.myTabControl.Controls.Add(this.tabPage1);
             this.myTabControl.Controls.Add(this.tabPage2);
             this.myTabControl.Controls.Add(this.tabPage3);
@@ -258,6 +259,7 @@
             // myGroupBox1
             // 
             this.myGroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(157)))), ((int)(((byte)(185)))));
+            this.myGroupBox1.Controls.Add(this.alButton_Shortcut_moneyrule);
             this.myGroupBox1.Controls.Add(this.alButton_Shortcut_SetCardType);
             this.myGroupBox1.Controls.Add(this.alButton_Shortcut_SetLevel);
             this.myGroupBox1.Location = new System.Drawing.Point(76, 369);
@@ -266,6 +268,18 @@
             this.myGroupBox1.TabIndex = 3;
             this.myGroupBox1.TabStop = false;
             this.myGroupBox1.Text = "快捷功能";
+            // 
+            // alButton_Shortcut_moneyrule
+            // 
+            this.alButton_Shortcut_moneyrule.BackColor = System.Drawing.Color.Transparent;
+            this.alButton_Shortcut_moneyrule.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.alButton_Shortcut_moneyrule.Location = new System.Drawing.Point(265, 20);
+            this.alButton_Shortcut_moneyrule.Name = "alButton_Shortcut_moneyrule";
+            this.alButton_Shortcut_moneyrule.Size = new System.Drawing.Size(90, 23);
+            this.alButton_Shortcut_moneyrule.TabIndex = 3;
+            this.alButton_Shortcut_moneyrule.Text = "收费规则设置";
+            this.alButton_Shortcut_moneyrule.UseVisualStyleBackColor = true;
+            this.alButton_Shortcut_moneyrule.Click += new System.EventHandler(this.alButton_Shortcut_Click);
             // 
             // alButton_Shortcut_SetCardType
             // 
@@ -1100,5 +1114,6 @@
         private Vipsoft.Controls.PanelButton panelButton_Export_Cai;
         private Vipsoft.Controls.PanelButton panelButton_Export_Gift;
         private Vipsoft.Controls.PanelButton panelButton_Export_Order;
+        private AlSkin.AlControl.AlButton alButton_Shortcut_moneyrule;
     }
 }

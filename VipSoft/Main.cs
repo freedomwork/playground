@@ -192,6 +192,10 @@ namespace VipSoft
                     memCardType cardTypeWin = new memCardType();
                     cardTypeWin.ShowDialog();
                     break;
+                case "alButton_Shortcut_moneyrule":
+                    MoneyRuleList ruleList = new MoneyRuleList();
+                    ruleList.ShowDialog();
+                    break;
                 default:
                     break;
             }
