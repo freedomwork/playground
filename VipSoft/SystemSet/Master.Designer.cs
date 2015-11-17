@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pager1 = new Vipsoft.Controls.Pager();
+            this.delBtn = new AlSkin.AlControl.AlButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.checkbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,8 +61,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.f_account = new System.Windows.Forms.TextBox();
-            this.delBtn = new AlSkin.AlControl.AlButton();
-            this.pager1 = new Vipsoft.Controls.Pager();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -83,17 +83,41 @@
             this.tabPage1.Controls.Add(this.pager1);
             this.tabPage1.Controls.Add(this.delBtn);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 21);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(423, 318);
+            this.tabPage1.Size = new System.Drawing.Size(423, 317);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "管理员列表";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pager1
+            // 
+            this.pager1.BackGroundImage = null;
+            this.pager1.CurrentPage = 0;
+            this.pager1.Location = new System.Drawing.Point(6, 285);
+            this.pager1.Name = "pager1";
+            this.pager1.PageCount = 0;
+            this.pager1.PagerWidth = 500;
+            this.pager1.PageSize = 10;
+            this.pager1.RecordCount = 0;
+            this.pager1.Size = new System.Drawing.Size(411, 30);
+            this.pager1.TabIndex = 2;
+            // 
+            // delBtn
+            // 
+            this.delBtn.Location = new System.Drawing.Point(6, 5);
+            this.delBtn.Name = "delBtn";
+            this.delBtn.Size = new System.Drawing.Size(62, 23);
+            this.delBtn.TabIndex = 1;
+            this.delBtn.Text = "删除";
+            this.delBtn.UseVisualStyleBackColor = true;
+            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.checkbox,
@@ -107,6 +131,7 @@
             this.issupper});
             this.dataGridView1.Location = new System.Drawing.Point(3, 32);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(417, 251);
             this.dataGridView1.TabIndex = 0;
@@ -176,10 +201,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 21);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(423, 318);
+            this.tabPage2.Size = new System.Drawing.Size(423, 317);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "新增管理员";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -358,36 +383,18 @@
             this.f_account.Size = new System.Drawing.Size(100, 21);
             this.f_account.TabIndex = 0;
             // 
-            // delBtn
-            // 
-            this.delBtn.Location = new System.Drawing.Point(6, 5);
-            this.delBtn.Name = "delBtn";
-            this.delBtn.Size = new System.Drawing.Size(62, 23);
-            this.delBtn.TabIndex = 1;
-            this.delBtn.Text = "删除";
-            this.delBtn.UseVisualStyleBackColor = true;
-            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
-            // 
-            // pager1
-            // 
-            this.pager1.BackGroundImage = null;
-            this.pager1.CurrentPage = 0;
-            this.pager1.Location = new System.Drawing.Point(6, 285);
-            this.pager1.Name = "pager1";
-            this.pager1.PageCount = 0;
-            this.pager1.PagerWidth = 500;
-            this.pager1.PageSize = 10;
-            this.pager1.RecordCount = 0;
-            this.pager1.Size = new System.Drawing.Size(411, 30);
-            this.pager1.TabIndex = 2;
-            // 
             // Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 399);
             this.Controls.Add(this.tabControl1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Master";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理员设置";
             this.Load += new System.EventHandler(this.Master_Load);
             this.Controls.SetChildIndex(this.tabControl1, 0);

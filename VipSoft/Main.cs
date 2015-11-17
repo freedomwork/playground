@@ -140,12 +140,16 @@ namespace VipSoft
                 case "panelButton_SystemSet":
                     break;
                 case "panelButton_Export_Order":
+                    OrderReport orderReport = new OrderReport();
+                    orderReport.ShowDialog();
                     break;
                 case "panelButton_Export_Gift":
                     PointExchangeReport pointExchangeReport = new PointExchangeReport();
                     pointExchangeReport.ShowDialog();
                     break;
                 case "panelButton_Export_Cai":
+                    ReportStock rStock = new ReportStock();
+                    rStock.ShowDialog();
                     break;
                 case "panelButton_Export_Recharge":
                     RechargeMoneyReport rechrgeMoneyReport = new RechargeMoneyReport();

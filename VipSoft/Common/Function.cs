@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Data;
+using VipSoft.Common;
 
 namespace VipSoft
 {
@@ -128,6 +129,8 @@ namespace VipSoft
                 (Screen.GetBounds(currentForm).Height / 2) - (currentForm.Height / 2), currentForm.Width, currentForm.Height, BoundsSpecified.Location);
         }
 
+
+
         /// <summary>
         /// 绑定产品分类到下拉菜单
         /// </summary>
@@ -226,7 +229,53 @@ namespace VipSoft
             }
             return sb.ToString();
         }
+
+        #region 支付方式相关方法
+        /// <summary>
+        /// 取得支付类型的名称
+        /// </summary>
+        public static string GetPayTypeName(OrderPayType payType)
+        {
+            return GetPayTypeName((int)payType);
+        }
+        /// <summary>
+        /// 取得支付类型的名称
+        /// </summary>
+        public static string GetPayTypeName(int payType)
+        {
+            string name = "";
+            switch (payType.ToString())
+            {
+                case "1":
+                    name = "余额";
+                    break;
+                case "2":
+                    name = "现金";
+                    break;
+                case "3":
+                    name = "银行卡";
+                    break;
+                case "4":
+                    name = "代金券";
+                    break;
+                case "5":
+                    name = "联合";
+                    break;
+                case "10":
+                    name = "挂账";
+                    break;
+                case "11":
+                    name = "挂单";
+                    break;
+                case "100":
+                    name = "记次";
+                    break;
+            }
+            return name;
+        }
+        #endregion
     }
+
 
     #region PublicState 类：保存各种全局状态，如登录状态，全局变量等
     public class PublicState

@@ -217,6 +217,12 @@
       <DependentUpon>DataInput.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\OrderReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\OrderReport.Designer.cs">
+      <DependentUpon>OrderReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\PointChangeReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +362,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\OrderReport.resx">
+      <DependentUpon>OrderReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\PointChangeReport.resx">
       <DependentUpon>PointChangeReport.cs</DependentUpon>
     </EmbeddedResource>
