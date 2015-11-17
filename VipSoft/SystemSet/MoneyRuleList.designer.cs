@@ -1,4 +1,4 @@
-﻿namespace VipSoft.SystemSet
+﻿namespace VipSoft
 {
     partial class MoneyRuleList
     {

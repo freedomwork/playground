@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using VipSoft.Model;
 
-namespace VipSoft.SystemSet
+namespace VipSoft
 {
     public partial class MoneyRuleList : BaseForm
     {
