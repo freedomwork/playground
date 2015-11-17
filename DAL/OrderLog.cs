@@ -409,6 +409,21 @@ namespace VipSoft.DAL
 			}
 			return DbHelperSQL.Query(strSql.ToString());
 		}
+        /// <summary>
+        /// 普通消费数据列表
+        /// </summary>
+        /// <param name="strWhere"></param>
+        /// <returns></returns>
+        public DataSet GetOrderGoodsList(string strWhere)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("select OrderLog.ID,OrderLog.OrderCode,OrderLog.OrderType,OrderLog.MemID,OrderLog.CardID,OrderLog.MemName,OrderLog.TotalNumber,OrderLog.TotalMoney,OrderLog.DiscountMoney,OrderLog.Point,OrderLog.CreateDateTime,OrderLog.MasterID,OrderLog.MasterName,OrderLog.PayType,OrderLog.PayInfo,OrderLog.Remark,OrderLog.PayInfo,MemCard.ID,MemCard.CardmianID,MemCard.ID,MemCard.Mobile");
+            sb.Append(" FROM OrderLog INNER JOIN MemCard on OrderLog.MemID=MemCard.ID ");
+            if (strWhere.Trim() != "")
+                sb.Append(" where " + strWhere);
+            sb.Append(" Order By OrderLog.ID desc");
+            return DbHelperSQL.Query(sb.ToString());
+        }
 
 		/// <summary>
 		/// 获得前几行数据
