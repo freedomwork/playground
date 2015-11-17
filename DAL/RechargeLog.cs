@@ -372,7 +372,17 @@ namespace VipSoft.DAL
 
 		#endregion  BasicMethod
 		#region  ExtensionMethod
-
+        public DataSet GetReportList(string strWhere)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("select RechargeLog.ID,RechargeLog.CardID,RechargeLog.MemName,RechargeLog.[Type],RechargeLog.[Money],RechargeLog.GiveMoney,RechargeLog.MasterID,RechargeLog.MasterName,RechargeLog.ShopID,RechargeLog.ShopName,RechargeLog.CreateTime,MemCard.LevelID,RechargeLog.Remark ");
+            sb.Append(" from RechargeLog left join MemCard on RechargeLog.CardID=MemCard.CardID");
+            if (strWhere!="")
+            {
+                sb.Append("  where  RechargeLog.[Money]>0 and "+strWhere);
+            }
+            return DbHelperSQL.Query(sb.ToString());
+        }
 		#endregion  ExtensionMethod
 	}
 }
