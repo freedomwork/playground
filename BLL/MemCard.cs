@@ -31,6 +31,14 @@ namespace VipSoft.BLL
 			return dal.Exists(ID);
 		}
 
+        /// <summary>
+        /// 取得某等级的会员列表
+        /// </summary>
+        public string GetMemIDs(int levelID)
+        {
+            return dal.GetMemIDs(levelID);
+        }
+
 		/// <summary>
 		/// 增加一条数据
 		/// </summary>
