@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.checkbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oneHourMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.secondHourMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thirdHourMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thanTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pager1 = new Vipsoft.Controls.Pager();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.delBtn = new AlSkin.AlControl.AlButton();
@@ -44,13 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.f_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oneHourMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.secondHourMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thirdHourMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thanTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,7 @@
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.checkbox,
@@ -69,10 +70,56 @@
             this.thanTime});
             this.dataGridView1.Location = new System.Drawing.Point(229, 52);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(521, 235);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // checkbox
+            // 
+            this.checkbox.HeaderText = " ";
+            this.checkbox.Name = "checkbox";
+            this.checkbox.Visible = false;
+            this.checkbox.Width = 20;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "序号";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            this.id.Width = 50;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "收费规则名称";
+            this.name.Name = "name";
+            // 
+            // oneHourMoney
+            // 
+            this.oneHourMoney.DataPropertyName = "oneHourMoney";
+            this.oneHourMoney.HeaderText = "一个小时收费";
+            this.oneHourMoney.Name = "oneHourMoney";
+            // 
+            // secondHourMoney
+            // 
+            this.secondHourMoney.DataPropertyName = "secondHourMoney";
+            this.secondHourMoney.HeaderText = "二个小时收费";
+            this.secondHourMoney.Name = "secondHourMoney";
+            // 
+            // thirdHourMoney
+            // 
+            this.thirdHourMoney.DataPropertyName = "thirdHourMoney";
+            this.thirdHourMoney.HeaderText = "三个小时收费";
+            this.thirdHourMoney.Name = "thirdHourMoney";
+            // 
+            // thanTime
+            // 
+            this.thanTime.DataPropertyName = "thanTime";
+            this.thanTime.HeaderText = "展期";
+            this.thanTime.Name = "thanTime";
             // 
             // pager1
             // 
@@ -220,51 +267,6 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "收费规则名称:";
             // 
-            // checkbox
-            // 
-            this.checkbox.HeaderText = " ";
-            this.checkbox.Name = "checkbox";
-            this.checkbox.Visible = false;
-            this.checkbox.Width = 20;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "序号";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            this.id.Width = 50;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "收费规则名称";
-            this.name.Name = "name";
-            // 
-            // oneHourMoney
-            // 
-            this.oneHourMoney.DataPropertyName = "oneHourMoney";
-            this.oneHourMoney.HeaderText = "一个小时收费";
-            this.oneHourMoney.Name = "oneHourMoney";
-            // 
-            // secondHourMoney
-            // 
-            this.secondHourMoney.DataPropertyName = "secondHourMoney";
-            this.secondHourMoney.HeaderText = "二个小时收费";
-            this.secondHourMoney.Name = "secondHourMoney";
-            // 
-            // thirdHourMoney
-            // 
-            this.thirdHourMoney.DataPropertyName = "thirdHourMoney";
-            this.thirdHourMoney.HeaderText = "三个小时收费";
-            this.thirdHourMoney.Name = "thirdHourMoney";
-            // 
-            // thanTime
-            // 
-            this.thanTime.DataPropertyName = "thanTime";
-            this.thanTime.HeaderText = "展期";
-            this.thanTime.Name = "thanTime";
-            // 
             // MoneyRuleList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -275,6 +277,9 @@
             this.Controls.Add(this.pager1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "MoneyRuleList";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "收费规则设置";
             this.Load += new System.EventHandler(this.MoneyRuleList_Load);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
