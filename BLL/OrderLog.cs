@@ -94,6 +94,15 @@ namespace VipSoft.BLL
 		{
 			return dal.GetList(Top,strWhere,filedOrder);
 		}
+        /// <summary>
+        /// 普通消费数据列表
+        /// </summary>
+        /// <param name="strWhere"></param>
+        /// <returns></returns>
+        public DataSet GetOrderGoodsList(string strWhere)
+        {
+            return dal.GetOrderGoodsList(strWhere);
+        }
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
