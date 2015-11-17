@@ -40,6 +40,19 @@ namespace VipSoft.DAL
 			return DbHelperSQL.Exists(strSql.ToString(),parameters);
 		}
 
+        /// <summary>
+        /// 取得某等级的会员列表
+        /// </summary>
+        public string GetMemIDs(int levelID)
+        {
+            DataTable dt = DbHelperSQL.Query("select ID from MemCard where LevelID=" + levelID.ToString()).Tables[0];
+            StringBuilder sb = new StringBuilder();
+            foreach (DataRow dr in dt.Rows)
+            {
+                sb.Append(dr["ID"].ToString() + ",");
+            }
+            return sb.ToString().Trim(",".ToCharArray());
+        }
 
 		/// <summary>
 		/// 增加一条数据
