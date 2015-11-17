@@ -370,7 +370,10 @@ namespace VipSoft.DAL
 
 		#endregion  BasicMethod
 		#region  ExtensionMethod
-
+        public DataSet GetListCollect(string sql)
+        {
+            return DbHelperSQL.Query(sql);
+        }
 		#endregion  ExtensionMethod
 	}
 }
