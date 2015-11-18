@@ -425,6 +425,22 @@ namespace VipSoft.DAL
             return DbHelperSQL.Query(sb.ToString());
         }
 
+        /// <summary>
+        /// 快速消费数据报表
+        /// </summary>
+        /// <param name="strWhere"></param>
+        /// <returns></returns>
+        public DataSet GetOrderPointList(string strWhere)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("select OrderLog.ID,OrderLog.OrderCode,OrderLog.OrderType,OrderLog.MemID,OrderLog.CardID,OrderLog.MemName,OrderLog.TotalNumber,OrderLog.TotalMoney,OrderLog.DiscountMoney,OrderLog.Point,OrderLog.CreateDateTime,OrderLog.MasterID,OrderLog.MasterName,OrderLog.PayType,OrderLog.PayInfo,OrderLog.Remark,MemCard.ID,MemCard.CardmianID,MemCard.Mobile");
+            sb.Append(" FROM OrderLog INNER JOIN MemCard on OrderLog.MemID=MemCard.ID ");
+            if (strWhere.Trim() != "")
+                sb.Append(" where " + strWhere);
+            sb.Append(" Order By OrderLog.ID desc");
+            return DbHelperSQL.Query(sb.ToString());
+        }
+
 		/// <summary>
 		/// 获得前几行数据
 		/// </summary>
@@ -520,7 +536,10 @@ namespace VipSoft.DAL
 
 		#endregion  BasicMethod
 		#region  ExtensionMethod
-
+        public DataSet GetListCollect(string sql)
+        {
+            return DbHelperSQL.Query(sql);
+        }
 		#endregion  ExtensionMethod
 	}
 }
