@@ -103,6 +103,15 @@ namespace VipSoft.BLL
         {
             return dal.GetOrderGoodsList(strWhere);
         }
+        /// <summary>
+        /// 快速消费数据列表
+        /// </summary>
+        /// <param name="strWhere"></param>
+        /// <returns></returns>
+        public DataSet GetOrderPointList(string strWhere)
+        {
+            return dal.GetOrderPointList(strWhere);
+        }
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
@@ -165,7 +174,10 @@ namespace VipSoft.BLL
 
 		#endregion  BasicMethod
 		#region  ExtensionMethod
-
+        public DataSet GetListCollect(string sql)
+        {
+            return dal.GetListCollect(sql);
+        }
 		#endregion  ExtensionMethod
 	}
 }
