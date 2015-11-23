@@ -122,23 +122,48 @@ namespace VipSoft.SystemSet
             mModel.ShopID = int.Parse(f_shopid.Text.ToString());
             mModel.ShopName = f_shopname.Text.ToString();
 
-            if (mBll.Add(mModel) > 0)
+            if (this.currentId == 0)
             {
-                MessageBox.Show("新增记录成功!");
-                BindList();
+                if (mBll.Add(mModel) > 0)
+                {
+                    MessageBox.Show("新增记录成功!");
+                    BindList();
+                    reset();
+                }
+                else
+                {
+                    MessageBox.Show("新增记录失败!");
+                }
+            }
+            else
+            {
+                mModel.ID = currentId;
+                if (mBll.Update(mModel))
+                {
+                    MessageBox.Show("修改记录成功!");
+                    BindList();
+                    reset();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("修改记录失败!");
+                }
+
             }
         }
 
-        private void delBtn_Click(object sender, EventArgs e)
+        private void delBtn_Click()
         {
-             String id = this.dataGridView1.Rows[this.dataGridView1.CurrentRow.Index].Cells["id"].Value.ToString();
-             if (id != null && id != "")
+            if (currentId > 0)
              {
                  VipSoft.BLL.Master mBll = new BLL.Master();
-                 if (mBll.Delete(int.Parse(id)))
+                 if (mBll.Delete(currentId))
                  {
                      MessageBox.Show("删除管理员成功!");
                      BindList();
+                     reset();
                  }
              }
              else
@@ -146,6 +171,71 @@ namespace VipSoft.SystemSet
                  MessageBox.Show("请先选择一条数据!");
              }
         }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (e.RowIndex == -1)
+                    return;
+
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                row.Selected = true;
+                Point point = this.dataGridView1.PointToClient(Cursor.Position);
+                this.contextMenuStrip_CellRight.Show(this.dataGridView1, point);
+            }
+        }
+
+        private void ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            currentId = int.Parse(this.dataGridView1.Rows[this.dataGridView1.CurrentRow.Index].Cells["id"].Value.ToString());
+            ToolStripMenuItem item = (ToolStripMenuItem)sender;
+            switch (item.Name)
+            {
+                // 编辑
+                case "modifyItem":
+                    this.tabControl1.SelectedIndex = 1;
+                    BindMasterInfo();
+                    break;
+                // 删除
+                case "deleteItem":
+                    delBtn_Click();
+                    break;
+            }
+        }
+      
+
+        private void BindMasterInfo() {
+            VipSoft.BLL.Master mBll = new BLL.Master();
+            VipSoft.Model.Master model = mBll.GetModel(currentId);
+            if (model != null)
+            {
+                this.f_account.Text = model.Account;
+                this.f_name.Text = model.Name;
+                this.f_password.Text = model.Password;
+                this.f_sex.SelectedIndex = (int)model.Sex;
+                this.f_issuper.Checked = model.IsSuper;
+                this.f_telphone.Text = model.TelPhone;
+                this.f_shopid.Text = model.ShopID.ToString();
+                this.f_shopname.Text = model.ShopName;
+            }
+        }
+
+        private void reset()
+        {
+            this.f_account.Text = "";
+            this.f_name.Text = "";
+            this.f_password.Text ="";
+            this.f_sex.SelectedIndex = 0;
+            this.f_issuper.Checked = false;
+            this.f_telphone.Text = "";
+            this.f_shopid.Text = "";
+            this.f_shopname.Text = "";
+            this.currentId = 0;
+
+        }
+
 
 
 

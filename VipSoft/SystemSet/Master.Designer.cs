@@ -31,17 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pager1 = new Vipsoft.Controls.Pager();
-            this.delBtn = new AlSkin.AlControl.AlButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.checkbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.account = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shopid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shopname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issupper = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.f_issuper = new System.Windows.Forms.CheckBox();
@@ -61,11 +51,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.f_account = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip_CellRight = new AlSkin.AlControl.AlContextMenuStrip();
+            this.modifyItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.account = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shopid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shopname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.issupper = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.contextMenuStrip_CellRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -81,12 +84,11 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.pager1);
-            this.tabPage1.Controls.Add(this.delBtn);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 21);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(423, 317);
+            this.tabPage1.Size = new System.Drawing.Size(423, 318);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "管理员列表";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -104,16 +106,6 @@
             this.pager1.Size = new System.Drawing.Size(411, 30);
             this.pager1.TabIndex = 2;
             // 
-            // delBtn
-            // 
-            this.delBtn.Location = new System.Drawing.Point(6, 5);
-            this.delBtn.Name = "delBtn";
-            this.delBtn.Size = new System.Drawing.Size(62, 23);
-            this.delBtn.TabIndex = 1;
-            this.delBtn.Text = "删除";
-            this.delBtn.UseVisualStyleBackColor = true;
-            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
@@ -129,82 +121,21 @@
             this.shopid,
             this.shopname,
             this.issupper});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 32);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(417, 251);
+            this.dataGridView1.Size = new System.Drawing.Size(417, 277);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // checkbox
-            // 
-            this.checkbox.HeaderText = " ";
-            this.checkbox.Name = "checkbox";
-            this.checkbox.Visible = false;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "序号";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // account
-            // 
-            this.account.DataPropertyName = "account";
-            this.account.HeaderText = "编号";
-            this.account.Name = "account";
-            this.account.Width = 60;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "名称";
-            this.name.Name = "name";
-            this.name.Width = 80;
-            // 
-            // sex
-            // 
-            this.sex.DataPropertyName = "sex";
-            this.sex.HeaderText = "性别";
-            this.sex.Name = "sex";
-            this.sex.Width = 60;
-            // 
-            // telPhone
-            // 
-            this.telPhone.DataPropertyName = "telPhone";
-            this.telPhone.HeaderText = "联系电话";
-            this.telPhone.Name = "telPhone";
-            this.telPhone.Width = 80;
-            // 
-            // shopid
-            // 
-            this.shopid.DataPropertyName = "shopid";
-            this.shopid.HeaderText = "店铺ID";
-            this.shopid.Name = "shopid";
-            this.shopid.Width = 80;
-            // 
-            // shopname
-            // 
-            this.shopname.DataPropertyName = "shopname";
-            this.shopname.HeaderText = "店铺名称";
-            this.shopname.Name = "shopname";
-            this.shopname.Width = 80;
-            // 
-            // issupper
-            // 
-            this.issupper.DataPropertyName = "issuper";
-            this.issupper.HeaderText = "是否超级管理员";
-            this.issupper.Name = "issupper";
-            this.issupper.Width = 140;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 21);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(423, 317);
+            this.tabPage2.Size = new System.Drawing.Size(423, 318);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "新增管理员";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -383,6 +314,93 @@
             this.f_account.Size = new System.Drawing.Size(100, 21);
             this.f_account.TabIndex = 0;
             // 
+            // contextMenuStrip_CellRight
+            // 
+            this.contextMenuStrip_CellRight.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modifyItem,
+            this.deleteItem});
+            this.contextMenuStrip_CellRight.Name = "contextMenuStrip_CellRight";
+            this.contextMenuStrip_CellRight.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.contextMenuStrip_CellRight.Size = new System.Drawing.Size(119, 48);
+            this.contextMenuStrip_CellRight.Text = "修改记录";
+            // 
+            // modifyItem
+            // 
+            this.modifyItem.Name = "modifyItem";
+            this.modifyItem.Size = new System.Drawing.Size(152, 22);
+            this.modifyItem.Text = "修改记录";
+            this.modifyItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // deleteItem
+            // 
+            this.deleteItem.Name = "deleteItem";
+            this.deleteItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteItem.Text = "删除记录";
+            this.deleteItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // checkbox
+            // 
+            this.checkbox.HeaderText = " ";
+            this.checkbox.Name = "checkbox";
+            this.checkbox.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.checkbox.Visible = false;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "序号";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // account
+            // 
+            this.account.DataPropertyName = "account";
+            this.account.HeaderText = "编号";
+            this.account.Name = "account";
+            this.account.Width = 60;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "名称";
+            this.name.Name = "name";
+            this.name.Width = 80;
+            // 
+            // sex
+            // 
+            this.sex.DataPropertyName = "sex";
+            this.sex.HeaderText = "性别";
+            this.sex.Name = "sex";
+            this.sex.Width = 60;
+            // 
+            // telPhone
+            // 
+            this.telPhone.DataPropertyName = "telPhone";
+            this.telPhone.HeaderText = "联系电话";
+            this.telPhone.Name = "telPhone";
+            this.telPhone.Width = 80;
+            // 
+            // shopid
+            // 
+            this.shopid.DataPropertyName = "shopid";
+            this.shopid.HeaderText = "店铺ID";
+            this.shopid.Name = "shopid";
+            this.shopid.Width = 80;
+            // 
+            // shopname
+            // 
+            this.shopname.DataPropertyName = "shopname";
+            this.shopname.HeaderText = "店铺名称";
+            this.shopname.Name = "shopname";
+            this.shopname.Width = 80;
+            // 
+            // issupper
+            // 
+            this.issupper.DataPropertyName = "issuper";
+            this.issupper.HeaderText = "是否超级管理员";
+            this.issupper.Name = "issupper";
+            this.issupper.Width = 140;
+            // 
             // Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -404,6 +422,7 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.contextMenuStrip_CellRight.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -414,15 +433,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn checkbox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn account;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telPhone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shopid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shopname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn issupper;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox f_account;
@@ -441,8 +451,19 @@
         private AlSkin.AlControl.AlButton alButton1;
         private System.Windows.Forms.ComboBox f_sex;
         private System.Windows.Forms.CheckBox f_issuper;
-        private AlSkin.AlControl.AlButton delBtn;
         private Vipsoft.Controls.Pager pager1;
+        private AlSkin.AlControl.AlContextMenuStrip contextMenuStrip_CellRight;
+        private System.Windows.Forms.ToolStripMenuItem modifyItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteItem;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn checkbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn account;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telPhone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shopid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shopname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn issupper;
 
     }
 }
