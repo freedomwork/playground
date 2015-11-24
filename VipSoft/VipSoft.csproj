@@ -241,6 +241,18 @@
     <Compile Include="Report\RechargeMoneyReport.Designer.cs">
       <DependentUpon>RechargeMoneyReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="SystemSet\AddCoupon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSet\AddCoupon.Designer.cs">
+      <DependentUpon>AddCoupon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\Coupon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSet\Coupon.Designer.cs">
+      <DependentUpon>Coupon.cs</DependentUpon>
+    </Compile>
     <Compile Include="SystemSet\Master.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -373,6 +385,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\RechargeMoneyReport.resx">
       <DependentUpon>RechargeMoneyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\AddCoupon.resx">
+      <DependentUpon>AddCoupon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\Coupon.resx">
+      <DependentUpon>Coupon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SystemSet\Master.resx">
       <DependentUpon>Master.cs</DependentUpon>
