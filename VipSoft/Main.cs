@@ -161,6 +161,10 @@ namespace VipSoft
                     break;
                 case "panelButton_Export_Total":
                     break;
+                case "panelButton_CouponSet":
+                    Coupon coupon = new Coupon();
+                    coupon.ShowDialog();
+                    break;
                 default:
                     break;
             }

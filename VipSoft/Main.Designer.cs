@@ -95,6 +95,7 @@
             this.Button_MemberOrder = new AlSkin.AlControl.AlButton();
             this.Button_Report = new AlSkin.AlControl.AlButton();
             this.Button_Setup = new AlSkin.AlControl.AlButton();
+            this.panelButton_CouponSet = new Vipsoft.Controls.PanelButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -798,6 +799,7 @@
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.panelButton_CouponSet, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.panelButton_SystemSet, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.panelButton_Setup_Master, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.panelButton_Step_Shop, 0, 2);
@@ -821,7 +823,7 @@
             this.panelButton_SystemSet.BackColor = System.Drawing.Color.Transparent;
             this.panelButton_SystemSet.Info = "整个系统综合参数设置";
             this.panelButton_SystemSet.InfoImg = global::VipSoft.Properties.Resources.ico_系统全局设置;
-            this.panelButton_SystemSet.Location = new System.Drawing.Point(3, 243);
+            this.panelButton_SystemSet.Location = new System.Drawing.Point(255, 243);
             this.panelButton_SystemSet.Name = "panelButton_SystemSet";
             this.panelButton_SystemSet.Size = new System.Drawing.Size(245, 60);
             this.panelButton_SystemSet.TabIndex = 6;
@@ -986,6 +988,19 @@
             this.Button_Setup.UseVisualStyleBackColor = true;
             this.Button_Setup.Click += new System.EventHandler(this.Button_Setup_Click);
             // 
+            // panelButton_CouponSet
+            // 
+            this.panelButton_CouponSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_CouponSet.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_CouponSet.Info = "设置电子优惠券，金额，优惠券号";
+            this.panelButton_CouponSet.InfoImg = global::VipSoft.Properties.Resources.ico_自定义属性设置;
+            this.panelButton_CouponSet.Location = new System.Drawing.Point(3, 243);
+            this.panelButton_CouponSet.Name = "panelButton_CouponSet";
+            this.panelButton_CouponSet.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_CouponSet.TabIndex = 7;
+            this.panelButton_CouponSet.Title = "优惠券设置";
+            this.panelButton_CouponSet.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1115,5 +1130,6 @@
         private Vipsoft.Controls.PanelButton panelButton_Export_Gift;
         private Vipsoft.Controls.PanelButton panelButton_Export_Order;
         private AlSkin.AlControl.AlButton alButton_Shortcut_moneyrule;
+        private Vipsoft.Controls.PanelButton panelButton_CouponSet;
     }
 }
