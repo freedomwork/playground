@@ -13,13 +13,13 @@ namespace VipSoft.Model
 		private int _id;
 		private string _title;
 		private string _prefix;
-		private string _startcouponnumber;
 		private DateTime? _starttime;
 		private DateTime? _endtime;
 		private decimal? _money;
 		private string _shopidinfo;
-		private string _goodsclassinfo;
 		private string _remark;
+        private int _type;
+        private int _num;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -43,14 +43,6 @@ namespace VipSoft.Model
 		{
 			set{ _prefix=value;}
 			get{return _prefix;}
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public string StartCouponNumber
-		{
-			set{ _startcouponnumber=value;}
-			get{return _startcouponnumber;}
 		}
 		/// <summary>
 		/// 
@@ -87,19 +79,27 @@ namespace VipSoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string GoodsClassInfo
-		{
-			set{ _goodsclassinfo=value;}
-			get{return _goodsclassinfo;}
-		}
-		/// <summary>
-		/// 
-		/// </summary>
 		public string Remark
 		{
 			set{ _remark=value;}
 			get{return _remark;}
 		}
+        /// <summary>
+        /// 有效期类型
+        /// </summary>
+        public int Type
+        {
+            get { return _type; }
+            set { _type = value; }
+        }
+        /// <summary>
+        /// 预发电子券数量
+        /// </summary>
+        public int Num
+        {
+            get { return _num; }
+            set { _num = value; }
+        }
 		#endregion Model
 
 	}
