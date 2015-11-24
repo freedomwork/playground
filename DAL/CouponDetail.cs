@@ -38,6 +38,21 @@ namespace VipSoft.DAL
 			return DbHelperSQL.Exists(strSql.ToString(),parameters);
 		}
 
+        /// <summary>
+        /// 是否存在该记录
+        /// </summary>
+        public bool Exists(string CouponNumber)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select count(1) from CouponDetail");
+            strSql.Append(" where CouponNumber=@CouponNumber");
+            SqlParameter[] parameters = {
+					new SqlParameter("@CouponNumber", SqlDbType.VarChar,50)
+			};
+            parameters[0].Value = CouponNumber;
+
+            return DbHelperSQL.Exists(strSql.ToString(), parameters);
+        }
 
 		/// <summary>
 		/// 增加一条数据
@@ -46,19 +61,17 @@ namespace VipSoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into CouponDetail(");
-			strSql.Append("CouponID,CouponNumber,State,UsedTime)");
+			strSql.Append("CouponID,CouponNumber,State)");
 			strSql.Append(" values (");
-			strSql.Append("@CouponID,@CouponNumber,@State,@UsedTime)");
+			strSql.Append("@CouponID,@CouponNumber,@State)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@CouponID", SqlDbType.Int,4),
 					new SqlParameter("@CouponNumber", SqlDbType.VarChar,20),
-					new SqlParameter("@State", SqlDbType.Int,4),
-					new SqlParameter("@UsedTime", SqlDbType.DateTime)};
+					new SqlParameter("@State", SqlDbType.Int,4)};
 			parameters[0].Value = model.CouponID;
 			parameters[1].Value = model.CouponNumber;
 			parameters[2].Value = model.State;
-			parameters[3].Value = model.UsedTime;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
