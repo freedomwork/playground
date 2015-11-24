@@ -30,6 +30,15 @@ namespace VipSoft.BLL
 		{
 			return dal.Exists(ID);
 		}
+        /// <summary>
+        /// 是否存在该记录
+        /// </summary>
+        /// <param name="CouponNumber"></param>
+        /// <returns></returns>
+        public bool Exists(string CouponNumber)
+        {
+            return dal.Exists(CouponNumber);
+        }
 
 		/// <summary>
 		/// 增加一条数据
