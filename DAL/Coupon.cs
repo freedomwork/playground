@@ -46,29 +46,30 @@ namespace VipSoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into Coupon(");
-			strSql.Append("Title,Prefix,StartCouponNumber,StartTime,EndTime,Money,ShopIDInfo,GoodsClassInfo,Remark)");
+			strSql.Append("Title,Prefix,Type,StartTime,EndTime,Money,ShopIDInfo,Remark,Num)");
 			strSql.Append(" values (");
-			strSql.Append("@Title,@Prefix,@StartCouponNumber,@StartTime,@EndTime,@Money,@ShopIDInfo,@GoodsClassInfo,@Remark)");
+			strSql.Append("@Title,@Prefix,@Type,@StartTime,@EndTime,@Money,@ShopIDInfo,@Remark,@Num)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@Title", SqlDbType.VarChar,50),
 					new SqlParameter("@Prefix", SqlDbType.VarChar,20),
-					new SqlParameter("@StartCouponNumber", SqlDbType.VarChar,20),
+                    new SqlParameter("@Type",SqlDbType.Int,4),
 					new SqlParameter("@StartTime", SqlDbType.DateTime),
 					new SqlParameter("@EndTime", SqlDbType.DateTime),
 					new SqlParameter("@Money", SqlDbType.Money,8),
 					new SqlParameter("@ShopIDInfo", SqlDbType.VarChar,255),
-					new SqlParameter("@GoodsClassInfo", SqlDbType.VarChar,255),
-					new SqlParameter("@Remark", SqlDbType.VarChar,1000)};
+					new SqlParameter("@Remark", SqlDbType.VarChar,1000),
+                    new SqlParameter("@Num",SqlDbType.Int,4)
+                                        };
 			parameters[0].Value = model.Title;
 			parameters[1].Value = model.Prefix;
-			parameters[2].Value = model.StartCouponNumber;
+            parameters[2].Value = model.Type;
 			parameters[3].Value = model.StartTime;
 			parameters[4].Value = model.EndTime;
 			parameters[5].Value = model.Money;
 			parameters[6].Value = model.ShopIDInfo;
-			parameters[7].Value = model.GoodsClassInfo;
-			parameters[8].Value = model.Remark;
+			parameters[7].Value = model.Remark;
+            parameters[8].Value = model.Num;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -89,7 +90,7 @@ namespace VipSoft.DAL
 			strSql.Append("update Coupon set ");
 			strSql.Append("Title=@Title,");
 			strSql.Append("Prefix=@Prefix,");
-			strSql.Append("StartCouponNumber=@StartCouponNumber,");
+			strSql.Append("Type=@Type,");
 			strSql.Append("StartTime=@StartTime,");
 			strSql.Append("EndTime=@EndTime,");
 			strSql.Append("Money=@Money,");
@@ -100,7 +101,7 @@ namespace VipSoft.DAL
 			SqlParameter[] parameters = {
 					new SqlParameter("@Title", SqlDbType.VarChar,50),
 					new SqlParameter("@Prefix", SqlDbType.VarChar,20),
-					new SqlParameter("@StartCouponNumber", SqlDbType.VarChar,20),
+					new SqlParameter("@Type", SqlDbType.Int,4),
 					new SqlParameter("@StartTime", SqlDbType.DateTime),
 					new SqlParameter("@EndTime", SqlDbType.DateTime),
 					new SqlParameter("@Money", SqlDbType.Money,8),
@@ -110,14 +111,13 @@ namespace VipSoft.DAL
 					new SqlParameter("@ID", SqlDbType.Int,4)};
 			parameters[0].Value = model.Title;
 			parameters[1].Value = model.Prefix;
-			parameters[2].Value = model.StartCouponNumber;
+			parameters[2].Value = model.Type;
 			parameters[3].Value = model.StartTime;
 			parameters[4].Value = model.EndTime;
 			parameters[5].Value = model.Money;
 			parameters[6].Value = model.ShopIDInfo;
-			parameters[7].Value = model.GoodsClassInfo;
-			parameters[8].Value = model.Remark;
-			parameters[9].Value = model.ID;
+			parameters[7].Value = model.Remark;
+			parameters[8].Value = model.ID;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -181,7 +181,7 @@ namespace VipSoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 ID,Title,Prefix,StartCouponNumber,StartTime,EndTime,Money,ShopIDInfo,GoodsClassInfo,Remark from Coupon ");
+			strSql.Append("select  top 1 ID,Title,Prefix,Type,StartTime,EndTime,Money,ShopIDInfo,Remark from Coupon ");
 			strSql.Append(" where ID=@ID");
 			SqlParameter[] parameters = {
 					new SqlParameter("@ID", SqlDbType.Int,4)
@@ -221,9 +221,9 @@ namespace VipSoft.DAL
 				{
 					model.Prefix=row["Prefix"].ToString();
 				}
-				if(row["StartCouponNumber"]!=null)
+                if (row["Type"] != null && row["Type"].ToString()!="")
 				{
-					model.StartCouponNumber=row["StartCouponNumber"].ToString();
+                    model.Type = int.Parse(row["Type"].ToString());
 				}
 				if(row["StartTime"]!=null && row["StartTime"].ToString()!="")
 				{
@@ -241,10 +241,6 @@ namespace VipSoft.DAL
 				{
 					model.ShopIDInfo=row["ShopIDInfo"].ToString();
 				}
-				if(row["GoodsClassInfo"]!=null)
-				{
-					model.GoodsClassInfo=row["GoodsClassInfo"].ToString();
-				}
 				if(row["Remark"]!=null)
 				{
 					model.Remark=row["Remark"].ToString();
@@ -259,7 +255,7 @@ namespace VipSoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select ID,Title,Prefix,StartCouponNumber,StartTime,EndTime,Money,ShopIDInfo,GoodsClassInfo,Remark ");
+			strSql.Append("select ID,Title,Prefix,Type,StartTime,EndTime,Money,ShopIDInfo,Remark ");
 			strSql.Append(" FROM Coupon ");
 			if(strWhere.Trim()!="")
 			{
@@ -279,7 +275,7 @@ namespace VipSoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" ID,Title,Prefix,StartCouponNumber,StartTime,EndTime,Money,ShopIDInfo,GoodsClassInfo,Remark ");
+			strSql.Append(" ID,Title,Prefix,Type,StartTime,EndTime,Money,ShopIDInfo,Remark ");
 			strSql.Append(" FROM Coupon ");
 			if(strWhere.Trim()!="")
 			{
@@ -363,7 +359,19 @@ namespace VipSoft.DAL
 
 		#endregion  BasicMethod
 		#region  ExtensionMethod
-
+        /// <summary>
+        /// 分页获取数据列表
+        /// </summary>
+        public DataSet GetList(int PageSize, int PageIndex, string[] strWhere, out int resCount)
+        {
+            string tableName = "Coupon";
+            string[] columns = { "ID, Title, Prefix, StartTime, EndTime,Money, ShopIDInfo, Remark, Type, Num" };
+            string[] condition = strWhere;
+            int recordCount = 1;
+            DataSet ds = DbHelperSQL.GetTable(tableName, columns, condition, "ID", false, PageSize, PageIndex, recordCount);
+            resCount = int.Parse(ds.Tables[1].Rows[0][0].ToString());
+            return ds;
+        }
 		#endregion  ExtensionMethod
 	}
 }
