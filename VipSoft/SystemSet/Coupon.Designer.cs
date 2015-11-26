@@ -45,7 +45,7 @@
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pager1 = new Vipsoft.Controls.Pager();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_CouponDetail = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +53,7 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CouponList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CouponDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -141,6 +141,7 @@
             this.dataGridView_CouponList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_CouponList.Size = new System.Drawing.Size(853, 251);
             this.dataGridView_CouponList.TabIndex = 10;
+            this.dataGridView_CouponList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CouponList_CellDoubleClick);
             // 
             // Column_ID
             // 
@@ -201,29 +202,29 @@
             this.pager1.TabIndex = 11;
             this.pager1.EventPaging += new Vipsoft.Controls.EventPagingHandler(this.pager1_EventPaging);
             // 
-            // dataGridView1
+            // dataGridView_CouponDetail
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView_CouponDetail.AllowUserToAddRows = false;
+            this.dataGridView_CouponDetail.AllowUserToDeleteRows = false;
+            this.dataGridView_CouponDetail.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_CouponDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_CouponDetail.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView_CouponDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_CouponDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 365);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 20;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(853, 273);
-            this.dataGridView1.TabIndex = 12;
+            this.dataGridView_CouponDetail.Location = new System.Drawing.Point(12, 365);
+            this.dataGridView_CouponDetail.MultiSelect = false;
+            this.dataGridView_CouponDetail.Name = "dataGridView_CouponDetail";
+            this.dataGridView_CouponDetail.ReadOnly = true;
+            this.dataGridView_CouponDetail.RowHeadersWidth = 20;
+            this.dataGridView_CouponDetail.RowTemplate.Height = 23;
+            this.dataGridView_CouponDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_CouponDetail.Size = new System.Drawing.Size(853, 273);
+            this.dataGridView_CouponDetail.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -267,7 +268,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 678);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView_CouponDetail);
             this.Controls.Add(this.pager1);
             this.Controls.Add(this.dataGridView_CouponList);
             this.Controls.Add(this.toolStrip1);
@@ -282,11 +283,11 @@
             this.Controls.SetChildIndex(this.toolStrip1, 0);
             this.Controls.SetChildIndex(this.dataGridView_CouponList, 0);
             this.Controls.SetChildIndex(this.pager1, 0);
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.dataGridView_CouponDetail, 0);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CouponList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CouponDetail)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -307,7 +308,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remark;
         private Vipsoft.Controls.Pager pager1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_CouponDetail;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

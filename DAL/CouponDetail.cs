@@ -227,8 +227,8 @@ namespace VipSoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select ID,CouponID,CouponNumber,State,UsedTime ");
-			strSql.Append(" FROM CouponDetail ");
+            strSql.Append("select CouponDetail.ID,CouponID,CouponNumber,State,UsedTime,Title ");
+            strSql.Append(" FROM CouponDetail left join Coupon on CouponDetail.CouponID=Coupon.ID");
 			if(strWhere.Trim()!="")
 			{
 				strSql.Append(" where "+strWhere);

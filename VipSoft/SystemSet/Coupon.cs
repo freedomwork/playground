@@ -31,6 +31,38 @@ namespace VipSoft
                     AddCoupon addCoupon = new AddCoupon();
                     addCoupon.ShowDialog();
                     break;
+                case "DelBtn":
+                    if (this.dataGridView_CouponList.SelectedRows.Count != 1)
+                        return;
+
+                    int ID = int.Parse(this.dataGridView_CouponList.SelectedRows[0].Cells[0].Value.ToString());
+                    DialogResult dRes = MessageBox.Show("您确定要删除此优惠券么？此操作不可恢复。", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    if (dRes == DialogResult.No)
+                        return;
+                    VipSoft.BLL.Coupon bllCoupon = new BLL.Coupon();
+                    VipSoft.BLL.CouponDetail bllCouponDetail = new BLL.CouponDetail();
+                    if (bllCoupon.Delete(ID))
+                    {
+                        DataSet ds = bllCouponDetail.GetList("CouponID=" + ID.ToString());
+                        string IDs = string.Empty;
+                        foreach (DataRow dr in ds.Tables[0].Rows)
+                        {
+                            IDs += dr["ID"].ToString() + ",";
+                        }
+                        if (!string.IsNullOrEmpty(IDs))
+                        {
+                            IDs = IDs.Substring(0, IDs.Length - 1);
+                            bllCouponDetail.DeleteList(IDs);
+                        }
+
+                        MessageBox.Show("电子优惠券删除成功！");
+                        BindList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("删除失败！");
+                    }
+                    break;
                 default:
                     break;
             }
@@ -39,6 +71,7 @@ namespace VipSoft
         private void BindList()
         {
             this.dataGridView_CouponList.Rows.Clear();
+            this.dataGridView_CouponDetail.Rows.Clear();
             DataSet ds = new VipSoft.BLL.Coupon().GetList(pageSize, currentPage, out resCount, condition);
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
@@ -69,5 +102,28 @@ namespace VipSoft
             currentPage = e.PageIndex;
             BindList();
         }
+
+        private void BindCouponDetail()
+        {
+            if (this.dataGridView_CouponList.SelectedRows.Count != 1)
+                return;
+
+            this.dataGridView_CouponDetail.Rows.Clear();
+            string CouponID = this.dataGridView_CouponList.SelectedRows[0].Cells["Column_ID"].Value.ToString();
+            VipSoft.BLL.CouponDetail detail = new VipSoft.BLL.CouponDetail();
+            DataTable dt = detail.GetList("CouponID=" + CouponID ).Tables[0];
+            foreach (DataRow dr in dt.Rows)
+            {
+                this.dataGridView_CouponDetail.Rows.Add(dr["ID"].ToString(), dr["Title"].ToString(), dr["CouponNumber"].ToString(), dr["State"].ToString() == "0" ? "未使用" : "已使用", dr["UsedTime"].ToString());
+            }
+        }
+
+        private void dataGridView_CouponList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+                this.dataGridView_CouponList.Rows[e.RowIndex].Selected = true;
+            BindCouponDetail();
+        }
+
     }
 }
