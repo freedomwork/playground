@@ -303,7 +303,7 @@ namespace VipSoft.DAL
 
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select  top 1 ID,CardID,CardMianID,Name,Sex,Password,Mobile,Photo,LevelID,IsPast,PastTime,Point,State,IsPointAuto,Money,TotalMoney,ShopID,ShopName,LastTime,Email,PayMoney,Remark,CardTypeID,CreateTime from MemCard ");
-            strSql.Append(" where CardID=@CardID or CardMianID=@CardMianID or Mobile=@CardID");
+            strSql.Append(" where CardID=@CardID or CardMianID=@CardID or Mobile=@CardID");
             SqlParameter[] parameters = {
 					new SqlParameter("@CardID", SqlDbType.VarChar,50)
 			};

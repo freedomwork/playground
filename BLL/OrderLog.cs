@@ -178,6 +178,14 @@ namespace VipSoft.BLL
         {
             return dal.GetListCollect(sql);
         }
+
+        /// <summary>
+        /// 分页获得数据列表
+        /// </summary>
+        public DataSet GetList(int PageSize, int PageIndex, out int resCount, params string[] strWhere)
+        {
+            return dal.GetList(PageSize, PageIndex, strWhere, out resCount);
+        }
 		#endregion  ExtensionMethod
 	}
 }

@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -39,6 +46,80 @@
             this.alpanel21 = new AlSkin.AlControl.Alpanel2();
             this.myTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.myTabControl1 = new YiJiaSoft.Controls.MyTabControl();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.dataGridView_DetailList = new System.Windows.Forms.DataGridView();
+            this.Column_GoodsCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_GoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_DiscountPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label_Loading_History = new System.Windows.Forms.Label();
+            this.dataGridView_OrderList = new System.Windows.Forms.DataGridView();
+            this.Column_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_OrderCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Money = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_List_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Point = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_State = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_OrderType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_CreateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.label_Loading_History1 = new System.Windows.Forms.Label();
+            this.dataGridView_Recharge = new System.Windows.Forms.DataGridView();
+            this.卡号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.姓名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.类型 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.支付金额 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.充值时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.赠送金额 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.备注 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.label_Loading_History2 = new System.Windows.Forms.Label();
+            this.dataGridView_List = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel_SwCard = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label_msg = new System.Windows.Forms.Label();
+            this.Button_ShowList = new AlSkin.AlControl.AlButton();
+            this.Button_Expense = new AlSkin.AlControl.AlButton();
+            this.Button_Point = new AlSkin.AlControl.AlButton();
+            this.Button_Cancel = new AlSkin.AlControl.AlButton();
+            this.Button_Other = new AlSkin.AlControl.AlButton();
+            this.myGroupBox3 = new YiJiaSoft.Controls.MyGroupBox();
+            this.panel_Msg = new System.Windows.Forms.Panel();
+            this.label_Level = new System.Windows.Forms.Label();
+            this.label_Birth = new System.Windows.Forms.Label();
+            this.label_OverCount = new System.Windows.Forms.Label();
+            this.label_Pay = new System.Windows.Forms.Label();
+            this.label_Point = new System.Windows.Forms.Label();
+            this.label_PassTime = new System.Windows.Forms.Label();
+            this.label_Mobile = new System.Windows.Forms.Label();
+            this.label_TotalMoney = new System.Windows.Forms.Label();
+            this.label_Money = new System.Windows.Forms.Label();
+            this.label_State = new System.Windows.Forms.Label();
+            this.label_Name = new System.Windows.Forms.Label();
+            this.label_CardID = new System.Windows.Forms.Label();
+            this.panel_Custom = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.linkLabel_ClearMsg = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_EditMsg = new System.Windows.Forms.LinkLabel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.myGroupBox1 = new YiJiaSoft.Controls.MyGroupBox();
             this.alButton_Shortcut_moneyrule = new AlSkin.AlControl.AlButton();
@@ -82,6 +163,7 @@
             this.panelButton_Export_Order = new Vipsoft.Controls.PanelButton();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelButton_CouponSet = new Vipsoft.Controls.PanelButton();
             this.panelButton_SystemSet = new Vipsoft.Controls.PanelButton();
             this.panelButton_Setup_Master = new Vipsoft.Controls.PanelButton();
             this.panelButton_Step_Shop = new Vipsoft.Controls.PanelButton();
@@ -95,13 +177,26 @@
             this.Button_MemberOrder = new AlSkin.AlControl.AlButton();
             this.Button_Report = new AlSkin.AlControl.AlButton();
             this.Button_Setup = new AlSkin.AlControl.AlButton();
-            this.panelButton_CouponSet = new Vipsoft.Controls.PanelButton();
+            this.myMemberPhoto = new VipSoft.Controls.MemberPhoto();
+            this.TextBox_CardID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.alpanel21.SuspendLayout();
             this.myTabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.myTabControl1.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DetailList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OrderList)).BeginInit();
+            this.tabPage9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Recharge)).BeginInit();
+            this.tabPage10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).BeginInit();
+            this.panel_SwCard.SuspendLayout();
+            this.myGroupBox3.SuspendLayout();
+            this.panel_Msg.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.myGroupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -238,6 +333,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.myTabControl1);
+            this.tabPage1.Controls.Add(this.panel_SwCard);
+            this.tabPage1.Controls.Add(this.myGroupBox3);
             this.tabPage1.Location = new System.Drawing.Point(24, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -245,6 +343,796 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "会员刷卡";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // myTabControl1
+            // 
+            this.myTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.myTabControl1.Controls.Add(this.tabPage8);
+            this.myTabControl1.Controls.Add(this.tabPage9);
+            this.myTabControl1.Controls.Add(this.tabPage10);
+            this.myTabControl1.ItemSize = new System.Drawing.Size(0, 20);
+            this.myTabControl1.Location = new System.Drawing.Point(258, 88);
+            this.myTabControl1.Name = "myTabControl1";
+            this.myTabControl1.Padding = new System.Drawing.Point(9, 0);
+            this.myTabControl1.PageBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(130)))), ((int)(((byte)(132)))));
+            this.myTabControl1.SelectedIndex = 0;
+            this.myTabControl1.Size = new System.Drawing.Size(567, 360);
+            this.myTabControl1.TabIndex = 27;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.Color.White;
+            this.tabPage8.Controls.Add(this.dataGridView_DetailList);
+            this.tabPage8.Controls.Add(this.label_Loading_History);
+            this.tabPage8.Controls.Add(this.dataGridView_OrderList);
+            this.tabPage8.Location = new System.Drawing.Point(4, 24);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(559, 332);
+            this.tabPage8.TabIndex = 0;
+            this.tabPage8.Text = "消费历史记录";
+            // 
+            // dataGridView_DetailList
+            // 
+            this.dataGridView_DetailList.AllowUserToAddRows = false;
+            this.dataGridView_DetailList.AllowUserToDeleteRows = false;
+            this.dataGridView_DetailList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_DetailList.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_DetailList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_DetailList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView_DetailList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_DetailList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column_GoodsCode,
+            this.Column_GoodsName,
+            this.Column_Price,
+            this.Column_Number,
+            this.Column_DiscountPrice});
+            this.dataGridView_DetailList.Location = new System.Drawing.Point(-7, 215);
+            this.dataGridView_DetailList.MultiSelect = false;
+            this.dataGridView_DetailList.Name = "dataGridView_DetailList";
+            this.dataGridView_DetailList.ReadOnly = true;
+            this.dataGridView_DetailList.RowHeadersWidth = 20;
+            this.dataGridView_DetailList.RowTemplate.Height = 23;
+            this.dataGridView_DetailList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_DetailList.Size = new System.Drawing.Size(566, 109);
+            this.dataGridView_DetailList.TabIndex = 12;
+            // 
+            // Column_GoodsCode
+            // 
+            this.Column_GoodsCode.DataPropertyName = "GoodsCode";
+            this.Column_GoodsCode.HeaderText = "产品编号";
+            this.Column_GoodsCode.Name = "Column_GoodsCode";
+            this.Column_GoodsCode.ReadOnly = true;
+            // 
+            // Column_GoodsName
+            // 
+            this.Column_GoodsName.DataPropertyName = "GoodsName";
+            this.Column_GoodsName.HeaderText = "产品名称";
+            this.Column_GoodsName.Name = "Column_GoodsName";
+            this.Column_GoodsName.ReadOnly = true;
+            this.Column_GoodsName.Width = 300;
+            // 
+            // Column_Price
+            // 
+            this.Column_Price.DataPropertyName = "Price";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "￥0.00";
+            this.Column_Price.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column_Price.HeaderText = "单价";
+            this.Column_Price.Name = "Column_Price";
+            this.Column_Price.ReadOnly = true;
+            // 
+            // Column_Number
+            // 
+            this.Column_Number.DataPropertyName = "Number";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column_Number.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column_Number.HeaderText = "数量";
+            this.Column_Number.Name = "Column_Number";
+            this.Column_Number.ReadOnly = true;
+            // 
+            // Column_DiscountPrice
+            // 
+            this.Column_DiscountPrice.DataPropertyName = "DiscountPrice";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "￥0.00";
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.Column_DiscountPrice.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column_DiscountPrice.HeaderText = "合计";
+            this.Column_DiscountPrice.Name = "Column_DiscountPrice";
+            this.Column_DiscountPrice.ReadOnly = true;
+            this.Column_DiscountPrice.Width = 150;
+            // 
+            // label_Loading_History
+            // 
+            this.label_Loading_History.AutoSize = true;
+            this.label_Loading_History.BackColor = System.Drawing.Color.White;
+            this.label_Loading_History.Location = new System.Drawing.Point(18, 33);
+            this.label_Loading_History.Name = "label_Loading_History";
+            this.label_Loading_History.Size = new System.Drawing.Size(149, 12);
+            this.label_Loading_History.TabIndex = 11;
+            this.label_Loading_History.Text = "正在提取数据，请稍候……";
+            this.label_Loading_History.Visible = false;
+            // 
+            // dataGridView_OrderList
+            // 
+            this.dataGridView_OrderList.AllowUserToAddRows = false;
+            this.dataGridView_OrderList.AllowUserToDeleteRows = false;
+            this.dataGridView_OrderList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_OrderList.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_OrderList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_OrderList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView_OrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_OrderList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column_ID,
+            this.Column_OrderCode,
+            this.Column_Money,
+            this.Column_Discount,
+            this.Column_List_Number,
+            this.Column_Point,
+            this.Column_State,
+            this.Column_OrderType,
+            this.Column_CreateTime,
+            this.Column_Remark});
+            this.dataGridView_OrderList.Location = new System.Drawing.Point(-4, 5);
+            this.dataGridView_OrderList.MultiSelect = false;
+            this.dataGridView_OrderList.Name = "dataGridView_OrderList";
+            this.dataGridView_OrderList.ReadOnly = true;
+            this.dataGridView_OrderList.RowHeadersWidth = 20;
+            this.dataGridView_OrderList.RowTemplate.Height = 23;
+            this.dataGridView_OrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_OrderList.Size = new System.Drawing.Size(563, 205);
+            this.dataGridView_OrderList.TabIndex = 9;
+            // 
+            // Column_ID
+            // 
+            this.Column_ID.HeaderText = "编号";
+            this.Column_ID.Name = "Column_ID";
+            this.Column_ID.ReadOnly = true;
+            this.Column_ID.Visible = false;
+            // 
+            // Column_OrderCode
+            // 
+            this.Column_OrderCode.FillWeight = 1000F;
+            this.Column_OrderCode.HeaderText = "订单号";
+            this.Column_OrderCode.Name = "Column_OrderCode";
+            this.Column_OrderCode.ReadOnly = true;
+            this.Column_OrderCode.Width = 80;
+            // 
+            // Column_Money
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "￥0.00";
+            this.Column_Money.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column_Money.HeaderText = "额度";
+            this.Column_Money.Name = "Column_Money";
+            this.Column_Money.ReadOnly = true;
+            this.Column_Money.Width = 70;
+            // 
+            // Column_Discount
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "￥0.00";
+            this.Column_Discount.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column_Discount.HeaderText = "实际支付";
+            this.Column_Discount.Name = "Column_Discount";
+            this.Column_Discount.ReadOnly = true;
+            this.Column_Discount.Width = 80;
+            // 
+            // Column_List_Number
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column_List_Number.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column_List_Number.HeaderText = "数量";
+            this.Column_List_Number.Name = "Column_List_Number";
+            this.Column_List_Number.ReadOnly = true;
+            this.Column_List_Number.Width = 60;
+            // 
+            // Column_Point
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column_Point.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Column_Point.HeaderText = "积分";
+            this.Column_Point.Name = "Column_Point";
+            this.Column_Point.ReadOnly = true;
+            this.Column_Point.Width = 60;
+            // 
+            // Column_State
+            // 
+            this.Column_State.HeaderText = "状态";
+            this.Column_State.Name = "Column_State";
+            this.Column_State.ReadOnly = true;
+            this.Column_State.Width = 60;
+            // 
+            // Column_OrderType
+            // 
+            this.Column_OrderType.HeaderText = "类型";
+            this.Column_OrderType.Name = "Column_OrderType";
+            this.Column_OrderType.ReadOnly = true;
+            this.Column_OrderType.Width = 60;
+            // 
+            // Column_CreateTime
+            // 
+            this.Column_CreateTime.HeaderText = "时间";
+            this.Column_CreateTime.Name = "Column_CreateTime";
+            this.Column_CreateTime.ReadOnly = true;
+            this.Column_CreateTime.Width = 130;
+            // 
+            // Column_Remark
+            // 
+            this.Column_Remark.HeaderText = "备注";
+            this.Column_Remark.Name = "Column_Remark";
+            this.Column_Remark.ReadOnly = true;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.BackColor = System.Drawing.Color.White;
+            this.tabPage9.Controls.Add(this.label_Loading_History1);
+            this.tabPage9.Controls.Add(this.dataGridView_Recharge);
+            this.tabPage9.Location = new System.Drawing.Point(4, 24);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(559, 332);
+            this.tabPage9.TabIndex = 1;
+            this.tabPage9.Text = "会员充值记录";
+            // 
+            // label_Loading_History1
+            // 
+            this.label_Loading_History1.AutoSize = true;
+            this.label_Loading_History1.BackColor = System.Drawing.Color.White;
+            this.label_Loading_History1.Location = new System.Drawing.Point(19, 31);
+            this.label_Loading_History1.Name = "label_Loading_History1";
+            this.label_Loading_History1.Size = new System.Drawing.Size(149, 12);
+            this.label_Loading_History1.TabIndex = 12;
+            this.label_Loading_History1.Text = "正在提取数据，请稍候……";
+            this.label_Loading_History1.Visible = false;
+            // 
+            // dataGridView_Recharge
+            // 
+            this.dataGridView_Recharge.AllowUserToAddRows = false;
+            this.dataGridView_Recharge.AllowUserToDeleteRows = false;
+            this.dataGridView_Recharge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_Recharge.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_Recharge.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_Recharge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Recharge.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.卡号,
+            this.姓名,
+            this.类型,
+            this.支付金额,
+            this.充值时间,
+            this.赠送金额,
+            this.备注});
+            this.dataGridView_Recharge.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView_Recharge.Name = "dataGridView_Recharge";
+            this.dataGridView_Recharge.ReadOnly = true;
+            this.dataGridView_Recharge.RowTemplate.Height = 23;
+            this.dataGridView_Recharge.Size = new System.Drawing.Size(550, 318);
+            this.dataGridView_Recharge.TabIndex = 0;
+            // 
+            // 卡号
+            // 
+            this.卡号.HeaderText = "卡号";
+            this.卡号.Name = "卡号";
+            this.卡号.ReadOnly = true;
+            // 
+            // 姓名
+            // 
+            this.姓名.HeaderText = "姓名";
+            this.姓名.Name = "姓名";
+            this.姓名.ReadOnly = true;
+            // 
+            // 类型
+            // 
+            this.类型.HeaderText = "类型";
+            this.类型.Name = "类型";
+            this.类型.ReadOnly = true;
+            // 
+            // 支付金额
+            // 
+            this.支付金额.HeaderText = "支付金额";
+            this.支付金额.Name = "支付金额";
+            this.支付金额.ReadOnly = true;
+            // 
+            // 充值时间
+            // 
+            this.充值时间.HeaderText = "充值时间";
+            this.充值时间.Name = "充值时间";
+            this.充值时间.ReadOnly = true;
+            // 
+            // 赠送金额
+            // 
+            this.赠送金额.HeaderText = "赠送金额";
+            this.赠送金额.Name = "赠送金额";
+            this.赠送金额.ReadOnly = true;
+            // 
+            // 备注
+            // 
+            this.备注.HeaderText = "备注";
+            this.备注.Name = "备注";
+            this.备注.ReadOnly = true;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.BackColor = System.Drawing.Color.White;
+            this.tabPage10.Controls.Add(this.label_Loading_History2);
+            this.tabPage10.Controls.Add(this.dataGridView_List);
+            this.tabPage10.Location = new System.Drawing.Point(4, 24);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(559, 332);
+            this.tabPage10.TabIndex = 2;
+            this.tabPage10.Text = "礼品兑换记录";
+            // 
+            // label_Loading_History2
+            // 
+            this.label_Loading_History2.AutoSize = true;
+            this.label_Loading_History2.BackColor = System.Drawing.Color.White;
+            this.label_Loading_History2.Location = new System.Drawing.Point(15, 33);
+            this.label_Loading_History2.Name = "label_Loading_History2";
+            this.label_Loading_History2.Size = new System.Drawing.Size(149, 12);
+            this.label_Loading_History2.TabIndex = 12;
+            this.label_Loading_History2.Text = "正在提取数据，请稍候……";
+            this.label_Loading_History2.Visible = false;
+            // 
+            // dataGridView_List
+            // 
+            this.dataGridView_List.AllowUserToAddRows = false;
+            this.dataGridView_List.AllowUserToDeleteRows = false;
+            this.dataGridView_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_List.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_List.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_List.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.Column_Num,
+            this.Column_Time});
+            this.dataGridView_List.Location = new System.Drawing.Point(5, 4);
+            this.dataGridView_List.Name = "dataGridView_List";
+            this.dataGridView_List.ReadOnly = true;
+            this.dataGridView_List.RowHeadersWidth = 20;
+            this.dataGridView_List.RowTemplate.Height = 23;
+            this.dataGridView_List.Size = new System.Drawing.Size(572, 325);
+            this.dataGridView_List.TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "礼品名称";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "所需积分";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // Column_Num
+            // 
+            this.Column_Num.HeaderText = "兑换数量";
+            this.Column_Num.Name = "Column_Num";
+            this.Column_Num.ReadOnly = true;
+            // 
+            // Column_Time
+            // 
+            this.Column_Time.HeaderText = "兑换时间";
+            this.Column_Time.Name = "Column_Time";
+            this.Column_Time.ReadOnly = true;
+            this.Column_Time.Width = 120;
+            // 
+            // panel_SwCard
+            // 
+            this.panel_SwCard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_SwCard.Controls.Add(this.TextBox_CardID);
+            this.panel_SwCard.Controls.Add(this.label1);
+            this.panel_SwCard.Controls.Add(this.label_msg);
+            this.panel_SwCard.Controls.Add(this.Button_ShowList);
+            this.panel_SwCard.Controls.Add(this.Button_Expense);
+            this.panel_SwCard.Controls.Add(this.Button_Point);
+            this.panel_SwCard.Controls.Add(this.Button_Cancel);
+            this.panel_SwCard.Controls.Add(this.Button_Other);
+            this.panel_SwCard.Location = new System.Drawing.Point(259, 3);
+            this.panel_SwCard.Name = "panel_SwCard";
+            this.panel_SwCard.Size = new System.Drawing.Size(564, 79);
+            this.panel_SwCard.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 12);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "请刷卡(F2)：";
+            // 
+            // label_msg
+            // 
+            this.label_msg.AutoSize = true;
+            this.label_msg.Location = new System.Drawing.Point(348, 17);
+            this.label_msg.Name = "label_msg";
+            this.label_msg.Size = new System.Drawing.Size(209, 12);
+            this.label_msg.TabIndex = 24;
+            this.label_msg.Text = "输入卡号或手机号码按回车键搜索会员";
+            // 
+            // Button_ShowList
+            // 
+            this.Button_ShowList.BackColor = System.Drawing.Color.Transparent;
+            this.Button_ShowList.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Button_ShowList.ForeColor = System.Drawing.Color.Black;
+            this.Button_ShowList.Location = new System.Drawing.Point(281, 11);
+            this.Button_ShowList.Name = "Button_ShowList";
+            this.Button_ShowList.Size = new System.Drawing.Size(64, 25);
+            this.Button_ShowList.TabIndex = 13;
+            this.Button_ShowList.Text = "查找(F3)";
+            this.Button_ShowList.UseVisualStyleBackColor = true;
+            // 
+            // Button_Expense
+            // 
+            this.Button_Expense.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Expense.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Button_Expense.ForeColor = System.Drawing.Color.Black;
+            this.Button_Expense.Location = new System.Drawing.Point(4, 46);
+            this.Button_Expense.Name = "Button_Expense";
+            this.Button_Expense.Size = new System.Drawing.Size(90, 25);
+            this.Button_Expense.TabIndex = 14;
+            this.Button_Expense.Text = "普通消费(F5)";
+            this.Button_Expense.UseVisualStyleBackColor = true;
+            // 
+            // Button_Point
+            // 
+            this.Button_Point.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Point.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Button_Point.ForeColor = System.Drawing.Color.Black;
+            this.Button_Point.Location = new System.Drawing.Point(106, 46);
+            this.Button_Point.Name = "Button_Point";
+            this.Button_Point.Size = new System.Drawing.Size(90, 25);
+            this.Button_Point.TabIndex = 18;
+            this.Button_Point.Text = "快速消费(F7)";
+            this.Button_Point.UseVisualStyleBackColor = true;
+            // 
+            // Button_Cancel
+            // 
+            this.Button_Cancel.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Cancel.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Button_Cancel.ForeColor = System.Drawing.Color.Black;
+            this.Button_Cancel.Location = new System.Drawing.Point(204, 46);
+            this.Button_Cancel.Name = "Button_Cancel";
+            this.Button_Cancel.Size = new System.Drawing.Size(90, 25);
+            this.Button_Cancel.TabIndex = 15;
+            this.Button_Cancel.Text = "消费退货(F8)";
+            this.Button_Cancel.UseVisualStyleBackColor = true;
+            // 
+            // Button_Other
+            // 
+            this.Button_Other.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Other.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Button_Other.ForeColor = System.Drawing.Color.Black;
+            this.Button_Other.Location = new System.Drawing.Point(302, 46);
+            this.Button_Other.Name = "Button_Other";
+            this.Button_Other.Size = new System.Drawing.Size(60, 25);
+            this.Button_Other.TabIndex = 16;
+            this.Button_Other.Text = "其他";
+            this.Button_Other.UseVisualStyleBackColor = true;
+            // 
+            // myGroupBox3
+            // 
+            this.myGroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.myGroupBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(172)))), ((int)(((byte)(225)))));
+            this.myGroupBox3.Controls.Add(this.panel_Msg);
+            this.myGroupBox3.Controls.Add(this.linkLabel_ClearMsg);
+            this.myGroupBox3.Controls.Add(this.linkLabel_EditMsg);
+            this.myGroupBox3.Location = new System.Drawing.Point(5, 5);
+            this.myGroupBox3.Name = "myGroupBox3";
+            this.myGroupBox3.Size = new System.Drawing.Size(248, 438);
+            this.myGroupBox3.TabIndex = 21;
+            this.myGroupBox3.TabStop = false;
+            this.myGroupBox3.Text = "会员资料";
+            // 
+            // panel_Msg
+            // 
+            this.panel_Msg.AutoScroll = true;
+            this.panel_Msg.BackColor = System.Drawing.Color.White;
+            this.panel_Msg.Controls.Add(this.myMemberPhoto);
+            this.panel_Msg.Controls.Add(this.label_Level);
+            this.panel_Msg.Controls.Add(this.label_Birth);
+            this.panel_Msg.Controls.Add(this.label_OverCount);
+            this.panel_Msg.Controls.Add(this.label_Pay);
+            this.panel_Msg.Controls.Add(this.label_Point);
+            this.panel_Msg.Controls.Add(this.label_PassTime);
+            this.panel_Msg.Controls.Add(this.label_Mobile);
+            this.panel_Msg.Controls.Add(this.label_TotalMoney);
+            this.panel_Msg.Controls.Add(this.label_Money);
+            this.panel_Msg.Controls.Add(this.label_State);
+            this.panel_Msg.Controls.Add(this.label_Name);
+            this.panel_Msg.Controls.Add(this.label_CardID);
+            this.panel_Msg.Controls.Add(this.panel_Custom);
+            this.panel_Msg.Controls.Add(this.label9);
+            this.panel_Msg.Controls.Add(this.label21);
+            this.panel_Msg.Controls.Add(this.label23);
+            this.panel_Msg.Controls.Add(this.label26);
+            this.panel_Msg.Controls.Add(this.label18);
+            this.panel_Msg.Controls.Add(this.label16);
+            this.panel_Msg.Controls.Add(this.label4);
+            this.panel_Msg.Controls.Add(this.label14);
+            this.panel_Msg.Controls.Add(this.label6);
+            this.panel_Msg.Controls.Add(this.label12);
+            this.panel_Msg.Controls.Add(this.label10);
+            this.panel_Msg.Controls.Add(this.label8);
+            this.panel_Msg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Msg.Location = new System.Drawing.Point(3, 17);
+            this.panel_Msg.Name = "panel_Msg";
+            this.panel_Msg.Size = new System.Drawing.Size(242, 418);
+            this.panel_Msg.TabIndex = 0;
+            // 
+            // label_Level
+            // 
+            this.label_Level.AutoSize = true;
+            this.label_Level.Location = new System.Drawing.Point(146, 201);
+            this.label_Level.Name = "label_Level";
+            this.label_Level.Size = new System.Drawing.Size(71, 12);
+            this.label_Level.TabIndex = 2;
+            this.label_Level.Text = "label_Level";
+            // 
+            // label_Birth
+            // 
+            this.label_Birth.AutoSize = true;
+            this.label_Birth.Location = new System.Drawing.Point(146, 182);
+            this.label_Birth.Name = "label_Birth";
+            this.label_Birth.Size = new System.Drawing.Size(71, 12);
+            this.label_Birth.TabIndex = 2;
+            this.label_Birth.Text = "label_Birth";
+            // 
+            // label_OverCount
+            // 
+            this.label_OverCount.AutoSize = true;
+            this.label_OverCount.Location = new System.Drawing.Point(62, 259);
+            this.label_OverCount.Name = "label_OverCount";
+            this.label_OverCount.Size = new System.Drawing.Size(95, 12);
+            this.label_OverCount.TabIndex = 16;
+            this.label_OverCount.Text = "label_OverCount";
+            // 
+            // label_Pay
+            // 
+            this.label_Pay.AutoSize = true;
+            this.label_Pay.Location = new System.Drawing.Point(167, 239);
+            this.label_Pay.Name = "label_Pay";
+            this.label_Pay.Size = new System.Drawing.Size(59, 12);
+            this.label_Pay.TabIndex = 18;
+            this.label_Pay.Text = "label_Pay";
+            // 
+            // label_Point
+            // 
+            this.label_Point.AutoSize = true;
+            this.label_Point.Location = new System.Drawing.Point(146, 220);
+            this.label_Point.Name = "label_Point";
+            this.label_Point.Size = new System.Drawing.Size(71, 12);
+            this.label_Point.TabIndex = 2;
+            this.label_Point.Text = "label_Point";
+            // 
+            // label_PassTime
+            // 
+            this.label_PassTime.AutoSize = true;
+            this.label_PassTime.Location = new System.Drawing.Point(62, 278);
+            this.label_PassTime.Name = "label_PassTime";
+            this.label_PassTime.Size = new System.Drawing.Size(89, 12);
+            this.label_PassTime.TabIndex = 2;
+            this.label_PassTime.Text = "label_PassTime";
+            // 
+            // label_Mobile
+            // 
+            this.label_Mobile.AutoSize = true;
+            this.label_Mobile.Location = new System.Drawing.Point(38, 201);
+            this.label_Mobile.Name = "label_Mobile";
+            this.label_Mobile.Size = new System.Drawing.Size(77, 12);
+            this.label_Mobile.TabIndex = 2;
+            this.label_Mobile.Text = "label_Mobile";
+            // 
+            // label_TotalMoney
+            // 
+            this.label_TotalMoney.AutoSize = true;
+            this.label_TotalMoney.Location = new System.Drawing.Point(167, 259);
+            this.label_TotalMoney.Name = "label_TotalMoney";
+            this.label_TotalMoney.Size = new System.Drawing.Size(53, 12);
+            this.label_TotalMoney.TabIndex = 16;
+            this.label_TotalMoney.Text = "label_TM";
+            // 
+            // label_Money
+            // 
+            this.label_Money.AutoSize = true;
+            this.label_Money.Location = new System.Drawing.Point(38, 239);
+            this.label_Money.Name = "label_Money";
+            this.label_Money.Size = new System.Drawing.Size(71, 12);
+            this.label_Money.TabIndex = 18;
+            this.label_Money.Text = "label_Money";
+            // 
+            // label_State
+            // 
+            this.label_State.AutoSize = true;
+            this.label_State.Location = new System.Drawing.Point(38, 220);
+            this.label_State.Name = "label_State";
+            this.label_State.Size = new System.Drawing.Size(71, 12);
+            this.label_State.TabIndex = 2;
+            this.label_State.Text = "label_State";
+            // 
+            // label_Name
+            // 
+            this.label_Name.AutoSize = true;
+            this.label_Name.Location = new System.Drawing.Point(38, 182);
+            this.label_Name.Name = "label_Name";
+            this.label_Name.Size = new System.Drawing.Size(65, 12);
+            this.label_Name.TabIndex = 2;
+            this.label_Name.Text = "label_Name";
+            // 
+            // label_CardID
+            // 
+            this.label_CardID.AutoSize = true;
+            this.label_CardID.Location = new System.Drawing.Point(38, 163);
+            this.label_CardID.Name = "label_CardID";
+            this.label_CardID.Size = new System.Drawing.Size(77, 12);
+            this.label_CardID.TabIndex = 2;
+            this.label_CardID.Text = "label_CardID";
+            // 
+            // panel_Custom
+            // 
+            this.panel_Custom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel_Custom.AutoScroll = true;
+            this.panel_Custom.Location = new System.Drawing.Point(6, 297);
+            this.panel_Custom.Name = "panel_Custom";
+            this.panel_Custom.Size = new System.Drawing.Size(230, 244);
+            this.panel_Custom.TabIndex = 46;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(4, 259);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 12);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "剩余次数：";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label21.Location = new System.Drawing.Point(4, 239);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(41, 12);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "余额：";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label23.Location = new System.Drawing.Point(111, 239);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(65, 12);
+            this.label23.TabIndex = 15;
+            this.label23.Text = "卡片付费：";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label26.Location = new System.Drawing.Point(111, 259);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(65, 12);
+            this.label26.TabIndex = 13;
+            this.label26.Text = "累计消费：";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label18.Location = new System.Drawing.Point(111, 220);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 12);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "积分：";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label16.Location = new System.Drawing.Point(4, 220);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(41, 12);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "状态：";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(4, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 12);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "卡号：";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label14.Location = new System.Drawing.Point(4, 278);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 12);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "过期时间：";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(4, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 12);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "姓名：";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Location = new System.Drawing.Point(111, 201);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 12);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "等级：";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(111, 182);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 12);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "生日：";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(4, 201);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 12);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "手机：";
+            // 
+            // linkLabel_ClearMsg
+            // 
+            this.linkLabel_ClearMsg.AutoSize = true;
+            this.linkLabel_ClearMsg.Location = new System.Drawing.Point(173, 0);
+            this.linkLabel_ClearMsg.Name = "linkLabel_ClearMsg";
+            this.linkLabel_ClearMsg.Size = new System.Drawing.Size(53, 12);
+            this.linkLabel_ClearMsg.TabIndex = 19;
+            this.linkLabel_ClearMsg.TabStop = true;
+            this.linkLabel_ClearMsg.Text = "清除资料";
+            // 
+            // linkLabel_EditMsg
+            // 
+            this.linkLabel_EditMsg.AutoSize = true;
+            this.linkLabel_EditMsg.Location = new System.Drawing.Point(73, 0);
+            this.linkLabel_EditMsg.Name = "linkLabel_EditMsg";
+            this.linkLabel_EditMsg.Size = new System.Drawing.Size(89, 12);
+            this.linkLabel_EditMsg.TabIndex = 19;
+            this.linkLabel_EditMsg.TabStop = true;
+            this.linkLabel_EditMsg.Text = "修改资料（F4）";
             // 
             // tabPage2
             // 
@@ -817,6 +1705,19 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(503, 312);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
+            // panelButton_CouponSet
+            // 
+            this.panelButton_CouponSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelButton_CouponSet.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton_CouponSet.Info = "设置电子优惠券，金额，优惠券号";
+            this.panelButton_CouponSet.InfoImg = global::VipSoft.Properties.Resources.ico_自定义属性设置;
+            this.panelButton_CouponSet.Location = new System.Drawing.Point(3, 243);
+            this.panelButton_CouponSet.Name = "panelButton_CouponSet";
+            this.panelButton_CouponSet.Size = new System.Drawing.Size(245, 60);
+            this.panelButton_CouponSet.TabIndex = 7;
+            this.panelButton_CouponSet.Title = "优惠券设置";
+            this.panelButton_CouponSet.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            // 
             // panelButton_SystemSet
             // 
             this.panelButton_SystemSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -988,18 +1889,27 @@
             this.Button_Setup.UseVisualStyleBackColor = true;
             this.Button_Setup.Click += new System.EventHandler(this.Button_Setup_Click);
             // 
-            // panelButton_CouponSet
+            // myMemberPhoto
             // 
-            this.panelButton_CouponSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelButton_CouponSet.BackColor = System.Drawing.Color.Transparent;
-            this.panelButton_CouponSet.Info = "设置电子优惠券，金额，优惠券号";
-            this.panelButton_CouponSet.InfoImg = global::VipSoft.Properties.Resources.ico_自定义属性设置;
-            this.panelButton_CouponSet.Location = new System.Drawing.Point(3, 243);
-            this.panelButton_CouponSet.Name = "panelButton_CouponSet";
-            this.panelButton_CouponSet.Size = new System.Drawing.Size(245, 60);
-            this.panelButton_CouponSet.TabIndex = 7;
-            this.panelButton_CouponSet.Title = "优惠券设置";
-            this.panelButton_CouponSet.PanelButtonClick += new Vipsoft.Controls.EventPanelHandler(this.panelButton_Item_Click);
+            this.myMemberPhoto.BackColor = System.Drawing.Color.Transparent;
+            this.myMemberPhoto.Location = new System.Drawing.Point(40, 7);
+            this.myMemberPhoto.Margin = new System.Windows.Forms.Padding(0);
+            this.myMemberPhoto.Name = "myMemberPhoto";
+            this.myMemberPhoto.PhotoHeight = 150;
+            this.myMemberPhoto.PhotoPath = "";
+            this.myMemberPhoto.PhotoWidth = 150;
+            this.myMemberPhoto.Size = new System.Drawing.Size(152, 153);
+            this.myMemberPhoto.TabIndex = 47;
+            // 
+            // TextBox_CardID
+            // 
+            this.TextBox_CardID.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.TextBox_CardID.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.TextBox_CardID.Location = new System.Drawing.Point(80, 9);
+            this.TextBox_CardID.Name = "TextBox_CardID";
+            this.TextBox_CardID.Size = new System.Drawing.Size(195, 29);
+            this.TextBox_CardID.TabIndex = 22;
+            this.TextBox_CardID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_CardID_KeyDown);
             // 
             // Main
             // 
@@ -1042,6 +1952,24 @@
             this.alpanel21.ResumeLayout(false);
             this.alpanel21.PerformLayout();
             this.myTabControl.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.myTabControl1.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DetailList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OrderList)).EndInit();
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Recharge)).EndInit();
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_List)).EndInit();
+            this.panel_SwCard.ResumeLayout(false);
+            this.panel_SwCard.PerformLayout();
+            this.myGroupBox3.ResumeLayout(false);
+            this.myGroupBox3.PerformLayout();
+            this.panel_Msg.ResumeLayout(false);
+            this.panel_Msg.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.myGroupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1131,5 +2059,81 @@
         private Vipsoft.Controls.PanelButton panelButton_Export_Order;
         private AlSkin.AlControl.AlButton alButton_Shortcut_moneyrule;
         private Vipsoft.Controls.PanelButton panelButton_CouponSet;
+        private YiJiaSoft.Controls.MyTabControl myTabControl1;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.DataGridView dataGridView_DetailList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_GoodsCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_GoodsName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_DiscountPrice;
+        private System.Windows.Forms.Label label_Loading_History;
+        private System.Windows.Forms.DataGridView dataGridView_OrderList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_OrderCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Money;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Discount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_List_Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Point;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_State;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_OrderType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_CreateTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Remark;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.Label label_Loading_History1;
+        private System.Windows.Forms.DataGridView dataGridView_Recharge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 卡号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 姓名;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 类型;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 支付金额;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 充值时间;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 赠送金额;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 备注;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.Label label_Loading_History2;
+        private System.Windows.Forms.DataGridView dataGridView_List;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Time;
+        private System.Windows.Forms.Panel panel_SwCard;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_msg;
+        private AlSkin.AlControl.AlButton Button_ShowList;
+        private AlSkin.AlControl.AlButton Button_Expense;
+        private AlSkin.AlControl.AlButton Button_Point;
+        private AlSkin.AlControl.AlButton Button_Cancel;
+        private AlSkin.AlControl.AlButton Button_Other;
+        private YiJiaSoft.Controls.MyGroupBox myGroupBox3;
+        private System.Windows.Forms.Panel panel_Msg;
+        private System.Windows.Forms.Label label_Level;
+        private System.Windows.Forms.Label label_Birth;
+        private System.Windows.Forms.Label label_OverCount;
+        private System.Windows.Forms.Label label_Pay;
+        private System.Windows.Forms.Label label_Point;
+        private System.Windows.Forms.Label label_PassTime;
+        private System.Windows.Forms.Label label_Mobile;
+        private System.Windows.Forms.Label label_TotalMoney;
+        private System.Windows.Forms.Label label_Money;
+        private System.Windows.Forms.Label label_State;
+        private System.Windows.Forms.Label label_Name;
+        private System.Windows.Forms.Label label_CardID;
+        private System.Windows.Forms.Panel panel_Custom;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.LinkLabel linkLabel_ClearMsg;
+        private System.Windows.Forms.LinkLabel linkLabel_EditMsg;
+        private System.Windows.Forms.TextBox TextBox_CardID;
+        private Controls.MemberPhoto myMemberPhoto;
     }
 }
