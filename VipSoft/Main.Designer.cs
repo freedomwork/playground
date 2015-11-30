@@ -43,9 +43,9 @@
             this.toolStripButton_SwipingCard = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.alpanel21 = new AlSkin.AlControl.Alpanel2();
+            this.Panel_Main = new AlSkin.AlControl.Alpanel2();
             this.myTabControl = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage_SwipingCard = new System.Windows.Forms.TabPage();
             this.myTabControl1 = new YiJiaSoft.Controls.MyTabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.dataGridView_DetailList = new System.Windows.Forms.DataGridView();
@@ -84,6 +84,7 @@
             this.Column_Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_SwCard = new System.Windows.Forms.Panel();
+            this.TextBox_CardID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label_msg = new System.Windows.Forms.Label();
             this.Button_ShowList = new AlSkin.AlControl.AlButton();
@@ -93,6 +94,7 @@
             this.Button_Other = new AlSkin.AlControl.AlButton();
             this.myGroupBox3 = new YiJiaSoft.Controls.MyGroupBox();
             this.panel_Msg = new System.Windows.Forms.Panel();
+            this.myMemberPhoto = new VipSoft.Controls.MemberPhoto();
             this.label_Level = new System.Windows.Forms.Label();
             this.label_Birth = new System.Windows.Forms.Label();
             this.label_OverCount = new System.Windows.Forms.Label();
@@ -177,15 +179,13 @@
             this.Button_MemberOrder = new AlSkin.AlControl.AlButton();
             this.Button_Report = new AlSkin.AlControl.AlButton();
             this.Button_Setup = new AlSkin.AlControl.AlButton();
-            this.myMemberPhoto = new VipSoft.Controls.MemberPhoto();
-            this.TextBox_CardID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            this.alpanel21.SuspendLayout();
+            this.Panel_Main.SuspendLayout();
             this.myTabControl.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPage_SwipingCard.SuspendLayout();
             this.myTabControl1.SuspendLayout();
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DetailList)).BeginInit();
@@ -301,14 +301,14 @@
             this.toolStripButton3.Size = new System.Drawing.Size(106, 29);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
-            // alpanel21
+            // Panel_Main
             // 
-            this.alpanel21.Controls.Add(this.myTabControl);
-            this.alpanel21.Controls.Add(this.label_Title);
-            this.alpanel21.Location = new System.Drawing.Point(205, 137);
-            this.alpanel21.Name = "alpanel21";
-            this.alpanel21.Size = new System.Drawing.Size(830, 481);
-            this.alpanel21.TabIndex = 19;
+            this.Panel_Main.Controls.Add(this.myTabControl);
+            this.Panel_Main.Controls.Add(this.label_Title);
+            this.Panel_Main.Location = new System.Drawing.Point(205, 137);
+            this.Panel_Main.Name = "Panel_Main";
+            this.Panel_Main.Size = new System.Drawing.Size(830, 481);
+            this.Panel_Main.TabIndex = 19;
             // 
             // myTabControl
             // 
@@ -316,7 +316,7 @@
             this.myTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.myTabControl.Controls.Add(this.tabPage1);
+            this.myTabControl.Controls.Add(this.tabPage_SwipingCard);
             this.myTabControl.Controls.Add(this.tabPage2);
             this.myTabControl.Controls.Add(this.tabPage3);
             this.myTabControl.Controls.Add(this.tabPage5);
@@ -331,18 +331,18 @@
             this.myTabControl.Size = new System.Drawing.Size(853, 458);
             this.myTabControl.TabIndex = 45;
             // 
-            // tabPage1
+            // tabPage_SwipingCard
             // 
-            this.tabPage1.Controls.Add(this.myTabControl1);
-            this.tabPage1.Controls.Add(this.panel_SwCard);
-            this.tabPage1.Controls.Add(this.myGroupBox3);
-            this.tabPage1.Location = new System.Drawing.Point(24, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(825, 450);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "会员刷卡";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage_SwipingCard.Controls.Add(this.myTabControl1);
+            this.tabPage_SwipingCard.Controls.Add(this.panel_SwCard);
+            this.tabPage_SwipingCard.Controls.Add(this.myGroupBox3);
+            this.tabPage_SwipingCard.Location = new System.Drawing.Point(24, 4);
+            this.tabPage_SwipingCard.Name = "tabPage_SwipingCard";
+            this.tabPage_SwipingCard.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_SwipingCard.Size = new System.Drawing.Size(825, 450);
+            this.tabPage_SwipingCard.TabIndex = 0;
+            this.tabPage_SwipingCard.Text = "会员刷卡";
+            this.tabPage_SwipingCard.UseVisualStyleBackColor = true;
             // 
             // myTabControl1
             // 
@@ -360,6 +360,7 @@
             this.myTabControl1.SelectedIndex = 0;
             this.myTabControl1.Size = new System.Drawing.Size(567, 360);
             this.myTabControl1.TabIndex = 27;
+            this.myTabControl1.SelectedIndexChanged += new System.EventHandler(this.myTabControl1_SelectedIndexChanged);
             // 
             // tabPage8
             // 
@@ -488,6 +489,7 @@
             this.dataGridView_OrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_OrderList.Size = new System.Drawing.Size(563, 205);
             this.dataGridView_OrderList.TabIndex = 9;
+            this.dataGridView_OrderList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_OrderList_CellDoubleClick);
             // 
             // Column_ID
             // 
@@ -747,6 +749,16 @@
             this.panel_SwCard.Size = new System.Drawing.Size(564, 79);
             this.panel_SwCard.TabIndex = 26;
             // 
+            // TextBox_CardID
+            // 
+            this.TextBox_CardID.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.TextBox_CardID.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.TextBox_CardID.Location = new System.Drawing.Point(80, 9);
+            this.TextBox_CardID.Name = "TextBox_CardID";
+            this.TextBox_CardID.Size = new System.Drawing.Size(195, 29);
+            this.TextBox_CardID.TabIndex = 22;
+            this.TextBox_CardID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_CardID_KeyDown);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -776,6 +788,7 @@
             this.Button_ShowList.TabIndex = 13;
             this.Button_ShowList.Text = "查找(F3)";
             this.Button_ShowList.UseVisualStyleBackColor = true;
+            this.Button_ShowList.Click += new System.EventHandler(this.Button_ShowList_Click);
             // 
             // Button_Expense
             // 
@@ -875,6 +888,18 @@
             this.panel_Msg.Name = "panel_Msg";
             this.panel_Msg.Size = new System.Drawing.Size(242, 418);
             this.panel_Msg.TabIndex = 0;
+            // 
+            // myMemberPhoto
+            // 
+            this.myMemberPhoto.BackColor = System.Drawing.Color.Transparent;
+            this.myMemberPhoto.Location = new System.Drawing.Point(40, 7);
+            this.myMemberPhoto.Margin = new System.Windows.Forms.Padding(0);
+            this.myMemberPhoto.Name = "myMemberPhoto";
+            this.myMemberPhoto.PhotoHeight = 150;
+            this.myMemberPhoto.PhotoPath = "";
+            this.myMemberPhoto.PhotoWidth = 150;
+            this.myMemberPhoto.Size = new System.Drawing.Size(152, 153);
+            this.myMemberPhoto.TabIndex = 47;
             // 
             // label_Level
             // 
@@ -1123,6 +1148,7 @@
             this.linkLabel_ClearMsg.TabIndex = 19;
             this.linkLabel_ClearMsg.TabStop = true;
             this.linkLabel_ClearMsg.Text = "清除资料";
+            this.linkLabel_ClearMsg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_ClearMsg_LinkClicked);
             // 
             // linkLabel_EditMsg
             // 
@@ -1133,6 +1159,7 @@
             this.linkLabel_EditMsg.TabIndex = 19;
             this.linkLabel_EditMsg.TabStop = true;
             this.linkLabel_EditMsg.Text = "修改资料（F4）";
+            this.linkLabel_EditMsg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_EditMsg_LinkClicked);
             // 
             // tabPage2
             // 
@@ -1889,28 +1916,6 @@
             this.Button_Setup.UseVisualStyleBackColor = true;
             this.Button_Setup.Click += new System.EventHandler(this.Button_Setup_Click);
             // 
-            // myMemberPhoto
-            // 
-            this.myMemberPhoto.BackColor = System.Drawing.Color.Transparent;
-            this.myMemberPhoto.Location = new System.Drawing.Point(40, 7);
-            this.myMemberPhoto.Margin = new System.Windows.Forms.Padding(0);
-            this.myMemberPhoto.Name = "myMemberPhoto";
-            this.myMemberPhoto.PhotoHeight = 150;
-            this.myMemberPhoto.PhotoPath = "";
-            this.myMemberPhoto.PhotoWidth = 150;
-            this.myMemberPhoto.Size = new System.Drawing.Size(152, 153);
-            this.myMemberPhoto.TabIndex = 47;
-            // 
-            // TextBox_CardID
-            // 
-            this.TextBox_CardID.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TextBox_CardID.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.TextBox_CardID.Location = new System.Drawing.Point(80, 9);
-            this.TextBox_CardID.Name = "TextBox_CardID";
-            this.TextBox_CardID.Size = new System.Drawing.Size(195, 29);
-            this.TextBox_CardID.TabIndex = 22;
-            this.TextBox_CardID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_CardID_KeyDown);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1928,13 +1933,13 @@
             this.Controls.Add(this.Button_MemberManage);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.alpanel21);
+            this.Controls.Add(this.Panel_Main);
             this.Name = "Main";
             this.ShowTitle = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
-            this.Controls.SetChildIndex(this.alpanel21, 0);
+            this.Controls.SetChildIndex(this.Panel_Main, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.pictureBox2, 0);
             this.Controls.SetChildIndex(this.Button_MemberManage, 0);
@@ -1949,10 +1954,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.alpanel21.ResumeLayout(false);
-            this.alpanel21.PerformLayout();
+            this.Panel_Main.ResumeLayout(false);
+            this.Panel_Main.PerformLayout();
             this.myTabControl.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabPage_SwipingCard.ResumeLayout(false);
             this.myTabControl1.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
@@ -1999,10 +2004,10 @@
         private System.Windows.Forms.ToolStripButton toolStripButton_SwipingCard;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private AlSkin.AlControl.Alpanel2 alpanel21;
+        private AlSkin.AlControl.Alpanel2 Panel_Main;
         private System.Windows.Forms.Label label_Title;
         private System.Windows.Forms.TabControl myTabControl;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage_SwipingCard;
         private AlSkin.AlControl.AlButton Button_GoodsManage;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;

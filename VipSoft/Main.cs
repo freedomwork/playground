@@ -295,7 +295,7 @@ namespace VipSoft
             this.dataGridView_Recharge.Visible = true;
             foreach (DataRow dr in dt.Rows)
             {
-                this.dataGridView_Recharge.Rows.Add(dr["CardID"], dr["MemName"], dr["Type"].ToString() == "0" ? "初始化" : dr["Type"].ToString() == "1" ? "充值" : "充次", dr["Money"], dr["CreateTime"], dr["moneyinfo"], dr["remark"]);
+                this.dataGridView_Recharge.Rows.Add(dr["CardID"], dr["MemName"], dr["Type"].ToString() == "0" ? "初始化" : dr["Type"].ToString() == "1" ? "充值" : "充次", dr["Money"], dr["CreateTime"], dr["GiveMoney"], dr["remark"]);
             }
         }
 
@@ -402,6 +402,107 @@ namespace VipSoft
                     this.TextBox_CardID.SelectAll();
                 }
             }
+        }
+
+        private void myTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int tindex = this.myTabControl1.SelectedIndex;
+            switch (tindex)
+            {
+                case 1:
+                    if (memInfo != null)
+                    {
+                        BindRechageHistory();
+                    }
+                    break;
+                case 2:
+                    if (memInfo != null)
+                    {
+                        BindLiPingHistory();
+                    }
+                    break;
+            }
+        }
+
+        void searchM_SearchMemSelectedCard(string cardID)
+        {
+            this.TextBox_CardID.Text = cardID;
+            TextBox_CardID_KeyDown(null, new KeyEventArgs(Keys.Enter));
+        }
+
+        private void Button_ShowList_Click(object sender, EventArgs e)
+        {
+            SearchMem searchM = new SearchMem();
+            searchM.SearchMemSelectedCard += new SearchCardSelectedHandler(searchM_SearchMemSelectedCard);
+            searchM.StartPosition = FormStartPosition.Manual;
+            searchM.Location = new Point(this.Location.X + this.Panel_Main.Location.X + this.myTabControl.Location.X + this.panel_SwCard.Location.X + this.Button_ShowList.Location.X + this.tabPage_SwipingCard.Left - 160,
+                this.Location.Y + this.Panel_Main.Location.Y + this.myTabControl.Location.Y + this.panel_SwCard.Location.Y + this.tabPage_SwipingCard.Top + this.Button_ShowList.Location.Y + 30);
+            searchM.Show();
+        }
+
+
+        /// <summary>
+        /// 选择订单时，右边显示订单详细
+        /// </summary>
+        private void BindOrderDetail()
+        {
+            if (this.dataGridView_OrderList.SelectedRows.Count != 1)
+                return;
+            string orderCode = this.dataGridView_OrderList.SelectedRows[0].Cells["Column_OrderCode"].Value.ToString();
+            VipSoft.BLL.OrderDetail detail = new VipSoft.BLL.OrderDetail();
+            DataTable dt = detail.GetList("OrderCode='" + orderCode + "'").Tables[0];
+            this.dataGridView_DetailList.DataSource = dt;
+        }
+
+        private void dataGridView_OrderList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+                this.dataGridView_OrderList.Rows[e.RowIndex].Selected = true;
+            BindOrderDetail();
+        }
+
+        /// <summary>
+        /// 清除会员信息
+        /// </summary>
+        private void ClearMember()
+        {
+            this.label_Birth.Text = "";
+            this.label_CardID.Text = "";
+            this.label_Level.Text = "";
+            this.label_Mobile.Text = "";
+            this.label_Money.Text = "";
+            this.label_Name.Text = "";
+            this.label_OverCount.Text = "";
+            this.label_PassTime.Text = "";
+            this.label_Pay.Text = "";
+            this.label_Point.Text = "";
+            this.label_State.Text = "";
+            this.label_TotalMoney.Text = "";
+            this.myMemberPhoto.PhotoPath = "";
+            memInfo = null;
+            this.TextBox_CardID.Text = "";
+            this.dataGridView_OrderList.Rows.Clear();
+            this.dataGridView_Recharge.Rows.Clear();
+            this.dataGridView_List.Rows.Clear();
+            this.dataGridView_DetailList.DataSource = null;
+            this.panel_Custom.Controls.Clear();
+        }
+
+        private void linkLabel_ClearMsg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ClearMember();
+        }
+
+        private void linkLabel_EditMsg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (memInfo == null)
+            {
+                MessageBox.Show("对不起，请先刷卡！");
+                return;
+            }
+            memRegister reg = new memRegister();
+            reg.memId = memInfo.ID;
+            reg.ShowDialog();
         }
 
     }

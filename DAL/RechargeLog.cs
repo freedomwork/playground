@@ -46,9 +46,9 @@ namespace VipSoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into RechargeLog(");
-			strSql.Append("MemID,CardID,MemName,Type,Money,GiveMoney,MasterID,MasterName,ShopID,ShopName)");
+			strSql.Append("MemID,CardID,MemName,Type,Money,GiveMoney,MasterID,MasterName,CreateTime,Remark,ShopID,ShopName)");
 			strSql.Append(" values (");
-			strSql.Append("@MemID,@CardID,@MemName,@Type,@Money,@GiveMoney,@MasterID,@MasterName,@ShopID,@ShopName)");
+			strSql.Append("@MemID,@CardID,@MemName,@Type,@Money,@GiveMoney,@MasterID,@MasterName,@CreateTime,@Remark,@ShopID,@ShopName)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@MemID", SqlDbType.Int,4),
@@ -57,6 +57,8 @@ namespace VipSoft.DAL
 					new SqlParameter("@Type", SqlDbType.Int,4),
 					new SqlParameter("@Money", SqlDbType.Money,8),
 					new SqlParameter("@GiveMoney", SqlDbType.Money,8),
+                    new SqlParameter("@CreateTime",SqlDbType.DateTime),
+                    new SqlParameter("@Remark",SqlDbType.VarChar,1000),
 					new SqlParameter("@MasterID", SqlDbType.Int,4),
 					new SqlParameter("@MasterName", SqlDbType.VarChar,50),
 					new SqlParameter("@ShopID", SqlDbType.Int,4),
@@ -67,10 +69,12 @@ namespace VipSoft.DAL
 			parameters[3].Value = model.Type;
 			parameters[4].Value = model.Money;
 			parameters[5].Value = model.GiveMoney;
-			parameters[6].Value = model.MasterID;
-			parameters[7].Value = model.MasterName;
-			parameters[8].Value = model.ShopID;
-			parameters[9].Value = model.ShopName;
+            parameters[6].Value = model.CreateTime;
+            parameters[7].Value = model.Remark;
+			parameters[8].Value = model.MasterID;
+			parameters[9].Value = model.MasterName;
+			parameters[10].Value = model.ShopID;
+			parameters[11].Value = model.ShopName;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -95,6 +99,8 @@ namespace VipSoft.DAL
 			strSql.Append("Type=@Type,");
 			strSql.Append("Money=@Money,");
 			strSql.Append("GiveMoney=@GiveMoney,");
+            strSql.Append("CreateTime=@CreateTime,");
+            strSql.Append("Remark=@Remark,");
 			strSql.Append("MasterID=@MasterID,");
 			strSql.Append("MasterName=@MasterName,");
 			strSql.Append("ShopID=@ShopID,");
@@ -107,6 +113,8 @@ namespace VipSoft.DAL
 					new SqlParameter("@Type", SqlDbType.Int,4),
 					new SqlParameter("@Money", SqlDbType.Money,8),
 					new SqlParameter("@GiveMoney", SqlDbType.Money,8),
+                    new SqlParameter("@CreateTime",SqlDbType.DateTime),
+                    new SqlParameter("@Remark",SqlDbType.VarChar,1000),
 					new SqlParameter("@MasterID", SqlDbType.Int,4),
 					new SqlParameter("@MasterName", SqlDbType.VarChar,50),
 					new SqlParameter("@ShopID", SqlDbType.Int,4),
@@ -118,11 +126,13 @@ namespace VipSoft.DAL
 			parameters[3].Value = model.Type;
 			parameters[4].Value = model.Money;
 			parameters[5].Value = model.GiveMoney;
-			parameters[6].Value = model.MasterID;
-			parameters[7].Value = model.MasterName;
-			parameters[8].Value = model.ShopID;
-			parameters[9].Value = model.ShopName;
-			parameters[10].Value = model.ID;
+            parameters[6].Value=model.CreateTime;
+            parameters[7].Value = model.Remark;
+			parameters[8].Value = model.MasterID;
+			parameters[9].Value = model.MasterName;
+			parameters[10].Value = model.ShopID;
+			parameters[11].Value = model.ShopName;
+			parameters[12].Value = model.ID;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -186,7 +196,7 @@ namespace VipSoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 ID,MemID,CardID,MemName,Type,Money,GiveMoney,MasterID,MasterName,ShopID,ShopName from RechargeLog ");
+			strSql.Append("select  top 1 ID,MemID,CardID,MemName,Type,Money,GiveMoney,CreateTime,Remark,MasterID,MasterName,ShopID,ShopName from RechargeLog ");
 			strSql.Append(" where ID=@ID");
 			SqlParameter[] parameters = {
 					new SqlParameter("@ID", SqlDbType.Int,4)
@@ -258,6 +268,14 @@ namespace VipSoft.DAL
 				{
 					model.ShopName=row["ShopName"].ToString();
 				}
+                if (row["CreateTime"] != null && row["CreateTime"].ToString() != "")
+                {
+                    model.CreateTime = DateTime.Parse(row["CreateTime"].ToString());
+                }
+                if (row["Remark"] != null)
+                {
+                    model.Remark = row["Remark"].ToString();
+                }
 			}
 			return model;
 		}
@@ -268,7 +286,7 @@ namespace VipSoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select ID,MemID,CardID,MemName,Type,Money,GiveMoney,MasterID,MasterName,ShopID,ShopName ");
+			strSql.Append("select ID,MemID,CardID,MemName,Type,Money,GiveMoney,CreateTime,Remark,MasterID,MasterName,ShopID,ShopName ");
 			strSql.Append(" FROM RechargeLog ");
 			if(strWhere.Trim()!="")
 			{
@@ -288,7 +306,7 @@ namespace VipSoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" ID,MemID,CardID,MemName,Type,Money,GiveMoney,MasterID,MasterName,ShopID,ShopName ");
+			strSql.Append(" ID,MemID,CardID,MemName,Type,Money,GiveMoney,CreateTime,Remark,MasterID,MasterName,ShopID,ShopName ");
 			strSql.Append(" FROM RechargeLog ");
 			if(strWhere.Trim()!="")
 			{

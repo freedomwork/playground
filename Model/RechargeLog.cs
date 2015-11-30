@@ -17,6 +17,8 @@ namespace VipSoft.Model
 		private int? _type;
 		private decimal? _money;
 		private decimal? _givemoney;
+        private DateTime _createtime;
+        private string _remark;
 		private int? _masterid;
 		private string _mastername;
 		private int? _shopid;
@@ -77,6 +79,22 @@ namespace VipSoft.Model
 			set{ _givemoney=value;}
 			get{return _givemoney;}
 		}
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime CreateTime
+        {
+            set { _createtime = value; }
+            get { return _createtime; }
+        }
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string Remark
+        {
+            get { return _remark; }
+            set { _remark = value; }
+        }
 		/// <summary>
 		/// 
 		/// </summary>
